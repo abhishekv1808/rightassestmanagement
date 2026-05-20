@@ -1,0 +1,285 @@
+"use client";
+
+import { useState, useMemo } from "react";
+import Link from "next/link";
+import { ArrowRight, MessageCircle, Info } from "lucide-react";
+
+function fmtINR(n: number): string {
+  if (n >= 100_000) return `₹${(n / 100_000).toFixed(1)} L`;
+  return `₹${Math.round(n).toLocaleString("en-IN")}`;
+}
+
+// Simplified premium rates per ₹1 Lakh sum assured, per year
+// Based on typical Indian market averages (LIC, HDFC Life, ICICI Pru, etc.)
+const TERM_RATES: Record<string, number[]> = {
+  // [minRate, maxRate] per ₹1L SA per year (non-smoker male)
+  "18-25": [170, 280],
+  "26-30": [210, 340],
+  "31-35": [300, 480],
+  "36-40": [480, 750],
+  "41-45": [780, 1200],
+  "46-50": [1300, 2000],
+  "51-55": [2200, 3500],
+  "56-65": [4000, 7000],
+};
+
+function getAgeGroup(age: number): string {
+  if (age <= 25) return "18-25";
+  if (age <= 30) return "26-30";
+  if (age <= 35) return "31-35";
+  if (age <= 40) return "36-40";
+  if (age <= 45) return "41-45";
+  if (age <= 50) return "46-50";
+  if (age <= 55) return "51-55";
+  return "56-65";
+}
+
+// Health insurance annual premium for given cover (family floater)
+function getHealthPremium(age: number, cover: number, members: number): [number, number] {
+  const coverLakh = cover / 100_000;
+  let ratePerLakh: [number, number];
+  if (age <= 30) ratePerLakh = [350, 550];
+  else if (age <= 40) ratePerLakh = [550, 900];
+  else if (age <= 50) ratePerLakh = [900, 1500];
+  else ratePerLakh = [1500, 2800];
+  const memberFactor = members === 1 ? 1 : members === 2 ? 1.6 : members <= 4 ? 2.1 : 2.5;
+  return [
+    Math.round(ratePerLakh[0] * coverLakh * memberFactor),
+    Math.round(ratePerLakh[1] * coverLakh * memberFactor),
+  ];
+}
+
+const INSURANCE_TYPES = ["Term Life", "Health Insurance"] as const;
+type InsuranceType = (typeof INSURANCE_TYPES)[number];
+
+export default function InsurancePremiumEstimator() {
+  const [type, setType] = useState<InsuranceType>("Term Life");
+  const [age, setAge] = useState(30);
+  const [cover, setCover] = useState(10000000);
+  const [smoker, setSmoker] = useState(false);
+  const [members, setMembers] = useState(2);
+
+  const { minPremium, maxPremium, monthly } = useMemo(() => {
+    let min = 0;
+    let max = 0;
+
+    if (type === "Term Life") {
+      const group = getAgeGroup(age);
+      const [r1, r2] = TERM_RATES[group];
+      const coverLakh = cover / 100_000;
+      min = Math.round(r1 * coverLakh);
+      max = Math.round(r2 * coverLakh);
+      if (smoker) { min = Math.round(min * 1.5); max = Math.round(max * 2); }
+    } else {
+      [min, max] = getHealthPremium(age, cover, members);
+    }
+
+    return { minPremium: min, maxPremium: max, monthly: Math.round((min + max) / 2 / 12) };
+  }, [type, age, cover, smoker, members]);
+
+  return (
+    <section className="py-16 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+          {/* ── Inputs ───────────────────────────────────────────────── */}
+          <div className="lg:col-span-7">
+            <div className="bg-white rounded-2xl p-8" style={{ boxShadow: "0 2px 24px rgba(0,0,0,0.07)" }}>
+              <h2 className="font-heading font-bold text-xl mb-7" style={{ color: "#1B3A6B" }}>
+                Your Insurance Profile
+              </h2>
+
+              <div className="space-y-7">
+                {/* Insurance type toggle */}
+                <div>
+                  <p className="text-sm font-medium mb-3" style={{ color: "#374151" }}>Insurance Type</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {INSURANCE_TYPES.map((t) => (
+                      <button
+                        key={t}
+                        onClick={() => { setType(t); if (t === "Health Insurance") setCover(500000); else setCover(10000000); }}
+                        className="py-3 rounded-xl text-sm font-semibold transition-all"
+                        style={
+                          type === t
+                            ? { backgroundColor: "#1B3A6B", color: "white" }
+                            : { backgroundColor: "#F9F8F5", color: "#6B7280", border: "1px solid #E5E7EB" }
+                        }
+                      >
+                        {t}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Age slider */}
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <label className="text-sm font-medium" style={{ color: "#374151" }}>Your Age</label>
+                    <div className="px-3 py-1.5 rounded-lg font-heading font-bold text-sm" style={{ backgroundColor: "#EEF2F8", color: "#1B3A6B" }}>
+                      {age} years
+                    </div>
+                  </div>
+                  <input
+                    type="range" min={18} max={65} step={1} value={age}
+                    onChange={(e) => setAge(Number(e.target.value))}
+                    className="w-full h-2 rounded-full appearance-none cursor-pointer"
+                    style={{ accentColor: "#C9A84C" }}
+                  />
+                  <div className="flex justify-between text-xs mt-1.5" style={{ color: "#9CA3AF" }}>
+                    <span>18 yrs</span>
+                    <span>65 yrs</span>
+                  </div>
+                </div>
+
+                {/* Cover amount slider */}
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <label className="text-sm font-medium" style={{ color: "#374151" }}>
+                      {type === "Term Life" ? "Sum Assured (Life Cover)" : "Cover Amount"}
+                    </label>
+                    <div className="px-3 py-1.5 rounded-lg font-heading font-bold text-sm" style={{ backgroundColor: "#EEF2F8", color: "#1B3A6B" }}>
+                      {fmtINR(cover)}
+                    </div>
+                  </div>
+                  {type === "Term Life" ? (
+                    <input
+                      type="range" min={2500000} max={100000000} step={2500000} value={cover}
+                      onChange={(e) => setCover(Number(e.target.value))}
+                      className="w-full h-2 rounded-full appearance-none cursor-pointer"
+                      style={{ accentColor: "#C9A84C" }}
+                    />
+                  ) : (
+                    <input
+                      type="range" min={300000} max={2000000} step={100000} value={cover}
+                      onChange={(e) => setCover(Number(e.target.value))}
+                      className="w-full h-2 rounded-full appearance-none cursor-pointer"
+                      style={{ accentColor: "#C9A84C" }}
+                    />
+                  )}
+                  <div className="flex justify-between text-xs mt-1.5" style={{ color: "#9CA3AF" }}>
+                    {type === "Term Life" ? (
+                      <><span>₹25 L</span><span>₹10 Cr</span></>
+                    ) : (
+                      <><span>₹3 L</span><span>₹20 L</span></>
+                    )}
+                  </div>
+                </div>
+
+                {/* Smoker toggle — only for Term Life */}
+                {type === "Term Life" && (
+                  <div className="flex items-center justify-between p-4 rounded-xl" style={{ backgroundColor: "#F9F8F5", border: "1px solid #E5E7EB" }}>
+                    <div>
+                      <p className="text-sm font-medium" style={{ color: "#374151" }}>Smoker / Tobacco User</p>
+                      <p className="text-xs mt-0.5" style={{ color: "#9CA3AF" }}>Smoker premiums are 50–100% higher</p>
+                    </div>
+                    <button
+                      onClick={() => setSmoker(!smoker)}
+                      className="relative w-12 h-6 rounded-full transition-colors duration-200 flex-shrink-0"
+                      style={{ backgroundColor: smoker ? "#C9A84C" : "#D1D5DB" }}
+                    >
+                      <span
+                        className="absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white transition-transform duration-200"
+                        style={{ transform: smoker ? "translateX(24px)" : "translateX(0)" }}
+                      />
+                    </button>
+                  </div>
+                )}
+
+                {/* Family members — only for Health */}
+                {type === "Health Insurance" && (
+                  <div>
+                    <p className="text-sm font-medium mb-3" style={{ color: "#374151" }}>Number of Members (Family Floater)</p>
+                    <div className="grid grid-cols-4 gap-2">
+                      {[1, 2, 3, 4].map((n) => (
+                        <button
+                          key={n}
+                          onClick={() => setMembers(n)}
+                          className="py-2.5 rounded-xl text-sm font-semibold transition-all"
+                          style={
+                            members === n
+                              ? { backgroundColor: "#1B3A6B", color: "white" }
+                              : { backgroundColor: "#F9F8F5", color: "#6B7280", border: "1px solid #E5E7EB" }
+                          }
+                        >
+                          {n}{n === 4 ? "+" : ""}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Disclaimer */}
+              <div className="mt-7 flex gap-2.5 p-4 rounded-xl" style={{ backgroundColor: "#FBF5E6" }}>
+                <Info className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "#C9A84C" }} />
+                <p className="text-xs leading-relaxed" style={{ color: "#6B7280" }}>
+                  These are <strong>estimates only</strong> based on average Indian market rates.
+                  Actual premiums depend on your medical history, insurer, and policy terms.
+                  Consult our advisors for an accurate quote.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Results ──────────────────────────────────────────────── */}
+          <div className="lg:col-span-5 lg:sticky lg:top-24">
+            <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "0 4px 32px rgba(0,0,0,0.12)" }}>
+              <div style={{ backgroundColor: "#1B3A6B" }} className="px-7 py-6">
+                <p className="text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "rgba(255,255,255,0.55)" }}>
+                  Estimated Annual Premium
+                </p>
+                <p className="font-heading font-bold text-white" style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)" }}>
+                  {fmtINR(minPremium)} – {fmtINR(maxPremium)}
+                </p>
+                <p className="text-xs mt-1" style={{ color: "rgba(255,255,255,0.5)" }}>
+                  ≈ {fmtINR(monthly)}/month · {type} · {fmtINR(cover)} cover
+                </p>
+              </div>
+
+              <div className="bg-white px-7 py-6 space-y-5">
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="p-4 rounded-xl" style={{ backgroundColor: "#EEF2F8" }}>
+                    <p className="text-xs mb-1" style={{ color: "#9CA3AF" }}>Min. Estimate</p>
+                    <p className="font-heading font-bold text-sm" style={{ color: "#1B3A6B" }}>{fmtINR(minPremium)}/yr</p>
+                  </div>
+                  <div className="p-4 rounded-xl" style={{ backgroundColor: "#FBF5E6" }}>
+                    <p className="text-xs mb-1" style={{ color: "#9CA3AF" }}>Max. Estimate</p>
+                    <p className="font-heading font-bold text-sm" style={{ color: "#C9A84C" }}>{fmtINR(maxPremium)}/yr</p>
+                  </div>
+                  <div className="col-span-2 p-4 rounded-xl" style={{ backgroundColor: "#F9F8F5", border: "1px solid #E5E7EB" }}>
+                    <p className="text-xs mb-1" style={{ color: "#9CA3AF" }}>Estimated Monthly Cost</p>
+                    <p className="font-heading font-bold text-sm" style={{ color: "#1A1A1A" }}>{fmtINR(monthly)}/month</p>
+                  </div>
+                </div>
+
+                <div className="p-3.5 rounded-xl text-xs leading-relaxed" style={{ backgroundColor: "#FBF5E6", color: "#92714A" }}>
+                  This is an indicative estimate. Actual premium will be confirmed after underwriting.
+                  Tax benefits available u/s 80C (life) and 80D (health) of Income Tax Act.
+                </div>
+
+                <Link
+                  href="/contact"
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98]"
+                  style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
+                >
+                  Get Exact Quote — Free Consultation
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <a
+                  href="https://wa.me/919999999999"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90"
+                  style={{ backgroundColor: "#25D366", color: "white" }}
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Ask on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

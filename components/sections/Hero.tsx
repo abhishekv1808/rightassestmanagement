@@ -23,7 +23,7 @@ export default function Hero() {
       className="relative overflow-hidden flex items-center"
       style={{
         background: "linear-gradient(135deg, #1B3A6B 0%, #0D2347 55%, #071428 100%)",
-        minHeight: "92vh",
+        minHeight: "78vh",
       }}
     >
       {/* ── Background decoration ───────────────────────────────────────── */}
@@ -54,7 +54,7 @@ export default function Hero() {
       </div>
 
       {/* ── Content ─────────────────────────────────────────────────────── */}
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-36">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="max-w-[780px]">
 
           {/* Eyebrow */}

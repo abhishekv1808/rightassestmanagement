@@ -192,15 +192,6 @@ export default function RealEstateHubPage() {
                   className="group relative flex flex-col gap-3 p-5 rounded-2xl bg-white transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
                   style={{ border: "1px solid #E5E7EB" }}
                 >
-                  {card.badge && (
-                    <span
-                      className="absolute top-4 right-[4.5rem] text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full"
-                      style={{ backgroundColor: card.lightBg, color: card.color }}
-                    >
-                      {card.badge}
-                    </span>
-                  )}
-
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex-1 min-w-0">
                       <p

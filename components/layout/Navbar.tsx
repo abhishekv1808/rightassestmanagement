@@ -10,10 +10,12 @@ import {
   Menu,
   X,
   Phone,
+  Search,
   TrendingUp,
   Building2,
   Scale,
 } from "lucide-react";
+import SearchModal from "@/components/layout/SearchModal";
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 
@@ -168,6 +170,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileAccordion, setMobileAccordion] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -186,6 +189,11 @@ export default function Navbar() {
       if (e.key === "Escape") {
         setActiveMenu(null);
         setMobileOpen(false);
+        setSearchOpen(false);
+      }
+      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+        e.preventDefault();
+        setSearchOpen((v) => !v);
       }
     };
     document.addEventListener("keydown", onKey);
@@ -216,8 +224,8 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-300${scrolled ? " shadow-xl" : ""}`}
         style={{ backgroundColor: "#1B3A6B" }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-[72px]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="flex items-center justify-between h-16 lg:h-[68px]">
 
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 flex items-center gap-2.5 group">
@@ -238,15 +246,7 @@ export default function Navbar() {
             </Link>
 
             {/* ── Desktop Navigation ──────────────────────────────────────── */}
-            <div className="hidden lg:flex items-center gap-0.5">
-              <Link
-                href="/"
-                className="px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                style={{ color: isActive("/") ? "#C9A84C" : "rgba(255,255,255,0.85)" }}
-              >
-                Home
-              </Link>
-
+            <div className="hidden lg:flex items-center gap-1">
               {VERTICALS.map((v) => (
                 <div
                   key={v.label}
@@ -255,7 +255,7 @@ export default function Navbar() {
                   className="relative"
                 >
                   <button
-                    className="flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    className="flex items-center gap-1 px-3.5 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap"
                     style={{
                       color: isActive(v.href) || activeMenu === v.label
                         ? "#C9A84C"
@@ -264,7 +264,7 @@ export default function Navbar() {
                   >
                     {v.shortLabel}
                     <ChevronDown
-                      className="w-3.5 h-3.5 transition-transform duration-200"
+                      className="w-3 h-3 transition-transform duration-200"
                       style={{
                         transform: activeMenu === v.label ? "rotate(180deg)" : "rotate(0deg)",
                       }}
@@ -273,34 +273,62 @@ export default function Navbar() {
                 </div>
               ))}
 
-              {SECONDARY_LINKS.map((link) => (
+              {/* Divider */}
+              <div className="w-px h-4 mx-1" style={{ backgroundColor: "rgba(255,255,255,0.15)" }} />
+
+              {SECONDARY_LINKS.filter((l) => l.label !== "Blog").map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  style={{ color: isActive(link.href) ? "#C9A84C" : "rgba(255,255,255,0.85)" }}
+                  className="px-3.5 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap"
+                  style={{ color: isActive(link.href) ? "#C9A84C" : "rgba(255,255,255,0.75)" }}
                 >
                   {link.label}
                 </Link>
               ))}
             </div>
 
-            {/* ── Desktop CTA ─────────────────────────────────────────────── */}
-            <div className="hidden lg:flex items-center gap-4">
+            {/* ── Desktop Right Actions ────────────────────────────────────── */}
+            <div className="hidden lg:flex items-center gap-2">
+              {/* Search icon button */}
+              <button
+                onClick={() => setSearchOpen(true)}
+                className="w-9 h-9 rounded-full flex items-center justify-center transition-colors flex-shrink-0"
+                style={{ color: "rgba(255,255,255,0.7)", backgroundColor: "rgba(255,255,255,0.08)" }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(255,255,255,0.15)";
+                  (e.currentTarget as HTMLElement).style.color = "#fff";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(255,255,255,0.08)";
+                  (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.7)";
+                }}
+                aria-label="Search services (Ctrl+K)"
+                title="Search services (Ctrl+K)"
+              >
+                <Search className="w-4 h-4" />
+              </button>
+
+              {/* Divider */}
+              <div className="w-px h-5" style={{ backgroundColor: "rgba(255,255,255,0.15)" }} />
+
               <a
                 href="tel:+919999999999"
-                className="flex items-center gap-1.5 text-sm transition-colors"
-                style={{ color: "rgba(255,255,255,0.7)" }}
+                className="flex items-center gap-1.5 text-sm font-medium transition-colors whitespace-nowrap"
+                style={{ color: "rgba(255,255,255,0.75)" }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "#C9A84C"; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.75)"; }}
               >
-                <Phone className="w-3.5 h-3.5" />
+                <Phone className="w-3.5 h-3.5 flex-shrink-0" />
                 <span>+91 99999 99999</span>
               </a>
+
               <Link
                 href="/contact"
-                className="px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:opacity-90 active:scale-95"
+                className="px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:opacity-90 active:scale-95 whitespace-nowrap"
                 style={{ backgroundColor: "#C9A84C", color: "#1B3A6B" }}
               >
-                Book Free Consultation
+                Free Consult
               </Link>
             </div>
 
@@ -371,21 +399,38 @@ export default function Navbar() {
                     {v.groups.map((group) => (
                       <div key={group.category}>
                         <p
-                          className="font-body font-semibold text-[11px] uppercase tracking-[0.15em] mb-3"
-                          style={{ color: v.color }}
+                          className="font-body font-semibold text-[11px] uppercase tracking-[0.15em] mb-3 pl-2.5"
+                          style={{
+                            color: v.color,
+                            borderLeft: `2.5px solid ${v.color}`,
+                          }}
                         >
                           {group.category}
                         </p>
-                        <ul className="space-y-2">
+                        <ul className="space-y-0.5">
                           {group.links.map((link) => (
                             <li key={link.href}>
                               <Link
                                 href={link.href}
-                                className="text-sm text-gray-600 hover:text-gray-900 transition-colors block group/link"
+                                className="group/link flex items-center justify-between gap-2 text-sm text-gray-600 rounded-lg px-2.5 py-1.5 transition-all duration-150 hover:text-gray-900"
+                                style={{
+                                  ["--hover-bg" as string]: v.lightBg,
+                                  ["--hover-color" as string]: v.color,
+                                }}
+                                onMouseEnter={(e) => {
+                                  (e.currentTarget as HTMLElement).style.backgroundColor = v.lightBg;
+                                  (e.currentTarget as HTMLElement).style.color = v.color;
+                                }}
+                                onMouseLeave={(e) => {
+                                  (e.currentTarget as HTMLElement).style.backgroundColor = "";
+                                  (e.currentTarget as HTMLElement).style.color = "";
+                                }}
                               >
-                                <span className="group-hover/link:underline" style={{ textDecorationColor: v.color }}>
-                                  {link.label}
-                                </span>
+                                <span>{link.label}</span>
+                                <ChevronRight
+                                  className="w-3 h-3 flex-shrink-0 opacity-0 group-hover/link:opacity-100 transition-opacity"
+                                  style={{ color: v.color }}
+                                />
                               </Link>
                             </li>
                           ))}
@@ -433,17 +478,37 @@ export default function Navbar() {
                   </div>
                   <span className="font-heading font-bold text-white text-sm">Right Asset Management</span>
                 </div>
-                <button
-                  onClick={() => setMobileOpen(false)}
-                  className="p-1.5 rounded transition-colors"
-                  style={{ color: "rgba(255,255,255,0.8)" }}
-                >
-                  <X className="w-5 h-5" />
-                </button>
+                <div className="flex items-center gap-1">
+                  <button
+                    onClick={() => { setMobileOpen(false); setSearchOpen(true); }}
+                    className="p-1.5 rounded transition-colors"
+                    style={{ color: "rgba(255,255,255,0.8)" }}
+                    aria-label="Search services"
+                  >
+                    <Search className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => setMobileOpen(false)}
+                    className="p-1.5 rounded transition-colors"
+                    style={{ color: "rgba(255,255,255,0.8)" }}
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
               </div>
 
               {/* Drawer body */}
               <nav className="flex-1 overflow-y-auto p-4 space-y-0.5">
+                {/* Mobile search trigger */}
+                <button
+                  onClick={() => { setMobileOpen(false); setSearchOpen(true); }}
+                  className="w-full flex items-center gap-3 px-4 py-3 rounded-xl mb-2 text-left transition-colors"
+                  style={{ backgroundColor: "#F1F5F9", color: "#64748B" }}
+                >
+                  <Search className="w-4 h-4 flex-shrink-0" />
+                  <span className="text-sm">Search 48+ services…</span>
+                </button>
+
                 <Link
                   href="/"
                   className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-gray-50 transition-colors"
@@ -554,7 +619,10 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Spacer so page content clears the fixed navbar */}
-      <div className="h-16 lg:h-[72px]" aria-hidden="true" />
+      <div className="h-16 lg:h-[68px]" aria-hidden="true" />
+
+      {/* Search modal */}
+      <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
 }

@@ -1,8 +1,11 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, Download, ChevronDown, ChevronUp, Table2 } from "lucide-react";
+import { SliderInput } from "@/components/tools/SliderInput";
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function fmtINR(n: number): string {
   if (n >= 10_000_000) return `₹${(n / 10_000_000).toFixed(2)} Cr`;
@@ -10,69 +13,132 @@ function fmtINR(n: number): string {
   return `₹${Math.round(n).toLocaleString("en-IN")}`;
 }
 
-function SliderInput({
-  label,
-  value,
-  onChange,
-  min,
-  max,
-  step,
-  display,
-  minLabel,
-  maxLabel,
-}: {
-  label: string;
-  value: number;
-  onChange: (v: number) => void;
-  min: number;
-  max: number;
-  step: number;
-  display: string;
-  minLabel: string;
-  maxLabel: string;
-}) {
-  return (
-    <div>
-      <div className="flex items-center justify-between mb-3">
-        <label className="text-sm font-medium" style={{ color: "#374151" }}>{label}</label>
-        <div
-          className="px-3 py-1.5 rounded-lg font-heading font-bold text-sm"
-          style={{ backgroundColor: "#EEF2F8", color: "#1B3A6B" }}
-        >
-          {display}
-        </div>
-      </div>
-      <input
-        type="range"
-        min={min} max={max} step={step}
-        value={value}
-        onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full h-2 rounded-full appearance-none cursor-pointer"
-        style={{ accentColor: "#C9A84C" }}
-      />
-      <div className="flex justify-between text-xs mt-1.5" style={{ color: "#9CA3AF" }}>
-        <span>{minLabel}</span>
-        <span>{maxLabel}</span>
-      </div>
-    </div>
-  );
+function fmtINRExact(n: number): string {
+  return `₹${Math.round(n).toLocaleString("en-IN")}`;
 }
+
+type AmortRow = {
+  month: number;
+  emi: number;
+  principal: number;
+  interest: number;
+  balance: number;
+  totalPrincipal: number;
+  totalInterest: number;
+};
+
+// ─── Component ────────────────────────────────────────────────────────────────
 
 export default function EMICalculator() {
   const [loanAmount, setLoanAmount] = useState(3000000);
   const [rate, setRate] = useState(8.5);
   const [tenure, setTenure] = useState(20);
+  const [showTable, setShowTable] = useState(false);
+  const [viewMode, setViewMode] = useState<"monthly" | "yearly">("yearly");
 
-  const { emi, totalPayable, totalInterest } = useMemo(() => {
+  const { emi, totalPayable, totalInterest, schedule } = useMemo(() => {
     const r = rate / 100 / 12;
     const n = tenure * 12;
-    const emi = r === 0 ? loanAmount / n : (loanAmount * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    const emi =
+      r === 0
+        ? loanAmount / n
+        : (loanAmount * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
     const totalPayable = emi * n;
-    return { emi, totalPayable, totalInterest: totalPayable - loanAmount };
+
+    // Build amortization schedule
+    const rows: AmortRow[] = [];
+    let balance = loanAmount;
+    let cumPrincipal = 0;
+    let cumInterest = 0;
+
+    for (let m = 1; m <= n; m++) {
+      const interestPart = balance * r;
+      const principalPart = emi - interestPart;
+      balance = Math.max(0, balance - principalPart);
+      cumPrincipal += principalPart;
+      cumInterest += interestPart;
+      rows.push({
+        month: m,
+        emi,
+        principal: principalPart,
+        interest: interestPart,
+        balance,
+        totalPrincipal: cumPrincipal,
+        totalInterest: cumInterest,
+      });
+    }
+
+    return { emi, totalPayable, totalInterest: totalPayable - loanAmount, schedule: rows };
   }, [loanAmount, rate, tenure]);
 
-  const principalPct = Math.round((loanAmount / (emi * tenure * 12)) * 100);
+  const principalPct = Math.round((loanAmount / totalPayable) * 100);
   const interestPct = 100 - principalPct;
+
+  // Yearly aggregation
+  const yearlySchedule = useMemo(() => {
+    const years: {
+      year: number;
+      emi: number;
+      principal: number;
+      interest: number;
+      balance: number;
+      totalPrincipal: number;
+      totalInterest: number;
+    }[] = [];
+
+    for (let y = 0; y < tenure; y++) {
+      const start = y * 12;
+      const end = Math.min(start + 12, schedule.length);
+      const slice = schedule.slice(start, end);
+      if (slice.length === 0) break;
+      const last = slice[slice.length - 1];
+      years.push({
+        year: y + 1,
+        emi: slice.reduce((s, r) => s + r.emi, 0),
+        principal: slice.reduce((s, r) => s + r.principal, 0),
+        interest: slice.reduce((s, r) => s + r.interest, 0),
+        balance: last.balance,
+        totalPrincipal: last.totalPrincipal,
+        totalInterest: last.totalInterest,
+      });
+    }
+    return years;
+  }, [schedule, tenure]);
+
+  // Excel download
+  const downloadExcel = useCallback(async () => {
+    const XLSX = await import("xlsx");
+    const wsData = [
+      ["Loan Amortization Schedule — Right Asset Management"],
+      [`Loan Amount: ${fmtINR(loanAmount)}`, `Interest Rate: ${rate.toFixed(1)}%`, `Tenure: ${tenure} years`, `Monthly EMI: ${fmtINRExact(emi)}`],
+      [],
+      ["Month", "EMI (₹)", "Principal (₹)", "Interest (₹)", "Balance (₹)", "Cumulative Principal (₹)", "Cumulative Interest (₹)"],
+      ...schedule.map((r) => [
+        r.month,
+        Math.round(r.emi),
+        Math.round(r.principal),
+        Math.round(r.interest),
+        Math.round(r.balance),
+        Math.round(r.totalPrincipal),
+        Math.round(r.totalInterest),
+      ]),
+      [],
+      ["Total", Math.round(emi * tenure * 12), Math.round(loanAmount), Math.round(totalInterest), 0, "", ""],
+    ];
+
+    const ws = XLSX.utils.aoa_to_sheet(wsData);
+
+    // Column widths
+    ws["!cols"] = [
+      { wch: 8 }, { wch: 14 }, { wch: 14 }, { wch: 14 }, { wch: 16 }, { wch: 22 }, { wch: 22 },
+    ];
+
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Amortization");
+    XLSX.writeFile(wb, `Loan_Amortization_${fmtINR(loanAmount)}_${rate}pct_${tenure}yrs.xlsx`);
+  }, [schedule, loanAmount, rate, tenure, emi, totalInterest]);
+
+  const displayRows = viewMode === "yearly" ? yearlySchedule : schedule;
 
   return (
     <section className="py-16 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>
@@ -198,6 +264,185 @@ export default function EMICalculator() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* ── Amortization Table ─────────────────────────────────────── */}
+        <div className="mt-12">
+          <div
+            className="bg-white rounded-2xl overflow-hidden"
+            style={{ boxShadow: "0 2px 24px rgba(0,0,0,0.07)" }}
+          >
+            {/* Header bar */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 px-6 sm:px-8 py-5"
+              style={{ borderBottom: "1px solid #E5E7EB" }}
+            >
+              <button
+                onClick={() => setShowTable(!showTable)}
+                className="flex items-center gap-3 group"
+              >
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center"
+                  style={{ backgroundColor: "#EEF2F8" }}
+                >
+                  <Table2 className="w-5 h-5" style={{ color: "#1B3A6B" }} />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-heading font-bold text-base" style={{ color: "#1B3A6B" }}>
+                    Amortization Schedule
+                  </h3>
+                  <p className="text-xs" style={{ color: "#9CA3AF" }}>
+                    {tenure * 12} months · {fmtINRExact(emi)}/month
+                  </p>
+                </div>
+                {showTable ? (
+                  <ChevronUp className="w-5 h-5 ml-1" style={{ color: "#9CA3AF" }} />
+                ) : (
+                  <ChevronDown className="w-5 h-5 ml-1" style={{ color: "#9CA3AF" }} />
+                )}
+              </button>
+
+              <div className="flex items-center gap-3">
+                {/* View toggle */}
+                {showTable && (
+                  <div className="flex rounded-xl overflow-hidden" style={{ border: "1px solid #E5E7EB" }}>
+                    <button
+                      onClick={() => setViewMode("yearly")}
+                      className="px-4 py-2 text-xs font-semibold transition-all"
+                      style={viewMode === "yearly"
+                        ? { backgroundColor: "#1B3A6B", color: "white" }
+                        : { backgroundColor: "white", color: "#6B7280" }
+                      }
+                    >
+                      Yearly
+                    </button>
+                    <button
+                      onClick={() => setViewMode("monthly")}
+                      className="px-4 py-2 text-xs font-semibold transition-all"
+                      style={viewMode === "monthly"
+                        ? { backgroundColor: "#1B3A6B", color: "white" }
+                        : { backgroundColor: "white", color: "#6B7280" }
+                      }
+                    >
+                      Monthly
+                    </button>
+                  </div>
+                )}
+
+                {/* Download button */}
+                <button
+                  onClick={downloadExcel}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs transition-all hover:opacity-90 active:scale-[0.98]"
+                  style={{ backgroundColor: "#059669", color: "white" }}
+                >
+                  <Download className="w-4 h-4" />
+                  Download Excel
+                </button>
+              </div>
+            </div>
+
+            {/* Table */}
+            {showTable && (
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr style={{ backgroundColor: "#F1F5F9" }}>
+                      <th className="text-left px-4 sm:px-6 py-3 text-xs font-bold uppercase tracking-wider" style={{ color: "#1B3A6B" }}>
+                        {viewMode === "yearly" ? "Year" : "Month"}
+                      </th>
+                      <th className="text-right px-4 sm:px-6 py-3 text-xs font-bold uppercase tracking-wider" style={{ color: "#1B3A6B" }}>
+                        EMI Paid
+                      </th>
+                      <th className="text-right px-4 sm:px-6 py-3 text-xs font-bold uppercase tracking-wider" style={{ color: "#1B3A6B" }}>
+                        Principal
+                      </th>
+                      <th className="text-right px-4 sm:px-6 py-3 text-xs font-bold uppercase tracking-wider" style={{ color: "#1B3A6B" }}>
+                        Interest
+                      </th>
+                      <th className="text-right px-4 sm:px-6 py-3 text-xs font-bold uppercase tracking-wider" style={{ color: "#1B3A6B" }}>
+                        Balance
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {displayRows.map((row, idx) => {
+                      const period = viewMode === "yearly" ? (row as typeof yearlySchedule[0]).year : (row as AmortRow).month;
+                      const principalRatio = row.principal / row.emi;
+                      return (
+                        <tr
+                          key={period}
+                          style={{
+                            backgroundColor: idx % 2 === 0 ? "white" : "#FAFBFC",
+                            borderBottom: "1px solid #F1F5F9",
+                          }}
+                        >
+                          <td className="px-4 sm:px-6 py-3.5">
+                            <span className="font-heading font-bold text-sm" style={{ color: "#1B3A6B" }}>
+                              {viewMode === "yearly" ? `Year ${period}` : period}
+                            </span>
+                          </td>
+                          <td className="text-right px-4 sm:px-6 py-3.5 font-medium" style={{ color: "#374151" }}>
+                            {fmtINRExact(row.emi)}
+                          </td>
+                          <td className="text-right px-4 sm:px-6 py-3.5">
+                            <div className="inline-flex flex-col items-end gap-1">
+                              <span className="font-semibold" style={{ color: "#1B3A6B" }}>
+                                {fmtINRExact(row.principal)}
+                              </span>
+                              {/* Mini progress bar */}
+                              <div className="w-16 h-1.5 rounded-full overflow-hidden" style={{ backgroundColor: "#E5E7EB" }}>
+                                <div
+                                  className="h-full rounded-full"
+                                  style={{
+                                    width: `${Math.round(principalRatio * 100)}%`,
+                                    backgroundColor: "#1B3A6B",
+                                    transition: "width 0.3s ease",
+                                  }}
+                                />
+                              </div>
+                            </div>
+                          </td>
+                          <td className="text-right px-4 sm:px-6 py-3.5 font-medium" style={{ color: "#C9A84C" }}>
+                            {fmtINRExact(row.interest)}
+                          </td>
+                          <td className="text-right px-4 sm:px-6 py-3.5 font-medium" style={{ color: "#6B7280" }}>
+                            {fmtINRExact(row.balance)}
+                          </td>
+                        </tr>
+                      );
+                    })}
+
+                    {/* Totals row */}
+                    <tr style={{ backgroundColor: "#1B3A6B" }}>
+                      <td className="px-4 sm:px-6 py-4 font-heading font-bold text-sm text-white">
+                        Total
+                      </td>
+                      <td className="text-right px-4 sm:px-6 py-4 font-bold text-sm text-white">
+                        {fmtINRExact(totalPayable)}
+                      </td>
+                      <td className="text-right px-4 sm:px-6 py-4 font-bold text-sm" style={{ color: "#93C5FD" }}>
+                        {fmtINRExact(loanAmount)}
+                      </td>
+                      <td className="text-right px-4 sm:px-6 py-4 font-bold text-sm" style={{ color: "#C9A84C" }}>
+                        {fmtINRExact(totalInterest)}
+                      </td>
+                      <td className="text-right px-4 sm:px-6 py-4 font-bold text-sm text-white">
+                        ₹0
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            )}
+
+            {/* Collapsed hint */}
+            {!showTable && (
+              <div className="px-6 sm:px-8 py-4 text-center">
+                <p className="text-xs" style={{ color: "#9CA3AF" }}>
+                  Click above to view the full month-by-month breakdown of your loan repayment.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -15,6 +15,9 @@ import {
   allServices,
 } from "@/lib/services-data";
 import LeadForm from "@/components/forms/LeadForm";
+import MutualFundTable from "@/components/sections/MutualFundTable";
+import TopStocksWidget from "@/components/widgets/TopStocksWidget";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 
 // ─── Static params (build all 21 pages at build time) ─────────────────────────
 
@@ -56,6 +59,7 @@ export default async function FinancialServicePage({
 
   return (
     <>
+      <ServiceSchema service={svc} />
       {/* ── Hero ──────────────────────────────────────────────────────── */}
       <div
         className="relative overflow-hidden"
@@ -163,6 +167,49 @@ export default async function FinancialServicePage({
           </div>
         </div>
       </div>
+
+      {/* ── Top stocks widget (equity-commodity only) ────────────────── */}
+      {service === "equity-commodity" && (
+        <section className="py-10 lg:py-14" style={{ backgroundColor: "#F9F8F5" }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-1.5" style={{ color: "#C9A84C" }}>
+                Live Market Data
+              </p>
+              <h2 className="font-heading font-bold text-2xl" style={{ color: "#1B3A6B" }}>
+                Top NSE Stocks — Today&apos;s Prices
+              </h2>
+              <p className="text-sm text-gray-500 mt-1">
+                For reference only. Prices are indicative. Not investment advice.
+              </p>
+            </div>
+            <TopStocksWidget />
+          </div>
+        </section>
+      )}
+
+      {/* ── Live NAV table (mutual funds only) ───────────────────────── */}
+      {service === "mutual-funds" && (
+        <section className="py-10 lg:py-14" style={{ backgroundColor: "#F9F8F5" }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-5">
+              <p
+                className="text-xs font-semibold uppercase tracking-[0.18em] mb-1.5"
+                style={{ color: "#C9A84C" }}
+              >
+                Market Data
+              </p>
+              <h2 className="font-heading font-bold text-2xl" style={{ color: "#1B3A6B" }}>
+                Popular Funds — Today&apos;s NAV
+              </h2>
+              <p className="text-sm text-gray-500 mt-1">
+                Indicative NAVs. Investments are subject to market risk — read all scheme documents carefully.
+              </p>
+            </div>
+            <MutualFundTable />
+          </div>
+        </section>
+      )}
 
       {/* ── Main content ──────────────────────────────────────────────── */}
       <section className="py-16 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>

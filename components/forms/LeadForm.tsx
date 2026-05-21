@@ -4,9 +4,10 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import { Loader2, CheckCircle2, AlertCircle, MapPin } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 import { allServices } from "@/lib/services-data";
+import { getPincodeDetails } from "@/lib/api/pincode";
 
 // ─── Schema ──────────────────────────────────────────────────────────────────
 
@@ -21,6 +22,13 @@ const leadSchema = z.object({
     .optional()
     .or(z.literal("")),
   service_interested: z.string().optional(),
+  pincode: z
+    .string()
+    .regex(/^\d{6}$/, "Must be exactly 6 digits")
+    .optional()
+    .or(z.literal("")),
+  city: z.string().optional(),
+  state: z.string().optional(),
   message: z.string().optional(),
   source: z.enum(["Google", "Referral", "Social Media", "Other", ""]).optional(),
 });
@@ -44,16 +52,20 @@ const serviceOptions = [
   },
 ];
 
+// ─── Shared input style helpers ───────────────────────────────────────────────
+
+const baseInput =
+  "w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-all";
+const borderDefault = "#e2e8f0";
+const borderFocus   = "#1B3A6B";
+const borderError   = "#ef4444";
+
 // ─── Props ───────────────────────────────────────────────────────────────────
 
 type LeadFormProps = {
-  /** Heading text shown above the form */
   heading?: string;
-  /** Subtext below heading */
   subtext?: string;
-  /** Pre-select a service slug */
   defaultService?: string;
-  /** Extra class names for the outer wrapper */
   className?: string;
 };
 
@@ -68,10 +80,16 @@ export default function LeadForm({
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
+  // Pincode lookup state
+  const [pincodeStatus, setPincodeStatus] = useState<
+    "idle" | "loading" | "found" | "error"
+  >("idle");
+
   const {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<LeadFormData>({
     resolver: zodResolver(leadSchema),
@@ -80,23 +98,60 @@ export default function LeadForm({
       phone: "",
       email: "",
       service_interested: defaultService,
+      pincode: "",
+      city: "",
+      state: "",
       message: "",
       source: "",
     },
   });
+
+  // ── Pincode blur handler ───────────────────────────────────────────────────
+
+  const handlePincodeBlur = async (e: React.FocusEvent<HTMLInputElement>) => {
+    const pin = e.currentTarget.value.trim();
+    if (!pin) { setPincodeStatus("idle"); return; }
+    if (!/^\d{6}$/.test(pin)) { setPincodeStatus("error"); return; }
+
+    setPincodeStatus("loading");
+    const details = await getPincodeDetails(pin);
+
+    if (!details) {
+      setPincodeStatus("error");
+      setValue("city", "");
+      setValue("state", "");
+    } else {
+      setPincodeStatus("found");
+      setValue("city", details.city, { shouldValidate: false });
+      setValue("state", details.state, { shouldValidate: false });
+    }
+  };
+
+  // ── Submit ─────────────────────────────────────────────────────────────────
 
   const onSubmit = async (data: LeadFormData) => {
     setStatus("loading");
     setErrorMsg("");
 
     try {
+      // Build location note to append to message
+      const locationParts = [
+        data.pincode && `Pincode: ${data.pincode}`,
+        data.city    && `City: ${data.city}`,
+        data.state   && `State: ${data.state}`,
+      ].filter(Boolean);
+      const locationNote = locationParts.length
+        ? `Location — ${locationParts.join(", ")}`
+        : "";
+      const fullMessage = [locationNote, data.message].filter(Boolean).join("\n\n");
+
       const supabase = createClient();
       const { error } = await supabase.from("leads").insert({
         full_name: data.full_name,
         phone: data.phone,
         email: data.email || null,
         service_interested: data.service_interested || null,
-        message: data.message || null,
+        message: fullMessage || null,
         source: data.source || null,
         status: "new",
       });
@@ -104,6 +159,7 @@ export default function LeadForm({
       if (error) throw error;
 
       setStatus("success");
+      setPincodeStatus("idle");
       reset();
     } catch (err) {
       console.error("Lead form error:", err);
@@ -172,12 +228,10 @@ export default function LeadForm({
             type="text"
             placeholder="Eg. Rajesh Kumar"
             {...register("full_name")}
-            className="w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2"
-            style={{
-              borderColor: errors.full_name ? "#ef4444" : "#e2e8f0",
-            }}
-            onFocus={(e) => (e.currentTarget.style.borderColor = "#1B3A6B")}
-            onBlur={(e) => (e.currentTarget.style.borderColor = errors.full_name ? "#ef4444" : "#e2e8f0")}
+            className={baseInput}
+            style={{ borderColor: errors.full_name ? borderError : borderDefault }}
+            onFocus={(e) => (e.currentTarget.style.borderColor = borderFocus)}
+            onBlur={(e) => (e.currentTarget.style.borderColor = errors.full_name ? borderError : borderDefault)}
           />
           {errors.full_name && (
             <p className="mt-1 text-xs text-red-500">{errors.full_name.message}</p>
@@ -192,7 +246,7 @@ export default function LeadForm({
           <div className="flex">
             <span
               className="flex items-center px-3 rounded-l-lg border border-r-0 text-sm text-gray-500 bg-gray-50"
-              style={{ borderColor: "#e2e8f0" }}
+              style={{ borderColor: borderDefault }}
             >
               +91
             </span>
@@ -202,9 +256,9 @@ export default function LeadForm({
               maxLength={10}
               {...register("phone")}
               className="flex-1 px-4 py-2.5 rounded-r-lg border text-sm outline-none transition-all"
-              style={{ borderColor: errors.phone ? "#ef4444" : "#e2e8f0" }}
-              onFocus={(e) => (e.currentTarget.style.borderColor = "#1B3A6B")}
-              onBlur={(e) => (e.currentTarget.style.borderColor = errors.phone ? "#ef4444" : "#e2e8f0")}
+              style={{ borderColor: errors.phone ? borderError : borderDefault }}
+              onFocus={(e) => (e.currentTarget.style.borderColor = borderFocus)}
+              onBlur={(e) => (e.currentTarget.style.borderColor = errors.phone ? borderError : borderDefault)}
             />
           </div>
           {errors.phone && (
@@ -222,14 +276,110 @@ export default function LeadForm({
             type="email"
             placeholder="you@example.com"
             {...register("email")}
-            className="w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-all"
-            style={{ borderColor: errors.email ? "#ef4444" : "#e2e8f0" }}
-            onFocus={(e) => (e.currentTarget.style.borderColor = "#1B3A6B")}
-            onBlur={(e) => (e.currentTarget.style.borderColor = errors.email ? "#ef4444" : "#e2e8f0")}
+            className={baseInput}
+            style={{ borderColor: errors.email ? borderError : borderDefault }}
+            onFocus={(e) => (e.currentTarget.style.borderColor = borderFocus)}
+            onBlur={(e) => (e.currentTarget.style.borderColor = errors.email ? borderError : borderDefault)}
           />
           {errors.email && (
             <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>
           )}
+        </div>
+
+        {/* ── Location row: Pincode → City + State ──────────────────────────── */}
+        <div className="space-y-3">
+
+          {/* Pincode */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              Pincode{" "}
+              <span className="text-xs text-gray-400 font-normal">(optional — auto-fills city &amp; state)</span>
+            </label>
+            <div className="relative">
+              <input
+                type="text"
+                inputMode="numeric"
+                placeholder="6-digit pincode"
+                maxLength={6}
+                {...register("pincode")}
+                onBlur={handlePincodeBlur}
+                className={baseInput}
+                style={{
+                  borderColor:
+                    pincodeStatus === "error" || errors.pincode
+                      ? borderError
+                      : pincodeStatus === "found"
+                      ? "#16a34a"
+                      : borderDefault,
+                  paddingRight: pincodeStatus !== "idle" ? "2.5rem" : undefined,
+                }}
+                onFocus={(e) => (e.currentTarget.style.borderColor = borderFocus)}
+              />
+              {/* Status icon inside pincode field */}
+              {pincodeStatus === "found" && (
+                <CheckCircle2
+                  className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4"
+                  style={{ color: "#16a34a" }}
+                />
+              )}
+              {pincodeStatus === "error" && !errors.pincode && (
+                <AlertCircle
+                  className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-red-400"
+                />
+              )}
+            </div>
+            {errors.pincode && (
+              <p className="mt-1 text-xs text-red-500">{errors.pincode.message}</p>
+            )}
+            {pincodeStatus === "error" && !errors.pincode && (
+              <p className="mt-1 text-xs text-red-500">
+                Invalid pincode. Please enter city &amp; state manually.
+              </p>
+            )}
+          </div>
+
+          {/* City + State in one row */}
+          <div className="grid grid-cols-2 gap-3">
+            {/* City — shows spinner while fetching */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                City
+              </label>
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="City"
+                  {...register("city")}
+                  className={baseInput}
+                  style={{ borderColor: borderDefault, paddingRight: pincodeStatus === "loading" ? "2.5rem" : undefined }}
+                  onFocus={(e) => (e.currentTarget.style.borderColor = borderFocus)}
+                  onBlur={(e) => (e.currentTarget.style.borderColor = borderDefault)}
+                />
+                {pincodeStatus === "loading" && (
+                  <Loader2
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 animate-spin"
+                    style={{ color: "#1B3A6B" }}
+                  />
+                )}
+              </div>
+            </div>
+
+            {/* State */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                State
+              </label>
+              <input
+                type="text"
+                placeholder="State"
+                {...register("state")}
+                className={baseInput}
+                style={{ borderColor: borderDefault }}
+                onFocus={(e) => (e.currentTarget.style.borderColor = borderFocus)}
+                onBlur={(e) => (e.currentTarget.style.borderColor = borderDefault)}
+              />
+            </div>
+          </div>
         </div>
 
         {/* Service Interested In */}
@@ -241,9 +391,9 @@ export default function LeadForm({
           <select
             {...register("service_interested")}
             className="w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-all bg-white"
-            style={{ borderColor: "#e2e8f0", color: "#374151" }}
-            onFocus={(e) => (e.currentTarget.style.borderColor = "#1B3A6B")}
-            onBlur={(e) => (e.currentTarget.style.borderColor = "#e2e8f0")}
+            style={{ borderColor: borderDefault, color: "#374151" }}
+            onFocus={(e) => (e.currentTarget.style.borderColor = borderFocus)}
+            onBlur={(e) => (e.currentTarget.style.borderColor = borderDefault)}
           >
             <option value="">Select a service...</option>
             {serviceOptions.map((group) => (
@@ -269,9 +419,9 @@ export default function LeadForm({
             placeholder="Brief description of what you need help with..."
             {...register("message")}
             className="w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-all resize-none"
-            style={{ borderColor: "#e2e8f0" }}
-            onFocus={(e) => (e.currentTarget.style.borderColor = "#1B3A6B")}
-            onBlur={(e) => (e.currentTarget.style.borderColor = "#e2e8f0")}
+            style={{ borderColor: borderDefault }}
+            onFocus={(e) => (e.currentTarget.style.borderColor = borderFocus)}
+            onBlur={(e) => (e.currentTarget.style.borderColor = borderDefault)}
           />
         </div>
 

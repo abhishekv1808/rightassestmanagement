@@ -199,15 +199,6 @@ export default function FinancialHubPage() {
                   className="group relative flex flex-col gap-3 p-5 rounded-2xl bg-white transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
                   style={{ border: "1px solid #E5E7EB" }}
                 >
-                  {/* Badge */}
-                  {card.badge && (
-                    <span
-                      className="absolute top-4 right-[4.5rem] text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full"
-                      style={{ backgroundColor: card.lightBg, color: card.color }}
-                    >
-                      {card.badge}
-                    </span>
-                  )}
 
                   {/* Title row */}
                   <div className="flex items-start justify-between gap-3">

@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import { SliderInput } from "@/components/tools/SliderInput";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -10,56 +11,6 @@ function fmtINR(n: number): string {
   if (n >= 10_000_000) return `₹${(n / 10_000_000).toFixed(2)} Cr`;
   if (n >= 100_000) return `₹${(n / 100_000).toFixed(2)} L`;
   return `₹${Math.round(n).toLocaleString("en-IN")}`;
-}
-
-function SliderInput({
-  label,
-  value,
-  onChange,
-  min,
-  max,
-  step,
-  display,
-  minLabel,
-  maxLabel,
-}: {
-  label: string;
-  value: number;
-  onChange: (v: number) => void;
-  min: number;
-  max: number;
-  step: number;
-  display: string;
-  minLabel: string;
-  maxLabel: string;
-}) {
-  return (
-    <div>
-      <div className="flex items-center justify-between mb-3">
-        <label className="text-sm font-medium" style={{ color: "#374151" }}>{label}</label>
-        <div
-          className="px-3 py-1.5 rounded-lg font-heading font-bold text-sm"
-          style={{ backgroundColor: "#EEF2F8", color: "#1B3A6B" }}
-        >
-          {display}
-        </div>
-      </div>
-      <input
-        type="range"
-        min={min}
-        max={max}
-        step={step}
-        value={value}
-        onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full h-2 rounded-full appearance-none cursor-pointer"
-        style={{ accentColor: "#C9A84C" }}
-      />
-      <div className="flex justify-between text-xs mt-1.5" style={{ color: "#9CA3AF" }}>
-        <span>{minLabel}</span>
-        <span>{maxLabel}</span>
-      </div>
-    </div>
-  );
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────

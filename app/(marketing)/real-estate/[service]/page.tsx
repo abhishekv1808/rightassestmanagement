@@ -15,6 +15,7 @@ import {
   allServices,
 } from "@/lib/services-data";
 import LeadForm from "@/components/forms/LeadForm";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export async function generateStaticParams() {
   return getServicesByVertical("real-estate").map((s) => ({ service: s.slug }));
@@ -50,6 +51,7 @@ export default async function RealEstateServicePage({
 
   return (
     <>
+      <ServiceSchema service={svc} />
       {/* ── Hero ──────────────────────────────────────────────────────── */}
       <div
         className="relative overflow-hidden"

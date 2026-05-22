@@ -15,7 +15,7 @@ export type Service = {
 };
 
 // ─────────────────────────────────────────────
-// FINANCIAL SERVICES (21 services)
+// FINANCIAL SERVICES (21 services)s
 // ─────────────────────────────────────────────
 
 const financialServices: Service[] = [

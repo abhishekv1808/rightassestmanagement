@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -8,6 +8,7 @@ import { Loader2, CheckCircle2, AlertCircle, MapPin } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 import { allServices } from "@/lib/services-data";
 import { getPincodeDetails } from "@/lib/api/pincode";
+import { trackLeadFormStart, trackLeadFormSubmit } from "@/lib/analytics";
 
 // ─── Schema ──────────────────────────────────────────────────────────────────
 
@@ -79,6 +80,9 @@ export default function LeadForm({
 }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+
+  // Analytics: track form interaction once per mount
+  const hasFocused = useRef(false);
 
   // Pincode lookup state
   const [pincodeStatus, setPincodeStatus] = useState<
@@ -158,6 +162,27 @@ export default function LeadForm({
 
       if (error) throw error;
 
+      // ── Analytics ────────────────────────────────────────────────────────────
+      trackLeadFormSubmit(data.service_interested);
+
+      // ── Email notification (fire-and-forget) ─────────────────────────────────
+      fetch("/api/notify-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          full_name: data.full_name,
+          phone: data.phone,
+          email: data.email || null,
+          service_interested: data.service_interested || null,
+          message: fullMessage || null,
+          source: data.source || null,
+          city: data.city || null,
+          state: data.state || null,
+        }),
+      }).catch(() => {
+        // Non-critical — ignore failures silently
+      });
+
       setStatus("success");
       setPincodeStatus("idle");
       reset();
@@ -230,7 +255,13 @@ export default function LeadForm({
             {...register("full_name")}
             className={baseInput}
             style={{ borderColor: errors.full_name ? borderError : borderDefault }}
-            onFocus={(e) => (e.currentTarget.style.borderColor = borderFocus)}
+            onFocus={(e) => {
+              e.currentTarget.style.borderColor = borderFocus;
+              if (!hasFocused.current) {
+                hasFocused.current = true;
+                trackLeadFormStart();
+              }
+            }}
             onBlur={(e) => (e.currentTarget.style.borderColor = errors.full_name ? borderError : borderDefault)}
           />
           {errors.full_name && (

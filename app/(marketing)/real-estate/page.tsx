@@ -53,8 +53,59 @@ const CARDS = [
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function RealEstateHubPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What real estate services does Right Asset Management provide in Bangalore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer 17+ real estate services in Bangalore including property buying/selling, sale deed drafting, rent agreements, E-Khatha, land conversion, building plan approval, encumbrance certificates, property registration, mutation, and more."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Right Asset Management help with property registration in Bangalore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we provide end-to-end property registration assistance in Bangalore — from document verification and stamp duty calculation to sub-registrar office coordination and final registration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does property registration take in Bangalore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Property registration in Bangalore typically takes 1–3 working days once all documents are in order. The sub-registrar appointment can be booked online via the Kaveri portal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is E-Khatha and do I need it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "E-Khatha is a digital property ownership document issued by BBMP (Bruhat Bengaluru Mahanagara Palike). It is mandatory for property tax payment and essential for property transactions in Bangalore."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What documents are required for property registration in Bangalore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Key documents include the original sale deed, encumbrance certificate, Khatha certificate, property tax receipts, identity proofs of buyer/seller, and the demand draft for stamp duty and registration fees."
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* ── Hero ──────────────────────────────────────────────────────── */}
       <div
         className="relative overflow-hidden"
@@ -129,25 +180,6 @@ export default function RealEstateHubPage() {
                 Explore All Services
               </a>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Stats strip ───────────────────────────────────────────────── */}
-      <div style={{ backgroundColor: "#C9A84C" }} className="py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-            {[
-              { value: "17", label: "Real Estate Services" },
-              { value: "BBMP", label: "BDA & SRO Expertise" },
-              { value: "100%", label: "End-to-End Support" },
-              { value: "Free", label: "First Consultation" },
-            ].map((s) => (
-              <div key={s.label}>
-                <p className="font-heading font-bold text-2xl" style={{ color: "#1B3A6B" }}>{s.value}</p>
-                <p className="text-xs font-medium" style={{ color: "rgba(27,58,107,0.75)" }}>{s.label}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>

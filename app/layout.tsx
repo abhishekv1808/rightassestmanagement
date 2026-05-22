@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -84,9 +85,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID ?? "";
+
   return (
     <html lang="en" className={`${dmSans.variable} ${jetbrainsMono.variable}`}>
-      <body>{children}</body>
+      <body suppressHydrationWarning>
+        {gaId && <GoogleAnalytics gaId={gaId} />}
+        {children}
+      </body>
     </html>
   );
 }

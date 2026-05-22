@@ -3,6 +3,10 @@ import Footer from "@/components/layout/Footer";
 import MarketTickerStrip from "@/components/widgets/MarketTickerStrip";
 import WhatsAppButton from "@/components/widgets/WhatsAppButton";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
+import CookieConsent from "@/components/ui/CookieConsent";
+import ExitIntentPopup from "@/components/ui/ExitIntentPopup";
+import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
+import SocialProofTicker from "@/components/ui/SocialProofTicker";
 
 export default function MarketingLayout({
   children,
@@ -18,6 +22,11 @@ export default function MarketingLayout({
       <main className="flex-1 flex flex-col">{children}</main>
       <Footer />
       <WhatsAppButton />
+      <CookieConsent />
+      {/* Conversion & engagement layer */}
+      <ExitIntentPopup />
+      <StickyMobileCTA />
+      <SocialProofTicker />
     </div>
   );
 }

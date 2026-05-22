@@ -37,8 +37,59 @@ const CARDS = [
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function LegalHubPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What legal services does Right Asset Management offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer legal advisory across 8 areas: property disputes, criminal case advisory, family law (divorce, maintenance), labour cases, insurance claim disputes, banking and financial cases, cyber crime, and consumer disputes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I file a cyber crime complaint in Bangalore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can file a cyber crime complaint at cybercrime.gov.in or call the national helpline 1930. Right Asset Management's legal advisors can guide you through the entire complaint process and documentation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Right Asset Management provide court representation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide legal advisory and connect you with experienced attorneys in Bangalore for court representation. Our role is to guide, prepare your case, and connect you with the right legal professionals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does legal advisory cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer a free initial consultation to understand your case. Fee structures depend on the complexity and type of legal matter — your advisor will provide transparent pricing before you engage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Right Asset Management help resolve property disputes without going to court?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we first explore alternative dispute resolution (ADR) options like mediation and arbitration which are faster and less expensive than court proceedings. Court action is recommended only when necessary."
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* ── Hero ──────────────────────────────────────────────────────── */}
       <div
         className="relative overflow-hidden"

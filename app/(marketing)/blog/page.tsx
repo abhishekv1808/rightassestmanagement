@@ -14,6 +14,7 @@ import {
   Search,
 } from "lucide-react";
 import { allBlogPosts, CATEGORY_META, type BlogPost } from "@/lib/blog-data";
+import NewsletterSignup from "@/components/ui/NewsletterSignup";
 
 // ─── Filter config ────────────────────────────────────────────────────────────
 
@@ -374,6 +375,9 @@ export default function BlogPage() {
             )}
         </div>
       </section>
+
+      {/* ── Newsletter Signup ─────────────────────────────────────────── */}
+      <NewsletterSignup />
 
       {/* ── CTA ───────────────────────────────────────────────────────── */}
       <section

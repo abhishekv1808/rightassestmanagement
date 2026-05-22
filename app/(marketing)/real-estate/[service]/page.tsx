@@ -16,6 +16,7 @@ import {
 } from "@/lib/services-data";
 import LeadForm from "@/components/forms/LeadForm";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import ServiceStickyBar from "@/components/service/ServiceStickyBar";
 
 export async function generateStaticParams() {
   return getServicesByVertical("real-estate").map((s) => ({ service: s.slug }));
@@ -332,6 +333,7 @@ export default async function RealEstateServicePage({
           </div>
         </section>
       )}
+      <ServiceStickyBar serviceName={svc.title} />
     </>
   );
 }

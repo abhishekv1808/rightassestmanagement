@@ -61,8 +61,59 @@ const CARDS = [
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function FinancialHubPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What financial services does Right Asset Management offer in Bangalore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Right Asset Management offers 21+ financial services including mutual fund SIP, health and life insurance, home loans, personal loans, equity investments, fixed deposits, tax planning, NPS, PPF, portfolio management, and more — all under one roof in Bangalore."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Right Asset Management SEBI registered?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Right Asset Management's advisors are SEBI-registered investment advisors, ensuring your investments are managed by qualified, regulated professionals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I start investing with Right Asset Management?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can book a free 30-minute consultation by calling us, WhatsApping, or filling the contact form on our website. Our advisor will assess your goals and recommend the right investment plan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum investment amount for mutual funds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can start a SIP (Systematic Investment Plan) with as little as ₹500 per month. There is no minimum for lump sum investments in most mutual fund schemes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Right Asset Management charge fees for financial advisory?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Initial consultations are completely free. Fee structures vary by service — your advisor will explain all charges transparently before you commit to any plan."
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* ── Hero ──────────────────────────────────────────────────────── */}
       <div
         className="relative overflow-hidden"
@@ -136,25 +187,6 @@ export default function FinancialHubPage() {
                 Explore All Services
               </a>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Stats strip ───────────────────────────────────────────────── */}
-      <div style={{ backgroundColor: "#C9A84C" }} className="py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-            {[
-              { value: "20+", label: "Financial Services" },
-              { value: "500+", label: "Clients Served" },
-              { value: "SEBI", label: "Registered Advisors" },
-              { value: "Free", label: "First Consultation" },
-            ].map((s) => (
-              <div key={s.label}>
-                <p className="font-heading font-bold text-2xl" style={{ color: "#1B3A6B" }}>{s.value}</p>
-                <p className="text-xs font-medium" style={{ color: "rgba(27,58,107,0.75)" }}>{s.label}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>

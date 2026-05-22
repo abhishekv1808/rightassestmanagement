@@ -18,6 +18,7 @@ import LeadForm from "@/components/forms/LeadForm";
 import MutualFundTable from "@/components/sections/MutualFundTable";
 import TopStocksWidget from "@/components/widgets/TopStocksWidget";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import ServiceStickyBar from "@/components/service/ServiceStickyBar";
 
 // ─── Static params (build all 21 pages at build time) ─────────────────────────
 
@@ -454,6 +455,7 @@ export default async function FinancialServicePage({
           </div>
         </section>
       )}
+      <ServiceStickyBar serviceName={svc.title} />
     </>
   );
 }

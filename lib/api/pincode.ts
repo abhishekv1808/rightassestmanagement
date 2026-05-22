@@ -1,54 +1,26 @@
-// India Post Pincode API — https://api.postalpincode.in
-
-export type PostOffice = {
-  Name: string;
-  BranchType: string;
-  DeliveryStatus: string;
-  Circle: string;
-  District: string;
-  Division: string;
-  Region: string;
-  Block: string;
-  State: string;
-  Country: string;
-  Pincode: string;
-};
-
-type PincodeAPIResponse = {
-  Message: string;
-  Status: string;
-  PostOffice: PostOffice[] | null;
-}[];
-
 export type PincodeDetails = {
-  city: string;       // district name — best proxy for city in Indian addresses
-  district: string;
+  city: string;
   state: string;
-  post_office: string;
 };
+
+// In-memory cache — avoids repeat network calls for the same pincode in a session
+const cache = new Map<string, PincodeDetails>();
 
 export async function getPincodeDetails(pincode: string): Promise<PincodeDetails | null> {
   if (!/^\d{6}$/.test(pincode)) return null;
 
+  if (cache.has(pincode)) return cache.get(pincode)!;
+
   try {
-    const res = await fetch(`https://api.postalpincode.in/pincode/${pincode}`, {
-      // Results are stable — cache aggressively on the client
-      next: { revalidate: 86400 },
-    });
+    const res = await fetch(`/api/pincode?code=${pincode}`);
     if (!res.ok) return null;
 
-    const data: PincodeAPIResponse = await res.json();
-    const record = data?.[0];
+    const data = await res.json();
+    if (data.error || !data.city || !data.state) return null;
 
-    if (record?.Status !== "Success" || !record.PostOffice?.length) return null;
-
-    const po = record.PostOffice[0];
-    return {
-      city: po.District,
-      district: po.District,
-      state: po.State,
-      post_office: po.Name,
-    };
+    const details: PincodeDetails = { city: data.city, state: data.state };
+    cache.set(pincode, details);
+    return details;
   } catch {
     return null;
   }

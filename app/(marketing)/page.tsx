@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import ImageGallerySlider from "@/components/sections/ImageGallerySlider";
 import MutualFundTicker from "@/components/sections/MutualFundTicker";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import StatsBar from "@/components/sections/StatsBar";
@@ -17,6 +18,7 @@ export default function HomePage() {
       <ServicesGrid />
       <StatsBar />
       <WhyRightAsset />
+      <ImageGallerySlider />
       <AllServicesSection />
       <section className="py-14 lg:py-20" style={{ backgroundColor: "#EEF2F8" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

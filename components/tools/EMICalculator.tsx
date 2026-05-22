@@ -539,8 +539,8 @@ export default function EMICalculator() {
                           <tr
                             key={row.month}
                             style={{
-                              backgroundColor: i % 2 === 0 ? "#FFFFFF" : "#FAFBFC",
-                              borderBottom: "1px solid #F1F5F9",
+                              backgroundColor: i % 2 === 0 ? "#F0FDF4" : "#E6F9EC",
+                              borderBottom: "1px solid #D1FAE5",
                             }}
                           >
                             <td className="px-5 py-2.5 text-xs" style={{ color: "#CBD5E1" }}>

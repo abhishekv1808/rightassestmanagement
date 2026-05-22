@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { allBlogPosts, CATEGORY_META } from "@/lib/blog-data";
 import { ExternalLink, Info } from "lucide-react";

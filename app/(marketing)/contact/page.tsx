@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SocialFollowBanner from "@/components/sections/SocialFollowBanner";
 import Link from "next/link";
 import {
   MapPin,
@@ -401,6 +402,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Social follow ───────────────────────────────────────────────── */}
+      <SocialFollowBanner />
 
       {/* ── What to expect ──────────────────────────────────────────────── */}
       <section className="py-16 bg-white">

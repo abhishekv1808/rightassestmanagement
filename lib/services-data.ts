@@ -1349,12 +1349,12 @@ const realEstateServices: Service[] = [
     tagline: "End-to-end property buying and selling assistance in Bangalore.",
     description: "Buying or selling property in Bangalore involves far more than finding the right price — it requires thorough due diligence, document verification, legal checks, and precise registration processes. Whether you are looking at a 2BHK apartment in Whitefield, a commercial space in Koramangala, or a residential plot in Yelahanka, every transaction carries legal and financial implications that must be handled correctly. Right Asset Management guides buyers and sellers through every stage of the property transaction, ensuring clean titles, fair valuations, and legally sound agreements. Our team conducts title searches, encumbrance checks, BBMP/BDA approval verifications, and khatha confirmations before any deal moves forward. We work with experienced sub-registrar office liaisons across Bangalore to make the registration process smooth and timely. Sellers benefit from our market pricing analysis, buyer network, and documentation preparation — so the property moves quickly and at the right value. For buyers, we perform comprehensive legal audits to ensure the property has no pending dues, disputes, or encumbrances. From Jayanagar to Hebbal, Electronic City to Indiranagar, our local expertise across Bangalore's diverse micro-markets helps you make confident, well-informed decisions. We handle stamp duty calculations (2% below ₹20L, 3% for ₹20L–₹35L, 5% above ₹35L plus 1% registration charge), draft all agreements, and coordinate the complete handover process.",
     whoIsItFor: [
-    "Homebuyers purchasing their first or second property in Bangalore",
-    "Investors looking to buy residential or commercial property for rental income or appreciation",
-    "Property owners wanting to sell their flat, plot, or commercial space quickly and legally",
-    "NRIs managing property transactions in Bangalore remotely",
-    "Families handling property transfer after inheritance or partition",
-    "Developers or builders acquiring land parcels for new projects"
+      "Homebuyers purchasing their first or second property in Bangalore",
+      "Investors looking to buy residential or commercial property for rental income or appreciation",
+      "Property owners wanting to sell their flat, plot, or commercial space quickly and legally",
+      "NRIs managing property transactions in Bangalore remotely",
+      "Families handling property transfer after inheritance or partition",
+      "Developers or builders acquiring land parcels for new projects"
     ],
     process: [
       { step: 1, title: "Initial Consultation & Requirement Mapping", description: "We understand your buying or selling goals — budget, location preferences, property type, timeline, and legal requirements — and assign a dedicated advisor." },
@@ -1366,23 +1366,23 @@ const realEstateServices: Service[] = [
       { step: 7, title: "Post-Registration Handover", description: "We assist with khatha transfer application, property tax name update at BBMP, and handover of all original documents to the buyer." }
     ],
     benefits: [
-    "Receive end-to-end support from property search or listing to final registration",
-    "Protect your investment with thorough legal due diligence before any payment",
-    "Save time with our established liaisons at Sub-Registrar offices across Bangalore",
-    "Avoid overpaying or underselling with accurate local market pricing analysis",
-    "Ensure all documents are legally sound and compliant with Karnataka registration laws",
-    "Get transparent stamp duty and cost breakdowns with zero hidden charges",
-    "Access our buyer and seller network for faster, hassle-free transactions"
+      "Receive end-to-end support from property search or listing to final registration",
+      "Protect your investment with thorough legal due diligence before any payment",
+      "Save time with our established liaisons at Sub-Registrar offices across Bangalore",
+      "Avoid overpaying or underselling with accurate local market pricing analysis",
+      "Ensure all documents are legally sound and compliant with Karnataka registration laws",
+      "Get transparent stamp duty and cost breakdowns with zero hidden charges",
+      "Access our buyer and seller network for faster, hassle-free transactions"
     ],
     documentsRequired: [
-    "Title deed / previous sale deed of the property",
-    "Encumbrance Certificate (EC) for minimum 13 years from Kaveri Online",
-    "Khatha certificate and khatha extract (A-Khatha for BBMP-approved properties)",
-    "Latest property tax paid receipt from BBMP",
-    "Approved building plan and occupancy/completion certificate",
-    "Identity and address proof of buyer and seller (Aadhaar, PAN)",
-    "Property valuation report or guidance value from Sub-Registrar",
-    "NOC from bank if property has an existing home loan"
+      "Title deed / previous sale deed of the property",
+      "Encumbrance Certificate (EC) for minimum 13 years from Kaveri Online",
+      "Khatha certificate and khatha extract (A-Khatha for BBMP-approved properties)",
+      "Latest property tax paid receipt from BBMP",
+      "Approved building plan and occupancy/completion certificate",
+      "Identity and address proof of buyer and seller (Aadhaar, PAN)",
+      "Property valuation report or guidance value from Sub-Registrar",
+      "NOC from bank if property has an existing home loan"
     ],
     faqs: [
       { question: "What is the stamp duty for buying property in Bangalore?", answer: "In Karnataka, stamp duty is 2% for properties valued below ₹20 lakh, 3% for ₹20 lakh to ₹35 lakh, and 5% for properties above ₹35 lakh. An additional 1% registration charge applies in all cases. These are calculated on the higher of the guideline value or actual sale consideration." },
@@ -1391,7 +1391,7 @@ const realEstateServices: Service[] = [
       { question: "Can NRIs buy property in Bangalore?", answer: "Yes, NRIs and PIOs can purchase residential and commercial properties in India, including Bangalore, under the Foreign Exchange Management Act (FEMA). There are restrictions on agricultural land. We assist NRIs with power of attorney arrangements, FEMA compliance, and complete remote transaction handling." },
       { question: "Is an Agreement to Sell legally binding?", answer: "Yes, a registered Agreement to Sell is a legally binding contract that establishes the seller's obligation to transfer property and the buyer's obligation to pay. It protects both parties if either defaults and forms the basis for the final sale deed." }
     ],
-    relatedServices: ["property-registration","sale-deed","property-valuation"],
+    relatedServices: ["property-registration", "sale-deed", "property-valuation"],
     metaTitle: "Buy & Sell Property in Bangalore | Right Asset Management",
     metaDescription: "Looking to buy or sell property in Bangalore? Right Asset Management provides end-to-end assistance from property search to registration.",
   },
@@ -1402,12 +1402,12 @@ const realEstateServices: Service[] = [
     tagline: "Legally sound sale deed and agreement drafting by experienced professionals.",
     description: "A sale deed is the most important legal document in any property transaction — it is the instrument through which ownership is officially and permanently transferred from the seller to the buyer. In Karnataka, a sale deed must be executed on non-judicial stamp paper of the appropriate value, signed by both parties in the presence of two witnesses, and registered at the jurisdictional Sub-Registrar office. Without a registered sale deed, no ownership transfer is legally recognized, regardless of any prior agreements or payments made. Right Asset Management drafts sale deeds that are legally precise, compliant with the Registration Act 1908 and the Indian Stamp Act, and tailored to the specific property — whether it is a flat in HSR Layout, a plot in Yelahanka New Town, or a commercial unit in Koramangala. We also draft the Agreement to Sell, which is the preliminary contract signed before the final sale deed, detailing the sale price, advance payment, timelines, and contingency clauses. Our legal team reviews every clause to protect your interests, whether you are a buyer or seller. We handle the complete documentation chain — from title deed verification and EC extraction to stamp paper procurement and Sub-Registrar appointment booking — ensuring the deed is executed accurately, on time, and without scope for future disputes.",
     whoIsItFor: [
-    "Buyers and sellers completing a residential or commercial property transaction in Bangalore",
-    "Property owners transferring ownership to family members or through a settlement deed",
-    "Builders and developers executing sale deeds with flat or plot purchasers",
-    "Individuals who signed an Agreement to Sell and are now ready to complete the final registration",
-    "NRIs transferring property ownership in Bangalore through a power of attorney holder",
-    "Anyone who needs a legally vetted, error-free sale deed drafted quickly"
+      "Buyers and sellers completing a residential or commercial property transaction in Bangalore",
+      "Property owners transferring ownership to family members or through a settlement deed",
+      "Builders and developers executing sale deeds with flat or plot purchasers",
+      "Individuals who signed an Agreement to Sell and are now ready to complete the final registration",
+      "NRIs transferring property ownership in Bangalore through a power of attorney holder",
+      "Anyone who needs a legally vetted, error-free sale deed drafted quickly"
     ],
     process: [
       { step: 1, title: "Document Collection & Review", description: "We collect the title documents, previous sale deeds, encumbrance certificate, khatha, and tax receipts to verify ownership history and identify any red flags before drafting." },
@@ -1419,22 +1419,22 @@ const realEstateServices: Service[] = [
       { step: 7, title: "Document Handover", description: "The registered sale deed is collected from the Sub-Registrar office (typically within 2–3 working days) and handed over to the buyer along with all original supporting documents." }
     ],
     benefits: [
-    "Receive a legally precise sale deed that protects both buyer and seller from future disputes",
-    "Avoid costly errors in property boundary descriptions, names, or consideration amounts",
-    "Save hours of Sub-Registrar office waiting time with our appointment management",
-    "Ensure full stamp duty compliance to prevent penalties or deed cancellation",
-    "Get both Agreement to Sell and Sale Deed handled under one professional team",
-    "Access post-registration khatha transfer assistance included in our service"
+      "Receive a legally precise sale deed that protects both buyer and seller from future disputes",
+      "Avoid costly errors in property boundary descriptions, names, or consideration amounts",
+      "Save hours of Sub-Registrar office waiting time with our appointment management",
+      "Ensure full stamp duty compliance to prevent penalties or deed cancellation",
+      "Get both Agreement to Sell and Sale Deed handled under one professional team",
+      "Access post-registration khatha transfer assistance included in our service"
     ],
     documentsRequired: [
-    "Original title deed and all previous sale deeds in the chain of title",
-    "Encumbrance Certificate (EC) from Kaveri Online for minimum 13 years",
-    "Khatha certificate and extract from BBMP or Gram Panchayat",
-    "Latest property tax paid receipt",
-    "Approved building plan or layout approval documents",
-    "Identity proof and PAN card of both buyer and seller",
-    "Passport-size photographs of buyer, seller, and witnesses",
-    "Bank NOC or foreclosure letter if existing loan is to be cleared at registration"
+      "Original title deed and all previous sale deeds in the chain of title",
+      "Encumbrance Certificate (EC) from Kaveri Online for minimum 13 years",
+      "Khatha certificate and extract from BBMP or Gram Panchayat",
+      "Latest property tax paid receipt",
+      "Approved building plan or layout approval documents",
+      "Identity proof and PAN card of both buyer and seller",
+      "Passport-size photographs of buyer, seller, and witnesses",
+      "Bank NOC or foreclosure letter if existing loan is to be cleared at registration"
     ],
     faqs: [
       { question: "What is the difference between an Agreement to Sell and a Sale Deed?", answer: "An Agreement to Sell is a preliminary contract that records the intent to sell — it outlines price, advance paid, and timelines but does not transfer ownership. A Sale Deed is the final, registered document that actually transfers ownership. Both are important, but only the registered sale deed creates legal title in the buyer's name." },
@@ -1443,7 +1443,7 @@ const realEstateServices: Service[] = [
       { question: "How long does it take to get the registered sale deed back after registration?", answer: "After registration at the Sub-Registrar office, the registered document is typically returned within 2–7 working days, depending on the office workload. We track the document return and collect it on your behalf if you are unavailable." },
       { question: "Is it mandatory to register an Agreement to Sell?", answer: "Under the Registration Act, an Agreement to Sell for immovable property above ₹100 is compulsorily registrable if it creates an interest in the property. While many people skip this, a registered Agreement to Sell gives you stronger legal protection and is recommended for high-value transactions." }
     ],
-    relatedServices: ["buy-sell","property-registration","rent-agreement"],
+    relatedServices: ["buy-sell", "property-registration", "rent-agreement"],
     metaTitle: "Sale Deed & Agreement to Sell in Bangalore | Right Asset Management",
     metaDescription: "Get professionally drafted sale deeds and agreements to sell in Bangalore. Right Asset Management ensures legally compliant property documentation.",
   },
@@ -1454,12 +1454,12 @@ const realEstateServices: Service[] = [
     tagline: "Legally binding rent agreements drafted and registered quickly.",
     description: "A properly drafted and registered rent agreement is the foundation of a safe landlord-tenant relationship in Bangalore. With Bangalore's rental market spanning furnished apartments in Indiranagar, PG accommodations near Electronic City, and commercial spaces in Whitefield and Koramangala, the terms of rental agreements vary widely — and so do the risks if agreements are poorly drafted or unregistered. In Karnataka, rent agreements for a period of 11 months or less are typically notarised, while agreements for 12 months or more must be registered at the Sub-Registrar office to be legally enforceable. Right Asset Management drafts rent agreements tailored to your specific situation — residential or commercial, short-term or long-term — covering rent, security deposit, maintenance responsibilities, lock-in periods, notice clauses, and eviction terms in clear, unambiguous language. We also ensure that both landlords and tenants understand their rights under the Karnataka Rent Control Act and the Model Tenancy Act. Our team assists with notarisation for short-term agreements and full Sub-Registrar registration for long-term leases. Whether you are a landlord managing multiple properties across Jayanagar and HSR Layout, or a tenant entering a new rental in Hebbal, our agreements protect your interests completely.",
     whoIsItFor: [
-    "Landlords renting out residential flats, independent houses, or villas in Bangalore",
-    "Commercial property owners leasing shops, offices, or warehouses to businesses",
-    "Tenants wanting a legally sound agreement that clearly defines their rights and deposit return terms",
-    "Paying guest (PG) operators formalising rental arrangements with multiple occupants",
-    "Companies renting residential accommodation for employees (corporate leases)",
-    "Property owners in Bangalore needing lease agreement renewal or revision"
+      "Landlords renting out residential flats, independent houses, or villas in Bangalore",
+      "Commercial property owners leasing shops, offices, or warehouses to businesses",
+      "Tenants wanting a legally sound agreement that clearly defines their rights and deposit return terms",
+      "Paying guest (PG) operators formalising rental arrangements with multiple occupants",
+      "Companies renting residential accommodation for employees (corporate leases)",
+      "Property owners in Bangalore needing lease agreement renewal or revision"
     ],
     process: [
       { step: 1, title: "Requirement Discussion", description: "We understand the type of property, rental period, monthly rent, security deposit amount, and any specific clauses both landlord and tenant want included in the agreement." },
@@ -1470,19 +1470,19 @@ const realEstateServices: Service[] = [
       { step: 6, title: "Execution & Handover", description: "Both parties sign the agreement in the presence of two witnesses (and before the Sub-Registrar for registered leases). Copies are provided to both landlord and tenant." }
     ],
     benefits: [
-    "Protect your security deposit and rental income with legally enforceable agreement terms",
-    "Avoid disputes over eviction, maintenance, and deposit deductions with clear contract clauses",
-    "Receive a customised agreement tailored to your property type and rental terms",
-    "Ensure compliance with Karnataka's rental laws and the Model Tenancy Act",
-    "Get both notarised and Sub-Registrar-registered agreements handled end to end",
-    "Save time with doorstep document collection and delivery options"
+      "Protect your security deposit and rental income with legally enforceable agreement terms",
+      "Avoid disputes over eviction, maintenance, and deposit deductions with clear contract clauses",
+      "Receive a customised agreement tailored to your property type and rental terms",
+      "Ensure compliance with Karnataka's rental laws and the Model Tenancy Act",
+      "Get both notarised and Sub-Registrar-registered agreements handled end to end",
+      "Save time with doorstep document collection and delivery options"
     ],
     documentsRequired: [
-    "Identity proof of landlord and tenant (Aadhaar card, PAN card)",
-    "Ownership proof of the property (sale deed or khatha extract in landlord's name)",
-    "Passport-size photographs of landlord and tenant",
-    "Electricity bill or water bill of the property for address verification",
-    "Previous rent agreement (for renewal cases)"
+      "Identity proof of landlord and tenant (Aadhaar card, PAN card)",
+      "Ownership proof of the property (sale deed or khatha extract in landlord's name)",
+      "Passport-size photographs of landlord and tenant",
+      "Electricity bill or water bill of the property for address verification",
+      "Previous rent agreement (for renewal cases)"
     ],
     faqs: [
       { question: "Why is an 11-month rent agreement so common in Bangalore?", answer: "An 11-month agreement avoids mandatory Sub-Registrar registration, which is required for leases of 12 months or more. This makes it faster and cheaper to execute. However, it also means landlords and tenants renew more frequently. For long-term rentals, a registered agreement provides stronger legal protection." },
@@ -1491,7 +1491,7 @@ const realEstateServices: Service[] = [
       { question: "Can a landlord evict a tenant during the lock-in period?", answer: "No. During the agreed lock-in period, neither party can unilaterally terminate the agreement without incurring the financial penalty specified in the contract. If a landlord attempts eviction during lock-in, the tenant can seek legal remedy. Our agreements clearly specify lock-in terms and consequences of breach." },
       { question: "What if the tenant refuses to vacate after the agreement expires?", answer: "If a tenant holds over after the agreement expires and refuses to vacate, the landlord can file for eviction under the Karnataka Rent Control Act or Civil Procedure Code. A registered rent agreement significantly strengthens the landlord's legal position in such proceedings." }
     ],
-    relatedServices: ["sale-deed","noc","property-registration"],
+    relatedServices: ["sale-deed", "noc", "property-registration"],
     metaTitle: "Rent Agreement Services in Bangalore | Right Asset Management",
     metaDescription: "Get legally valid rent agreements drafted and registered in Bangalore. Right Asset Management handles the complete rental documentation process.",
   },
@@ -1502,12 +1502,12 @@ const realEstateServices: Service[] = [
     tagline: "Get your E-Khatha certificate hassle-free in Bangalore.",
     description: "The E-Khatha is BBMP's (Bruhat Bengaluru Mahanagara Palike) digital property record that officially recognises a property owner in the municipal database and enables payment of property tax, application for building plan approval, and connection of utilities. Managed through the E-Aasthi portal, the E-Khatha replaces the manual khatha process and is now mandatory for all property transactions within BBMP limits. Understanding the distinction between A-Khatha and B-Khatha is critical: A-Khatha is issued to properties that comply with BBMP building regulations and have paid all dues — these properties can legally obtain building plan approvals and trade licences. B-Khatha, or the B-Register, covers properties that have not yet fully complied with BBMP norms, often older constructions or properties on converted land that have not gone through the regularisation process. Right Asset Management assists property owners across Bangalore — from Rajajinagar to Sarjapur Road — in checking their E-Khatha status on the E-Aasthi portal, applying for a fresh E-Khatha, transferring khatha after a property purchase, and upgrading from B-Khatha to A-Khatha through the BBMP regularisation scheme. Our team handles all paperwork, portal submissions, and BBMP follow-ups, saving you repeated visits to the BBMP zonal offices.",
     whoIsItFor: [
-    "New property buyers who need to transfer khatha into their name after purchase",
-    "Property owners whose properties still appear on the B-Register and want A-Khatha status",
-    "Builders and developers needing khatha for newly completed apartment complexes or layouts",
-    "Property owners applying for a home loan or selling their property who require current khatha",
-    "Inherited property owners who need to update khatha to reflect the new owner's name",
-    "Anyone who has not received their E-Khatha after BBMP's migration to the E-Aasthi system"
+      "New property buyers who need to transfer khatha into their name after purchase",
+      "Property owners whose properties still appear on the B-Register and want A-Khatha status",
+      "Builders and developers needing khatha for newly completed apartment complexes or layouts",
+      "Property owners applying for a home loan or selling their property who require current khatha",
+      "Inherited property owners who need to update khatha to reflect the new owner's name",
+      "Anyone who has not received their E-Khatha after BBMP's migration to the E-Aasthi system"
     ],
     process: [
       { step: 1, title: "E-Khatha Status Check", description: "We check the current status of your property on the BBMP E-Aasthi portal using your SAS application number, PID number, or property address to understand what type of khatha exists and what action is needed." },
@@ -1518,21 +1518,21 @@ const realEstateServices: Service[] = [
       { step: 6, title: "E-Khatha Certificate & Extract Delivery", description: "Once approved, we download the E-Khatha certificate and extract from the portal and deliver the documents to you. We also assist with updating property tax records to reflect the new owner." }
     ],
     benefits: [
-    "Secure your property's legal standing with BBMP for all future transactions and approvals",
-    "Upgrade from B-Khatha to A-Khatha to unlock building plan approval and loan eligibility",
-    "Save multiple BBMP office visits with our end-to-end application and follow-up service",
-    "Receive timely application submission that prevents delays in property sales or loan processing",
-    "Ensure accurate property records that protect against future municipal disputes",
-    "Access expert guidance on BBMP's E-Aasthi portal requirements and documentation standards"
+      "Secure your property's legal standing with BBMP for all future transactions and approvals",
+      "Upgrade from B-Khatha to A-Khatha to unlock building plan approval and loan eligibility",
+      "Save multiple BBMP office visits with our end-to-end application and follow-up service",
+      "Receive timely application submission that prevents delays in property sales or loan processing",
+      "Ensure accurate property records that protect against future municipal disputes",
+      "Access expert guidance on BBMP's E-Aasthi portal requirements and documentation standards"
     ],
     documentsRequired: [
-    "Registered sale deed or gift deed in the current owner's name",
-    "Latest property tax paid receipt (BBMP SAS receipt)",
-    "Encumbrance Certificate (EC) for the past 13 years from Kaveri Online",
-    "Possession certificate or occupancy certificate from builder (for apartments)",
-    "Approved building plan or layout approval document",
-    "Identity proof of the property owner (Aadhaar and PAN)",
-    "Death certificate and legal heir certificate (for inheritance-based transfers)"
+      "Registered sale deed or gift deed in the current owner's name",
+      "Latest property tax paid receipt (BBMP SAS receipt)",
+      "Encumbrance Certificate (EC) for the past 13 years from Kaveri Online",
+      "Possession certificate or occupancy certificate from builder (for apartments)",
+      "Approved building plan or layout approval document",
+      "Identity proof of the property owner (Aadhaar and PAN)",
+      "Death certificate and legal heir certificate (for inheritance-based transfers)"
     ],
     faqs: [
       { question: "What is the difference between A-Khatha and B-Khatha?", answer: "A-Khatha (BBMP 'A' Register) is issued to properties that are fully compliant with BBMP building regulations and have no dues. These properties can legally get building plan approvals, trade licences, and home loans. B-Khatha (B Register) covers non-compliant or partially regularised properties. B-Khatha properties cannot get building plan approvals but can pay property tax." },
@@ -1541,7 +1541,7 @@ const realEstateServices: Service[] = [
       { question: "What is the E-Aasthi portal?", answer: "E-Aasthi is BBMP's official online portal for all property-related services, including E-Khatha registration, transfer, and extraction. It replaced the manual khatha process and now digitally links property records to the SAS (Self-Assessment Scheme) property tax database, making records more transparent and accessible." },
       { question: "Is a khatha the same as a title document?", answer: "No. A khatha is a municipal record that identifies the owner for tax and service purposes — it is not a title document. Ownership title is established by the registered sale deed. However, a khatha is essential for property transactions, building plan approvals, and utility connections in Bangalore." }
     ],
-    relatedServices: ["property-tax","mutation","property-registration"],
+    relatedServices: ["property-tax", "mutation", "property-registration"],
     metaTitle: "E-Khatha Application in Bangalore | Right Asset Management",
     metaDescription: "Apply for E-Khatha or check your E-Khatha status in Bangalore with expert help from Right Asset Management. Fast, accurate, and reliable service.",
   },
@@ -1552,12 +1552,12 @@ const realEstateServices: Service[] = [
     tagline: "Convert agricultural land to residential use with expert guidance.",
     description: "Agricultural land in Karnataka cannot be used for residential, commercial, or industrial purposes without first obtaining a formal Land Conversion Order from the Deputy Commissioner (DC) under Section 95 of the Karnataka Land Revenue Act, 1964. This process, commonly called DC Conversion, is a prerequisite for anyone planning to build a house, develop a layout, or sell land for non-agricultural use. A large portion of Bangalore's peripheral areas — including parts of Yelahanka, Sarjapur, Devanahalli, Kengeri, and Attibele — consist of agricultural survey numbers that require conversion before development. Without a DC Conversion Order, construction on such land is illegal, banks will not finance its purchase, and BBMP or Gram Panchayat will not issue building plan approvals. Right Asset Management assists landowners and developers through the entire conversion process — from verifying land records on the Bhoomi portal and confirming land classification, to preparing the conversion application, coordinating with the Tahsildar and Revenue Inspector, and following up at the Deputy Commissioner's office. We also assist with the payment of conversion fees (based on land use category and zone) and ensure all conditions attached to the DC Order are complied with. Our deep familiarity with Karnataka's revenue administration makes us an effective partner in avoiding delays and rejections.",
     whoIsItFor: [
-    "Farmers or landowners in Bangalore's peripheral areas wanting to sell or develop their agricultural land",
-    "Real estate developers acquiring agricultural parcels for residential layout development",
-    "Individuals who have inherited agricultural land in Bangalore Rural or Ramanagara districts and wish to build on it",
-    "Investors who purchased agricultural land and now need conversion for legitimate non-agricultural use",
-    "Property owners in mixed-use areas where some survey numbers still carry agricultural classification",
-    "Anyone who has received a notice from revenue authorities for unauthorised construction on unconverted land"
+      "Farmers or landowners in Bangalore's peripheral areas wanting to sell or develop their agricultural land",
+      "Real estate developers acquiring agricultural parcels for residential layout development",
+      "Individuals who have inherited agricultural land in Bangalore Rural or Ramanagara districts and wish to build on it",
+      "Investors who purchased agricultural land and now need conversion for legitimate non-agricultural use",
+      "Property owners in mixed-use areas where some survey numbers still carry agricultural classification",
+      "Anyone who has received a notice from revenue authorities for unauthorised construction on unconverted land"
     ],
     process: [
       { step: 1, title: "Land Record Verification", description: "We check the RTC (Record of Rights, Tenancy and Crops) on the Bhoomi portal to confirm the current land classification, owner name, survey number, and whether the land is encumbrance-free and cultivation-free." },
@@ -1569,22 +1569,22 @@ const realEstateServices: Service[] = [
       { step: 7, title: "Mutation & Record Update", description: "After the DC Order is obtained, we assist with updating the Pahani/RTC to reflect the conversion, and coordinate with BBMP or BDA for further development approvals." }
     ],
     benefits: [
-    "Obtain a legally valid DC Conversion Order that unlocks the full development potential of your land",
-    "Prevent demolition notices and legal complications from building on unconverted agricultural land",
-    "Enable home loan financing by converting land to legally eligible residential category",
-    "Increase land value significantly by changing classification from agricultural to residential or commercial",
-    "Navigate the Karnataka Revenue Department process with expert guidance and fewer rejections",
-    "Save time with our established workflows at Tahsildar and Deputy Commissioner offices across Bangalore Rural and Urban districts"
+      "Obtain a legally valid DC Conversion Order that unlocks the full development potential of your land",
+      "Prevent demolition notices and legal complications from building on unconverted agricultural land",
+      "Enable home loan financing by converting land to legally eligible residential category",
+      "Increase land value significantly by changing classification from agricultural to residential or commercial",
+      "Navigate the Karnataka Revenue Department process with expert guidance and fewer rejections",
+      "Save time with our established workflows at Tahsildar and Deputy Commissioner offices across Bangalore Rural and Urban districts"
     ],
     documentsRequired: [
-    "RTC (Record of Rights, Tenancy and Crops) from Bhoomi portal",
-    "Survey sketch and pahani for the land parcel",
-    "Encumbrance Certificate (EC) for the land from Kaveri Online",
-    "Sale deed or title document proving ownership of the land",
-    "Identity and address proof of the landowner",
-    "Site plan showing boundaries and dimensions of the land",
-    "No Objection Certificate from Gram Panchayat or local authority (if applicable)",
-    "Caste certificate (if applicable for exemption from certain fees)"
+      "RTC (Record of Rights, Tenancy and Crops) from Bhoomi portal",
+      "Survey sketch and pahani for the land parcel",
+      "Encumbrance Certificate (EC) for the land from Kaveri Online",
+      "Sale deed or title document proving ownership of the land",
+      "Identity and address proof of the landowner",
+      "Site plan showing boundaries and dimensions of the land",
+      "No Objection Certificate from Gram Panchayat or local authority (if applicable)",
+      "Caste certificate (if applicable for exemption from certain fees)"
     ],
     faqs: [
       { question: "What is a DC Conversion Order in Karnataka?", answer: "A DC (Deputy Commissioner) Conversion Order is a formal permission granted under Section 95 of the Karnataka Land Revenue Act that allows agricultural land to be used for non-agricultural purposes such as residential, commercial, or industrial use. Without this order, any construction on agricultural land is legally unauthorised and subject to demolition." },
@@ -1593,7 +1593,7 @@ const realEstateServices: Service[] = [
       { question: "How long does the DC Conversion process take?", answer: "Under Karnataka government guidelines, the DC Conversion process should be completed within 90 days of application. However, in practice, it can take 3–6 months depending on the office workload, inspection scheduling, and whether additional queries are raised. We actively follow up to minimise delays." },
       { question: "What happens if construction is done before obtaining DC Conversion?", answer: "Constructing on agricultural land without a DC Conversion Order is illegal in Karnataka. Such constructions can receive demolition notices from the revenue department or local planning authority. BBMP and BDA regularly conduct drives in peripheral Bangalore areas. Regularisation of such structures, if at all possible, involves heavy penalty payments." }
     ],
-    relatedServices: ["building-plan","e-khatha","rtc-pahani"],
+    relatedServices: ["building-plan", "e-khatha", "rtc-pahani"],
     metaTitle: "Land Conversion Services in Bangalore | Right Asset Management",
     metaDescription: "Convert agricultural land to residential or commercial use in Bangalore with expert assistance from Right Asset Management.",
   },
@@ -1604,12 +1604,12 @@ const realEstateServices: Service[] = [
     tagline: "Navigate BBMP / BDA building plan approval with expert support.",
     description: "Before constructing any building in Bangalore — whether a residential house, apartment complex, commercial building, or industrial facility — you must obtain Building Plan Approval from the relevant planning authority. The authority depends on where your property is located: BBMP (Bruhat Bengaluru Mahanagara Palike) for properties within Bruhat Bengaluru limits, BDA (Bangalore Development Authority) for BDA-formed layouts and residential schemes, and BMRDA (Bangalore Metropolitan Region Development Authority) for properties in the peripheral metropolitan area outside BBMP jurisdiction. Without an approved building plan, your construction is illegal, cannot be insured or financed, will face demolition risk, and will not qualify for an Occupancy Certificate or khatha. Right Asset Management assists property owners, architects, and developers in preparing and submitting building plan applications that comply with the National Building Code, BBMP/BDA bye-laws, FAR (Floor Area Ratio) limits, setback requirements, and zoning regulations. Our team coordinates with licensed architects for plan preparation, handles all application filings, responds to technical queries from the planning authority, and tracks approvals. Whether you are building a single house in Jayanagar or a multi-storey apartment in Hebbal, we ensure your plan is compliant, submitted correctly, and approved on time.",
     whoIsItFor: [
-    "Individual homeowners planning to construct a new house on a residential plot in Bangalore",
-    "Developers building apartment complexes, commercial buildings, or mixed-use projects",
-    "Property owners seeking to add floors or extensions to an existing building (Modification Plans)",
-    "Architects and civil contractors who need a compliance partner for plan submission",
-    "Owners of properties with unapproved or lapsed building plans seeking regularisation",
-    "Industrial and warehouse developers needing approval from BMRDA for peripheral area projects"
+      "Individual homeowners planning to construct a new house on a residential plot in Bangalore",
+      "Developers building apartment complexes, commercial buildings, or mixed-use projects",
+      "Property owners seeking to add floors or extensions to an existing building (Modification Plans)",
+      "Architects and civil contractors who need a compliance partner for plan submission",
+      "Owners of properties with unapproved or lapsed building plans seeking regularisation",
+      "Industrial and warehouse developers needing approval from BMRDA for peripheral area projects"
     ],
     process: [
       { step: 1, title: "Site & Document Assessment", description: "We review your site plan, khatha, sale deed, DC Conversion Order (if applicable), and zoning details to identify the applicable authority and determine FAR, setback, and height restrictions for your plot." },
@@ -1621,22 +1621,22 @@ const realEstateServices: Service[] = [
       { step: 7, title: "Commencement Certificate & Completion Certificate Guidance", description: "We advise on the Commencement Certificate application before construction begins and guide you through the Occupancy/Completion Certificate process once construction is finished." }
     ],
     benefits: [
-    "Ensure your construction is fully legal and protected from demolition or sealing notices",
-    "Receive a technically compliant plan that satisfies BBMP/BDA bye-laws, FAR, and setback norms",
-    "Access our network of BBMP-empanelled architects for plan preparation",
-    "Avoid application rejections with pre-submission compliance review by our team",
-    "Track your application status and get regular updates without visiting BBMP offices",
-    "Secure eligibility for home loans, fire NOC, lift clearances, and OC with an approved plan"
+      "Ensure your construction is fully legal and protected from demolition or sealing notices",
+      "Receive a technically compliant plan that satisfies BBMP/BDA bye-laws, FAR, and setback norms",
+      "Access our network of BBMP-empanelled architects for plan preparation",
+      "Avoid application rejections with pre-submission compliance review by our team",
+      "Track your application status and get regular updates without visiting BBMP offices",
+      "Secure eligibility for home loans, fire NOC, lift clearances, and OC with an approved plan"
     ],
     documentsRequired: [
-    "Khatha certificate and extract from BBMP or relevant local body",
-    "Registered sale deed proving property ownership",
-    "Encumbrance Certificate (EC) from Kaveri Online",
-    "Property sketch or survey plan from the Survey Department",
-    "DC Conversion Order (for properties on converted agricultural land)",
-    "Structural drawings and architectural plans prepared by a licensed architect",
-    "Latest property tax paid receipt",
-    "NOC from electricity board, water supply board (if applicable for large projects)"
+      "Khatha certificate and extract from BBMP or relevant local body",
+      "Registered sale deed proving property ownership",
+      "Encumbrance Certificate (EC) from Kaveri Online",
+      "Property sketch or survey plan from the Survey Department",
+      "DC Conversion Order (for properties on converted agricultural land)",
+      "Structural drawings and architectural plans prepared by a licensed architect",
+      "Latest property tax paid receipt",
+      "NOC from electricity board, water supply board (if applicable for large projects)"
     ],
     faqs: [
       { question: "What is the FAR (Floor Area Ratio) for residential buildings in Bangalore?", answer: "FAR in Bangalore varies based on the road width in front of the property and the zone classification. For residential plots on roads of up to 9 metres width, the FAR is typically 1.75, while for roads of 12 metres and above it can go up to 2.25 or higher under BDA/BBMP bye-laws. Our team checks the exact FAR applicable to your plot before plan preparation." },
@@ -1645,7 +1645,7 @@ const realEstateServices: Service[] = [
       { question: "Can I get a building plan approved for an ongoing construction?", answer: "You must obtain building plan approval before starting construction, not during or after. If construction is already underway without approval, you risk demolition notices. In some cases, regularisation may be possible under BBMP's compounding scheme with penalty payment, but this is not guaranteed. Contact us to assess your specific situation." },
       { question: "Is a separate plan approval needed for adding a floor to an existing building?", answer: "Yes. Any addition or alteration to an existing structure — including adding a floor, extending a room, or making structural changes — requires a fresh building plan approval or a modification plan approval from BBMP/BDA. Proceeding without approval makes the additional construction illegal." }
     ],
-    relatedServices: ["land-conversion","e-khatha","noc"],
+    relatedServices: ["land-conversion", "e-khatha", "noc"],
     metaTitle: "Building Plan Approval in Bangalore | Right Asset Management",
     metaDescription: "Get your building plan approved by BBMP or BDA in Bangalore. Right Asset Management handles the complete approval process from start to finish.",
   },
@@ -1656,12 +1656,12 @@ const realEstateServices: Service[] = [
     tagline: "Obtain your EC quickly to verify clear property title.",
     description: "An Encumbrance Certificate (EC) is one of the most critical documents in any property transaction in Karnataka. It is an official record of all registered transactions and encumbrances — mortgages, loans, liens, sale deeds, gift deeds, or court attachments — recorded against a specific property over a given period. Issued by the Sub-Registrar office through the Kaveri Online Services portal, the EC reveals whether a property is free from financial and legal liabilities. Banks in Bangalore mandatorily require an EC before sanctioning a home loan or loan against property. Buyers, sellers, and lenders use the EC to verify the property's transactional history and ensure there are no hidden charges or undisclosed mortgage encumbrances. Right Asset Management extracts ECs for any registered property in Karnataka — flats, plots, commercial properties, agricultural land — for any time period required (typically 13–30 years for property transactions). We access the Kaveri Online portal and, where digital records are incomplete for older properties, visit the Sub-Registrar office to obtain physical EC extracts. Our team also interprets the EC for clients, explaining each transaction, identifying red flags, and advising on whether the property history is clean enough to proceed with a transaction. Whether you need an EC for a property in Sarjapur Road, Malleswaram, or on the outskirts of Bangalore like Hoskote, we can extract it efficiently.",
     whoIsItFor: [
-    "Home buyers performing due diligence before paying an advance on a property in Bangalore",
-    "Banks and housing finance companies verifying property history before loan disbursement",
-    "Property sellers who want to proactively demonstrate a clean title to prospective buyers",
-    "Individuals checking for any court attachments or third-party claims on inherited property",
-    "Lawyers and real estate attorneys conducting title searches for their clients",
-    "Property investors conducting portfolio-wide encumbrance checks on multiple assets"
+      "Home buyers performing due diligence before paying an advance on a property in Bangalore",
+      "Banks and housing finance companies verifying property history before loan disbursement",
+      "Property sellers who want to proactively demonstrate a clean title to prospective buyers",
+      "Individuals checking for any court attachments or third-party claims on inherited property",
+      "Lawyers and real estate attorneys conducting title searches for their clients",
+      "Property investors conducting portfolio-wide encumbrance checks on multiple assets"
     ],
     process: [
       { step: 1, title: "Property Details Collection", description: "We collect the survey number, property address, Sub-Registrar office jurisdiction, and the period for which the EC is required (typically 13, 15, or 30 years)." },
@@ -1672,19 +1672,19 @@ const realEstateServices: Service[] = [
       { step: 6, title: "Report & Document Delivery", description: "We deliver the EC along with a summary interpretation report. If encumbrances exist, we advise on the steps needed to obtain clearances or negotiate appropriate protections in the sale agreement." }
     ],
     benefits: [
-    "Verify the complete ownership history of a property before committing any funds",
-    "Identify undisclosed mortgages, loans, or court attachments on the property",
-    "Satisfy bank requirements for home loan or loan against property processing",
-    "Receive expert interpretation of complex EC entries — not just the raw document",
-    "Access both online Kaveri portal and physical Sub-Registrar office extraction capabilities",
-    "Obtain ECs for any property in Karnataka, not just Bangalore city limits"
+      "Verify the complete ownership history of a property before committing any funds",
+      "Identify undisclosed mortgages, loans, or court attachments on the property",
+      "Satisfy bank requirements for home loan or loan against property processing",
+      "Receive expert interpretation of complex EC entries — not just the raw document",
+      "Access both online Kaveri portal and physical Sub-Registrar office extraction capabilities",
+      "Obtain ECs for any property in Karnataka, not just Bangalore city limits"
     ],
     documentsRequired: [
-    "Property address and survey number or sub-division details",
-    "Name of current property owner",
-    "Previous sale deed or title document (helps in faster portal search)",
-    "Sub-Registrar office jurisdiction details",
-    "Period for which EC is required (number of years)"
+      "Property address and survey number or sub-division details",
+      "Name of current property owner",
+      "Previous sale deed or title document (helps in faster portal search)",
+      "Sub-Registrar office jurisdiction details",
+      "Period for which EC is required (number of years)"
     ],
     faqs: [
       { question: "What does 'nil encumbrance' mean in an EC?", answer: "A 'nil encumbrance' certificate means that no registered transactions — sale, mortgage, court attachment, or lien — have been recorded against the property in the Sub-Registrar's database for the specified period. This indicates a clean title history for that period, though it does not cover unregistered encumbrances or oral agreements." },
@@ -1693,7 +1693,7 @@ const realEstateServices: Service[] = [
       { question: "How long does it take to get an EC from the Kaveri portal?", answer: "For properties with complete digital records on Kaveri Online, an EC can typically be downloaded within 1–2 working days. For properties requiring physical extraction from Sub-Registrar records, it may take 3–7 working days depending on the office and volume of records to be searched." },
       { question: "What if the EC shows a bank mortgage that I was not told about?", answer: "If the EC reveals an existing bank mortgage or lien, the seller must clear it (obtain a loan foreclosure letter and registered mortgage release deed) before the property can be sold with a clean title. We advise buyers to withhold final payment until all encumbrances are cleared and the EC reflects a nil status for the liability period." }
     ],
-    relatedServices: ["property-registration","sale-deed","buy-sell"],
+    relatedServices: ["property-registration", "sale-deed", "buy-sell"],
     metaTitle: "Encumbrance Certificate (EC) in Bangalore | Right Asset Management",
     metaDescription: "Get your Encumbrance Certificate in Bangalore quickly. Right Asset Management helps verify clear property title through official EC extraction.",
   },
@@ -1704,12 +1704,12 @@ const realEstateServices: Service[] = [
     tagline: "Extract and verify RTC / Pahani land records in Karnataka.",
     description: "The RTC (Record of Rights, Tenancy and Crops), also known as the Pahani or Form 7/12 in common usage, is the fundamental land record document issued by the Karnataka Revenue Department for agricultural and rural land parcels. It records the survey number, land extent, owner's name, cultivation details, water source, nature of land use, and any encumbrances or government claims. For property transactions involving sites, plots, or any land in Karnataka that falls outside BBMP-formed layout areas, the RTC is an essential document for establishing ownership and land classification. The RTC is issued by the Village Accountant (Gram Panchayat level) and can be extracted online through the Bhoomi portal — Karnataka's digitised land records system managed by the Revenue Department. Right Asset Management assists property owners, buyers, legal professionals, and banks in obtaining RTCs for any survey number across Karnataka. Whether you need an RTC for a plot in Devanahalli, agricultural land in Tumkur Road, or a converted site near Anekal, our team can extract accurate, up-to-date records from the Bhoomi portal and the Bhoomi Kiosk network. We also assist with corrections to RTC entries — such as name corrections after a sale, adding or removing encumbrances, and updating cultivation details — through the appropriate revenue authorities.",
     whoIsItFor: [
-    "Agricultural landowners in Karnataka needing certified RTC extracts for transactions or legal purposes",
-    "Buyers of plots or sites in Bangalore's peripheral areas where land records are under Revenue Department jurisdiction",
-    "Banks and HFCs requiring RTC as part of home loan or agricultural loan documentation",
-    "Developers performing due diligence on large land parcels before acquisition",
-    "Individuals who have inherited agricultural land and need to update the RTC in their name",
-    "Legal professionals conducting revenue record searches for property litigation"
+      "Agricultural landowners in Karnataka needing certified RTC extracts for transactions or legal purposes",
+      "Buyers of plots or sites in Bangalore's peripheral areas where land records are under Revenue Department jurisdiction",
+      "Banks and HFCs requiring RTC as part of home loan or agricultural loan documentation",
+      "Developers performing due diligence on large land parcels before acquisition",
+      "Individuals who have inherited agricultural land and need to update the RTC in their name",
+      "Legal professionals conducting revenue record searches for property litigation"
     ],
     process: [
       { step: 1, title: "Survey Number & Jurisdiction Identification", description: "We identify the correct survey number, village, hobli, and taluk for your land parcel — essential for locating records in the Bhoomi database or at the correct Tahsildar office." },
@@ -1719,19 +1719,19 @@ const realEstateServices: Service[] = [
       { step: 5, title: "Correction Applications (if required)", description: "If the RTC shows errors in owner name, extent, or classification, we prepare and file the appropriate correction application with the Tahsildar or Revenue Inspector and follow up until the mutation order is passed and records are updated." }
     ],
     benefits: [
-    "Obtain accurate, up-to-date RTC records for any survey number in Karnataka",
-    "Receive expert interpretation of RTC columns, land classification, and encumbrances",
-    "Satisfy bank requirements for agricultural and property loan documentation",
-    "Identify encumbrances, government reservations, or tenancy entries before purchasing land",
-    "Get certified copies accepted by courts, banks, and government departments",
-    "Correct errors in Bhoomi records with our guided revenue office follow-up service"
+      "Obtain accurate, up-to-date RTC records for any survey number in Karnataka",
+      "Receive expert interpretation of RTC columns, land classification, and encumbrances",
+      "Satisfy bank requirements for agricultural and property loan documentation",
+      "Identify encumbrances, government reservations, or tenancy entries before purchasing land",
+      "Get certified copies accepted by courts, banks, and government departments",
+      "Correct errors in Bhoomi records with our guided revenue office follow-up service"
     ],
     documentsRequired: [
-    "Survey number and sub-division number of the land",
-    "Village, hobli, and taluk name where the land is located",
-    "Name of the current landowner as recorded in revenue records",
-    "Previous sale deed or title document for reference",
-    "Identity proof of the applicant (for certified copy requests)"
+      "Survey number and sub-division number of the land",
+      "Village, hobli, and taluk name where the land is located",
+      "Name of the current landowner as recorded in revenue records",
+      "Previous sale deed or title document for reference",
+      "Identity proof of the applicant (for certified copy requests)"
     ],
     faqs: [
       { question: "What is the difference between RTC and Pahani?", answer: "RTC (Record of Rights, Tenancy and Crops) and Pahani refer to essentially the same document — the primary agricultural land record in Karnataka. 'Pahani' is the common name used colloquially, while RTC is the official designation. It is similar to Form 7/12 in Maharashtra and records ownership, tenancy, and land use details for each survey number." },
@@ -1740,7 +1740,7 @@ const realEstateServices: Service[] = [
       { question: "How do I update the RTC after buying agricultural land?", answer: "After registering the sale deed for agricultural land, you must apply for Mutation at the Tahsildar office to update the RTC in the buyer's name. We assist with the mutation application and follow-up. Until mutation is completed, the seller's name continues to appear as owner in revenue records, which can create complications." },
       { question: "Is an RTC sufficient to prove ownership of a property?", answer: "The RTC establishes possession and identifies the revenue record holder, but it is not a title document on its own. Legal ownership is established by a combination of the registered sale deed and the updated RTC reflecting the current owner. Both documents together constitute strong evidence of ownership for agricultural or rural land." }
     ],
-    relatedServices: ["land-conversion","mutation","vamshavruksha"],
+    relatedServices: ["land-conversion", "mutation", "vamshavruksha"],
     metaTitle: "RTC / Pahani Records in Bangalore | Right Asset Management",
     metaDescription: "Extract RTC and Pahani land records in Karnataka with expert help. Right Asset Management verifies rural and urban land records accurately.",
   },
@@ -1751,12 +1751,12 @@ const realEstateServices: Service[] = [
     tagline: "Update ownership records after purchase or inheritance quickly.",
     description: "Property mutation is the process of updating government revenue and municipal records to reflect the current owner's name after a property has been purchased, inherited, gifted, or transferred through any legal instrument. In Bangalore, this involves two separate processes: BBMP Khatha Transfer (for properties within BBMP limits) and Revenue Mutation or Pahani Mutation (for agricultural or revenue land under the Revenue Department's jurisdiction). Neither process happens automatically after registration — the new owner must separately apply for mutation within the respective department. Failure to mutate means the property tax, water bills, and electricity connections continue to reflect the previous owner's name, creating complications during resale, loan applications, and utility transfers. Right Asset Management handles both types of mutation in Bangalore and Karnataka — BBMP khatha transfer through the E-Aasthi portal and revenue mutation (Hissaa Pahani/Mutation Register) through the Tahsildar and Revenue Inspector process. We assist clients who have purchased properties in areas like Whitefield, Sarjapur Road, and Electronic City that fall under varying jurisdictions. We also handle mutation for inherited properties, gift deeds, and court partition orders — situations where the underlying documents are more complex than a simple sale deed. Our team prepares all applications, coordinates inspections, responds to objections, and ensures the mutation order is passed and records are updated correctly.",
     whoIsItFor: [
-    "New property buyers in Bangalore who have registered the sale deed and need to update municipal or revenue records",
-    "Individuals who have inherited property and need to get the RTC or khatha transferred after the previous owner's death",
-    "Recipients of gift deeds or family settlement deeds requiring mutation to reflect the new ownership",
-    "Property owners whose mutation has been pending for an extended period due to departmental delays",
-    "Developers who have completed a project and need to mutate individual flat records into buyers' names",
-    "NRIs who have acquired property in Bangalore and need remote mutation assistance"
+      "New property buyers in Bangalore who have registered the sale deed and need to update municipal or revenue records",
+      "Individuals who have inherited property and need to get the RTC or khatha transferred after the previous owner's death",
+      "Recipients of gift deeds or family settlement deeds requiring mutation to reflect the new ownership",
+      "Property owners whose mutation has been pending for an extended period due to departmental delays",
+      "Developers who have completed a project and need to mutate individual flat records into buyers' names",
+      "NRIs who have acquired property in Bangalore and need remote mutation assistance"
     ],
     process: [
       { step: 1, title: "Identify Applicable Mutation Authority", description: "We determine whether the mutation is under BBMP jurisdiction (E-Khatha transfer via E-Aasthi portal) or Revenue Department jurisdiction (Tahsildar mutation under Karnataka Land Revenue Act), based on the property location and classification." },
@@ -1767,21 +1767,21 @@ const realEstateServices: Service[] = [
       { step: 6, title: "Mutation Order & Record Update", description: "Upon the Tahsildar passing a mutation order or BBMP approving the khatha transfer, we ensure the official records (RTC or BBMP property register) are updated and obtain certified copies for the new owner's records." }
     ],
     benefits: [
-    "Ensure government records officially recognise you as the legal property owner after purchase",
-    "Avoid complications in future resale, home loans, and property tax payments due to outdated records",
-    "Protect against fraudulent re-sale or claims by old owners when records are not updated",
-    "Handle both BBMP khatha mutation and Revenue Department mutation under one service",
-    "Receive faster processing with our established contacts at BBMP zonal offices and Tahsildar offices",
-    "Get complete documentation confirming mutation order for safe-keeping and future transactions"
+      "Ensure government records officially recognise you as the legal property owner after purchase",
+      "Avoid complications in future resale, home loans, and property tax payments due to outdated records",
+      "Protect against fraudulent re-sale or claims by old owners when records are not updated",
+      "Handle both BBMP khatha mutation and Revenue Department mutation under one service",
+      "Receive faster processing with our established contacts at BBMP zonal offices and Tahsildar offices",
+      "Get complete documentation confirming mutation order for safe-keeping and future transactions"
     ],
     documentsRequired: [
-    "Registered sale deed, gift deed, or court partition order",
-    "Previous owner's khatha certificate or RTC (as applicable)",
-    "Encumbrance Certificate (EC) from Kaveri Online",
-    "Latest property tax paid receipt",
-    "Death certificate and legal heir certificate (for inherited property)",
-    "Identity proof of the new owner (Aadhaar and PAN)",
-    "Affidavit declaring lawful ownership and no pending disputes"
+      "Registered sale deed, gift deed, or court partition order",
+      "Previous owner's khatha certificate or RTC (as applicable)",
+      "Encumbrance Certificate (EC) from Kaveri Online",
+      "Latest property tax paid receipt",
+      "Death certificate and legal heir certificate (for inherited property)",
+      "Identity proof of the new owner (Aadhaar and PAN)",
+      "Affidavit declaring lawful ownership and no pending disputes"
     ],
     faqs: [
       { question: "Is mutation the same as registration?", answer: "No. Registration (at the Sub-Registrar office) creates the legal title transfer through a registered sale deed. Mutation is a separate administrative process that updates the municipal (BBMP) or revenue (Tahsildar) records to reflect the new owner's name. Both are necessary — registration establishes legal title, mutation updates government records for tax and service purposes." },
@@ -1790,7 +1790,7 @@ const realEstateServices: Service[] = [
       { question: "Can mutation be done for properties purchased 10 years ago without updating records?", answer: "Yes. Mutation can be applied for even if the property was purchased years ago and records were never updated. You will need to present the original sale deed, old EC, and property tax receipts. There may be outstanding property tax dues in the previous owner's name that need to be settled first. We assess each case individually." },
       { question: "Is mutation sufficient to prove ownership?", answer: "Mutation alone is not proof of ownership — it is a revenue and municipal administrative record. Legal ownership is established by the registered sale deed. However, mutation is required for property tax payments, utility connections, and is an important supporting record in any legal proceeding related to the property." }
     ],
-    relatedServices: ["e-khatha","property-registration","rtc-pahani"],
+    relatedServices: ["e-khatha", "property-registration", "rtc-pahani"],
     metaTitle: "Property Mutation Services in Bangalore | Right Asset Management",
     metaDescription: "Get property mutation done quickly in Bangalore after purchase or inheritance. Right Asset Management handles all khatha transfer formalities.",
   },
@@ -1801,12 +1801,12 @@ const realEstateServices: Service[] = [
     tagline: "Get your Vamshavruksha for ancestral property and inheritance matters.",
     description: "A Vamshavruksha, literally meaning 'family tree' in Kannada, is an official genealogical document that records the lineage and family relationships of an individual tracing back through multiple generations. In Karnataka, this document is issued by the Nadakacheri (Government Service Centre) through the Atalji Janasnehi Kendra portal and is one of the most important documents for establishing lineal descent and identifying legal heirs in property matters. It is particularly relevant in Karnataka's rural and semi-urban areas — including many parts of Bangalore's outskirts — where ancestral agricultural land has been passed through generations without formal partition or registered succession documents. The Vamshavruksha is required when claiming ancestral property rights, applying for certain government schemes, seeking caste-based educational reservations, and resolving property disputes involving joint family or HUF (Hindu Undivided Family) assets. It is also increasingly used in cases where inherited properties in areas like Rajajinagar, Basavanagudi, and older Bangalore localities are being sold or partitioned and buyers need to verify the seller's claim to the entire property. Right Asset Management assists individuals in applying for Vamshavruksha through the Nadakacheri, gathering supporting documentation, navigating the Tahsildar verification process, and obtaining the certified family tree document that is accepted by courts, banks, and government offices.",
     whoIsItFor: [
-    "Individuals claiming inheritance or succession rights to ancestral property in Karnataka",
-    "Legal heirs who need to prove their relationship to a deceased property owner for mutation or transfer",
-    "Applicants for government schemes, OBC/SC/ST reservations, or educational benefits requiring lineage proof",
-    "Property buyers performing due diligence on inherited property to verify the seller's legal heirship",
-    "Partition suit litigants who need to establish all branch members of a joint family",
-    "NRIs with ancestral land in Karnataka needing formal lineage documentation for property transactions"
+      "Individuals claiming inheritance or succession rights to ancestral property in Karnataka",
+      "Legal heirs who need to prove their relationship to a deceased property owner for mutation or transfer",
+      "Applicants for government schemes, OBC/SC/ST reservations, or educational benefits requiring lineage proof",
+      "Property buyers performing due diligence on inherited property to verify the seller's legal heirship",
+      "Partition suit litigants who need to establish all branch members of a joint family",
+      "NRIs with ancestral land in Karnataka needing formal lineage documentation for property transactions"
     ],
     process: [
       { step: 1, title: "Family Information Collection", description: "We collect comprehensive family information — names, relationships, dates of birth, and any existing documentary proof for each family member to be included in the Vamshavruksha." },
@@ -1817,21 +1817,21 @@ const realEstateServices: Service[] = [
       { step: 6, title: "Certified Document Delivery", description: "We collect the issued Vamshavruksha and deliver the certified document to you. For property transactions, we also advise on how to present the Vamshavruksha along with other title documents." }
     ],
     benefits: [
-    "Establish legally recognised lineage and heirship for property and government claims",
-    "Obtain a Tahsildar-certified document accepted by courts, banks, and registration authorities",
-    "Navigate the complex Nadakacheri and revenue verification process with expert guidance",
-    "Resolve heirship ambiguities that could otherwise block property sales or loan applications",
-    "Support partition suits or family property settlement with authentic genealogical documentation",
-    "Prevent delays in property inheritance transactions through timely Vamshavruksha procurement"
+      "Establish legally recognised lineage and heirship for property and government claims",
+      "Obtain a Tahsildar-certified document accepted by courts, banks, and registration authorities",
+      "Navigate the complex Nadakacheri and revenue verification process with expert guidance",
+      "Resolve heirship ambiguities that could otherwise block property sales or loan applications",
+      "Support partition suits or family property settlement with authentic genealogical documentation",
+      "Prevent delays in property inheritance transactions through timely Vamshavruksha procurement"
     ],
     documentsRequired: [
-    "Identity proof of the applicant (Aadhaar card)",
-    "Ration card showing family members (older ration cards with names are valuable)",
-    "Birth certificates of family members (if available)",
-    "School Transfer Certificates showing father's/mother's name",
-    "Previous land records or RTC showing ancestral ownership",
-    "Death certificates of deceased family members in the lineage",
-    "Affidavit declaring the family tree details as accurate"
+      "Identity proof of the applicant (Aadhaar card)",
+      "Ration card showing family members (older ration cards with names are valuable)",
+      "Birth certificates of family members (if available)",
+      "School Transfer Certificates showing father's/mother's name",
+      "Previous land records or RTC showing ancestral ownership",
+      "Death certificates of deceased family members in the lineage",
+      "Affidavit declaring the family tree details as accurate"
     ],
     faqs: [
       { question: "What is a Vamshavruksha used for in property matters?", answer: "In property matters, a Vamshavruksha is used to establish who the legal heirs of a deceased property owner are, particularly when there is no registered will. It is essential for khatha transfer or RTC mutation in the name of heirs, for partition of ancestral property, and as supporting evidence in court proceedings related to property disputes." },
@@ -1840,7 +1840,7 @@ const realEstateServices: Service[] = [
       { question: "Is a Vamshavruksha the same as a legal heir certificate?", answer: "They serve overlapping purposes but are different documents. A Legal Heir Certificate (issued by Tahsildar) lists the immediate legal heirs of a deceased person. A Vamshavruksha is a more comprehensive genealogical family tree going back multiple generations. For complex ancestral property claims, both documents may be required, and we assist with both." },
       { question: "Can Vamshavruksha be obtained for urban families in Bangalore city?", answer: "Yes, though the process is easier for rural areas with clear revenue records. For urban families in Bangalore, the Tahsildar will rely on municipal records, ration cards, birth certificates, and an enquiry by the local revenue staff. The process works well for older Bangalore families with documentary records — we guide you on what documentation to gather." }
     ],
-    relatedServices: ["rtc-pahani","mutation","property-registration"],
+    relatedServices: ["rtc-pahani", "mutation", "property-registration"],
     metaTitle: "Vamshavruksha Document in Bangalore | Right Asset Management",
     metaDescription: "Obtain your Vamshavruksha family tree document in Bangalore for ancestral property claims. Right Asset Management assists with the complete process.",
   },
@@ -1851,12 +1851,12 @@ const realEstateServices: Service[] = [
     tagline: "Accurate property valuation for buying, selling, or loan purposes.",
     description: "Accurate property valuation is essential for making informed decisions in buying, selling, mortgaging, or insuring property in Bangalore. The value of a property is influenced by location, infrastructure connectivity, floor level, construction quality, legal status, and current market demand — all factors that vary significantly across Bangalore's micro-markets. A flat in Indiranagar commands dramatically different per-square-foot values compared to Yelahanka or Anekal, and even within the same locality, road-facing versus interior properties, BBMP-approved versus unapproved buildings, and newer versus older constructions all carry distinct value implications. Right Asset Management provides professional property valuation services for residential, commercial, and industrial properties across Bangalore. Our valuations are prepared by certified valuers with expertise in Karnataka's property market and are accepted by banks, insurance companies, courts, and government departments. We cover two types of valuation: Market Value Assessment (the realistic price you can expect in the current market) and Guideline Value / Government Value (the minimum value set by the Karnataka government for stamp duty calculation). Whether you need a valuation for home loan processing at a bank, for an insurance claim, for family partition settlement, or to make a confident buying or selling decision, Right Asset Management delivers a detailed, credible, and defensible valuation report.",
     whoIsItFor: [
-    "Home loan applicants whose bank requires a certified valuation report before loan sanction",
-    "Property sellers who want to determine the right asking price before listing",
-    "Buyers who want an independent valuation to negotiate a fair purchase price",
-    "Legal heirs needing property valuation for partition, estate settlement, or capital gains computation",
-    "Commercial property owners seeking valuation for lease negotiations or balance sheet accounting",
-    "NRIs requiring certified valuation for property sale, gift deed, or FEMA compliance purposes"
+      "Home loan applicants whose bank requires a certified valuation report before loan sanction",
+      "Property sellers who want to determine the right asking price before listing",
+      "Buyers who want an independent valuation to negotiate a fair purchase price",
+      "Legal heirs needing property valuation for partition, estate settlement, or capital gains computation",
+      "Commercial property owners seeking valuation for lease negotiations or balance sheet accounting",
+      "NRIs requiring certified valuation for property sale, gift deed, or FEMA compliance purposes"
     ],
     process: [
       { step: 1, title: "Property Information Collection", description: "We collect the property address, type, age of construction, built-up and plot areas, current usage, ownership documents, and any existing valuation reports or bank appraisals." },
@@ -1867,21 +1867,21 @@ const realEstateServices: Service[] = [
       { step: 6, title: "Report Delivery & Consultation", description: "The certified valuation report is delivered with a detailed explanation of the valuation methodology. We advise on using the report for loan applications, negotiations, or legal proceedings as appropriate." }
     ],
     benefits: [
-    "Receive a certified valuation report accepted by banks, courts, and insurance companies",
-    "Make informed buying and selling decisions with data-backed market value assessment",
-    "Support fair partition and estate settlement with an independent professional valuation",
-    "Accelerate home loan processing with a bank-compliant valuation report",
-    "Identify the gap between government guideline value and actual market value for transaction planning",
-    "Access valuations for all property types — residential, commercial, industrial, and agricultural land"
+      "Receive a certified valuation report accepted by banks, courts, and insurance companies",
+      "Make informed buying and selling decisions with data-backed market value assessment",
+      "Support fair partition and estate settlement with an independent professional valuation",
+      "Accelerate home loan processing with a bank-compliant valuation report",
+      "Identify the gap between government guideline value and actual market value for transaction planning",
+      "Access valuations for all property types — residential, commercial, industrial, and agricultural land"
     ],
     documentsRequired: [
-    "Registered sale deed or title document of the property",
-    "Approved building plan (for constructed properties)",
-    "Khatha certificate or RTC extract",
-    "Latest property tax paid receipt",
-    "Occupancy certificate or completion certificate (for apartments)",
-    "Floor plan of the constructed building",
-    "Bank's valuation request letter (if valuation is for loan purposes)"
+      "Registered sale deed or title document of the property",
+      "Approved building plan (for constructed properties)",
+      "Khatha certificate or RTC extract",
+      "Latest property tax paid receipt",
+      "Occupancy certificate or completion certificate (for apartments)",
+      "Floor plan of the constructed building",
+      "Bank's valuation request letter (if valuation is for loan purposes)"
     ],
     faqs: [
       { question: "What is the difference between market value and guideline value?", answer: "Market value is the realistic price at which a property can be sold between a willing buyer and seller in the current market. Guideline value (circle rate) is the minimum value set by the Karnataka government for each locality, used as the basis for stamp duty calculation. Market value is often higher than guideline value in prime Bangalore areas but can be lower in emerging or peripheral areas." },
@@ -1890,7 +1890,7 @@ const realEstateServices: Service[] = [
       { question: "Can property valuation be used in a court dispute?", answer: "Yes. A certified valuation report prepared by a registered valuer is admissible as expert evidence in court proceedings related to property disputes, partition suits, and matrimonial property settlement. The valuer may also be called as an expert witness to explain the methodology." },
       { question: "How often should I get my property revalued?", answer: "For property tax purposes, BBMP revises guideline values periodically. For investment or insurance purposes, revaluation every 2–3 years is recommended in a dynamic market like Bangalore. For specific transactions (sale, loan, partition), always get a fresh valuation as values can shift significantly in a short period." }
     ],
-    relatedServices: ["buy-sell","home-loan-property","property-registration"],
+    relatedServices: ["buy-sell", "home-loan-property", "property-registration"],
     metaTitle: "Property Valuation Services in Bangalore | Right Asset Management",
     metaDescription: "Get accurate property valuation in Bangalore for buying, selling, loans, or legal purposes. Right Asset Management provides certified valuation reports.",
   },
@@ -1901,12 +1901,12 @@ const realEstateServices: Service[] = [
     tagline: "Pay and manage your BBMP property tax without the hassle.",
     description: "Property tax in Bangalore is administered by BBMP (Bruhat Bengaluru Mahanagara Palike) under the Self-Assessment Scheme (SAS), which requires property owners to self-declare their property details and pay tax annually. The tax is calculated based on the Unit Area Value (UAV) system, which uses the property's built-up area, location zone (A to E in BBMP's zone classification), age of the building, and usage type (residential vs commercial). Unpaid property tax accrues interest and penalties, and can result in property attachment in extreme cases. When buying or selling property in Bangalore, clearing all outstanding property tax and obtaining a No Objection Certificate from BBMP for tax clearance is a mandatory step before registration. Right Asset Management helps property owners across Bangalore — whether in premium zones like Koramangala and Jayanagar or emerging areas like Yelahanka and Hebbal — with property tax computation and payment, correction of property tax records (zone, usage type, area discrepancies), name transfer after property purchase, bifurcation or consolidation of property tax accounts, and obtaining tax clearance certificates. We also assist with property tax assessment under BBMP's Akrama-Sakrama scheme for properties that were irregularly constructed and are now being regularised. Our service ensures your property tax account is accurate, up to date, and compliant.",
     whoIsItFor: [
-    "Property owners with unpaid or lapsed property tax dues who need to clear arrears and penalties",
-    "New buyers who need to transfer property tax records into their name after purchasing a property",
-    "Property owners who believe their property tax is overassessed due to incorrect zone or area classification",
-    "Sellers who need a tax clearance certificate (NOC from BBMP) before property registration",
-    "Landlords and investors managing multiple properties who want consolidated tax payment assistance",
-    "Property owners whose records were incorrectly bifurcated or merged during the BBMP SAS digitalisation"
+      "Property owners with unpaid or lapsed property tax dues who need to clear arrears and penalties",
+      "New buyers who need to transfer property tax records into their name after purchasing a property",
+      "Property owners who believe their property tax is overassessed due to incorrect zone or area classification",
+      "Sellers who need a tax clearance certificate (NOC from BBMP) before property registration",
+      "Landlords and investors managing multiple properties who want consolidated tax payment assistance",
+      "Property owners whose records were incorrectly bifurcated or merged during the BBMP SAS digitalisation"
     ],
     process: [
       { step: 1, title: "Property Identification & Records Check", description: "We access the BBMP property tax portal using the SAS Application Number, PID (Property Identification Number), or property address to retrieve the current tax assessment and dues status." },
@@ -1917,20 +1917,20 @@ const realEstateServices: Service[] = [
       { step: 6, title: "Tax Clearance Certificate", description: "We obtain the BBMP tax clearance certificate (showing all dues as paid) required for property registration, khatha transfer, and sale deed execution." }
     ],
     benefits: [
-    "Clear accumulated property tax arrears and penalties before they escalate further",
-    "Ensure your property tax assessment correctly reflects your property's actual zone and area",
-    "Receive support for transferring property tax records after a property purchase",
-    "Obtain BBMP tax clearance certificate quickly for uninterrupted property transaction processing",
-    "Avoid future complications in property sales, loans, and khatha applications due to tax dues",
-    "Access assistance for all BBMP property tax matters — from computation to record correction"
+      "Clear accumulated property tax arrears and penalties before they escalate further",
+      "Ensure your property tax assessment correctly reflects your property's actual zone and area",
+      "Receive support for transferring property tax records after a property purchase",
+      "Obtain BBMP tax clearance certificate quickly for uninterrupted property transaction processing",
+      "Avoid future complications in property sales, loans, and khatha applications due to tax dues",
+      "Access assistance for all BBMP property tax matters — from computation to record correction"
     ],
     documentsRequired: [
-    "BBMP SAS Application Number or PID (Property Identification Number)",
-    "Registered sale deed or ownership proof",
-    "Previous property tax paid receipts",
-    "Khatha certificate (for name transfer applications)",
-    "Identity proof of the property owner",
-    "Approved building plan (for area verification in tax disputes)"
+      "BBMP SAS Application Number or PID (Property Identification Number)",
+      "Registered sale deed or ownership proof",
+      "Previous property tax paid receipts",
+      "Khatha certificate (for name transfer applications)",
+      "Identity proof of the property owner",
+      "Approved building plan (for area verification in tax disputes)"
     ],
     faqs: [
       { question: "How is BBMP property tax calculated in Bangalore?", answer: "BBMP property tax is calculated using the Unit Area Value (UAV) system: Annual Property Tax = (Built-up Area × UAV per sq.ft. × Age Factor × 20%) + applicable cess. The UAV per square foot depends on the BBMP zone (A being highest — areas like Koramangala, Indiranagar; E being lowest for peripheral areas). Residential properties get a 50% exemption on the taxable value." },
@@ -1939,7 +1939,7 @@ const realEstateServices: Service[] = [
       { question: "What happens if property tax is not paid for many years?", answer: "Unpaid BBMP property tax accumulates with 2% monthly interest. BBMP can issue demand notices, attach movable property, and in serious cases, attach and sell the immovable property to recover dues. Most importantly, outstanding tax dues block property sales (sellers cannot register the deed without a clearance certificate) and khatha applications." },
       { question: "My property has been wrongly assessed as commercial — how do I correct it?", answer: "You must file a revision petition with the BBMP Assistant Revenue Officer (ARO) of your ward, along with the registered sale deed, approved building plan, and a self-declaration of usage. The ARO inspects the property and revises the assessment if the usage classification is incorrect. We prepare and present the complete correction application." }
     ],
-    relatedServices: ["e-khatha","mutation","noc"],
+    relatedServices: ["e-khatha", "mutation", "noc"],
     metaTitle: "Property Tax Services in Bangalore | Right Asset Management",
     metaDescription: "Get help with BBMP property tax payment, objections, and corrections in Bangalore. Right Asset Management simplifies property tax compliance.",
   },
@@ -1950,12 +1950,12 @@ const realEstateServices: Service[] = [
     tagline: "Obtain No Objection Certificates for property transactions quickly.",
     description: "A No Objection Certificate (NOC) for property is an official written declaration from a relevant authority or entity stating that they have no objection to a specific action related to the property — such as sale, development, change of use, or transfer. In Bangalore's property ecosystem, NOCs are required from multiple authorities and stakeholders at different stages of property transactions and development. Common NOC requirements include: NOC from the lending bank when selling a mortgaged property (certifying the loan has been repaid), NOC from BBMP or BDA for property tax clearance before registration, NOC from the society or RWA (Resident Welfare Association) for apartment sales, NOC from BESCOM (electricity board) and BWSSB (water board) for new construction, and NOC from the Airport Authority of India for properties in height-restricted zones near Kempegowda International Airport. Obtaining the right NOCs at the right time is critical to ensuring property transactions are not stalled or invalidated. Right Asset Management identifies which NOCs are required for your specific property and transaction type, coordinates with the relevant authorities across Bangalore, and obtains all clearances efficiently. Our experience with BBMP, BDA, BESCOM, BWSSB, and private bank NOC processes means we can navigate each system without delays, keeping your property transaction on track.",
     whoIsItFor: [
-    "Property sellers who have an existing home loan and need a bank NOC before executing the sale deed",
-    "Apartment owners in cooperative housing societies or RWA-governed complexes needing society NOC for sale",
-    "Builders and developers who need BESCOM, BWSSB, and fire department NOCs for building plan approval",
-    "Property owners near Kempegowda International Airport who need AAI height clearance NOC",
-    "Commercial property owners changing the use of their property and needing municipal NOC",
-    "Property owners redeveloping or adding floors who need structural and planning authority NOCs"
+      "Property sellers who have an existing home loan and need a bank NOC before executing the sale deed",
+      "Apartment owners in cooperative housing societies or RWA-governed complexes needing society NOC for sale",
+      "Builders and developers who need BESCOM, BWSSB, and fire department NOCs for building plan approval",
+      "Property owners near Kempegowda International Airport who need AAI height clearance NOC",
+      "Commercial property owners changing the use of their property and needing municipal NOC",
+      "Property owners redeveloping or adding floors who need structural and planning authority NOCs"
     ],
     process: [
       { step: 1, title: "NOC Requirement Identification", description: "We analyse your property transaction or development plan to identify exactly which NOCs are required — bank, BBMP, society, BESCOM, BWSSB, AAI, fire department, or others — based on the property type, location, and intended action." },
@@ -1966,21 +1966,21 @@ const realEstateServices: Service[] = [
       { step: 6, title: "AAI / Height Clearance NOC (if applicable)", description: "For properties within the height restriction zones of Kempegowda International Airport (applicable to large parts of North Bangalore including Yelahanka, Hebbal, Devanahalli), we apply to the Airport Authority of India for height clearance NOC through the online portal." }
     ],
     benefits: [
-    "Obtain all required NOCs through a single coordinated service, saving time and preventing missed clearances",
-    "Prevent property transaction delays caused by last-minute NOC requirements at the Sub-Registrar office",
-    "Ensure full compliance with all authority requirements for property development and sale",
-    "Receive expert guidance on which specific NOCs apply to your property and transaction",
-    "Access established relationships with BBMP, BDA, BESCOM, BWSSB, and housing society management offices",
-    "Protect the buyer in a transaction by ensuring all clearances are documented and transferred"
+      "Obtain all required NOCs through a single coordinated service, saving time and preventing missed clearances",
+      "Prevent property transaction delays caused by last-minute NOC requirements at the Sub-Registrar office",
+      "Ensure full compliance with all authority requirements for property development and sale",
+      "Receive expert guidance on which specific NOCs apply to your property and transaction",
+      "Access established relationships with BBMP, BDA, BESCOM, BWSSB, and housing society management offices",
+      "Protect the buyer in a transaction by ensuring all clearances are documented and transferred"
     ],
     documentsRequired: [
-    "Registered sale deed or ownership documents",
-    "Latest property tax paid receipt (BBMP SAS)",
-    "Loan account statement and foreclosure request letter (for bank NOC)",
-    "Society share certificate and maintenance paid receipts (for society NOC)",
-    "BESCOM consumer account number and latest paid bill",
-    "BWSSB connection details and latest paid bill",
-    "Building plan with height details (for AAI NOC applications)"
+      "Registered sale deed or ownership documents",
+      "Latest property tax paid receipt (BBMP SAS)",
+      "Loan account statement and foreclosure request letter (for bank NOC)",
+      "Society share certificate and maintenance paid receipts (for society NOC)",
+      "BESCOM consumer account number and latest paid bill",
+      "BWSSB connection details and latest paid bill",
+      "Building plan with height details (for AAI NOC applications)"
     ],
     faqs: [
       { question: "Is a bank NOC mandatory when selling a mortgaged property?", answer: "Yes. If the property you are selling has an existing home loan, you must either repay the loan in full and obtain a loan closure letter and registered mortgage release deed from the bank, or arrange for the buyer to take over the loan. Without clearing the mortgage and obtaining the bank's NOC, the property cannot be legally sold with a clean title." },
@@ -1989,7 +1989,7 @@ const realEstateServices: Service[] = [
       { question: "What properties near the Bangalore airport need AAI NOC?", answer: "Properties falling within the Obstacle Limitation Surface (OLS) zones of Kempegowda International Airport — broadly covering areas within 20 km of the airport in North Bangalore such as Devanahalli, Yelahanka, Hebbal, and parts of Thanisandra — require AAI height clearance NOC for new construction above certain heights. We check if your property falls in the restricted zone before applying." },
       { question: "Can I register a property without clearing all NOC requirements?", answer: "The Sub-Registrar office primarily requires a tax clearance for registration but may not check all NOCs. However, missing NOCs (especially bank mortgage NOC) create title defects that will surface during the buyer's future resale or loan application. We ensure all required clearances are obtained before registration to protect both buyer and seller." }
     ],
-    relatedServices: ["property-registration","building-plan","sale-deed"],
+    relatedServices: ["property-registration", "building-plan", "sale-deed"],
     metaTitle: "NOC for Property in Bangalore | Right Asset Management",
     metaDescription: "Get NOC certificates for property transactions in Bangalore. Right Asset Management handles NOC applications from all relevant authorities.",
   },
@@ -2000,12 +2000,12 @@ const realEstateServices: Service[] = [
     tagline: "Draft and register property Power of Attorney with legal precision.",
     description: "A Power of Attorney (POA) for property is a legal document through which a property owner (the Principal) authorises another trusted individual (the Agent or Attorney) to act on their behalf in property-related matters. This can range from a General Power of Attorney (GPA) that grants broad authority to manage and transact all property affairs, to a Special Power of Attorney (SPA) that is limited to a specific transaction — such as selling a particular flat in Whitefield or completing the registration of a property in Koramangala. In Bangalore, POAs are most commonly used by NRIs who are unable to travel to India for property transactions, by elderly individuals who need assistance managing their properties, by individuals who have purchased properties under construction and want a representative to handle possession and documentation, and by HUF (Hindu Undivided Family) property managers. In 2011, the Supreme Court of India (Suraj Lamp & Industries case) ruled that properties cannot be sold through GPA alone — a registered sale deed executed by the GPA holder is mandatory. Right Asset Management drafts legally sound, specific, and clearly scoped POAs for property matters in Karnataka, registered at the Sub-Registrar office in Bangalore. We also assist in drafting POAs to be authenticated by the Indian Consulate abroad for NRIs, and help POA holders complete the property transactions they have been authorised to perform.",
     whoIsItFor: [
-    "NRIs who own property in Bangalore and need an authorised representative in India for transactions",
-    "Elderly property owners who wish to authorise a family member to manage all property affairs",
-    "Property buyers of under-construction apartments who need a POA to handle possession formalities",
-    "Joint property owners where one owner needs to authorise the other to complete a transaction",
-    "Individuals who have purchased plots or properties in Bangalore but are based in another city",
-    "HUF property managers (Karta) who need a formal POA from other coparceners for property sales"
+      "NRIs who own property in Bangalore and need an authorised representative in India for transactions",
+      "Elderly property owners who wish to authorise a family member to manage all property affairs",
+      "Property buyers of under-construction apartments who need a POA to handle possession formalities",
+      "Joint property owners where one owner needs to authorise the other to complete a transaction",
+      "Individuals who have purchased plots or properties in Bangalore but are based in another city",
+      "HUF property managers (Karta) who need a formal POA from other coparceners for property sales"
     ],
     process: [
       { step: 1, title: "Scope & Purpose Determination", description: "We discuss the specific property transaction or management purpose for which the POA is needed and determine whether a General POA or Special (Limited) POA is appropriate for your situation." },
@@ -2016,20 +2016,20 @@ const realEstateServices: Service[] = [
       { step: 6, title: "Transaction Execution Under POA", description: "We assist the POA holder in completing the specific property transaction authorised — whether it is a sale, purchase, registration, rental, or document procurement — ensuring all actions are within the POA's scope." }
     ],
     benefits: [
-    "Execute property transactions in Bangalore without requiring physical presence for NRIs and outstation owners",
-    "Receive a legally precise POA that protects the Principal from misuse of authority",
-    "Ensure Sub-Registrar-registered POA that is accepted by banks, courts, and government departments",
-    "Get guidance on Consulate and Apostille authentication for POAs executed abroad",
-    "Avoid invalid transactions resulting from incorrectly drafted or unregistered POAs",
-    "Complete the entire POA-based transaction — from document to final registration — under one service"
+      "Execute property transactions in Bangalore without requiring physical presence for NRIs and outstation owners",
+      "Receive a legally precise POA that protects the Principal from misuse of authority",
+      "Ensure Sub-Registrar-registered POA that is accepted by banks, courts, and government departments",
+      "Get guidance on Consulate and Apostille authentication for POAs executed abroad",
+      "Avoid invalid transactions resulting from incorrectly drafted or unregistered POAs",
+      "Complete the entire POA-based transaction — from document to final registration — under one service"
     ],
     documentsRequired: [
-    "Identity proof of the Principal (Aadhaar, PAN, Passport for NRIs)",
-    "Identity proof of the Agent/Attorney (Aadhaar and PAN)",
-    "Title documents of the property for which POA is being executed",
-    "Passport and visa copy (for NRIs executing POA abroad)",
-    "Passport-size photographs of both Principal and Agent",
-    "Details of the specific property — survey number, flat number, or site address"
+      "Identity proof of the Principal (Aadhaar, PAN, Passport for NRIs)",
+      "Identity proof of the Agent/Attorney (Aadhaar and PAN)",
+      "Title documents of the property for which POA is being executed",
+      "Passport and visa copy (for NRIs executing POA abroad)",
+      "Passport-size photographs of both Principal and Agent",
+      "Details of the specific property — survey number, flat number, or site address"
     ],
     faqs: [
       { question: "Can I sell my property through a Power of Attorney?", answer: "The POA holder can execute a registered sale deed on your behalf as your authorised representative. However, following the 2011 Supreme Court ruling in Suraj Lamp & Industries, a property cannot be transferred through a GPA itself — a formal registered sale deed must be executed in the buyer's name by the GPA holder. We ensure all POA-based property sales comply with current legal requirements." },
@@ -2038,7 +2038,7 @@ const realEstateServices: Service[] = [
       { question: "How should an NRI in the USA execute a POA for Bangalore property?", answer: "An NRI in the USA can have the POA notarised by a US notary public, then either get it Apostilled by the US Secretary of State (since the US is a Hague Convention member) or authenticated by the Indian Consulate in the city of residence. The Apostilled/authenticated POA is then presented at the Sub-Registrar office in Bangalore for registration. We guide through each step." },
       { question: "Can a POA be revoked once it is registered?", answer: "Yes. A POA can be revoked at any time by the Principal by executing a Revocation of Power of Attorney deed, which should also be registered at the Sub-Registrar office and served on the Agent. It is important to inform all parties dealing with the Agent of the revocation to prevent the Agent from misusing the old POA after revocation." }
     ],
-    relatedServices: ["sale-deed","property-registration","buy-sell"],
+    relatedServices: ["sale-deed", "property-registration", "buy-sell"],
     metaTitle: "Power of Attorney for Property in Bangalore | Right Asset Management",
     metaDescription: "Get your property Power of Attorney drafted and registered in Bangalore. Right Asset Management ensures legally sound POA documentation.",
   },
@@ -2049,12 +2049,12 @@ const realEstateServices: Service[] = [
     tagline: "Expert JDA drafting and negotiation for landowners and builders.",
     description: "A Joint Development Agreement (JDA) is a legal contract between a landowner and a developer (builder) under which the landowner contributes the land and the developer contributes the construction expertise and capital, with the completed development being shared between both parties in an agreed ratio. JDAs are extremely common in Bangalore, where land is scarce and expensive — particularly in established neighbourhoods like Basavanagudi, Sadashivanagar, JP Nagar, and Rajajinagar, where ageing independent houses sit on prime land. Instead of selling the land outright, the landowner can enter a JDA and receive a share of newly built apartments — typically between 30% and 50% of the total built-up area depending on location and negotiation — while retaining the underlying land value appreciation. The developer bears construction cost and builds on the land, earning their share of apartments for sale. While a JDA is financially attractive, it involves complex legal and tax implications. The transfer of development rights through a JDA can trigger capital gains tax liability. The agreement must be meticulously drafted to protect the landowner's rights through a General Development Agreement, a Rectification Deed, a General Power of Attorney, and individual sale deeds for each unit. Right Asset Management guides landowners and developers in Bangalore through the entire JDA process — from feasibility analysis and term negotiation to legally binding agreement drafting, BBMP plan approval coordination, and final unit handover documentation.",
     whoIsItFor: [
-    "Independent house or bungalow owners in Bangalore wanting to redevelop their property without selling the land",
-    "Landowners with large plots in prime Bangalore localities exploring development partnerships with builders",
-    "Developers looking for suitable land parcels in established Bangalore neighbourhoods for JDA projects",
-    "Agricultural landowners who have obtained DC Conversion and want to develop a residential layout through a JDA",
-    "Families owning ancestral properties in Bangalore who want to develop without selling family land",
-    "HUF property owners seeking structured redevelopment of ancestral land while preserving ownership"
+      "Independent house or bungalow owners in Bangalore wanting to redevelop their property without selling the land",
+      "Landowners with large plots in prime Bangalore localities exploring development partnerships with builders",
+      "Developers looking for suitable land parcels in established Bangalore neighbourhoods for JDA projects",
+      "Agricultural landowners who have obtained DC Conversion and want to develop a residential layout through a JDA",
+      "Families owning ancestral properties in Bangalore who want to develop without selling family land",
+      "HUF property owners seeking structured redevelopment of ancestral land while preserving ownership"
     ],
     process: [
       { step: 1, title: "Feasibility Assessment & Term Discussion", description: "We assess the property's development potential — FAR, permissible built-up area, zone classification, road width — and advise on a fair sharing ratio and financial terms for the JDA based on current Bangalore market conditions." },
@@ -2066,21 +2066,21 @@ const realEstateServices: Service[] = [
       { step: 7, title: "Completion & Unit Handover Documentation", description: "Upon project completion, we prepare the Occupancy Certificate application, draft individual sale deeds for the landowner's units, and assist with khatha registration for the newly built apartments." }
     ],
     benefits: [
-    "Maximise land value by developing instead of selling, while retaining long-term appreciation",
-    "Receive legally binding protection of landowner rights through precisely drafted JDA terms",
-    "Avoid common developer disputes with clear penalty clauses, timelines, and quality specifications",
-    "Navigate capital gains tax implications of JDA with expert financial and legal guidance",
-    "Access our developer network for trustworthy development partnerships in Bangalore",
-    "Get end-to-end support from agreement drafting through building plan approval to unit handover"
+      "Maximise land value by developing instead of selling, while retaining long-term appreciation",
+      "Receive legally binding protection of landowner rights through precisely drafted JDA terms",
+      "Avoid common developer disputes with clear penalty clauses, timelines, and quality specifications",
+      "Navigate capital gains tax implications of JDA with expert financial and legal guidance",
+      "Access our developer network for trustworthy development partnerships in Bangalore",
+      "Get end-to-end support from agreement drafting through building plan approval to unit handover"
     ],
     documentsRequired: [
-    "Original title deed and complete chain of ownership documents",
-    "Encumbrance Certificate (EC) for minimum 13 years from Kaveri Online",
-    "Khatha certificate and extract (A-Khatha required for BBMP plan approval)",
-    "Survey sketch and site plan of the land parcel",
-    "Approved building plan (if existing structure is being demolished)",
-    "DC Conversion Order (if applicable for plots converted from agricultural land)",
-    "Identity proof of landowner and developer entity's authorised signatory"
+      "Original title deed and complete chain of ownership documents",
+      "Encumbrance Certificate (EC) for minimum 13 years from Kaveri Online",
+      "Khatha certificate and extract (A-Khatha required for BBMP plan approval)",
+      "Survey sketch and site plan of the land parcel",
+      "Approved building plan (if existing structure is being demolished)",
+      "DC Conversion Order (if applicable for plots converted from agricultural land)",
+      "Identity proof of landowner and developer entity's authorised signatory"
     ],
     faqs: [
       { question: "What is a typical sharing ratio in a JDA in Bangalore?", answer: "Sharing ratios vary based on land location and value. In prime central Bangalore areas (Jayanagar, Malleswaram, Indiranagar), landowners can command 45–50% of total built area. In secondary localities, 35–40% is common. The developer's share compensates for the full construction cost. We advise on market-appropriate ratios before negotiation." },
@@ -2089,7 +2089,7 @@ const realEstateServices: Service[] = [
       { question: "Can I mortgage my land while the JDA is active?", answer: "Generally, the JDA restricts the landowner from mortgaging the land to a third party during the development period, as it would cloud the developer's ability to obtain construction finance. The JDA agreement defines these restrictions. We ensure both parties clearly understand the financial restrictions before signing." },
       { question: "Is RERA registration required for JDA projects in Bangalore?", answer: "Yes. Under the Real Estate (Regulation and Development) Act 2016, all real estate projects with more than 8 units or land area exceeding 500 sq.m. must be registered with Karnataka RERA (K-RERA) before marketing or selling units. This applies to JDA projects as well, and the developer is responsible for K-RERA registration." }
     ],
-    relatedServices: ["sale-deed","property-registration","power-of-attorney"],
+    relatedServices: ["sale-deed", "property-registration", "power-of-attorney"],
     metaTitle: "Joint Development Agreement in Bangalore | Right Asset Management",
     metaDescription: "Get expert JDA drafting and negotiation services in Bangalore for landowners and developers. Right Asset Management ensures fair and legally sound agreements.",
   },
@@ -2100,12 +2100,12 @@ const realEstateServices: Service[] = [
     tagline: "Unlock the value in your property with a loan against property.",
     description: "A Loan Against Property (LAP) allows you to unlock the financial value of your existing property by pledging it as collateral to a bank or housing finance company and receiving a loan — typically between 50% to 70% of the property's current market value. This is distinct from a home loan (used to purchase a new property) — a LAP can be used for any purpose: business expansion, medical emergencies, education, debt consolidation, or working capital requirements. In Bangalore's property market, LAP is increasingly popular because property values in areas like Whitefield, Electronic City, Koramangala, and HSR Layout have appreciated significantly, enabling property owners to access substantial liquidity without selling their assets. Interest rates for LAP are generally higher than home loans (typically 9–12% p.a.) but lower than personal loans or business loans, making it a cost-effective borrowing instrument. Right Asset Management assists property owners in Bangalore in the complete LAP process — from assessing loan eligibility based on property value and income, to selecting the right lender, compiling all required documentation, coordinating property valuation and legal scrutiny by the bank, and ensuring the loan is disbursed quickly. We work with all major banks and HFCs in Bangalore — SBI, HDFC, ICICI, Axis, LIC Housing Finance, PNB Housing — and help you compare interest rates, loan-to-value ratios, and processing timelines to select the most suitable option.",
     whoIsItFor: [
-    "Business owners in Bangalore needing working capital or expansion funding against their residential or commercial property",
-    "Property owners with urgent liquidity requirements (medical, education, marriage) who do not want to sell their property",
-    "Individuals with poor personal loan eligibility who can pledge property to access lower-interest funding",
-    "Landlords wanting to unlock the equity in rental properties for reinvestment",
-    "Professionals (doctors, architects, consultants) needing to fund equipment or office setup using property as collateral",
-    "NRIs who own property in Bangalore and need funds for India-based expenses or investments"
+      "Business owners in Bangalore needing working capital or expansion funding against their residential or commercial property",
+      "Property owners with urgent liquidity requirements (medical, education, marriage) who do not want to sell their property",
+      "Individuals with poor personal loan eligibility who can pledge property to access lower-interest funding",
+      "Landlords wanting to unlock the equity in rental properties for reinvestment",
+      "Professionals (doctors, architects, consultants) needing to fund equipment or office setup using property as collateral",
+      "NRIs who own property in Bangalore and need funds for India-based expenses or investments"
     ],
     process: [
       { step: 1, title: "Eligibility & Property Assessment", description: "We assess your loan eligibility based on property type (residential, commercial, or industrial), property location, market value, age of construction, and your income profile to determine the maximum LAP quantum available." },
@@ -2116,22 +2116,22 @@ const realEstateServices: Service[] = [
       { step: 6, title: "Mortgage Registration & Disbursement", description: "The mortgage (Equitable Mortgage by deposit of title deeds) is created and registered at the Sub-Registrar office. Once all conditions are met, the loan is disbursed to your account and we provide a post-disbursement document checklist." }
     ],
     benefits: [
-    "Access large loan amounts (50–70% of property value) without selling your appreciating asset",
-    "Receive expert lender comparison that secures the best available interest rate and terms",
-    "Get faster loan processing with our document preparation and bank coordination support",
-    "Ensure a clean mortgage registration that protects both your interests and the lender's security",
-    "Use loan proceeds for any purpose — business, medical, education, or investment",
-    "Receive a complete post-closure checklist ensuring mortgage is discharged when the loan is repaid"
+      "Access large loan amounts (50–70% of property value) without selling your appreciating asset",
+      "Receive expert lender comparison that secures the best available interest rate and terms",
+      "Get faster loan processing with our document preparation and bank coordination support",
+      "Ensure a clean mortgage registration that protects both your interests and the lender's security",
+      "Use loan proceeds for any purpose — business, medical, education, or investment",
+      "Receive a complete post-closure checklist ensuring mortgage is discharged when the loan is repaid"
     ],
     documentsRequired: [
-    "Title deed and complete chain of ownership documents for the pledged property",
-    "Encumbrance Certificate (EC) from Kaveri Online",
-    "Khatha certificate and extract from BBMP",
-    "Latest property tax paid receipts",
-    "Approved building plan and occupancy certificate",
-    "Income proof: ITR for 2–3 years, salary slips, bank statements (6 months)",
-    "Identity and address proof of borrower (Aadhaar, PAN, passport if NRI)",
-    "Business proof: GST registration, business vintage documents (for self-employed)"
+      "Title deed and complete chain of ownership documents for the pledged property",
+      "Encumbrance Certificate (EC) from Kaveri Online",
+      "Khatha certificate and extract from BBMP",
+      "Latest property tax paid receipts",
+      "Approved building plan and occupancy certificate",
+      "Income proof: ITR for 2–3 years, salary slips, bank statements (6 months)",
+      "Identity and address proof of borrower (Aadhaar, PAN, passport if NRI)",
+      "Business proof: GST registration, business vintage documents (for self-employed)"
     ],
     faqs: [
       { question: "What is the maximum loan amount I can get against my property in Bangalore?", answer: "Most lenders offer 50–70% of the property's current market value as loan against property (LTV — Loan to Value Ratio). For a residential property in Bangalore valued at ₹1 crore, you could typically access ₹50–70 lakh as LAP. Commercial properties usually have a slightly lower LTV (40–60%). The exact amount also depends on your income and repayment capacity." },
@@ -2140,7 +2140,7 @@ const realEstateServices: Service[] = [
       { question: "How long does it take to get a LAP sanctioned and disbursed?", answer: "With complete documents and a clear property title, LAP sanction typically takes 10–20 working days and disbursement follows within a week of mortgage registration. Delays occur when title documents have gaps, legal opinions raise queries, or bank valuations and borrower's price expectations differ. Our pre-submission document audit significantly reduces processing time." },
       { question: "What happens to my property documents during the LAP tenure?", answer: "The original property documents (sale deed, previous title deeds, building plan, EC, khatha) are held by the bank as security for the loan under equitable mortgage. They are returned only after the full loan is repaid and the mortgage is formally released. We maintain a copy of all submitted documents and assist with the mortgage release process at loan closure." }
     ],
-    relatedServices: ["property-valuation","buy-sell","encumbrance"],
+    relatedServices: ["property-valuation", "buy-sell", "encumbrance"],
     metaTitle: "Loan Against Property in Bangalore | Right Asset Management",
     metaDescription: "Get a loan against your property in Bangalore with the best rates. Right Asset Management helps you unlock liquidity from your real estate assets.",
   },
@@ -2151,12 +2151,12 @@ const realEstateServices: Service[] = [
     tagline: "Smooth, complete property registration support at the Sub-Registrar's office.",
     description: "Property registration is the mandatory legal process through which ownership of immovable property is formally recorded in the government's property registry under the Registration Act, 1908. In Karnataka, all property transactions — sale, gift, partition, exchange, and lease for more than 11 months — must be registered at the appropriate Sub-Registrar office to be legally valid. Without registration, a property transaction is inadmissible as evidence of ownership in court and does not confer any legal rights on the buyer. Bangalore has multiple Sub-Registrar offices spread across the city and its peripheral areas, each covering a specific geographic jurisdiction. The applicable Sub-Registrar office is determined by the location of the property — not the residence of the buyer or seller. Properties in Koramangala register at one office, those in Yelahanka at another, and those in Devanahalli at yet another. Right Asset Management provides comprehensive property registration assistance across all Sub-Registrar jurisdictions in Bangalore and Bangalore Rural district. We handle the complete process — from document preparation, stamp duty computation, e-payment, and online appointment booking through the Karnataka Registration Department's portal, to accompanying clients to the Sub-Registrar office, completing biometric verification, and collecting the registered document. Our team also assists in interpreting the registered document and initiating the post-registration khatha transfer and mutation process to ensure the new owner's records are updated across all government systems.",
     whoIsItFor: [
-    "First-time home buyers completing the registration of a residential flat, plot, or independent house in Bangalore",
-    "Property sellers wanting end-to-end coordination of the registration process without handling it themselves",
-    "NRIs executing property registration through a Power of Attorney holder in Bangalore",
-    "Individuals registering gift deeds, family settlement deeds, or partition deeds for property",
-    "Developers registering individual sale deeds with multiple apartment buyers",
-    "Anyone who finds the Sub-Registrar process confusing and wants professional handholding through the registration"
+      "First-time home buyers completing the registration of a residential flat, plot, or independent house in Bangalore",
+      "Property sellers wanting end-to-end coordination of the registration process without handling it themselves",
+      "NRIs executing property registration through a Power of Attorney holder in Bangalore",
+      "Individuals registering gift deeds, family settlement deeds, or partition deeds for property",
+      "Developers registering individual sale deeds with multiple apartment buyers",
+      "Anyone who finds the Sub-Registrar process confusing and wants professional handholding through the registration"
     ],
     process: [
       { step: 1, title: "Document Review & Preparation", description: "We review all property documents — title deeds, EC, khatha, tax receipts, building plan, bank NOC — and prepare the complete document set required for registration, identifying and resolving any gaps or discrepancies before the appointment." },
@@ -2168,22 +2168,22 @@ const realEstateServices: Service[] = [
       { step: 7, title: "Post-Registration Services", description: "We initiate the khatha transfer application at BBMP and the property tax name change to complete the full transition of all government records into the new owner's name after registration." }
     ],
     benefits: [
-    "Complete the entire registration process without multiple BBMP and Sub-Registrar office visits",
-    "Receive accurate stamp duty calculation that avoids underpayment penalties or overpayment",
-    "Get experienced guidance through biometric verification and Sub-Registrar procedures",
-    "Ensure all supporting documents are complete and compliant before the registration day",
-    "Receive the registered document and immediately initiate khatha and mutation services",
-    "Access registration support across all Sub-Registrar offices in Bangalore Urban and Rural districts"
+      "Complete the entire registration process without multiple BBMP and Sub-Registrar office visits",
+      "Receive accurate stamp duty calculation that avoids underpayment penalties or overpayment",
+      "Get experienced guidance through biometric verification and Sub-Registrar procedures",
+      "Ensure all supporting documents are complete and compliant before the registration day",
+      "Receive the registered document and immediately initiate khatha and mutation services",
+      "Access registration support across all Sub-Registrar offices in Bangalore Urban and Rural districts"
     ],
     documentsRequired: [
-    "Original title deed and all previous sale deeds in the ownership chain",
-    "Encumbrance Certificate (EC) for minimum 13 years from Kaveri Online",
-    "Khatha certificate and extract from BBMP or local body",
-    "Latest property tax paid receipt",
-    "Approved building plan and occupancy certificate",
-    "PAN card of both buyer and seller (mandatory for transactions above ₹5 lakh)",
-    "Aadhaar card of buyer, seller, and two witnesses for biometric verification",
-    "Bank NOC / foreclosure letter if existing mortgage is being cleared at registration"
+      "Original title deed and all previous sale deeds in the ownership chain",
+      "Encumbrance Certificate (EC) for minimum 13 years from Kaveri Online",
+      "Khatha certificate and extract from BBMP or local body",
+      "Latest property tax paid receipt",
+      "Approved building plan and occupancy certificate",
+      "PAN card of both buyer and seller (mandatory for transactions above ₹5 lakh)",
+      "Aadhaar card of buyer, seller, and two witnesses for biometric verification",
+      "Bank NOC / foreclosure letter if existing mortgage is being cleared at registration"
     ],
     faqs: [
       { question: "Which Sub-Registrar office should I go to for property registration in Bangalore?", answer: "The Sub-Registrar office jurisdiction is determined by the location of the property, not the buyer's or seller's address. Bangalore city is covered by multiple Sub-Registrar offices including Bangalore South, North, East, West, Central, Yelahanka, Bangalore Rural, and others. We identify the correct office for your property address before scheduling the appointment." },
@@ -2192,7 +2192,7 @@ const realEstateServices: Service[] = [
       { question: "What documents does the buyer receive after registration?", answer: "After registration, the buyer receives the registered sale deed with the Sub-Registrar's signature, seal, and document registration number. This is the most important ownership document. We also collect all original supporting documents (EC, tax receipts, NOC) that were submitted during registration and hand them over to the buyer." },
       { question: "What if the seller cannot be present at the Sub-Registrar office on the registration day?", answer: "If the seller cannot be physically present, they must execute a registered Power of Attorney in favour of a representative who can appear on their behalf and sign the sale deed at the Sub-Registrar office. We assist in drafting and registering the POA so the seller's representative is properly authorised for the transaction." }
     ],
-    relatedServices: ["sale-deed","encumbrance","mutation"],
+    relatedServices: ["sale-deed", "encumbrance", "mutation"],
     metaTitle: "Property Registration in Bangalore | Right Asset Management",
     metaDescription: "Get complete property registration assistance in Bangalore. Right Asset Management handles document preparation, stamp duty, and Sub-Registrar coordination.",
   }
@@ -2210,12 +2210,12 @@ const legalServices: Service[] = [
     tagline: "Expert civil legal advisory for property boundary and title disputes.",
     description: "Property disputes are among the most stressful legal challenges faced by individuals and families in Bangalore. Whether it involves a boundary disagreement with a neighbour, an illegal encroachment on your land in areas like Whitefield or Yelahanka, a contested inheritance under the Hindu Succession Act, or a fraudulent sale deed registered at the sub-registrar's office, these matters demand both legal precision and local knowledge. Bangalore's rapid urbanisation has made property disputes increasingly common, especially in peri-urban layouts where BBMP limits, BDA approvals, and gram panchayat records often overlap and conflict. At Right Asset Management, we connect you with qualified property lawyers who practise before the City Civil Court (CCR) on Akkithimmanahalli Road and the Karnataka High Court, ensuring you get representation that understands local revenue records, RTC extracts, encumbrance certificates, and mutation entries. Our advisory team first reviews your documents and helps you understand whether your matter requires a civil suit, an injunction application, or a complaint before the revenue authorities. We guide you through each stage — from sending the initial legal notice to attending hearings — so you are never left in the dark about your own case.",
     whoIsItFor: [
-    "Homeowners facing illegal encroachment or boundary disputes with neighbours or builders",
-    "Legal heirs involved in succession and partition disputes over ancestral property",
-    "Buyers who have discovered title defects or fraud after purchasing property in Bangalore",
-    "Landlords or tenants dealing with unlawful possession or wrongful eviction",
-    "NRI property owners whose Bangalore assets are being mismanaged or grabbed by relatives or agents",
-    "Co-owners of jointly held property seeking a partition suit or division of assets"
+      "Homeowners facing illegal encroachment or boundary disputes with neighbours or builders",
+      "Legal heirs involved in succession and partition disputes over ancestral property",
+      "Buyers who have discovered title defects or fraud after purchasing property in Bangalore",
+      "Landlords or tenants dealing with unlawful possession or wrongful eviction",
+      "NRI property owners whose Bangalore assets are being mismanaged or grabbed by relatives or agents",
+      "Co-owners of jointly held property seeking a partition suit or division of assets"
     ],
     process: [
       { step: 1, title: "Document Review & Case Assessment", description: "You share all relevant property documents with our team — sale deeds, khata, RTC, EC, mutation records. We review them and provide an honest assessment of your legal standing before you spend a rupee on court fees." },
@@ -2227,23 +2227,23 @@ const legalServices: Service[] = [
       { step: 7, title: "Resolution & Execution", description: "Once the court passes its decree or the parties reach a settlement, we assist with executing the order — including updating revenue records, obtaining a fresh khata, or registering a court-approved sale deed." }
     ],
     benefits: [
-    "Access qualified property lawyers who regularly appear before Bangalore's City Civil Court and Karnataka High Court",
-    "Receive a clear, jargon-free explanation of your legal position before committing to litigation",
-    "Protect your property rights with urgent injunction applications when time is critical",
-    "Coordinate all documentation — from RTC extracts to EC certificates — through a single point of contact",
-    "Save time and money by exploring pre-litigation settlement and legal notice routes first",
-    "Stay informed at every hearing with regular case updates from our advisory team",
-    "Get post-decree support for revenue record corrections and re-registration formalities"
+      "Access qualified property lawyers who regularly appear before Bangalore's City Civil Court and Karnataka High Court",
+      "Receive a clear, jargon-free explanation of your legal position before committing to litigation",
+      "Protect your property rights with urgent injunction applications when time is critical",
+      "Coordinate all documentation — from RTC extracts to EC certificates — through a single point of contact",
+      "Save time and money by exploring pre-litigation settlement and legal notice routes first",
+      "Stay informed at every hearing with regular case updates from our advisory team",
+      "Get post-decree support for revenue record corrections and re-registration formalities"
     ],
     documentsRequired: [
-    "Sale deed / title deed of the disputed property",
-    "Encumbrance Certificate (EC) from the sub-registrar's office",
-    "RTC / Pahani extract from the revenue department",
-    "Khata certificate and khata extract (BBMP / BDA / panchayat)",
-    "Property tax paid receipts",
-    "Survey sketch or approved building plan (if boundary dispute)",
-    "Any prior legal notices, court orders, or FIR copies related to the matter",
-    "Identity proof and address proof of the applicant"
+      "Sale deed / title deed of the disputed property",
+      "Encumbrance Certificate (EC) from the sub-registrar's office",
+      "RTC / Pahani extract from the revenue department",
+      "Khata certificate and khata extract (BBMP / BDA / panchayat)",
+      "Property tax paid receipts",
+      "Survey sketch or approved building plan (if boundary dispute)",
+      "Any prior legal notices, court orders, or FIR copies related to the matter",
+      "Identity proof and address proof of the applicant"
     ],
     faqs: [
       { question: "Which court handles property disputes in Bangalore?", answer: "Most civil property disputes in Bangalore are filed before the City Civil Court (CCR) located at Akkithimmanahalli Road, Shivajinagar, or before the appropriate Munsiff Court based on the property's location. High-value matters or appeals go to the Karnataka High Court. Revenue disputes are handled by tahsildar offices and revenue appellate tribunals." },
@@ -2252,7 +2252,7 @@ const legalServices: Service[] = [
       { question: "Is Right Asset Management a law firm?", answer: "No. Right Asset Management is a legal advisory and facilitation service. We are not a law firm and do not represent clients in court ourselves. We review your situation, explain your options, and connect you with qualified, practising lawyers in Bangalore who will handle your case professionally." },
       { question: "What is the difference between a partition suit and a succession dispute?", answer: "A succession dispute concerns who inherits property after a person's death — often involving a contested will or intestate succession under the Hindu Succession Act or Indian Succession Act. A partition suit is filed by a co-owner or legal heir who acknowledges joint ownership but wants their share physically separated. Both can be filed before the City Civil Court." }
     ],
-    relatedServices: ["family-cases","consumer-cases","banking-cases"],
+    relatedServices: ["family-cases", "consumer-cases", "banking-cases"],
     metaTitle: "Property Dispute Lawyer in Bangalore | Right Asset Management",
     metaDescription: "Get expert legal advisory for property disputes in Bangalore. Right Asset Management connects you with experienced civil property lawyers.",
   },
@@ -2263,12 +2263,12 @@ const legalServices: Service[] = [
     tagline: "Experienced criminal case advisory to protect your rights.",
     description: "Facing a criminal case — whether as an accused, a complainant, or a witness — is an experience that can be deeply disorienting. The Indian Penal Code and the newly enacted Bharatiya Nyaya Sanhita (BNS) carry serious consequences, and navigating police stations, magistrate courts, and sessions courts in Bangalore without proper guidance is a grave risk. Common criminal matters we advise on include cheating and fraud under Section 316 BNS (formerly Section 420 IPC), dishonour of cheques under Section 138 of the Negotiable Instruments Act, domestic violence cases, criminal breach of trust, and cybercrime-related FIRs. Right Asset Management connects you with experienced criminal lawyers who practise before the Bengaluru City Police magistrate courts, the Chief Metropolitan Magistrate (CMM) Court, and the Sessions Court on Nrupathunga Road. Our role is to help you understand the nature of the complaint or charge against you, evaluate bail options, guide you on anticipatory bail applications, and ensure you know your rights at every stage. For complainants, we assist in drafting and filing a complaint, approaching the correct police station, and escalating to the Commissioner of Police if needed. We are not a law firm, but we ensure you never face the criminal justice system alone or uninformed.",
     whoIsItFor: [
-    "Individuals who have received a legal notice or summons and are unsure of the charges against them",
-    "Accused persons who need immediate guidance on bail or anticipatory bail before arrest",
-    "Victims of cheating, fraud, criminal breach of trust, or financial crimes in Bangalore",
-    "Businesses dealing with cheque bounce cases under Section 138 of the NI Act",
-    "Complainants who need help registering an FIR at a Bangalore police station or escalating a stalled case",
-    "Witnesses in criminal proceedings who need to understand their rights and obligations"
+      "Individuals who have received a legal notice or summons and are unsure of the charges against them",
+      "Accused persons who need immediate guidance on bail or anticipatory bail before arrest",
+      "Victims of cheating, fraud, criminal breach of trust, or financial crimes in Bangalore",
+      "Businesses dealing with cheque bounce cases under Section 138 of the NI Act",
+      "Complainants who need help registering an FIR at a Bangalore police station or escalating a stalled case",
+      "Witnesses in criminal proceedings who need to understand their rights and obligations"
     ],
     process: [
       { step: 1, title: "Case Briefing & Legal Assessment", description: "You share the facts of your situation with our advisory team — FIR copy, summons, legal notice, or complaint. We help you understand what offence is alleged, what the possible consequences are, and what your immediate priorities should be." },
@@ -2280,22 +2280,22 @@ const legalServices: Service[] = [
       { step: 7, title: "Settlement or Appeal", description: "Many criminal matters — especially cheque bounce cases — can be settled through compounding. Where the outcome is unfavourable, your lawyer advises on revision or appeal before the Karnataka High Court." }
     ],
     benefits: [
-    "Understand your legal position clearly before making any statement to police or courts",
-    "Access experienced criminal lawyers who practise before Bangalore's CMM Court and Sessions Court",
-    "Act quickly on bail and anticipatory bail applications with a lawyer who knows the system",
-    "Receive guidance on both sides — whether you are the accused or the aggrieved party",
-    "Compile a strong evidence record with structured advisory support from day one",
-    "Explore settlement and compounding options to resolve matters faster where legally permissible",
-    "Stay informed throughout the process with plain-language updates at every stage"
+      "Understand your legal position clearly before making any statement to police or courts",
+      "Access experienced criminal lawyers who practise before Bangalore's CMM Court and Sessions Court",
+      "Act quickly on bail and anticipatory bail applications with a lawyer who knows the system",
+      "Receive guidance on both sides — whether you are the accused or the aggrieved party",
+      "Compile a strong evidence record with structured advisory support from day one",
+      "Explore settlement and compounding options to resolve matters faster where legally permissible",
+      "Stay informed throughout the process with plain-language updates at every stage"
     ],
     documentsRequired: [
-    "Copy of FIR or complaint (if available)",
-    "Court summons or notice received",
-    "Any written agreements, contracts, or communications related to the dispute",
-    "Bank statements or cheque copies (for Section 138 NI Act cases)",
-    "Identity proof and address proof",
-    "Previous court orders or bail orders (if any)",
-    "WhatsApp / email evidence (screenshots or exports, if relevant)"
+      "Copy of FIR or complaint (if available)",
+      "Court summons or notice received",
+      "Any written agreements, contracts, or communications related to the dispute",
+      "Bank statements or cheque copies (for Section 138 NI Act cases)",
+      "Identity proof and address proof",
+      "Previous court orders or bail orders (if any)",
+      "WhatsApp / email evidence (screenshots or exports, if relevant)"
     ],
     faqs: [
       { question: "What should I do immediately if I receive a court summons in Bangalore?", answer: "Do not ignore a court summons. Contact a criminal lawyer immediately — ignoring a summons can lead to a bailable or non-bailable warrant being issued. Our team can help you understand the nature of the case, connect you with a lawyer the same day, and ensure your first court appearance is handled correctly." },
@@ -2304,7 +2304,7 @@ const legalServices: Service[] = [
       { question: "How do I file a criminal complaint if the police refuse to register an FIR?", answer: "If a Bangalore police station refuses to register your FIR, you can send a written complaint to the Commissioner of Police, file a private complaint directly before the Chief Metropolitan Magistrate under Section 200 CrPC (now BNSS), or approach the Karnataka High Court for directions. We guide you through the correct escalation path." },
       { question: "Is Right Asset Management a law firm that can represent me in court?", answer: "No. We are a legal advisory and facilitation service, not a law firm. We do not appear in court on your behalf. Our role is to assess your situation, explain your rights, help you prepare documentation, and connect you with a qualified, practising criminal lawyer in Bangalore who will represent you." }
     ],
-    relatedServices: ["cyber-crime","consumer-cases","property-disputes"],
+    relatedServices: ["cyber-crime", "consumer-cases", "property-disputes"],
     metaTitle: "Criminal Case Advisory in Bangalore | Right Asset Management",
     metaDescription: "Get expert criminal case advisory in Bangalore. Right Asset Management helps you understand your rights and connects you with experienced criminal lawyers.",
   },
@@ -2315,12 +2315,12 @@ const legalServices: Service[] = [
     tagline: "Sensitive, expert legal support for divorce, maintenance, and custody cases.",
     description: "Family legal matters — divorce, maintenance, custody, and domestic violence — are among the most emotionally charged legal processes anyone can go through. Navigating Karnataka's Family Court in Bangalore, which sits at the City Civil Court Complex, requires not only legal expertise but also sensitivity and local procedural knowledge. Whether you are seeking a mutual consent divorce under Section 13B of the Hindu Marriage Act, contesting a divorce petition, applying for interim maintenance under Section 125 CrPC (now BNSS), or fighting for custody of your children, every step in the Family Court process must be handled with care. At Right Asset Management, we connect you with qualified family lawyers who regularly practise before the Bangalore Family Court and have experience in matrimonial disputes, domestic violence cases under the Protection of Women from Domestic Violence Act 2005, and matters involving the Indian Succession Act and Hindu Succession Act for inheritance disputes among family members. We are not a law firm, but we provide clear advisory support — explaining the procedural timelines, helping you understand interim relief options, and ensuring you are fully prepared at every hearing. Our goal is to make a difficult personal situation as navigable and stress-free as possible, with honest guidance throughout.",
     whoIsItFor: [
-    "Individuals seeking mutual consent or contested divorce under the Hindu Marriage Act or Special Marriage Act",
-    "Spouses applying for maintenance or alimony — including interim maintenance during pending proceedings",
-    "Parents involved in child custody disputes or seeking to modify existing custody arrangements",
-    "Victims of domestic violence or cruelty seeking protection orders or residence orders",
-    "Legal heirs involved in succession and inheritance disputes within families",
-    "Individuals who need to challenge or enforce a family court order including non-compliance with maintenance payments"
+      "Individuals seeking mutual consent or contested divorce under the Hindu Marriage Act or Special Marriage Act",
+      "Spouses applying for maintenance or alimony — including interim maintenance during pending proceedings",
+      "Parents involved in child custody disputes or seeking to modify existing custody arrangements",
+      "Victims of domestic violence or cruelty seeking protection orders or residence orders",
+      "Legal heirs involved in succession and inheritance disputes within families",
+      "Individuals who need to challenge or enforce a family court order including non-compliance with maintenance payments"
     ],
     process: [
       { step: 1, title: "Confidential Case Discussion", description: "You share the facts of your family situation with our advisory team in complete confidence. We listen without judgment, assess your legal options, and explain what the Family Court process in Bangalore will look like for your specific matter." },
@@ -2332,22 +2332,22 @@ const legalServices: Service[] = [
       { step: 7, title: "Decree & Post-Order Compliance", description: "Once the court passes its decree or order, we help you understand your rights and obligations, and assist with enforcement steps if the other party fails to comply with maintenance payments or custody orders." }
     ],
     benefits: [
-    "Access family lawyers who regularly appear before the Bangalore Family Court and understand its specific procedures",
-    "Receive honest advice on whether your matter is suited for mediated settlement or contested litigation",
-    "Apply for urgent interim maintenance or protection orders quickly when safety or finances are at risk",
-    "Navigate the mandatory counselling and mediation process with proper preparation and support",
-    "Understand your rights under the Domestic Violence Act, Hindu Marriage Act, and relevant succession laws",
-    "Get post-decree enforcement support if the other party fails to comply with court orders",
-    "Benefit from a confidential, non-judgmental advisory approach throughout a difficult personal process"
+      "Access family lawyers who regularly appear before the Bangalore Family Court and understand its specific procedures",
+      "Receive honest advice on whether your matter is suited for mediated settlement or contested litigation",
+      "Apply for urgent interim maintenance or protection orders quickly when safety or finances are at risk",
+      "Navigate the mandatory counselling and mediation process with proper preparation and support",
+      "Understand your rights under the Domestic Violence Act, Hindu Marriage Act, and relevant succession laws",
+      "Get post-decree enforcement support if the other party fails to comply with court orders",
+      "Benefit from a confidential, non-judgmental advisory approach throughout a difficult personal process"
     ],
     documentsRequired: [
-    "Marriage certificate or marriage registration document",
-    "Birth certificates of children (for custody matters)",
-    "Income proof of both parties (salary slips, ITR, bank statements) for maintenance cases",
-    "Proof of address and identity for both parties",
-    "Any previous court orders, interim orders, or settlement agreements",
-    "Medical records or police complaint copies (for domestic violence cases)",
-    "Photographs or documentary evidence of matrimonial assets (for divorce with property division)"
+      "Marriage certificate or marriage registration document",
+      "Birth certificates of children (for custody matters)",
+      "Income proof of both parties (salary slips, ITR, bank statements) for maintenance cases",
+      "Proof of address and identity for both parties",
+      "Any previous court orders, interim orders, or settlement agreements",
+      "Medical records or police complaint copies (for domestic violence cases)",
+      "Photographs or documentary evidence of matrimonial assets (for divorce with property division)"
     ],
     faqs: [
       { question: "How long does a mutual consent divorce take in Bangalore?", answer: "A mutual consent divorce under Section 13B of the Hindu Marriage Act involves a six-month mandatory cooling-off period between the first and second motion. However, the Supreme Court has held that courts can waive this period in genuine cases. Practically, a mutual consent divorce in Bangalore's Family Court takes between six months to one year depending on court scheduling." },
@@ -2356,7 +2356,7 @@ const legalServices: Service[] = [
       { question: "How is child custody decided in Indian courts?", answer: "Indian courts decide custody based on the best interests and welfare of the child. Factors considered include the child's age, emotional attachment, parent's lifestyle, financial stability, and — for older children — the child's own preference. Bangalore's Family Court can grant interim custody, joint custody, or exclusive custody, with defined visitation rights for the non-custodial parent." },
       { question: "Is Right Asset Management a law firm handling family cases?", answer: "No. We are a legal advisory service, not a law firm. We do not appear in court on your behalf. We provide confidential advisory support, help you understand your legal options, and connect you with experienced family lawyers in Bangalore who will represent you before the Family Court and related magistrate courts." }
     ],
-    relatedServices: ["property-disputes","labour-cases","consumer-cases"],
+    relatedServices: ["property-disputes", "labour-cases", "consumer-cases"],
     metaTitle: "Family Case Legal Support in Bangalore | Right Asset Management",
     metaDescription: "Get sensitive and expert legal support for divorce, maintenance, and custody cases in Bangalore. Right Asset Management guides you through every step.",
   },
@@ -2367,12 +2367,12 @@ const legalServices: Service[] = [
     tagline: "Protect your workplace rights with expert labour law advisory.",
     description: "Employment and labour disputes in Bangalore — from wrongful termination and unpaid dues to sexual harassment complaints and PF/ESIC non-compliance by employers — are governed by a complex network of central and state legislation including the Industrial Disputes Act, Payment of Wages Act, Shops and Commercial Establishments Act (Karnataka), and the Code on Industrial Relations 2020. Whether you are an employee who has been dismissed without cause, denied your full and final settlement, or denied gratuity after years of service, or an employer facing a termination challenge or union dispute, the Labour Court and Industrial Tribunal in Bengaluru are the primary forums for resolution. At Right Asset Management, we connect you with qualified labour lawyers who practise before the Labour Court on Infantry Road, the Industrial Tribunal, and the ESIC courts in Bengaluru. We also support matters escalated to the Karnataka High Court. Our advisory team reviews your appointment letter, termination order, and company policies to assess the strength of your case before any filing. We are not a law firm, but we provide structured, employer- and employee-neutral advisory support that helps you understand your rights under Karnataka labour law and take the right steps from day one.",
     whoIsItFor: [
-    "Employees who have been terminated without a valid reason or without following due process under the Industrial Disputes Act",
-    "Workers denied full and final settlement, gratuity, or arrears of salary by their Bangalore employer",
-    "Individuals facing workplace harassment or discrimination and seeking legal recourse under the POSH Act or IPC",
-    "Employees whose PF or ESIC contributions were not deposited by their employer",
-    "Employers defending against wrongful termination claims or managing collective labour disputes",
-    "Contract workers and gig workers in Bangalore needing clarity on their legal rights and entitlements"
+      "Employees who have been terminated without a valid reason or without following due process under the Industrial Disputes Act",
+      "Workers denied full and final settlement, gratuity, or arrears of salary by their Bangalore employer",
+      "Individuals facing workplace harassment or discrimination and seeking legal recourse under the POSH Act or IPC",
+      "Employees whose PF or ESIC contributions were not deposited by their employer",
+      "Employers defending against wrongful termination claims or managing collective labour disputes",
+      "Contract workers and gig workers in Bangalore needing clarity on their legal rights and entitlements"
     ],
     process: [
       { step: 1, title: "Employment Document Review", description: "We review your appointment letter, salary slips, termination order, HR communications, and any settlement correspondence to assess your rights and identify any violations of the applicable labour law." },
@@ -2384,22 +2384,22 @@ const legalServices: Service[] = [
       { step: 7, title: "Award Execution", description: "Once the Labour Court or Tribunal passes an award in your favour, we assist with the enforcement process to ensure you actually recover the compensation, back wages, or reinstatement ordered." }
     ],
     benefits: [
-    "Access labour lawyers who practise before Bengaluru's Labour Court and Industrial Tribunal with domain expertise",
-    "Receive a clear assessment of your rights before committing to litigation or accepting a settlement offer",
-    "Explore cost-effective conciliation routes before escalating to formal court proceedings",
-    "Protect your PF, ESIC, and gratuity entitlements with targeted legal action against non-compliant employers",
-    "Get employer-neutral advisory that helps businesses manage disputes lawfully and avoid tribunal exposure",
-    "Compile and organise all employment documentation for a strong evidentiary record",
-    "Enforce awarded compensation or reinstatement orders with post-judgment support"
+      "Access labour lawyers who practise before Bengaluru's Labour Court and Industrial Tribunal with domain expertise",
+      "Receive a clear assessment of your rights before committing to litigation or accepting a settlement offer",
+      "Explore cost-effective conciliation routes before escalating to formal court proceedings",
+      "Protect your PF, ESIC, and gratuity entitlements with targeted legal action against non-compliant employers",
+      "Get employer-neutral advisory that helps businesses manage disputes lawfully and avoid tribunal exposure",
+      "Compile and organise all employment documentation for a strong evidentiary record",
+      "Enforce awarded compensation or reinstatement orders with post-judgment support"
     ],
     documentsRequired: [
-    "Appointment letter and employment contract",
-    "Salary slips and Form 16 (last 12-24 months)",
-    "Termination order or notice (if applicable)",
-    "Full and final settlement statement from employer",
-    "PF account statement (EPFO passbook) and ESIC card",
-    "Any written HR communications, performance reviews, or show-cause notices",
-    "Gratuity application and employer's response (if applicable)"
+      "Appointment letter and employment contract",
+      "Salary slips and Form 16 (last 12-24 months)",
+      "Termination order or notice (if applicable)",
+      "Full and final settlement statement from employer",
+      "PF account statement (EPFO passbook) and ESIC card",
+      "Any written HR communications, performance reviews, or show-cause notices",
+      "Gratuity application and employer's response (if applicable)"
     ],
     faqs: [
       { question: "Can I challenge a wrongful termination in Bangalore even if I signed a settlement?", answer: "It depends on the circumstances. If the settlement was signed under coercion or without understanding the full amount owed, it may be challenged. Courts have set aside settlements that do not reflect fair compensation. You should have a lawyer review the settlement document before signing — we can facilitate this review before you commit." },
@@ -2408,7 +2408,7 @@ const legalServices: Service[] = [
       { question: "What is the POSH Act and how does it apply to Bengaluru workplaces?", answer: "The Prevention of Sexual Harassment (POSH) Act 2013 applies to all workplaces in India, including Bengaluru. Every company with 10 or more employees must have an Internal Complaints Committee (ICC). If your employer does not, you can file a complaint directly before the Local Complaints Committee (LCC) constituted by the District Officer. We guide you through the correct process." },
       { question: "Is Right Asset Management a law firm that files labour cases?", answer: "No. We are a legal advisory service that helps individuals and employers understand their rights and connects them with qualified labour lawyers in Bengaluru. We do not file cases or appear in court ourselves. Our value is in simplifying the process, reviewing documents, and ensuring you are matched with the right legal expert for your matter." }
     ],
-    relatedServices: ["family-cases","consumer-cases","banking-cases"],
+    relatedServices: ["family-cases", "consumer-cases", "banking-cases"],
     metaTitle: "Labour Case Advisory in Bangalore | Right Asset Management",
     metaDescription: "Get expert labour law advisory and case support in Bangalore. Right Asset Management helps employees and employers resolve workplace disputes legally.",
   },
@@ -2419,12 +2419,12 @@ const legalServices: Service[] = [
     tagline: "Fight wrongful insurance claim rejections with expert legal support.",
     description: "Insurance companies in India are known to deny, delay, or undervalue legitimate claims — whether it is a health insurance hospitalisation claim, a life insurance death claim, a motor vehicle insurance claim after an accident, or a property damage claim. If your insurer has repudiated your claim or is unreasonably dragging its feet, you have strong legal remedies available in Karnataka. The Insurance Ombudsman for Karnataka is one of the fastest and most effective forums — it handles personal insurance complaints and delivers awards within 90 days, free of cost. For commercial disputes or higher-value claims, the Consumer Disputes Redressal Commission (District, State, and National) provides an accessible and relatively quick forum. In extreme cases, civil courts can also be approached. At Right Asset Management, we help you understand exactly why your claim was rejected, review the policy terms and conditions against the insurer's stated reasons, and connect you with lawyers who specialise in insurance litigation in Bengaluru. We are not a law firm, but our advisory support has helped clients recover hospitalisation claims, death benefits, and motor accident compensation that insurers had refused to honour. We believe no legitimate claimant should walk away empty-handed due to insurance company technicalities.",
     whoIsItFor: [
-    "Policyholders whose health insurance claims have been denied or underpaid by their insurer or TPA",
-    "Families whose life insurance death benefit claims have been rejected citing non-disclosure or suicide exclusions",
-    "Motor vehicle owners whose accident or theft claims have been repudiated or delayed beyond reason",
-    "Homeowners or business owners with property insurance claims that have been undervalued by the surveyor",
-    "Individuals whose personal accident or critical illness claims have been denied on technical grounds",
-    "Corporate clients with business interruption or group health insurance claim disputes"
+      "Policyholders whose health insurance claims have been denied or underpaid by their insurer or TPA",
+      "Families whose life insurance death benefit claims have been rejected citing non-disclosure or suicide exclusions",
+      "Motor vehicle owners whose accident or theft claims have been repudiated or delayed beyond reason",
+      "Homeowners or business owners with property insurance claims that have been undervalued by the surveyor",
+      "Individuals whose personal accident or critical illness claims have been denied on technical grounds",
+      "Corporate clients with business interruption or group health insurance claim disputes"
     ],
     process: [
       { step: 1, title: "Claim Rejection Review", description: "You share your policy document and the insurer's rejection or deficiency letter with our team. We review the stated grounds for rejection against your policy terms, exclusion clauses, and applicable IRDAI regulations." },
@@ -2436,23 +2436,23 @@ const legalServices: Service[] = [
       { step: 7, title: "Award Enforcement", description: "Once the Ombudsman or Consumer Commission passes an order in your favour, we assist with follow-up to ensure the insurer honours the award within the prescribed timeframe." }
     ],
     benefits: [
-    "Understand exactly why your insurance claim was rejected and whether the grounds are legally valid",
-    "Access the Insurance Ombudsman — a free, fast redressal forum specific to insurance disputes",
-    "Connect with insurance litigation lawyers who know the specific regulations and case law",
-    "Recover the full value of legitimate health, life, motor, or property insurance claims",
-    "Challenge unfair policy interpretation and standard exclusion clause misapplication by insurers",
-    "Receive end-to-end documentation support — from hospital records to surveyor report analysis",
-    "Get post-award enforcement support if your insurer delays honouring the Ombudsman or commission order"
+      "Understand exactly why your insurance claim was rejected and whether the grounds are legally valid",
+      "Access the Insurance Ombudsman — a free, fast redressal forum specific to insurance disputes",
+      "Connect with insurance litigation lawyers who know the specific regulations and case law",
+      "Recover the full value of legitimate health, life, motor, or property insurance claims",
+      "Challenge unfair policy interpretation and standard exclusion clause misapplication by insurers",
+      "Receive end-to-end documentation support — from hospital records to surveyor report analysis",
+      "Get post-award enforcement support if your insurer delays honouring the Ombudsman or commission order"
     ],
     documentsRequired: [
-    "Insurance policy document and premium payment receipts",
-    "Claim rejection letter or deficiency notice from the insurer or TPA",
-    "Claim form submitted to the insurer (copy)",
-    "Medical records, discharge summary, and hospital bills (for health/life claims)",
-    "FIR and vehicle inspection report (for motor claims)",
-    "Death certificate and post-mortem report (for life insurance claims)",
-    "Surveyor's inspection report (for property or vehicle damage claims)",
-    "All correspondence with the insurer including emails and written communications"
+      "Insurance policy document and premium payment receipts",
+      "Claim rejection letter or deficiency notice from the insurer or TPA",
+      "Claim form submitted to the insurer (copy)",
+      "Medical records, discharge summary, and hospital bills (for health/life claims)",
+      "FIR and vehicle inspection report (for motor claims)",
+      "Death certificate and post-mortem report (for life insurance claims)",
+      "Surveyor's inspection report (for property or vehicle damage claims)",
+      "All correspondence with the insurer including emails and written communications"
     ],
     faqs: [
       { question: "What is the Insurance Ombudsman and is it free?", answer: "The Insurance Ombudsman is a quasi-judicial body set up by the Government of India to resolve insurance grievances quickly and at no cost to the complainant. The Karnataka Ombudsman office in Bengaluru handles personal insurance disputes — health, life, motor, and travel. Awards up to ₹50 lakhs can be granted, and the process typically concludes within 90 days." },
@@ -2461,7 +2461,7 @@ const legalServices: Service[] = [
       { question: "Can I file an insurance complaint in consumer court after the Insurance Ombudsman?", answer: "If you accept the Ombudsman's award, it is binding and you cannot re-litigate the same matter. However, if you reject the Ombudsman award (which you are free to do), you can proceed to the Consumer Commission or civil court. We advise clients on whether to accept an Ombudsman award or pursue a higher-value remedy in another forum." },
       { question: "Is Right Asset Management an insurance legal firm?", answer: "No. We are an advisory and facilitation service. We help you understand your policy, review rejection grounds, prepare your evidence package, and connect you with lawyers specialising in insurance disputes. For Ombudsman complaints, we guide you through filing the complaint yourself — it is a process designed for self-representation and is free of charge." }
     ],
-    relatedServices: ["consumer-cases","banking-cases","property-disputes"],
+    relatedServices: ["consumer-cases", "banking-cases", "property-disputes"],
     metaTitle: "Insurance Claim Legal Advisory in Bangalore | Right Asset Management",
     metaDescription: "Get expert legal help for wrongfully rejected insurance claims in Bangalore. Right Asset Management helps you fight for the settlement you deserve.",
   },
@@ -2472,12 +2472,12 @@ const legalServices: Service[] = [
     tagline: "Expert advisory for banking disputes, loan fraud, and financial case matters.",
     description: "Banking and financial disputes in India — whether involving loan recovery notices, account freezes, wrongful CIBIL defaults, SARFAESI proceedings, credit card fraud, or NBFC harassment — require specialised legal knowledge and prompt action. Borrowers in Bengaluru who receive a 60-day notice under the SARFAESI Act or a demand notice from a bank's recovery department often do not realise they have the right to challenge these actions before the Debts Recovery Tribunal (DRT) in Bengaluru, the NCLT Bengaluru for insolvency matters, or the Banking Ombudsman. Similarly, customers whose accounts have been frozen, funds debited without authorisation, or credit scores damaged by incorrect bank reporting have strong remedies under the RBI's banking customer protection framework. At Right Asset Management, we connect you with qualified lawyers who specialise in banking and financial cases before Bengaluru's DRT, NCLT, and civil courts. We are not a law firm, but our advisory team can help you understand a SARFAESI notice, review an NPA classification, assess your options under the IBC 2016, or prepare a Banking Ombudsman complaint for unfair bank practices. Whether you are a borrower, a guarantor, or a bank customer who has suffered financial loss due to bank negligence, we ensure you know your rights and have the right legal support.",
     whoIsItFor: [
-    "Borrowers who have received SARFAESI Act notices or possession notices from banks or NBFCs in Bengaluru",
-    "Individuals whose credit scores have been incorrectly defaulted by a bank or NBFC due to reporting errors",
-    "Customers whose bank accounts have been frozen, funds wrongfully debited, or UPI transactions fraudulently processed",
-    "Personal guarantors in bank loan matters who are being pursued for recovery after the principal borrower's default",
-    "Business owners facing insolvency proceedings or CIRP before the NCLT Bengaluru bench",
-    "Customers with unresolved bank service complaints — excessive charges, mis-selling of products, or cheque return penalties"
+      "Borrowers who have received SARFAESI Act notices or possession notices from banks or NBFCs in Bengaluru",
+      "Individuals whose credit scores have been incorrectly defaulted by a bank or NBFC due to reporting errors",
+      "Customers whose bank accounts have been frozen, funds wrongfully debited, or UPI transactions fraudulently processed",
+      "Personal guarantors in bank loan matters who are being pursued for recovery after the principal borrower's default",
+      "Business owners facing insolvency proceedings or CIRP before the NCLT Bengaluru bench",
+      "Customers with unresolved bank service complaints — excessive charges, mis-selling of products, or cheque return penalties"
     ],
     process: [
       { step: 1, title: "Document & Notice Review", description: "You share the bank notice, loan agreement, SARFAESI notice, or account statement with our team. We explain what the notice means, the legal timelines involved, and what your immediate rights are under Indian banking law." },
@@ -2489,23 +2489,23 @@ const legalServices: Service[] = [
       { step: 7, title: "Resolution & Credit Score Correction", description: "Once the matter is resolved — by order or settlement — we assist with follow-up to ensure the bank updates your credit record with CIBIL and CRIF High Mark and withdraws any pending recovery notices." }
     ],
     benefits: [
-    "Understand SARFAESI notices and DRT proceedings before your bank takes possession of your property",
-    "Access banking law specialists who practise before the DRT Bengaluru and NCLT Bengaluru",
-    "File Banking Ombudsman complaints for free and recover unauthorised debits or bank negligence losses",
-    "Challenge incorrect NPA classification and wrongful CIBIL defaults that are damaging your credit profile",
-    "Explore OTS and loan restructuring options with advisory support during negotiations",
-    "Get urgent court protection against imminent bank possession or attachment of assets",
-    "Ensure post-resolution credit bureau corrections are made by the bank in the correct timeframe"
+      "Understand SARFAESI notices and DRT proceedings before your bank takes possession of your property",
+      "Access banking law specialists who practise before the DRT Bengaluru and NCLT Bengaluru",
+      "File Banking Ombudsman complaints for free and recover unauthorised debits or bank negligence losses",
+      "Challenge incorrect NPA classification and wrongful CIBIL defaults that are damaging your credit profile",
+      "Explore OTS and loan restructuring options with advisory support during negotiations",
+      "Get urgent court protection against imminent bank possession or attachment of assets",
+      "Ensure post-resolution credit bureau corrections are made by the bank in the correct timeframe"
     ],
     documentsRequired: [
-    "Loan agreement and sanction letter",
-    "SARFAESI Act notice or DRT summons (if received)",
-    "Bank statements covering the loan repayment period",
-    "CIBIL or credit bureau report (latest)",
-    "Property documents (for mortgage or secured loan matters)",
-    "All bank correspondence — letters, emails, notices, and demand statements",
-    "Any OTS offer or restructuring correspondence from the bank",
-    "Identity proof and address proof"
+      "Loan agreement and sanction letter",
+      "SARFAESI Act notice or DRT summons (if received)",
+      "Bank statements covering the loan repayment period",
+      "CIBIL or credit bureau report (latest)",
+      "Property documents (for mortgage or secured loan matters)",
+      "All bank correspondence — letters, emails, notices, and demand statements",
+      "Any OTS offer or restructuring correspondence from the bank",
+      "Identity proof and address proof"
     ],
     faqs: [
       { question: "What can I do if I receive a SARFAESI notice in Bangalore?", answer: "A 60-day notice under Section 13(2) of the SARFAESI Act gives you a limited window to respond and repay the dues or challenge the notice. If the bank proceeds, you can file an application under Section 17 before the Debt Recovery Tribunal (DRT) in Bengaluru to challenge the possession action. Acting within the 45-day DRT application deadline is critical — contact us immediately on receiving such a notice." },
@@ -2514,7 +2514,7 @@ const legalServices: Service[] = [
       { question: "I am a personal guarantor on a bank loan — can the bank come after me directly?", answer: "Yes, banks can pursue personal guarantors for recovery after the principal borrower defaults, including through SARFAESI if the guarantee is secured. However, the Supreme Court has clarified that personal guarantors in IBC insolvency proceedings have specific protections. A guarantor has the right to be heard and to challenge the demand before the DRT or in civil proceedings. Early legal advice is essential." },
       { question: "Is Right Asset Management a law firm specialising in banking cases?", answer: "No. We are a legal advisory and facilitation service. We review banking notices and documents, explain your rights and options in plain language, and connect you with qualified banking lawyers in Bengaluru. For Banking Ombudsman complaints, we guide you through self-filing — the process is free and designed for individual customers without requiring a lawyer." }
     ],
-    relatedServices: ["consumer-cases","insurance-claims","cyber-crime"],
+    relatedServices: ["consumer-cases", "insurance-claims", "cyber-crime"],
     metaTitle: "Banking Case Advisory in Bangalore | Right Asset Management",
     metaDescription: "Get expert legal advisory for banking disputes and financial cases in Bangalore. Right Asset Management helps with loan fraud, NPA notices, and recovery cases.",
   },
@@ -2525,12 +2525,12 @@ const legalServices: Service[] = [
     tagline: "Report and fight cyber crime with expert legal guidance in Bangalore.",
     description: "Cyber crime cases in India are rising sharply, and Bangalore — as the country's technology capital — sees one of the highest volumes of online fraud, financial scams, social media harassment, and data theft incidents. Whether you have lost money to an online investment scam, UPI fraud, romance scam, phishing, OTP fraud, or are being harassed through social media or WhatsApp messages, you have strong legal remedies under the Information Technology Act 2000, the IT (Amendment) Act 2008, and the Bharatiya Nyaya Sanhita (BNS). The primary law enforcement authority for cyber crimes in Karnataka is the Bengaluru Cyber Crime Police, housed at the CID headquarters in Chamarajpet. Cases can also be reported at any local police station, which is then required to forward the complaint to the Cyber Crime PS. For financial cyber frauds, the National Cyber Crime Reporting Portal (cybercrime.gov.in) is a critical first step, and the 1930 helpline can freeze fraudulently transferred funds if called immediately. At Right Asset Management, we connect you with cyber crime lawyers in Bengaluru who understand both the technical and legal dimensions of cyber offences. We are not a law firm, but our advisory team helps you document your evidence correctly, guides you through the FIR filing process at the Bengaluru Cyber Crime PS, and ensures your case is presented with the clarity and urgency it deserves.",
     whoIsItFor: [
-    "Individuals who have lost money through UPI fraud, online investment scams, or phishing attacks",
-    "Victims of identity theft, social media account hacking, or unauthorised use of personal photographs",
-    "Individuals being harassed, blackmailed, or threatened through WhatsApp, Instagram, or other digital platforms",
-    "Businesses whose website, email, or customer data has been compromised or subject to a ransomware attack",
-    "Victims of romance scams, matrimonial fraud, or fraudulent e-commerce transactions",
-    "Individuals whose reputation has been damaged by fake profiles, defamatory posts, or morphed images online"
+      "Individuals who have lost money through UPI fraud, online investment scams, or phishing attacks",
+      "Victims of identity theft, social media account hacking, or unauthorised use of personal photographs",
+      "Individuals being harassed, blackmailed, or threatened through WhatsApp, Instagram, or other digital platforms",
+      "Businesses whose website, email, or customer data has been compromised or subject to a ransomware attack",
+      "Victims of romance scams, matrimonial fraud, or fraudulent e-commerce transactions",
+      "Individuals whose reputation has been damaged by fake profiles, defamatory posts, or morphed images online"
     ],
     process: [
       { step: 1, title: "Immediate Evidence Preservation", description: "Time is critical in cyber crime cases. We guide you to immediately screenshot all conversations, save transaction IDs, note down UPI handles, and preserve digital evidence before it is deleted by the fraudster or platform." },
@@ -2542,22 +2542,22 @@ const legalServices: Service[] = [
       { step: 7, title: "Court Proceedings & Recovery", description: "Your lawyer represents you in the criminal case and simultaneously pursues civil remedies — attachment of fraudster assets, recovery of money through civil suits, or compensation orders — to maximise the chance of actual financial recovery." }
     ],
     benefits: [
-    "Preserve digital evidence correctly from day one to support both police complaints and court proceedings",
-    "Increase the chance of recovering fraudulently transferred funds through the 1930 helpline and cybercrime portal",
-    "File a detailed, effective FIR with the Bengaluru Cyber Crime Police Station rather than a generic complaint",
-    "Access cyber crime lawyers who understand both IT Act provisions and BNS criminal offences",
-    "Pursue online harassment and defamation removal through platform reporting and legal notices",
-    "Escalate stalled police investigations with court petitions for directions if needed",
-    "Pursue parallel civil remedies for financial recovery alongside the criminal complaint"
+      "Preserve digital evidence correctly from day one to support both police complaints and court proceedings",
+      "Increase the chance of recovering fraudulently transferred funds through the 1930 helpline and cybercrime portal",
+      "File a detailed, effective FIR with the Bengaluru Cyber Crime Police Station rather than a generic complaint",
+      "Access cyber crime lawyers who understand both IT Act provisions and BNS criminal offences",
+      "Pursue online harassment and defamation removal through platform reporting and legal notices",
+      "Escalate stalled police investigations with court petitions for directions if needed",
+      "Pursue parallel civil remedies for financial recovery alongside the criminal complaint"
     ],
     documentsRequired: [
-    "Screenshots of all fraudulent transactions, conversations, and social media posts",
-    "Bank statements showing fraudulent debit transactions and transaction reference numbers",
-    "UPI transaction IDs, payment app screenshots, or wallet transaction history",
-    "Email headers or phishing email copies (forwarded to cybercrime@pol.kar.nic.in if applicable)",
-    "Identity proof of the complainant (Aadhaar card, PAN card)",
-    "Device details — mobile number, device used, IP address if known",
-    "Any communications received from the fraudster — SMS, email, or chat logs"
+      "Screenshots of all fraudulent transactions, conversations, and social media posts",
+      "Bank statements showing fraudulent debit transactions and transaction reference numbers",
+      "UPI transaction IDs, payment app screenshots, or wallet transaction history",
+      "Email headers or phishing email copies (forwarded to cybercrime@pol.kar.nic.in if applicable)",
+      "Identity proof of the complainant (Aadhaar card, PAN card)",
+      "Device details — mobile number, device used, IP address if known",
+      "Any communications received from the fraudster — SMS, email, or chat logs"
     ],
     faqs: [
       { question: "What should I do immediately if I have been defrauded online in Bangalore?", answer: "Call the national cyber crime helpline 1930 immediately — this can trigger a hold on fraudulently transferred funds before they are withdrawn. Then file a complaint on cybercrime.gov.in. Simultaneously, inform your bank to flag the transaction. Do not wait — every hour increases the chance that the money is moved and unrecoverable. Contact us right after taking these emergency steps." },
@@ -2566,7 +2566,7 @@ const legalServices: Service[] = [
       { question: "What if the police are not taking my cyber crime complaint seriously?", answer: "Unfortunately, inaction on cyber crime complaints does happen. You can escalate in writing to the Superintendent of Police, Cyber Crime, Karnataka CID. If that fails, you can file a private complaint before the Chief Metropolitan Magistrate in Bangalore, who can direct the police to investigate. Our advisory team can guide you through the escalation process step by step." },
       { question: "Is Right Asset Management a cyber crime legal firm?", answer: "No. We are a legal advisory and facilitation service. We help you document evidence, guide you through emergency reporting steps, draft your FIR complaint in clear language, and connect you with experienced cyber crime lawyers in Bengaluru. We do not appear in court on your behalf but ensure you have the right support throughout the process." }
     ],
-    relatedServices: ["criminal-advisory","banking-cases","consumer-cases"],
+    relatedServices: ["criminal-advisory", "banking-cases", "consumer-cases"],
     metaTitle: "Cyber Crime Legal Advisory in Bangalore | Right Asset Management",
     metaDescription: "Get expert legal help for cyber crime cases in Bangalore — online fraud, identity theft, hacking, and more. Right Asset Management guides your complaint process.",
   },
@@ -2577,12 +2577,12 @@ const legalServices: Service[] = [
     tagline: "Fight unfair trade practices and defective products at the consumer forum.",
     description: "Consumer rights in India are protected by the Consumer Protection Act 2019, which gives every buyer of goods or services the right to file a complaint against defective products, deficient services, unfair trade practices, and misleading advertisements. In Bengaluru, consumer complaints are filed before the District Consumer Disputes Redressal Commission (DCDRC) for claims up to ₹50 lakhs, the Karnataka State Consumer Disputes Redressal Commission for claims between ₹50 lakhs and ₹2 crores, and the National Consumer Disputes Redressal Commission (NCDRC) in New Delhi for amounts above ₹2 crores. Consumer courts in Bengaluru cover a wide range of disputes — from builders who have delayed possession of a flat in a registered project, to e-commerce companies that have refused refunds, hospitals that have overcharged, airlines that have denied boarding compensation, and banks that have mis-sold insurance products. The process is consumer-friendly, filing fees are nominal, and individuals can appear without a lawyer in the district commission. At Right Asset Management, we connect you with consumer lawyers in Bengaluru and also guide you through the self-filing process for straightforward complaints. We are not a law firm, but we help you quantify your full claim — including compensation for mental agony and litigation costs — and present a clear, well-documented case that gives you the best chance of a favourable order.",
     whoIsItFor: [
-    "Homebuyers in Bengaluru whose builder has delayed possession beyond the agreed date in the sale agreement",
-    "Customers who have been denied refunds or received defective products from e-commerce platforms",
-    "Patients or families who have experienced medical negligence, overcharging, or deficient treatment at hospitals",
-    "Passengers denied compensation for flight delays, cancellations, or denied boarding by airlines operating from Bengaluru",
-    "Customers who have been mis-sold financial products — insurance policies, mutual funds, or investment schemes — by banks or agents",
-    "Individuals who have paid for a service — education, professional services, construction work — and received deficient or incomplete delivery"
+      "Homebuyers in Bengaluru whose builder has delayed possession beyond the agreed date in the sale agreement",
+      "Customers who have been denied refunds or received defective products from e-commerce platforms",
+      "Patients or families who have experienced medical negligence, overcharging, or deficient treatment at hospitals",
+      "Passengers denied compensation for flight delays, cancellations, or denied boarding by airlines operating from Bengaluru",
+      "Customers who have been mis-sold financial products — insurance policies, mutual funds, or investment schemes — by banks or agents",
+      "Individuals who have paid for a service — education, professional services, construction work — and received deficient or incomplete delivery"
     ],
     process: [
       { step: 1, title: "Complaint Assessment", description: "You brief our team on your consumer dispute. We assess whether it qualifies as a deficiency of service, defective product, or unfair trade practice under the Consumer Protection Act 2019, and estimate the value of your claim including compensation and costs." },
@@ -2594,23 +2594,23 @@ const legalServices: Service[] = [
       { step: 7, title: "Order Enforcement", description: "Once the commission passes an order, we assist with enforcement if the opposite party fails to comply within the stipulated period — including execution proceedings with interest and penalty under the Consumer Protection Act." }
     ],
     benefits: [
-    "File in a consumer-friendly forum with nominal fees — district commission filing costs as little as ₹100 to ₹200 for smaller claims",
-    "Claim not just a refund but also compensation for mental agony, financial loss, and litigation costs",
-    "Pursue builder delay complaints, medical negligence cases, and e-commerce refund disputes through one efficient platform",
-    "Represent yourself in the district commission with our guidance for straightforward disputes — no lawyer required",
-    "Send a legal notice first to resolve the matter quickly without formal court proceedings",
-    "Connect with consumer specialists for complex cases involving medical negligence or high-value builder fraud",
-    "Enforce commission orders with execution proceedings if the company refuses to comply voluntarily"
+      "File in a consumer-friendly forum with nominal fees — district commission filing costs as little as ₹100 to ₹200 for smaller claims",
+      "Claim not just a refund but also compensation for mental agony, financial loss, and litigation costs",
+      "Pursue builder delay complaints, medical negligence cases, and e-commerce refund disputes through one efficient platform",
+      "Represent yourself in the district commission with our guidance for straightforward disputes — no lawyer required",
+      "Send a legal notice first to resolve the matter quickly without formal court proceedings",
+      "Connect with consumer specialists for complex cases involving medical negligence or high-value builder fraud",
+      "Enforce commission orders with execution proceedings if the company refuses to comply voluntarily"
     ],
     documentsRequired: [
-    "Invoice, receipt, or proof of purchase / payment for the product or service",
-    "Sale agreement or booking receipt (for builder or real estate complaints)",
-    "Warranty card or service contract (if applicable)",
-    "Photographs or evidence of the defective product or deficient service",
-    "Written complaints previously made to the company and their responses (or non-response)",
-    "Medical records, prescriptions, and hospital bills (for medical negligence cases)",
-    "Email and SMS correspondence with the company or service provider",
-    "Identity proof of the complainant"
+      "Invoice, receipt, or proof of purchase / payment for the product or service",
+      "Sale agreement or booking receipt (for builder or real estate complaints)",
+      "Warranty card or service contract (if applicable)",
+      "Photographs or evidence of the defective product or deficient service",
+      "Written complaints previously made to the company and their responses (or non-response)",
+      "Medical records, prescriptions, and hospital bills (for medical negligence cases)",
+      "Email and SMS correspondence with the company or service provider",
+      "Identity proof of the complainant"
     ],
     faqs: [
       { question: "How much does it cost to file a consumer case in Bengaluru?", answer: "Consumer court filing fees in India are very nominal and are tiered by claim value. For claims up to ₹5 lakhs, the fee is ₹200. For ₹5 to ₹10 lakhs it is ₹400, and it scales up proportionally for higher amounts. There are no court fees in the traditional sense — the process is designed to be accessible without a large financial outlay." },
@@ -2619,7 +2619,7 @@ const legalServices: Service[] = [
       { question: "Can I claim compensation for mental agony in a consumer case?", answer: "Yes. The Consumer Protection Act specifically allows consumer commissions to award compensation for mental agony and harassment caused by the deficiency of service, in addition to the actual refund or replacement value. Bengaluru consumer commissions regularly award such compensation — especially in cases involving builder delays, medical negligence, and insurance mis-selling." },
       { question: "Is Right Asset Management a consumer law firm?", answer: "No. We are a legal advisory and facilitation service. We assess your complaint, help you draft the consumer notice and complaint, determine the correct forum, and connect you with consumer lawyers for complex cases. For straightforward consumer complaints, we can guide you through self-representation — consumer commissions are specifically designed to be accessible without mandatory legal representation." }
     ],
-    relatedServices: ["insurance-claims","banking-cases","labour-cases"],
+    relatedServices: ["insurance-claims", "banking-cases", "labour-cases"],
     metaTitle: "Consumer Dispute Cases in Bangalore | Right Asset Management",
     metaDescription: "File consumer complaints and fight unfair trade practices in Bangalore. Right Asset Management provides expert consumer forum advisory.",
   }

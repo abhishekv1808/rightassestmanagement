@@ -550,37 +550,98 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── 6. CTA ───────────────────────────────────────────────────────── */}
-      <section className="py-16 lg:py-20" style={{ backgroundColor: "#F9F8F5" }}>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2
-            className="font-heading font-bold text-3xl sm:text-4xl mb-4"
-            style={{ color: "#1B3A6B" }}
+      {/* ── 6. CTA Banner ──────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden" style={{ minHeight: "360px" }}>
+        {/* Background image */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/images/cta-banner.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center 35%",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        {/* Dark overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(14,30,56,0.82) 0%, rgba(14,30,56,0.72) 50%, rgba(14,30,56,0.82) 100%)",
+          }}
+        />
+
+        {/* Content — centered */}
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24 text-center flex flex-col items-center">
+          {/* Badge */}
+          <span
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.16em] mb-6"
+            style={{
+              background: "rgba(255,255,255,0.08)",
+              border: "1px solid rgba(201,168,76,0.3)",
+              color: "rgba(255,255,255,0.85)",
+              backdropFilter: "blur(8px)",
+            }}
           >
-            Ready to Work with Us?
+            <span
+              className="w-1.5 h-1.5 rounded-full"
+              style={{
+                background: "#C9A84C",
+                boxShadow: "0 0 6px rgba(201,168,76,0.6)",
+              }}
+            />
+            Let&apos;s Improve Your Finances
+          </span>
+
+          {/* Heading */}
+          <h2
+            className="font-heading font-bold text-white mb-8"
+            style={{
+              fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)",
+              lineHeight: 1.25,
+              letterSpacing: "-0.01em",
+            }}
+          >
+            Work With Our{" "}
+            <span
+              style={{
+                fontStyle: "italic",
+                background: "linear-gradient(135deg, #C9A84C 0%, #E8CC6E 50%, #C9A84C 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Experienced Financial
+            </span>
+            <br />
+            Coaches To Create Better Money Habits.
           </h2>
-          <p className="text-gray-500 text-lg mb-8 leading-relaxed">
-            Book a free 30-minute consultation — no commitment, no pressure. Just clear,
-            honest guidance from advisors who have seen it all.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-[15px] transition-all hover:opacity-90 active:scale-[0.97] shadow-lg"
-              style={{ backgroundColor: "#1B3A6B", color: "white" }}
-            >
-              Book a Free Consultation
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              href="/#services"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-[15px] transition-all hover:bg-white border"
-              style={{ borderColor: "#1B3A6B", color: "#1B3A6B" }}
-            >
-              Explore Our Services
-            </Link>
-          </div>
+
+          {/* CTA Button */}
+          <Link
+            href="/contact"
+            className="group inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-semibold text-sm transition-all duration-300 hover:brightness-110 active:scale-[0.97]"
+            style={{
+              background: "linear-gradient(135deg, #C9A84C, #B8953F)",
+              color: "#1A1A1A",
+              boxShadow:
+                "0 0 24px rgba(201,168,76,0.3), 0 4px 14px rgba(0,0,0,0.2)",
+            }}
+          >
+            Meet Your Coach Today
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
         </div>
+
+        {/* Bottom accent line */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-px"
+          style={{
+            background:
+              "linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.4) 50%, transparent 100%)",
+          }}
+        />
       </section>
     </>
   );

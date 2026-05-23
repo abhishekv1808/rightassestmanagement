@@ -7,6 +7,7 @@ import WhyRightAsset from "@/components/sections/WhyRightAsset";
 import AllServicesSection from "@/components/sections/AllServicesSection";
 import ToolsTeaser from "@/components/sections/ToolsTeaser";
 import Testimonials from "@/components/sections/Testimonials";
+import CTABanner from "@/components/sections/CTABanner";
 import CTASection from "@/components/sections/CTASection";
 import MarketOverviewCard from "@/components/widgets/MarketOverviewCard";
 
@@ -20,7 +21,7 @@ export default function HomePage() {
       <WhyRightAsset />
       <ImageGallerySlider />
       <AllServicesSection />
-      <section className="py-14 lg:py-20" style={{ backgroundColor: "#EEF2F8" }}>
+      <section className="py-14 lg:py-20" style={{ backgroundColor: "#FFFFFF" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <div>
@@ -41,6 +42,7 @@ export default function HomePage() {
       <ToolsTeaser />
       <Testimonials />
       <CTASection />
+      <CTABanner />
     </>
   );
 }

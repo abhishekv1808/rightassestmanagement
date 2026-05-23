@@ -489,48 +489,37 @@ export default function EMICalculator() {
                 <tbody>
                   {yearGroups.map((group) => {
                     const isOpen = expandedYears.has(group.year);
-                    // Year totals
-                    const yearEMI = group.months.reduce((s, r) => s + r.emi, 0);
-                    const yearPrincipal = group.months.reduce((s, r) => s + r.principal, 0);
-                    const yearInterest = group.months.reduce((s, r) => s + r.interest, 0);
-                    const lastRow = group.months[group.months.length - 1];
 
                     return (
                       <React.Fragment key={group.year}>
-                        {/* Year summary row — always visible, clickable */}
+                        {/* Year selector row — click to expand monthly breakdown */}
                         <tr
                           key={`yr-${group.year}`}
                           onClick={() => toggleYear(group.year)}
                           style={{
-                            backgroundColor: "#F8FAFC",
+                            backgroundColor: isOpen ? "#EEF2F8" : "#F8FAFC",
                             borderTop: "1px solid #E2E8F0",
                             borderBottom: isOpen ? "none" : "1px solid #E2E8F0",
                             cursor: "pointer",
+                            transition: "background-color 0.2s ease",
                           }}
                         >
-                          <td className="px-5 py-3" style={{ color: "#94A3B8" }}>
+                          <td className="px-5 py-3.5" style={{ color: "#94A3B8" }}>
                             {isOpen
-                              ? <ChevronUp className="w-3.5 h-3.5" />
-                              : <ChevronDown className="w-3.5 h-3.5" />
+                              ? <ChevronUp className="w-4 h-4" style={{ color: "#1B3A6B" }} />
+                              : <ChevronDown className="w-4 h-4" />
                             }
                           </td>
-                          <td className="px-5 py-3 font-semibold" style={{ color: "#1B3A6B" }}>
+                          <td colSpan={5} className="px-5 py-3.5 font-semibold" style={{ color: "#1B3A6B" }}>
                             {group.year}
                             <span className="ml-2 text-xs font-normal" style={{ color: "#94A3B8" }}>
                               ({group.months.length} months)
                             </span>
-                          </td>
-                          <td className="text-right px-5 py-3 font-semibold" style={{ color: "#1A1A1A" }}>
-                            {fmtINRExact(yearEMI)}
-                          </td>
-                          <td className="text-right px-5 py-3 font-semibold" style={{ color: "#1A1A1A" }}>
-                            {fmtINRExact(yearPrincipal)}
-                          </td>
-                          <td className="text-right px-5 py-3 font-semibold" style={{ color: "#1A1A1A" }}>
-                            {fmtINRExact(yearInterest)}
-                          </td>
-                          <td className="text-right px-5 py-3 font-semibold" style={{ color: "#1A1A1A" }}>
-                            {fmtINRExact(lastRow.balance)}
+                            {!isOpen && (
+                              <span className="ml-3 text-xs font-normal" style={{ color: "#B0BEC5" }}>
+                                — Click to view monthly breakdown
+                              </span>
+                            )}
                           </td>
                         </tr>
 

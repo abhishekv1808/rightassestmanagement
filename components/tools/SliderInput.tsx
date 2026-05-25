@@ -31,7 +31,6 @@ export function SliderInput({
   const [isDragging, setIsDragging] = useState(false);
   const pct = ((value - min) / (max - min)) * 100;
 
-  // Snap value to step
   const snapToStep = useCallback(
     (raw: number) => {
       const clamped = Math.min(max, Math.max(min, raw));
@@ -40,7 +39,6 @@ export function SliderInput({
     [min, max, step]
   );
 
-  // Get value from cursor position
   const getValueFromPosition = useCallback(
     (clientX: number) => {
       if (!trackRef.current) return value;
@@ -51,7 +49,6 @@ export function SliderInput({
     [min, max, value, snapToStep]
   );
 
-  // Mouse/Touch handlers
   const handleStart = useCallback(
     (clientX: number) => {
       setIsDragging(true);
@@ -83,7 +80,6 @@ export function SliderInput({
     };
   }, [isDragging, onChange, getValueFromPosition]);
 
-  // Keyboard support
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
       let newVal = value;
@@ -97,22 +93,33 @@ export function SliderInput({
   );
 
   return (
-    <div>
-      {/* Label + value badge */}
-      <div className="flex items-center justify-between mb-2">
+    <div
+      className="rounded-xl p-4"
+      style={{
+        backgroundColor: "#F9F8F5",
+        border: "1px solid #EEF0F3",
+      }}
+    >
+      {/* Label row + large value badge */}
+      <div className="flex items-center justify-between mb-3 gap-3">
         <label
           className="text-sm font-semibold"
-          style={{ color: "#1B3A6B" }}
+          style={{ color: "#64748B", letterSpacing: "0.01em" }}
         >
           {label}
         </label>
         <div
-          className="px-4 py-2 rounded-xl font-heading font-bold text-sm"
+          className="font-heading font-bold rounded-xl flex items-center justify-center"
           style={{
             backgroundColor: "#1B3A6B",
             color: "#C9A84C",
-            minWidth: "80px",
+            minWidth: "110px",
+            fontSize: "1.25rem",
+            lineHeight: 1,
+            padding: "10px 16px",
             textAlign: "center",
+            boxShadow: "0 2px 8px rgba(27,58,107,0.25)",
+            letterSpacing: "-0.01em",
           }}
         >
           {display}
@@ -120,7 +127,7 @@ export function SliderInput({
       </div>
 
       {hint && (
-        <p className="text-xs mb-2" style={{ color: "#9CA3AF" }}>
+        <p className="text-xs mb-3" style={{ color: "#9CA3AF" }}>
           {hint}
         </p>
       )}
@@ -137,27 +144,27 @@ export function SliderInput({
         onMouseDown={(e) => handleStart(e.clientX)}
         onTouchStart={(e) => handleStart(e.touches[0].clientX)}
       >
-        {/* Track background (unfilled) */}
+        {/* Track background */}
         <div
           className="absolute rounded-full"
           style={{
             top: "50%",
             left: 0,
             right: 0,
-            height: "8px",
+            height: "10px",
             transform: "translateY(-50%)",
-            backgroundColor: "#E2E8F0",
+            backgroundColor: "#DDE3EC",
           }}
         />
 
-        {/* Track filled portion */}
+        {/* Track filled */}
         <div
           className="absolute rounded-full"
           style={{
             top: "50%",
             left: 0,
             width: `${pct}%`,
-            height: "8px",
+            height: "10px",
             transform: "translateY(-50%)",
             background: "linear-gradient(90deg, #1B3A6B 0%, #2A5298 100%)",
             transition: isDragging ? "none" : "width 0.15s ease",
@@ -177,17 +184,19 @@ export function SliderInput({
           style={{
             top: "50%",
             left: `${pct}%`,
-            width: "28px",
-            height: "28px",
+            width: "30px",
+            height: "30px",
             borderRadius: "50%",
             background: "#FFFFFF",
             border: "3px solid #C9A84C",
             boxShadow: isDragging
-              ? "0 0 0 6px rgba(201,168,76,0.2), 0 4px 12px rgba(0,0,0,0.2)"
-              : "0 2px 8px rgba(0,0,0,0.18)",
+              ? "0 0 0 6px rgba(201,168,76,0.2), 0 4px 14px rgba(0,0,0,0.2)"
+              : "0 2px 10px rgba(0,0,0,0.18)",
             transform: "translate(-50%, -50%)",
             cursor: isDragging ? "grabbing" : "grab",
-            transition: isDragging ? "box-shadow 0.15s ease" : "left 0.15s ease, box-shadow 0.15s ease",
+            transition: isDragging
+              ? "box-shadow 0.15s ease"
+              : "left 0.15s ease, box-shadow 0.15s ease",
             zIndex: 2,
             outline: "none",
           }}
@@ -197,7 +206,7 @@ export function SliderInput({
       {/* Min / Max labels */}
       <div
         className="flex justify-between text-xs font-medium"
-        style={{ color: "#94A3B8", marginTop: "-4px" }}
+        style={{ color: "#94A3B8", marginTop: "-2px" }}
       >
         <span>{minLabel}</span>
         <span>{maxLabel}</span>

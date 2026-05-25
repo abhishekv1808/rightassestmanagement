@@ -158,6 +158,7 @@ const VERTICALS: NavVertical[] = [
 // Secondary links shown on desktop (Success Stories kept in mobile only)
 const DESKTOP_SECONDARY: NavLink[] = [
   { label: "Tools", href: "/tools" },
+  { label: "Free Guides", href: "/resources" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -165,6 +166,7 @@ const DESKTOP_SECONDARY: NavLink[] = [
 // All secondary links for mobile drawer
 const ALL_SECONDARY: NavLink[] = [
   { label: "Tools", href: "/tools" },
+  { label: "Free Guides", href: "/resources" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Success Stories", href: "/success-stories" },

@@ -21,8 +21,10 @@
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightasset.in";
 
 // ─── Update these when the client confirms exact details ─────────────────────
-const BUSINESS_PHONE = process.env.NEXT_PUBLIC_BUSINESS_PHONE ?? "+91-XXXXXXXXXX";
-const BUSINESS_EMAIL = process.env.NEXT_PUBLIC_BUSINESS_EMAIL ?? "info@rightasset.in";
+const BUSINESS_PHONE =
+  process.env.NEXT_PUBLIC_BUSINESS_PHONE ?? "+91-XXXXXXXXXX";
+const BUSINESS_EMAIL =
+  process.env.NEXT_PUBLIC_BUSINESS_EMAIL ?? "info@rightasset.in";
 const BUSINESS_STREET = process.env.NEXT_PUBLIC_BUSINESS_STREET ?? "Bangalore";
 // ─────────────────────────────────────────────────────────────────────────────
 

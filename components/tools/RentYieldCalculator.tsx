@@ -44,11 +44,36 @@ export default function RentYieldCalculator() {
 
           {/* ── Inputs ───────────────────────────────────────────────── */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-2xl p-8" style={{ boxShadow: "0 2px 24px rgba(0,0,0,0.07)" }}>
-              <h2 className="font-heading font-bold text-xl mb-7" style={{ color: "#1B3A6B" }}>
-                Property Details
-              </h2>
-              <div className="space-y-8">
+            <div
+              className="bg-white rounded-2xl overflow-hidden"
+              style={{ boxShadow: "0 2px 24px rgba(0,0,0,0.08)", border: "1px solid #EEF0F3" }}
+            >
+              {/* Navy gradient header */}
+              <div
+                className="px-8 py-5"
+                style={{
+                  borderBottom: "1px solid #EEF0F3",
+                  background: "linear-gradient(135deg, #1B3A6B 0%, #0D2347 100%)",
+                }}
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-1" style={{ color: "#C9A84C" }}>
+                      Rental Yield
+                    </p>
+                    <h2 className="font-heading font-bold text-xl text-white">Property Details</h2>
+                  </div>
+                  <div
+                    className="text-xs font-medium px-3 py-1.5 rounded-full"
+                    style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#C9A84C", border: "1px solid rgba(201,168,76,0.25)" }}
+                  >
+                    Drag sliders to update
+                  </div>
+                </div>
+              </div>
+
+              {/* Body — sliders */}
+              <div className="p-7 space-y-4">
                 <SliderInput
                   label="Property Value"
                   value={propertyValue}
@@ -79,25 +104,28 @@ export default function RentYieldCalculator() {
                 />
               </div>
 
-              {/* Yield benchmark guide */}
-              <div className="mt-8 p-5 rounded-xl" style={{ backgroundColor: "#F9F8F5", border: "1px solid #E5E7EB" }}>
-                <p className="text-xs font-semibold mb-3" style={{ color: "#1B3A6B" }}>Rental Yield Benchmarks (Bangalore)</p>
-                <div className="space-y-2">
-                  {[
-                    { label: "Excellent", range: "≥ 5%", color: "#059669" },
-                    { label: "Good", range: "3.5% – 5%", color: "#1B3A6B" },
-                    { label: "Average", range: "2.5% – 3.5%", color: "#C9A84C" },
-                    { label: "Below Average", range: "< 2.5%", color: "#DC2626" },
-                  ].map((b) => (
-                    <div key={b.label} className="flex items-center justify-between text-xs">
-                      <span style={{ color: b.color }} className="font-semibold">{b.label}</span>
-                      <span style={{ color: "#6B7280" }}>{b.range} net yield</span>
-                    </div>
-                  ))}
+              {/* Rental Yield Benchmarks box — navy accent bar style */}
+              <div className="mx-7 mb-7 p-4 rounded-xl flex gap-3" style={{ backgroundColor: "#EEF2F8", border: "1px solid #D6E0F0" }}>
+                <div className="w-1 rounded-full flex-shrink-0" style={{ backgroundColor: "#1B3A6B" }} />
+                <div className="flex-1">
+                  <p className="text-xs font-semibold mb-3" style={{ color: "#1B3A6B" }}>Rental Yield Benchmarks (Bangalore)</p>
+                  <div className="space-y-2">
+                    {[
+                      { label: "Excellent", range: "≥ 5%", color: "#059669" },
+                      { label: "Good", range: "3.5% – 5%", color: "#1B3A6B" },
+                      { label: "Average", range: "2.5% – 3.5%", color: "#C9A84C" },
+                      { label: "Below Average", range: "< 2.5%", color: "#DC2626" },
+                    ].map((b) => (
+                      <div key={b.label} className="flex items-center justify-between text-xs">
+                        <span style={{ color: b.color }} className="font-semibold">{b.label}</span>
+                        <span style={{ color: "#6B7280" }}>{b.range} net yield</span>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="text-xs mt-3" style={{ color: "#9CA3AF" }}>
+                    Bangalore average: 2.5% – 3.5%. Premium localities (Whitefield, Koramangala) can reach 4–5%.
+                  </p>
                 </div>
-                <p className="text-xs mt-3" style={{ color: "#9CA3AF" }}>
-                  Bangalore average: 2.5% – 3.5%. Premium localities (Whitefield, Koramangala) can reach 4–5%.
-                </p>
               </div>
             </div>
           </div>

@@ -209,16 +209,41 @@ export default function EMICalculator() {
           {/* ── Inputs ───────────────────────────────────────────────── */}
           <div className="lg:col-span-7">
             <div
-              className="bg-white rounded-2xl p-8"
-              style={{ boxShadow: "0 2px 24px rgba(0,0,0,0.07)" }}
+              className="bg-white rounded-2xl overflow-hidden"
+              style={{ boxShadow: "0 2px 24px rgba(0,0,0,0.08)", border: "1px solid #EEF0F3" }}
             >
-              <h2
-                className="font-heading font-bold text-xl mb-7"
-                style={{ color: "#1B3A6B" }}
+              {/* Card header */}
+              <div
+                className="px-8 py-5"
+                style={{
+                  borderBottom: "1px solid #EEF0F3",
+                  background: "linear-gradient(135deg, #1B3A6B 0%, #0D2347 100%)",
+                }}
               >
-                Enter Loan Details
-              </h2>
-              <div className="space-y-8">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p
+                      className="text-xs font-semibold uppercase tracking-[0.18em] mb-1"
+                      style={{ color: "#C9A84C" }}
+                    >
+                      Loan Calculator
+                    </p>
+                    <h2
+                      className="font-heading font-bold text-xl text-white"
+                    >
+                      Enter Loan Details
+                    </h2>
+                  </div>
+                  <div
+                    className="text-xs font-medium px-3 py-1.5 rounded-full"
+                    style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#C9A84C", border: "1px solid rgba(201,168,76,0.25)" }}
+                  >
+                    Drag sliders to update
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-7 space-y-4">
                 <SliderInput
                   label="Loan Amount"
                   value={loanAmount}
@@ -254,24 +279,29 @@ export default function EMICalculator() {
                 />
               </div>
 
+              {/* Formula footer */}
               <div
-                className="mt-8 p-4 rounded-xl"
+                className="mx-7 mb-7 p-4 rounded-xl flex gap-3"
                 style={{
-                  backgroundColor: "#F9F8F5",
-                  border: "1px solid #E5E7EB",
+                  backgroundColor: "#EEF2F8",
+                  border: "1px solid #D6E0F0",
                 }}
               >
-                <p
-                  className="text-xs font-semibold mb-1"
-                  style={{ color: "#1B3A6B" }}
-                >
-                  Formula Used
-                </p>
-                <p className="text-xs" style={{ color: "#6B7280" }}>
-                  EMI = P × r × (1+r)ⁿ / [(1+r)ⁿ − 1] — where P = principal, r =
-                  monthly rate, n = tenure in months. Calculated on reducing
-                  balance method.
-                </p>
+                <div
+                  className="w-1 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: "#1B3A6B" }}
+                />
+                <div>
+                  <p
+                    className="text-xs font-semibold mb-1"
+                    style={{ color: "#1B3A6B" }}
+                  >
+                    Formula Used
+                  </p>
+                  <p className="text-xs leading-relaxed" style={{ color: "#64748B" }}>
+                    EMI = P × r × (1+r)ⁿ / [(1+r)ⁿ − 1] — where P = principal, r = monthly rate, n = tenure in months. Calculated on reducing balance method.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

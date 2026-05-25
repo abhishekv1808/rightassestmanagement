@@ -42,11 +42,36 @@ export default function FDCalculator() {
 
           {/* ── Inputs ───────────────────────────────────────────────── */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-2xl p-8" style={{ boxShadow: "0 2px 24px rgba(0,0,0,0.07)" }}>
-              <h2 className="font-heading font-bold text-xl mb-7" style={{ color: "#1B3A6B" }}>
-                Enter FD Details
-              </h2>
-              <div className="space-y-8">
+            <div
+              className="bg-white rounded-2xl overflow-hidden"
+              style={{ boxShadow: "0 2px 24px rgba(0,0,0,0.08)", border: "1px solid #EEF0F3" }}
+            >
+              {/* Navy gradient header */}
+              <div
+                className="px-8 py-5"
+                style={{
+                  borderBottom: "1px solid #EEF0F3",
+                  background: "linear-gradient(135deg, #1B3A6B 0%, #0D2347 100%)",
+                }}
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-1" style={{ color: "#C9A84C" }}>
+                      FD Calculator
+                    </p>
+                    <h2 className="font-heading font-bold text-xl text-white">Enter FD Details</h2>
+                  </div>
+                  <div
+                    className="text-xs font-medium px-3 py-1.5 rounded-full"
+                    style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#C9A84C", border: "1px solid rgba(201,168,76,0.25)" }}
+                  >
+                    Drag sliders to update
+                  </div>
+                </div>
+              </div>
+
+              {/* Body — sliders and compounding selector */}
+              <div className="p-7 space-y-4">
                 <SliderInput
                   label="Principal Amount"
                   value={principal}
@@ -97,12 +122,19 @@ export default function FDCalculator() {
                 </div>
               </div>
 
-              <div className="mt-8 p-4 rounded-xl" style={{ backgroundColor: "#F9F8F5", border: "1px solid #E5E7EB" }}>
-                <p className="text-xs font-semibold mb-1" style={{ color: "#1B3A6B" }}>Formula Used</p>
-                <p className="text-xs" style={{ color: "#6B7280" }}>
-                  A = P(1 + r/n)^(nt) — where P = principal, r = annual rate, n = compounding
-                  frequency per year, t = tenure in years.
-                </p>
+              {/* Formula box — navy accent bar style */}
+              <div
+                className="mx-7 mb-7 p-4 rounded-xl flex gap-3"
+                style={{ backgroundColor: "#EEF2F8", border: "1px solid #D6E0F0" }}
+              >
+                <div className="w-1 rounded-full flex-shrink-0" style={{ backgroundColor: "#1B3A6B" }} />
+                <div>
+                  <p className="text-xs font-semibold mb-1" style={{ color: "#1B3A6B" }}>Formula Used</p>
+                  <p className="text-xs leading-relaxed" style={{ color: "#64748B" }}>
+                    A = P(1 + r/n)^(nt) — where P = principal, r = annual rate, n = compounding
+                    frequency per year, t = tenure in years.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

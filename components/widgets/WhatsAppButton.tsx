@@ -66,12 +66,12 @@ export default function WhatsAppButton() {
       `}</style>
 
       <div
+        className="hidden lg:flex"
         style={{
           position: "fixed",
           bottom: "28px",
           right: "24px",
           zIndex: 9999,
-          display: "flex",
           flexDirection: "column",
           alignItems: "flex-end",
           gap: "12px",

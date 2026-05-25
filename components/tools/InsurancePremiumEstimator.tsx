@@ -2,7 +2,8 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { ArrowRight, MessageCircle, Info } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
+import { SliderInput } from "@/components/tools/SliderInput";
 
 function fmtINR(n: number): string {
   if (n >= 100_000) return `₹${(n / 100_000).toFixed(1)} L`;
@@ -84,12 +85,36 @@ export default function InsurancePremiumEstimator() {
 
           {/* ── Inputs ───────────────────────────────────────────────── */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-2xl p-8" style={{ boxShadow: "0 2px 24px rgba(0,0,0,0.07)" }}>
-              <h2 className="font-heading font-bold text-xl mb-7" style={{ color: "#1B3A6B" }}>
-                Your Insurance Profile
-              </h2>
+            <div
+              className="bg-white rounded-2xl overflow-hidden"
+              style={{ boxShadow: "0 2px 24px rgba(0,0,0,0.08)", border: "1px solid #EEF0F3" }}
+            >
+              {/* Navy gradient header */}
+              <div
+                className="px-8 py-5"
+                style={{
+                  borderBottom: "1px solid #EEF0F3",
+                  background: "linear-gradient(135deg, #1B3A6B 0%, #0D2347 100%)",
+                }}
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-1" style={{ color: "#C9A84C" }}>
+                      Insurance Estimator
+                    </p>
+                    <h2 className="font-heading font-bold text-xl text-white">Your Insurance Profile</h2>
+                  </div>
+                  <div
+                    className="text-xs font-medium px-3 py-1.5 rounded-full"
+                    style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#C9A84C", border: "1px solid rgba(201,168,76,0.25)" }}
+                  >
+                    Drag sliders to update
+                  </div>
+                </div>
+              </div>
 
-              <div className="space-y-7">
+              {/* Body — inputs */}
+              <div className="p-7 space-y-4">
                 {/* Insurance type toggle */}
                 <div>
                   <p className="text-sm font-medium mb-3" style={{ color: "#374151" }}>Insurance Type</p>
@@ -112,58 +137,30 @@ export default function InsurancePremiumEstimator() {
                 </div>
 
                 {/* Age slider */}
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <label className="text-sm font-medium" style={{ color: "#374151" }}>Your Age</label>
-                    <div className="px-3 py-1.5 rounded-lg font-heading font-bold text-sm" style={{ backgroundColor: "#EEF2F8", color: "#1B3A6B" }}>
-                      {age} years
-                    </div>
-                  </div>
-                  <input
-                    type="range" min={18} max={65} step={1} value={age}
-                    onChange={(e) => setAge(Number(e.target.value))}
-                    className="w-full h-2 rounded-full appearance-none cursor-pointer"
-                    style={{ accentColor: "#C9A84C" }}
-                  />
-                  <div className="flex justify-between text-xs mt-1.5" style={{ color: "#9CA3AF" }}>
-                    <span>18 yrs</span>
-                    <span>65 yrs</span>
-                  </div>
-                </div>
+                <SliderInput
+                  label="Your Age"
+                  value={age}
+                  onChange={setAge}
+                  min={18}
+                  max={65}
+                  step={1}
+                  display={`${age} yrs`}
+                  minLabel="18 yrs"
+                  maxLabel="65 yrs"
+                />
 
                 {/* Cover amount slider */}
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <label className="text-sm font-medium" style={{ color: "#374151" }}>
-                      {type === "Term Life" ? "Sum Assured (Life Cover)" : "Cover Amount"}
-                    </label>
-                    <div className="px-3 py-1.5 rounded-lg font-heading font-bold text-sm" style={{ backgroundColor: "#EEF2F8", color: "#1B3A6B" }}>
-                      {fmtINR(cover)}
-                    </div>
-                  </div>
-                  {type === "Term Life" ? (
-                    <input
-                      type="range" min={2500000} max={100000000} step={2500000} value={cover}
-                      onChange={(e) => setCover(Number(e.target.value))}
-                      className="w-full h-2 rounded-full appearance-none cursor-pointer"
-                      style={{ accentColor: "#C9A84C" }}
-                    />
-                  ) : (
-                    <input
-                      type="range" min={300000} max={2000000} step={100000} value={cover}
-                      onChange={(e) => setCover(Number(e.target.value))}
-                      className="w-full h-2 rounded-full appearance-none cursor-pointer"
-                      style={{ accentColor: "#C9A84C" }}
-                    />
-                  )}
-                  <div className="flex justify-between text-xs mt-1.5" style={{ color: "#9CA3AF" }}>
-                    {type === "Term Life" ? (
-                      <><span>₹25 L</span><span>₹10 Cr</span></>
-                    ) : (
-                      <><span>₹3 L</span><span>₹20 L</span></>
-                    )}
-                  </div>
-                </div>
+                <SliderInput
+                  label={type === "Term Life" ? "Sum Assured (Life Cover)" : "Cover Amount"}
+                  value={cover}
+                  onChange={setCover}
+                  min={type === "Term Life" ? 2500000 : 300000}
+                  max={type === "Term Life" ? 100000000 : 2000000}
+                  step={type === "Term Life" ? 2500000 : 100000}
+                  display={fmtINR(cover)}
+                  minLabel={type === "Term Life" ? "₹25 L" : "₹3 L"}
+                  maxLabel={type === "Term Life" ? "₹10 Cr" : "₹20 L"}
+                />
 
                 {/* Smoker toggle — only for Term Life */}
                 {type === "Term Life" && (
@@ -209,9 +206,9 @@ export default function InsurancePremiumEstimator() {
                 )}
               </div>
 
-              {/* Disclaimer */}
-              <div className="mt-7 flex gap-2.5 p-4 rounded-xl" style={{ backgroundColor: "#FBF5E6" }}>
-                <Info className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "#C9A84C" }} />
+              {/* Disclaimer — gold accent bar style */}
+              <div className="mx-7 mb-7 p-4 rounded-xl flex gap-3" style={{ backgroundColor: "#FBF5E6", border: "1px solid #F0DFB8" }}>
+                <div className="w-1 rounded-full flex-shrink-0" style={{ backgroundColor: "#C9A84C" }} />
                 <p className="text-xs leading-relaxed" style={{ color: "#6B7280" }}>
                   These are <strong>estimates only</strong> based on average Indian market rates.
                   Actual premiums depend on your medical history, insurer, and policy terms.

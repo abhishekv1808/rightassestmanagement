@@ -213,7 +213,7 @@ export default function RealEstateHubPage() {
           </div>
 
           {/* 4-col card grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-5">
             {CARDS.map((card) => {
               const svc = getServiceBySlug(card.slug);
               if (!svc) return null;
@@ -221,8 +221,8 @@ export default function RealEstateHubPage() {
                 <Link
                   key={card.slug}
                   href={`/real-estate/${card.slug}`}
-                  className="group relative flex flex-col gap-3 p-5 rounded-2xl bg-white transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
-                  style={{ border: "1px solid #E5E7EB" }}
+                  className="group relative flex flex-col gap-2.5 p-4 md:p-5 rounded-2xl bg-white transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+                  style={{ border: "1px solid #E5E7EB", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex-1 min-w-0">

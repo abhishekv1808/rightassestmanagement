@@ -19,7 +19,7 @@ export default function MarketingLayout({
       <LocalBusinessSchema />
       <Navbar />
       <MarketTickerStrip />
-      <main className="flex-1 flex flex-col">{children}</main>
+      <main className="flex-1 flex flex-col pb-16 lg:pb-0">{children}</main>
       <Footer />
       <WhatsAppButton />
       <CookieConsent />

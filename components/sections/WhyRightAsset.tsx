@@ -9,7 +9,7 @@ const PILLARS = [
     color: "#1B3A6B",
     lightBg: "#EEF2F8",
     title: "Expert Guidance",
-    body: "Our SEBI-registered advisors bring deep domain expertise across finance, real estate documentation, and legal advisory — so every decision you make is informed, accurate, and professional.",
+    body: "Our advisors bring deep domain expertise across finance, real estate documentation, and legal advisory — so every decision you make is informed, accurate, and professional.",
   },
   {
     Icon: Workflow,

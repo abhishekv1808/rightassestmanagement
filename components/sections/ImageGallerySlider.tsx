@@ -3,13 +3,13 @@
 import Image from "next/image";
 
 const images = [
-  { src: "/images/Cyber Crime & Digital Legal Issues.jpeg", label: "Cyber Crime & Digital Legal Issues" },
-  { src: "/images/Financial Planning & Investments.jpeg", label: "Financial Planning & Investments" },
-  { src: "/images/Insurance (Health & Life).jpeg", label: "Insurance (Health & Life)" },
-  { src: "/images/Legal Services (Property, Family, Consumer, Labour).jpeg", label: "Legal Services" },
-  { src: "/images/Loans (Home, Personal, Vehicle).jpeg", label: "Loans" },
-  { src: "/images/Property Buying, Selling & Registration.jpeg", label: "Property Buying & Registration" },
-  { src: "/images/Property Documentation & Government Records.jpeg", label: "Property Documentation" },
+  { src: "/images/cyber-crime-digital-legal-issues.jpeg", label: "Cyber Crime & Digital Legal Issues" },
+  { src: "/images/financial-planning-investments.jpeg", label: "Financial Planning & Investments" },
+  { src: "/images/insurance-health-life.jpeg", label: "Insurance (Health & Life)" },
+  { src: "/images/legal-services-property-family.jpeg", label: "Legal Services" },
+  { src: "/images/loans-home-personal-vehicle.jpeg", label: "Loans" },
+  { src: "/images/property-buying-selling-registration.jpeg", label: "Property Buying & Registration" },
+  { src: "/images/property-documentation-records.jpeg", label: "Property Documentation" },
 ];
 
 const doubled = [...images, ...images];
@@ -18,7 +18,7 @@ const doubled = [...images, ...images];
 export default function ImageGallerySlider() {
   return (
     <section
-      className="py-20 overflow-hidden"
+      className="py-12 sm:py-20 overflow-hidden"
       style={{ backgroundColor: "#F9F8F5" }}
     >
       {/* Header */}
@@ -74,11 +74,11 @@ export default function ImageGallerySlider() {
 
       {/* Slider */}
       <div className="marquee-track overflow-hidden">
-        <div className="flex gap-6 w-max marquee-left">
+        <div className="flex gap-4 sm:gap-6 w-max marquee-left">
           {doubled.map((img, i) => (
             <div
               key={i}
-              className="service-gallery-card flex-shrink-0 w-[500px] rounded-2xl overflow-hidden"
+              className="service-gallery-card flex-shrink-0 w-[320px] sm:w-[430px] lg:w-[540px] rounded-2xl overflow-hidden"
               style={{
                 boxShadow: "0 2px 16px 0 rgba(27,58,107,0.07)",
                 border: "1px solid #E5E7EB",
@@ -86,12 +86,12 @@ export default function ImageGallerySlider() {
               }}
             >
               {/* Image with overlay */}
-              <div className="relative h-[360px] overflow-hidden">
+              <div className="relative h-[240px] sm:h-[300px] lg:h-[390px] overflow-hidden">
                 <Image
                   src={img.src}
                   alt={img.label}
                   fill
-                  sizes="500px"
+                  sizes="(max-width: 640px) 320px, (max-width: 1024px) 430px, 540px"
                   className="object-cover"
                   style={{ transition: "transform 0.5s ease" }}
                 />
@@ -116,7 +116,7 @@ export default function ImageGallerySlider() {
                     }}
                   />
                   <p
-                    className="text-white font-semibold text-base leading-snug"
+                    className="text-white font-semibold text-xs sm:text-sm lg:text-base leading-snug"
                     style={{ textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}
                   >
                     {img.label}

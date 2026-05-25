@@ -30,13 +30,13 @@ import { getServiceBySlug } from "@/lib/services-data";
 export const metadata: Metadata = {
   title: "Financial Services in Bangalore — Investments, Insurance & Loans",
   description:
-    "Comprehensive financial services in Bangalore — mutual funds, SIP, insurance, home loans, tax planning, and more. SEBI-registered advisors at Right Asset Management.",
+    "Comprehensive financial services in Bangalore — mutual funds, SIP, insurance, home loans, tax planning, and more. Expert advisors at Right Asset Management.",
 };
 
 // ─── Cards config ─────────────────────────────────────────────────────────────
 
 const CARDS = [
-  { slug: "mutual-funds",       Icon: PieChart,    color: "#1B3A6B", lightBg: "#EEF2F8",  badge: "Most Popular", highlight: "SEBI Registered" },
+  { slug: "mutual-funds",       Icon: PieChart,    color: "#1B3A6B", lightBg: "#EEF2F8",  badge: "Most Popular", highlight: "Expert Advisory" },
   { slug: "health-insurance",   Icon: Heart,       color: "#0D7E7E", lightBg: "#E6F4F4",  badge: null,           highlight: "Family Cover Plans" },
   { slug: "home-loan",          Icon: Home,        color: "#C9A84C", lightBg: "#FBF5E6",  badge: "Best Rates",   highlight: "From 8.4% p.a." },
   { slug: "life-insurance",     Icon: Shield,      color: "#6B46C1", lightBg: "#F0EBF9",  badge: null,           highlight: "Term & ULIP Plans" },
@@ -75,10 +75,10 @@ export default function FinancialHubPage() {
       },
       {
         "@type": "Question",
-        "name": "Is Right Asset Management SEBI registered?",
+        "name": "Are Right Asset Management's advisors qualified?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, Right Asset Management's advisors are SEBI-registered investment advisors, ensuring your investments are managed by qualified, regulated professionals."
+          "text": "Right Asset Management's advisors bring deep domain expertise and work with you to make informed, well-researched investment decisions aligned with your financial goals."
         }
       },
       {
@@ -166,7 +166,7 @@ export default function FinancialHubPage() {
             </h1>
 
             <p className="text-lg mb-8 max-w-2xl" style={{ color: "rgba(255,255,255,0.7)" }}>
-              From your first SIP to your retirement corpus — our SEBI-registered advisors
+              From your first SIP to your retirement corpus — our experienced advisors
               guide every financial decision with clarity, transparency, and no sales pressure.
             </p>
 
@@ -277,7 +277,7 @@ export default function FinancialHubPage() {
 
           {/* Disclaimer */}
           <p className="mt-8 text-center text-xs text-gray-400">
-            All investment advisory is provided by SEBI-registered advisors · Returns are subject to market risk ·
+            Returns are subject to market risk ·
             Past performance is not indicative of future results
           </p>
         </div>
@@ -293,7 +293,7 @@ export default function FinancialHubPage() {
             Ready to Build Your Financial Future?
           </h2>
           <p className="text-base mb-8" style={{ color: "rgba(255,255,255,0.7)" }}>
-            Book a free 30-minute consultation with our SEBI-registered advisors —
+            Book a free 30-minute consultation with our experienced advisors —
             no commitment, no sales pressure.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

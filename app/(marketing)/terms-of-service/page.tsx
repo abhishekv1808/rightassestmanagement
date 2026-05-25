@@ -27,7 +27,7 @@ We reserve the right to update or modify these Terms at any time. Continued use 
     content: `Right Asset Management provides advisory and facilitation services across three verticals:
 
 **Financial Services:**
-Investment advisory (as a SEBI-registered investment advisor), insurance advisory, loan facilitation, tax planning assistance, and related financial guidance for individuals and businesses.
+Investment advisory, insurance advisory, loan facilitation, tax planning assistance, and related financial guidance for individuals and businesses.
 
 **Real Estate Services:**
 Assistance with property transactions, documentation, government record extraction, regulatory approvals, and related real estate facilitation services in Karnataka, with a focus on Bangalore.
@@ -40,10 +40,7 @@ All services are subject to the specific scope agreed upon between the Company a
   {
     id: "financial-disclosures",
     title: "3. Financial Advisory — Regulatory Disclosures",
-    content: `**SEBI Registration:**
-Right Asset Management operates as a SEBI-registered investment advisor. All investment advisory services are rendered in accordance with the SEBI (Investment Advisers) Regulations, 2013, as amended from time to time.
-
-**Risk Disclosure — Investments:**
+    content: `**Risk Disclosure — Investments:**
 All investments in securities markets, mutual funds, equity, bonds, and other financial instruments are subject to market risk. Past performance of any fund, scheme, or instrument is not indicative of future results. The value of investments may rise or fall. Clients should read all scheme-related documents carefully before investing.
 
 **Insurance:**
@@ -238,7 +235,7 @@ export default function TermsOfServicePage() {
               Important Notice
             </p>
             <p className="text-sm leading-relaxed" style={{ color: "#7A5C00" }}>
-              Right Asset Management operates across three regulated domains — financial advisory (SEBI-registered),
+              Right Asset Management operates across three domains — financial advisory,
               real estate facilitation, and legal advisory (through empanelled advocates). Different regulatory frameworks
               apply to each vertical. Please read the relevant sections carefully before engaging our services.
             </p>

@@ -211,7 +211,6 @@ Mono/Tags:  JetBrains Mono — for code-like tags only
 
 **Section 3 — Why Choose Right Asset**
 - 48+ Services Under One Roof
-- SEBI-registered advisors
 - Transparent fee structure
 - End-to-end execution support
 - Serving clients across all of Bangalore

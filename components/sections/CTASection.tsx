@@ -7,7 +7,6 @@ import LeadForm from "@/components/forms/LeadForm";
 const BENEFITS = [
   "Free 30-minute initial consultation",
   "No commitment required",
-  "SEBI-registered advisors",
   "Response within 24 hours",
 ];
 

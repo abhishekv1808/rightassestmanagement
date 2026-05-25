@@ -240,7 +240,6 @@ export default function ExitIntentPopup() {
               }}
             >
               {[
-                "SEBI-registered advisors",
                 "No sales pressure",
                 "Response within 2 hours",
               ].map((item) => (

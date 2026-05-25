@@ -60,7 +60,7 @@ const article1: BlogPost = {
   readTime: "9 min read",
   excerpt:
     "Should you invest ₹5,000 every month or put ₹60,000 in one shot? We compare SIP and lump sum investing with real numbers to help Bangalore professionals decide.",
-  author: { name: "Right Asset Management", role: "SEBI-Registered Advisors" },
+  author: { name: "Right Asset Management", role: "Financial Advisors" },
   published: true,
 
   intro: [
@@ -139,7 +139,7 @@ const article1: BlogPost = {
       heading: "Why a Financial Advisor in Bangalore Can Help You Decide",
       paragraphs: [
         "A good financial advisor does not just say \"do SIP\" or \"invest lump sum\" — they evaluate your complete financial picture. Your income trajectory (Bangalore salaries often double every 4–5 years in tech), your EMI obligations, your tax-saving needs under Section 80C and 80D, your existing investments, and your life stage all influence the right investment strategy.",
-        "At Right Asset Management, our SEBI-registered advisors work with Bangalore professionals to build personalised investment plans. Whether you want to start a ₹5,000 SIP, deploy a ₹10 lakh bonus, or restructure your entire portfolio — we provide clear, unbiased guidance with no commission-driven product pushing. Our first consultation is free, and we explain everything in plain language.",
+        "At Right Asset Management, our advisors work with Bangalore professionals to build personalised investment plans. Whether you want to start a ₹5,000 SIP, deploy a ₹10 lakh bonus, or restructure your entire portfolio — we provide clear, unbiased guidance with no commission-driven product pushing. Our first consultation is free, and we explain everything in plain language.",
       ],
     },
   ],
@@ -168,13 +168,13 @@ const article1: BlogPost = {
     {
       question: "How does a financial advisor help me choose between SIP and lump sum?",
       answer:
-        "A SEBI-registered financial advisor evaluates your income pattern, existing investments, risk tolerance, financial goals, and tax situation before recommending SIP, lump sum, or a combination. This personalised approach ensures your strategy is aligned with your actual life circumstances, not generic rules.",
+        "A qualified financial advisor evaluates your income pattern, existing investments, risk tolerance, financial goals, and tax situation before recommending SIP, lump sum, or a combination. This personalised approach ensures your strategy is aligned with your actual life circumstances, not generic rules.",
     },
   ],
 
   conclusion: {
     text: "Both SIP and lump sum are powerful investment tools — the right choice depends on your cash flow, risk tolerance, and market conditions. For most salaried professionals in Bangalore, a monthly SIP forms the core strategy, supplemented by lump sum investments from bonuses and windfalls. The key is to start early, stay consistent, and seek expert guidance when deploying large sums.",
-    cta: "Need help choosing between SIP and lump sum? Right Asset Management offers personalised mutual fund advisory in Bangalore — SEBI-registered, transparent fees, and no commission bias. Book a free consultation today.",
+    cta: "Need help choosing between SIP and lump sum? Right Asset Management offers personalised mutual fund advisory in Bangalore — transparent fees and no commission bias. Book a free consultation today.",
   },
 
   relatedSlugs: [
@@ -200,7 +200,7 @@ const article2: BlogPost = {
   readTime: "10 min read",
   excerpt:
     "Buying your first home in Bangalore? This guide covers eligibility, documents, interest rates, and the full loan process — everything you need to know in 2026.",
-  author: { name: "Right Asset Management", role: "SEBI-Registered Advisors" },
+  author: { name: "Right Asset Management", role: "Financial Advisors" },
   published: true,
 
   intro: [
@@ -829,7 +829,7 @@ const article6: BlogPost = {
   publishedAt: "2026-05-20",
   readTime: "8 min read",
   excerpt: "STCG, LTCG, ELSS, dividend tax — mutual fund taxation in India can be confusing. This guide explains every tax rule in plain language with real examples.",
-  author: { name: "Right Asset Management", role: "SEBI-Registered Advisors" },
+  author: { name: "Right Asset Management", role: "Financial Advisors" },
   published: false,
   intro: [], sections: [], faqs: [],
   conclusion: { text: "", cta: "" },
@@ -863,7 +863,7 @@ const article8: BlogPost = {
   publishedAt: "2026-05-20",
   readTime: "8 min read",
   excerpt: "Term insurance is the most affordable way to protect your family. Learn how to calculate the right cover, compare plans, and avoid the mistakes most Indians make.",
-  author: { name: "Right Asset Management", role: "SEBI-Registered Advisors" },
+  author: { name: "Right Asset Management", role: "Financial Advisors" },
   published: false,
   intro: [], sections: [], faqs: [],
   conclusion: { text: "", cta: "" },
@@ -897,7 +897,7 @@ const article10: BlogPost = {
   publishedAt: "2026-05-20",
   readTime: "10 min read",
   excerpt: "A no-nonsense financial planning guide built for Bangalore salaries — covering the 50-30-20 rule, emergency funds, insurance, SIPs, and tax-saving strategies.",
-  author: { name: "Right Asset Management", role: "SEBI-Registered Advisors" },
+  author: { name: "Right Asset Management", role: "Financial Advisors" },
   published: false,
   intro: [], sections: [], faqs: [],
   conclusion: { text: "", cta: "" },

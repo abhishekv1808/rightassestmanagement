@@ -48,12 +48,12 @@ export default function ServicesGrid() {
             What We Do
           </p>
           <h2
-            className="font-heading font-bold text-4xl sm:text-5xl mb-4"
+            className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl mb-4"
             style={{ color: "#1B3A6B" }}
           >
             Three Verticals. One Firm.
           </h2>
-          <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-500 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
             Right Asset Management brings together expertise across Finance, Real Estate, and Law
             so you never have to coordinate between multiple advisors.
           </p>
@@ -71,7 +71,7 @@ export default function ServicesGrid() {
               {/* Top colour bar */}
               <div className="h-[4px] w-full" style={{ backgroundColor: v.color }} />
 
-              <div className="flex flex-col flex-1 p-8">
+              <div className="flex flex-col flex-1 p-5 sm:p-8">
                 {/* Icon */}
                 <div
                   className="w-14 h-14 rounded-xl flex items-center justify-center mb-5"
@@ -89,7 +89,7 @@ export default function ServicesGrid() {
                 </span>
 
                 <h3
-                  className="font-heading font-semibold text-2xl mb-3"
+                  className="font-heading font-semibold text-xl sm:text-2xl mb-3"
                   style={{ color: "#1A1A1A" }}
                 >
                   {v.name}

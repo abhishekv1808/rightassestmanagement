@@ -396,7 +396,7 @@ export default function BlogPage() {
             style={{ color: "rgba(255,255,255,0.7)" }}
           >
             Our articles give you the knowledge — our advisors give you the
-            plan. Book a free consultation with our SEBI-registered team.
+            plan. Book a free consultation with our experienced team.
           </p>
           <Link
             href="/contact"

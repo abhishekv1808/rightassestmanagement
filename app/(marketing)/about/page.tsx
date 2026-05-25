@@ -33,7 +33,7 @@ const VERTICALS = [
     href: "/financial",
     count: "20 services",
     headline: "Your complete financial guide.",
-    body: "From SIPs to portfolio management, health insurance to home loans, tax planning to retirement — we cover every stage of your financial life with qualified, SEBI-registered advisors.",
+    body: "From SIPs to portfolio management, health insurance to home loans, tax planning to retirement — we cover every stage of your financial life with qualified, experienced advisors.",
     services: [
       "Mutual Funds & SIP",
       "Insurance Planning",
@@ -93,8 +93,8 @@ const WHY_CHOOSE = [
     Icon: FileCheck,
     color: "#0D7E7E",
     lightBg: "#E6F4F4",
-    title: "SEBI-Registered Advisors",
-    body: "Our financial advisors are registered with SEBI. Every recommendation we make is compliant, qualified, and in your best interest — always.",
+    title: "Qualified, Experienced Advisors",
+    body: "Our financial advisors bring deep expertise and domain knowledge. Every recommendation we make is qualified, well-researched, and in your best interest — always.",
   },
   {
     Icon: Banknote,
@@ -293,7 +293,7 @@ export default function AboutPage() {
                 ))}
               </div>
 
-              {/* SEBI badge */}
+              {/* Expert advisors badge */}
               <div
                 className="rounded-2xl p-5 flex items-start gap-4"
                 style={{ backgroundColor: "#EEF2F8" }}
@@ -306,11 +306,11 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p className="font-semibold text-sm mb-1" style={{ color: "#1B3A6B" }}>
-                    SEBI-Registered Advisors
+                    Expert Advisory
                   </p>
                   <p className="text-xs text-gray-500 leading-relaxed">
-                    All financial advisory services are provided by SEBI-registered investment
-                    advisors in full compliance with applicable regulations.
+                    All financial advisory services are provided by experienced professionals
+                    committed to your best interest and full transparency.
                   </p>
                 </div>
               </div>

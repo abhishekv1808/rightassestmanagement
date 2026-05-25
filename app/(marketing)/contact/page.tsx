@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import SocialFollowBanner from "@/components/sections/SocialFollowBanner";
 import Link from "next/link";
 import {
   MapPin,
@@ -193,7 +192,7 @@ export default function ContactPage() {
                 <p className="text-gray-500 text-sm leading-relaxed mb-7">
                   Right Asset Management offers a free 30-minute initial consultation —
                   no commitment, no sales pressure. Just straightforward guidance from
-                  our SEBI-registered advisors.
+                  our experienced advisors.
                 </p>
 
                 {/* Contact detail rows */}
@@ -403,62 +402,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── Social follow ───────────────────────────────────────────────── */}
-      <SocialFollowBanner />
 
-      {/* ── What to expect ──────────────────────────────────────────────── */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p
-            className="text-xs font-semibold uppercase tracking-[0.18em] mb-3"
-            style={{ color: "#C9A84C" }}
-          >
-            The Process
-          </p>
-          <h2
-            className="font-heading font-bold text-3xl mb-12"
-            style={{ color: "#1B3A6B" }}
-          >
-            What Happens After You Submit
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {[
-              {
-                step: "01",
-                title: "We Call You Back",
-                desc: "An advisor will call you within 24 hours to understand your needs.",
-              },
-              {
-                step: "02",
-                title: "Free Consultation",
-                desc: "A 30-minute session — no jargon, no pressure, just clear guidance.",
-              },
-              {
-                step: "03",
-                title: "We Execute Together",
-                desc: "Once you're comfortable, we handle everything end-to-end.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center">
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 font-heading font-bold text-lg"
-                  style={{ backgroundColor: "#EEF2F8", color: "#1B3A6B" }}
-                >
-                  {item.step}
-                </div>
-                {/* Connector line — hidden on mobile */}
-                <h3
-                  className="font-heading font-semibold text-lg mb-2"
-                  style={{ color: "#1A1A1A" }}
-                >
-                  {item.title}
-                </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

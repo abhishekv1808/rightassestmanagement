@@ -555,7 +555,7 @@ export default function LeadsPage() {
         </div>
       </div>
 
-      {/* Detail slide-over panel */}
+      {/* Lead Detail Modal */}
       {selectedLead && (
         <>
           {/* Backdrop */}
@@ -564,27 +564,30 @@ export default function LeadsPage() {
             style={{
               position: "fixed",
               inset: 0,
-              backgroundColor: "rgba(0,0,0,0.3)",
+              backgroundColor: "rgba(0,0,0,0.45)",
               zIndex: 49,
+              backdropFilter: "blur(2px)",
             }}
           />
 
-          {/* Panel */}
+          {/* Modal */}
           <div
             style={{
               position: "fixed",
-              top: 0,
-              right: 0,
-              bottom: 0,
-              width: "min(480px, 100vw)",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "min(640px, calc(100vw - 32px))",
+              maxHeight: "calc(100vh - 48px)",
               backgroundColor: "#FFFFFF",
+              borderRadius: "20px",
               zIndex: 50,
               overflowY: "auto",
-              boxShadow: "-4px 0 24px rgba(0,0,0,0.12)",
-              animation: "slideIn 0.25s ease",
+              boxShadow: "0 24px 60px rgba(0,0,0,0.18), 0 4px 16px rgba(0,0,0,0.08)",
+              animation: "modalIn 0.22s cubic-bezier(0.34, 1.56, 0.64, 1)",
             }}
           >
-            {/* Panel header */}
+            {/* Modal header */}
             <div
               style={{
                 position: "sticky",
@@ -596,95 +599,124 @@ export default function LeadsPage() {
                 alignItems: "center",
                 justifyContent: "space-between",
                 zIndex: 1,
+                borderRadius: "20px 20px 0 0",
               }}
             >
-              <div>
-                <h3
+              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                {/* Avatar */}
+                <div
                   style={{
-                    fontSize: "17px",
+                    width: "44px",
+                    height: "44px",
+                    borderRadius: "12px",
+                    background: "linear-gradient(135deg, #1B3A6B 0%, #2D5FA8 100%)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "#C9A84C",
                     fontWeight: "700",
-                    color: "#1B3A6B",
-                    margin: "0 0 3px 0",
+                    fontSize: "16px",
+                    flexShrink: 0,
                   }}
                 >
-                  {selectedLead.full_name}
-                </h3>
-                <StatusBadge status={selectedLead.status} />
+                  {selectedLead.full_name.charAt(0).toUpperCase()}
+                </div>
+                <div>
+                  <h3
+                    style={{
+                      fontSize: "17px",
+                      fontWeight: "700",
+                      color: "#1B3A6B",
+                      margin: "0 0 4px 0",
+                    }}
+                  >
+                    {selectedLead.full_name}
+                  </h3>
+                  <StatusBadge status={selectedLead.status} />
+                </div>
               </div>
               <button
                 onClick={closePanel}
                 style={{
                   background: "none",
-                  border: "none",
+                  border: "1.5px solid #E2E8F0",
                   cursor: "pointer",
                   padding: "6px",
                   borderRadius: "8px",
                   color: "#64748B",
                   display: "flex",
                   alignItems: "center",
-                  transition: "background-color 0.15s",
+                  transition: "all 0.15s",
+                  flexShrink: 0,
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-                    "#F1F5F9";
+                  (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#F1F5F9";
+                  (e.currentTarget as HTMLButtonElement).style.borderColor = "#CBD5E1";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-                    "transparent";
+                  (e.currentTarget as HTMLButtonElement).style.backgroundColor = "transparent";
+                  (e.currentTarget as HTMLButtonElement).style.borderColor = "#E2E8F0";
                 }}
               >
-                <X size={20} />
+                <X size={18} />
               </button>
             </div>
 
-            {/* Panel content */}
+            {/* Modal body */}
             <div style={{ padding: "24px" }}>
-              {/* Details */}
+
+              {/* Details grid */}
               <div
                 style={{
                   display: "grid",
                   gridTemplateColumns: "1fr 1fr",
-                  gap: "16px",
-                  marginBottom: "24px",
+                  gap: "0",
+                  marginBottom: "20px",
+                  border: "1px solid #F1F5F9",
+                  borderRadius: "14px",
+                  overflow: "hidden",
                 }}
               >
                 {[
-                  { label: "Full Name", value: selectedLead.full_name },
-                  { label: "Phone", value: selectedLead.phone },
-                  { label: "Email", value: selectedLead.email ?? "—" },
-                  {
-                    label: "Service Interested",
-                    value: selectedLead.service_interested ?? "—",
-                  },
-                  { label: "Source", value: selectedLead.source ?? "—" },
+                  { label: "Full Name", value: selectedLead.full_name, icon: "👤" },
+                  { label: "Phone", value: selectedLead.phone, icon: "📞" },
+                  { label: "Email", value: selectedLead.email ?? "—", icon: "✉️" },
+                  { label: "Service Interested", value: selectedLead.service_interested ?? "—", icon: "🏷️" },
+                  { label: "Source", value: selectedLead.source ?? "—", icon: "📍" },
                   {
                     label: "Submitted",
-                    value: new Date(selectedLead.created_at).toLocaleDateString(
-                      "en-IN",
-                      {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      }
-                    ),
+                    value: new Date(selectedLead.created_at).toLocaleDateString("en-IN", {
+                      day: "numeric",
+                      month: "long",
+                      year: "numeric",
+                    }),
+                    icon: "📅",
                   },
-                ].map(({ label, value }) => (
-                  <div key={label}>
+                ].map(({ label, value, icon }, idx) => (
+                  <div
+                    key={label}
+                    style={{
+                      padding: "14px 16px",
+                      borderBottom: idx < 4 ? "1px solid #F1F5F9" : "none",
+                      borderRight: idx % 2 === 0 ? "1px solid #F1F5F9" : "none",
+                      backgroundColor: idx % 2 === 0 ? "#FAFBFC" : "#FFFFFF",
+                    }}
+                  >
                     <p
                       style={{
-                        fontSize: "11px",
+                        fontSize: "10px",
                         fontWeight: "700",
                         color: "#94A3B8",
                         letterSpacing: "0.8px",
                         textTransform: "uppercase",
-                        margin: "0 0 4px 0",
+                        margin: "0 0 5px 0",
                       }}
                     >
-                      {label}
+                      {icon} {label}
                     </p>
                     <p
                       style={{
-                        fontSize: "14px",
+                        fontSize: "13.5px",
                         color: "#1A1A1A",
                         margin: 0,
                         fontWeight: "500",
@@ -699,7 +731,7 @@ export default function LeadsPage() {
 
               {/* Message */}
               {selectedLead.message && (
-                <div style={{ marginBottom: "24px" }}>
+                <div style={{ marginBottom: "20px" }}>
                   <p
                     style={{
                       fontSize: "11px",
@@ -710,16 +742,17 @@ export default function LeadsPage() {
                       margin: "0 0 8px 0",
                     }}
                   >
-                    Message
+                    💬 Message
                   </p>
                   <div
                     style={{
                       backgroundColor: "#F8FAFC",
+                      border: "1px solid #F1F5F9",
                       borderRadius: "10px",
-                      padding: "14px",
+                      padding: "14px 16px",
                       fontSize: "14px",
                       color: "#374151",
-                      lineHeight: "1.6",
+                      lineHeight: "1.65",
                     }}
                   >
                     {selectedLead.message}
@@ -727,191 +760,176 @@ export default function LeadsPage() {
                 </div>
               )}
 
-              {/* Status update */}
-              <div
-                style={{
-                  backgroundColor: "#F8FAFC",
-                  borderRadius: "12px",
-                  padding: "18px",
-                  marginBottom: "16px",
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: "13px",
-                    fontWeight: "700",
-                    color: "#374151",
-                    margin: "0 0 10px 0",
-                  }}
-                >
-                  Update Status
-                </p>
-                <div
-                  style={{
-                    position: "relative",
-                    marginBottom: "12px",
-                  }}
-                >
-                  <select
-                    value={panelStatus}
-                    onChange={(e) => setPanelStatus(e.target.value)}
-                    style={{
-                      width: "100%",
-                      padding: "10px 36px 10px 12px",
-                      border: "1.5px solid #E2E8F0",
-                      borderRadius: "8px",
-                      fontSize: "14px",
-                      color: "#1A1A1A",
-                      backgroundColor: "#FFFFFF",
-                      appearance: "none",
-                      cursor: "pointer",
-                      outline: "none",
-                    }}
-                  >
-                    <option value="new">New</option>
-                    <option value="contacted">Contacted</option>
-                    <option value="converted">Converted</option>
-                    <option value="closed">Closed</option>
-                  </select>
-                  <ChevronDown
-                    size={15}
-                    color="#94A3B8"
-                    style={{
-                      position: "absolute",
-                      right: "12px",
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      pointerEvents: "none",
-                    }}
-                  />
-                </div>
-                <button
-                  onClick={handleUpdateStatus}
-                  disabled={updating || panelStatus === selectedLead.status}
-                  style={{
-                    width: "100%",
-                    padding: "11px",
-                    backgroundColor:
-                      updating || panelStatus === selectedLead.status
-                        ? "#E2E8F0"
-                        : "#1B3A6B",
-                    color:
-                      updating || panelStatus === selectedLead.status
-                        ? "#94A3B8"
-                        : "#FFFFFF",
-                    border: "none",
-                    borderRadius: "8px",
-                    fontSize: "14px",
-                    fontWeight: "600",
-                    cursor:
-                      updating || panelStatus === selectedLead.status
-                        ? "not-allowed"
-                        : "pointer",
-                    transition: "background-color 0.15s",
-                  }}
-                >
-                  {updating ? "Updating…" : "Update Status"}
-                </button>
-              </div>
+              {/* Divider */}
+              <div style={{ height: "1px", backgroundColor: "#F1F5F9", margin: "4px 0 20px" }} />
 
-              {/* Delete */}
-              {!deleteConfirm ? (
-                <button
-                  onClick={() => setDeleteConfirm(true)}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "7px",
-                    width: "100%",
-                    padding: "11px",
-                    backgroundColor: "transparent",
-                    border: "1.5px solid #FCA5A5",
-                    borderRadius: "8px",
-                    fontSize: "13.5px",
-                    fontWeight: "600",
-                    color: "#EF4444",
-                    cursor: "pointer",
-                    transition: "background-color 0.15s",
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-                      "#FEF2F2";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-                      "transparent";
-                  }}
-                >
-                  <Trash2 size={15} />
-                  Delete Lead
-                </button>
-              ) : (
+              {/* Status update + Delete in a row */}
+              <div style={{ display: "flex", gap: "12px", alignItems: "flex-start", flexWrap: "wrap" }}>
+
+                {/* Status update */}
                 <div
                   style={{
-                    backgroundColor: "#FEF2F2",
-                    border: "1px solid #FECACA",
-                    borderRadius: "10px",
+                    flex: 1,
+                    minWidth: "200px",
+                    backgroundColor: "#F8FAFC",
+                    borderRadius: "12px",
                     padding: "16px",
                   }}
                 >
-                  <div
+                  <p
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "8px",
-                      marginBottom: "12px",
+                      fontSize: "12px",
+                      fontWeight: "700",
+                      color: "#374151",
+                      margin: "0 0 10px 0",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.5px",
                     }}
                   >
-                    <AlertCircle size={16} color="#EF4444" />
-                    <p
+                    Update Status
+                  </p>
+                  <div style={{ position: "relative", marginBottom: "10px" }}>
+                    <select
+                      value={panelStatus}
+                      onChange={(e) => setPanelStatus(e.target.value)}
                       style={{
-                        fontSize: "13px",
-                        color: "#991B1B",
-                        margin: 0,
-                        fontWeight: "600",
-                      }}
-                    >
-                      This will permanently delete this lead. Are you sure?
-                    </p>
-                  </div>
-                  <div style={{ display: "flex", gap: "8px" }}>
-                    <button
-                      onClick={handleDeleteLead}
-                      disabled={deleting}
-                      style={{
-                        flex: 1,
-                        padding: "9px",
-                        backgroundColor: "#EF4444",
-                        color: "#FFFFFF",
-                        border: "none",
-                        borderRadius: "7px",
-                        fontSize: "13px",
-                        fontWeight: "600",
-                        cursor: deleting ? "not-allowed" : "pointer",
-                      }}
-                    >
-                      {deleting ? "Deleting…" : "Yes, Delete"}
-                    </button>
-                    <button
-                      onClick={() => setDeleteConfirm(false)}
-                      style={{
-                        flex: 1,
-                        padding: "9px",
+                        width: "100%",
+                        padding: "9px 32px 9px 12px",
+                        border: "1.5px solid #E2E8F0",
+                        borderRadius: "8px",
+                        fontSize: "13.5px",
+                        color: "#1A1A1A",
                         backgroundColor: "#FFFFFF",
-                        color: "#374151",
-                        border: "1px solid #E2E8F0",
-                        borderRadius: "7px",
-                        fontSize: "13px",
-                        fontWeight: "600",
+                        appearance: "none",
                         cursor: "pointer",
+                        outline: "none",
                       }}
                     >
-                      Cancel
-                    </button>
+                      <option value="new">New</option>
+                      <option value="contacted">Contacted</option>
+                      <option value="converted">Converted</option>
+                      <option value="closed">Closed</option>
+                    </select>
+                    <ChevronDown
+                      size={14}
+                      color="#94A3B8"
+                      style={{
+                        position: "absolute",
+                        right: "10px",
+                        top: "50%",
+                        transform: "translateY(-50%)",
+                        pointerEvents: "none",
+                      }}
+                    />
                   </div>
+                  <button
+                    onClick={handleUpdateStatus}
+                    disabled={updating || panelStatus === selectedLead.status}
+                    style={{
+                      width: "100%",
+                      padding: "10px",
+                      backgroundColor:
+                        updating || panelStatus === selectedLead.status ? "#E2E8F0" : "#1B3A6B",
+                      color:
+                        updating || panelStatus === selectedLead.status ? "#94A3B8" : "#FFFFFF",
+                      border: "none",
+                      borderRadius: "8px",
+                      fontSize: "13.5px",
+                      fontWeight: "600",
+                      cursor:
+                        updating || panelStatus === selectedLead.status ? "not-allowed" : "pointer",
+                      transition: "background-color 0.15s",
+                    }}
+                  >
+                    {updating ? "Updating…" : "Update Status"}
+                  </button>
                 </div>
-              )}
+
+                {/* Delete section */}
+                <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-end", paddingTop: "36px" }}>
+                  {!deleteConfirm ? (
+                    <button
+                      onClick={() => setDeleteConfirm(true)}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "6px",
+                        padding: "10px 18px",
+                        backgroundColor: "transparent",
+                        border: "1.5px solid #FCA5A5",
+                        borderRadius: "8px",
+                        fontSize: "13px",
+                        fontWeight: "600",
+                        color: "#EF4444",
+                        cursor: "pointer",
+                        transition: "background-color 0.15s",
+                        whiteSpace: "nowrap",
+                      }}
+                      onMouseEnter={(e) => {
+                        (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#FEF2F2";
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.currentTarget as HTMLButtonElement).style.backgroundColor = "transparent";
+                      }}
+                    >
+                      <Trash2 size={14} />
+                      Delete Lead
+                    </button>
+                  ) : (
+                    <div
+                      style={{
+                        backgroundColor: "#FEF2F2",
+                        border: "1px solid #FECACA",
+                        borderRadius: "10px",
+                        padding: "14px",
+                        maxWidth: "220px",
+                      }}
+                    >
+                      <div style={{ display: "flex", alignItems: "flex-start", gap: "8px", marginBottom: "10px" }}>
+                        <AlertCircle size={15} color="#EF4444" style={{ flexShrink: 0, marginTop: "1px" }} />
+                        <p style={{ fontSize: "12px", color: "#991B1B", margin: 0, fontWeight: "600", lineHeight: "1.4" }}>
+                          Permanently delete this lead?
+                        </p>
+                      </div>
+                      <div style={{ display: "flex", gap: "7px" }}>
+                        <button
+                          onClick={handleDeleteLead}
+                          disabled={deleting}
+                          style={{
+                            flex: 1,
+                            padding: "8px",
+                            backgroundColor: "#EF4444",
+                            color: "#FFFFFF",
+                            border: "none",
+                            borderRadius: "7px",
+                            fontSize: "12px",
+                            fontWeight: "600",
+                            cursor: deleting ? "not-allowed" : "pointer",
+                          }}
+                        >
+                          {deleting ? "Deleting…" : "Delete"}
+                        </button>
+                        <button
+                          onClick={() => setDeleteConfirm(false)}
+                          style={{
+                            flex: 1,
+                            padding: "8px",
+                            backgroundColor: "#FFFFFF",
+                            color: "#374151",
+                            border: "1px solid #E2E8F0",
+                            borderRadius: "7px",
+                            fontSize: "12px",
+                            fontWeight: "600",
+                            cursor: "pointer",
+                          }}
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </>
@@ -922,9 +940,9 @@ export default function LeadsPage() {
           0%, 100% { opacity: 1; }
           50% { opacity: 0.5; }
         }
-        @keyframes slideIn {
-          from { transform: translateX(100%); }
-          to { transform: translateX(0); }
+        @keyframes modalIn {
+          from { opacity: 0; transform: translate(-50%, -48%) scale(0.96); }
+          to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
         }
       `}</style>
     </div>

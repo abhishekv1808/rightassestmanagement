@@ -355,7 +355,7 @@ export default function Footer() {
             </p>
 
             <p className="text-[11px] mb-7 font-medium tracking-wide" style={{ color: "rgba(201,168,76,0.65)" }}>
-              SEBI-Registered · Pan Bangalore
+              Pan Bangalore
             </p>
 
             {/* Contact details */}
@@ -486,7 +486,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs order-3 text-center sm:text-right max-w-sm" style={{ color: "rgba(255,255,255,0.28)" }}>
-              SEBI-registered advisors · Investments subject to market risk · Read all scheme documents carefully
+              Investments subject to market risk · Read all scheme documents carefully
             </p>
           </div>
         </div>

@@ -148,7 +148,7 @@ export default async function FinancialServicePage({
               >
                 <p className="text-white font-semibold mb-1">Free 30-min Consultation</p>
                 <p className="text-sm mb-5" style={{ color: "rgba(255,255,255,0.6)" }}>
-                  Talk to a SEBI-registered advisor about {svc.title.toLowerCase()}.
+                  Talk to an experienced advisor about {svc.title.toLowerCase()}.
                 </p>
                 <a
                   href="https://wa.me/919999999999"

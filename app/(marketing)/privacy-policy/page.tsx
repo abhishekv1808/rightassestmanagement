@@ -60,7 +60,7 @@ We do not collect sensitive personal data such as Aadhaar numbers, PAN, financia
 — To maintain internal records of client interactions for service continuity
 
 **Compliance & Legal Obligations:**
-— To meet our regulatory obligations as a SEBI-registered advisory firm
+— To meet our regulatory obligations as an advisory firm
 — To maintain records as required under applicable Indian laws including the Prevention of Money Laundering Act, 2002 (PMLA) where applicable
 
 **We do not use your personal information for:**
@@ -138,7 +138,7 @@ To exercise any of these rights, please contact us using the details in Section 
 
 **Enquiry form submissions:** Retained for a period of 3 years from the date of submission, or for the duration of an active client relationship, whichever is longer.
 
-**Client records:** For clients who engage our services, records are retained for a minimum of 5 years following the conclusion of the engagement, in compliance with applicable regulations including SEBI guidelines for registered investment advisors.
+**Client records:** For clients who engage our services, records are retained for a minimum of 5 years following the conclusion of the engagement, in compliance with applicable regulations.
 
 **Analytics data:** Aggregated, anonymised analytics data does not identify individuals and may be retained indefinitely for operational improvement purposes.
 

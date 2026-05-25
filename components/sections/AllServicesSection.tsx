@@ -31,7 +31,7 @@ type CardConfig = {
 // ─── Card configs ─────────────────────────────────────────────────
 
 const FINANCIAL_CARDS: CardConfig[] = [
-  { slug: "mutual-funds",        Icon: PieChart,    color: "#1B3A6B", lightBg: "#EEF2F8", badge: "Most Popular", highlight: "SEBI Registered",          vertical: "financial" },
+  { slug: "mutual-funds",        Icon: PieChart,    color: "#1B3A6B", lightBg: "#EEF2F8", badge: "Most Popular", highlight: "Expert Advisory",          vertical: "financial" },
   { slug: "health-insurance",    Icon: Heart,       color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Family Cover Plans",       vertical: "financial" },
   { slug: "home-loan",           Icon: Home,        color: "#C9A84C", lightBg: "#FBF5E6", badge: "Best Rates",   highlight: "From 8.4% p.a.",            vertical: "financial" },
   { slug: "life-insurance",      Icon: Shield,      color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Term & ULIP Plans",        vertical: "financial" },

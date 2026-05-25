@@ -214,7 +214,7 @@ export default function ServiceStickyBar({
           WhatsApp Now
         </a>
         <p style={{ fontSize: "10px", color: "#64748B", textAlign: "center", lineHeight: 1.4 }}>
-          &#9733; SEBI-registered&nbsp;&middot;&nbsp;Free&nbsp;30-min&nbsp;call
+          &#9733; Free&nbsp;30-min&nbsp;call
         </p>
       </aside>
 
@@ -225,7 +225,7 @@ export default function ServiceStickyBar({
       >
         <div className="ssb-mobile-text">
           Get help with {serviceName}
-          <span>SEBI-registered · Free consult</span>
+          <span>Free consult</span>
         </div>
         <Link href={consultHref} className="ssb-mobile-cta">
           Free Consult&nbsp;&#8594;

@@ -24,7 +24,7 @@ const financialServices: Service[] = [
     title: "Equity & Commodity Market",
     vertical: "financial",
     tagline: "Expert guidance for stock market and commodity investments in Bangalore.",
-    description: "The equity and commodity markets offer some of the highest long-term wealth creation opportunities available to Indian investors, but navigating them requires disciplined research, timely execution, and a clear understanding of risk. At Right Asset Management, our SEBI-registered advisors provide end-to-end guidance — from identifying quality stocks and sectoral opportunities on NSE and BSE, to commodity positions in gold, silver, crude oil, and agricultural futures on MCX and NCDEX. We combine fundamental analysis with technical signals to build strategies suited to your time horizon and risk appetite. Whether you are a Bangalore-based salaried professional looking to start equity investing, or a seasoned investor wanting a structured approach to derivatives and commodity trading, we bring the research and discipline you need. Our advisors monitor your portfolio actively, flag rebalancing opportunities, and keep you informed about corporate actions, earnings results, and macro events that impact your holdings. We believe informed investors make better decisions — our role is to make sure you are always informed.",
+    description: "The equity and commodity markets offer some of the highest long-term wealth creation opportunities available to Indian investors, but navigating them requires disciplined research, timely execution, and a clear understanding of risk. At Right Asset Management, our advisors provide end-to-end guidance — from identifying quality stocks and sectoral opportunities on NSE and BSE, to commodity positions in gold, silver, crude oil, and agricultural futures on MCX and NCDEX. We combine fundamental analysis with technical signals to build strategies suited to your time horizon and risk appetite. Whether you are a Bangalore-based salaried professional looking to start equity investing, or a seasoned investor wanting a structured approach to derivatives and commodity trading, we bring the research and discipline you need. Our advisors monitor your portfolio actively, flag rebalancing opportunities, and keep you informed about corporate actions, earnings results, and macro events that impact your holdings. We believe informed investors make better decisions — our role is to make sure you are always informed.",
     whoIsItFor: [
       "Salaried professionals in Bangalore's IT and corporate sectors looking to grow wealth beyond savings accounts",
       "First-time equity investors who want a guided, research-backed entry into the stock market",
@@ -43,7 +43,7 @@ const financialServices: Service[] = [
       { step: 7, title: "Tax & Compliance Guidance", description: "We advise on short-term and long-term capital gains tax implications and help ensure your trading activity is reported correctly in your ITR." },
     ],
     benefits: [
-      "Access SEBI-registered, research-driven equity and commodity advice tailored to your financial goals",
+      "Access research-driven equity and commodity advice tailored to your financial goals",
       "Receive timely buy/sell calls backed by both fundamental and technical analysis",
       "Understand your investments fully — no blind tips, always explained rationale",
       "Benefit from active portfolio monitoring so you never miss a critical market event",
@@ -77,12 +77,12 @@ const financialServices: Service[] = [
       },
       {
         question: "Does Right Asset Management execute trades on my behalf?",
-        answer: "Right Asset Management provides SEBI-registered investment advisory services — we guide you with research-backed recommendations. Trade execution is done by you through your own Demat and trading account, ensuring full transparency and control over your money at all times.",
+        answer: "Right Asset Management provides investment advisory services — we guide you with research-backed recommendations. Trade execution is done by you through your own Demat and trading account, ensuring full transparency and control over your money at all times.",
       },
     ],
     relatedServices: ["mutual-funds", "portfolio-management", "financial-planning"],
     metaTitle: "Equity & Commodity Market Advisory in Bangalore | Right Asset Management",
-    metaDescription: "Get expert equity and commodity market advisory services in Bangalore. SEBI-registered advisors to help you invest confidently.",
+    metaDescription: "Get expert equity and commodity market advisory services in Bangalore. Experienced advisors to help you invest confidently.",
   },
   {
     slug: "mutual-funds",
@@ -551,7 +551,7 @@ const financialServices: Service[] = [
     title: "Portfolio Management Services",
     vertical: "financial",
     tagline: "Professional portfolio management for HNI investors in Bangalore.",
-    description: "Portfolio Management Services (PMS) in India are SEBI-regulated investment products designed specifically for high-net-worth individuals with a minimum investment of ₹50 lakh. Unlike mutual funds, PMS involves direct ownership of securities in your name — stocks, bonds, and other instruments are held in your own Demat account, providing full transparency into every position. PMS managers employ focused, high-conviction strategies that are not constrained by the diversification mandates of mutual funds, enabling potential outperformance for investors with a higher risk appetite and longer investment horizon. At Right Asset Management, our SEBI-registered advisors work with leading PMS providers across India and help Bangalore-based HNI investors evaluate and access the right PMS product for their wealth goals. Bangalore's growing class of tech entrepreneurs, senior corporate executives, and business owners with significant surplus capital increasingly look to PMS as a vehicle for structured wealth management beyond mutual funds and direct equity. We provide an independent assessment of PMS track records, fee structures (management fee, profit sharing), investment philosophy, and fund manager credentials — helping you make an informed decision before committing significant capital.",
+    description: "Portfolio Management Services (PMS) in India are SEBI-regulated investment products designed specifically for high-net-worth individuals with a minimum investment of ₹50 lakh. Unlike mutual funds, PMS involves direct ownership of securities in your name — stocks, bonds, and other instruments are held in your own Demat account, providing full transparency into every position. PMS managers employ focused, high-conviction strategies that are not constrained by the diversification mandates of mutual funds, enabling potential outperformance for investors with a higher risk appetite and longer investment horizon. At Right Asset Management, our advisors work with leading PMS providers across India and help Bangalore-based HNI investors evaluate and access the right PMS product for their wealth goals. Bangalore's growing class of tech entrepreneurs, senior corporate executives, and business owners with significant surplus capital increasingly look to PMS as a vehicle for structured wealth management beyond mutual funds and direct equity. We provide an independent assessment of PMS track records, fee structures (management fee, profit sharing), investment philosophy, and fund manager credentials — helping you make an informed decision before committing significant capital.",
     whoIsItFor: [
       "HNI individuals in Bangalore with investable surplus of ₹50 lakh or more seeking professional portfolio management",
       "Tech entrepreneurs and ESOP holders with concentrated single-stock positions needing active portfolio diversification",
@@ -611,7 +611,7 @@ const financialServices: Service[] = [
     ],
     relatedServices: ["equity-commodity", "aif", "financial-planning"],
     metaTitle: "Portfolio Management Services in Bangalore | Right Asset Management",
-    metaDescription: "Professional portfolio management for high-net-worth investors in Bangalore. SEBI-registered advisors managing your wealth end-to-end.",
+    metaDescription: "Professional portfolio management for high-net-worth investors in Bangalore. Expert advisors managing your wealth end-to-end.",
   },
   {
     slug: "bonds-ncd",
@@ -1273,7 +1273,7 @@ const financialServices: Service[] = [
     title: "Comprehensive Financial Planning",
     vertical: "financial",
     tagline: "A complete financial plan built around your life goals and risk profile.",
-    description: "Most people in Bangalore manage their finances reactively — investing in tax-saving instruments in March, buying insurance when pushed by an agent, taking a loan when they need money, and dealing with each financial decision in isolation. This fragmented approach often leads to duplication, inefficiency, under-insurance, and under-investment. Comprehensive financial planning takes a fundamentally different approach — it looks at your entire financial life as an integrated whole and builds a coherent, goal-based roadmap from where you are today to where you want to be. At Right Asset Management, our SEBI-registered advisors provide comprehensive financial plans covering every major dimension of your financial life: net worth assessment and cash flow analysis, goal setting and goal-based investment portfolio design, insurance audit and adequacy review (life, health, and income protection), tax planning across all applicable deductions and regimes, retirement corpus planning, estate planning basics (will and nomination), and debt management strategy. Whether you are a 28-year-old software engineer in Whitefield starting your first structured financial plan, or a 45-year-old business owner in Jayanagar trying to course-correct before retirement, we build a plan that is realistic, actionable, and regularly reviewed. Our financial planning process is transparent about fees and completely independent of product commissions — we advise in your best interest.",
+    description: "Most people in Bangalore manage their finances reactively — investing in tax-saving instruments in March, buying insurance when pushed by an agent, taking a loan when they need money, and dealing with each financial decision in isolation. This fragmented approach often leads to duplication, inefficiency, under-insurance, and under-investment. Comprehensive financial planning takes a fundamentally different approach — it looks at your entire financial life as an integrated whole and builds a coherent, goal-based roadmap from where you are today to where you want to be. At Right Asset Management, our advisors provide comprehensive financial plans covering every major dimension of your financial life: net worth assessment and cash flow analysis, goal setting and goal-based investment portfolio design, insurance audit and adequacy review (life, health, and income protection), tax planning across all applicable deductions and regimes, retirement corpus planning, estate planning basics (will and nomination), and debt management strategy. Whether you are a 28-year-old software engineer in Whitefield starting your first structured financial plan, or a 45-year-old business owner in Jayanagar trying to course-correct before retirement, we build a plan that is realistic, actionable, and regularly reviewed. Our financial planning process is transparent about fees and completely independent of product commissions — we advise in your best interest.",
     whoIsItFor: [
       "Young professionals in Bangalore's IT sector who want to start managing money strategically from the early years of their career",
       "Families at major life transitions — marriage, first child, home purchase — who need a comprehensive financial reset",

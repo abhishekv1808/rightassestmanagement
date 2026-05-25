@@ -24,10 +24,7 @@ Users and clients are strongly advised to independently verify all information a
   {
     id: "investment-disclaimer",
     title: "2. Investment & Financial Services Disclaimer",
-    content: `**SEBI Mandatory Risk Disclosure:**
-Right Asset Management is registered with the Securities and Exchange Board of India (SEBI) as an Investment Adviser. Registration does not guarantee investment performance or endorse the quality, accuracy, or completeness of our advisory services.
-
-**Market Risk:**
+    content: `**Market Risk:**
 Investments in equity, mutual funds, bonds, Non-Convertible Debentures (NCDs), Alternate Investment Funds (AIFs), gold instruments (SGBs, ETFs), and all other securities are subject to market risk. The Net Asset Value (NAV) of mutual fund schemes and the market price of securities fluctuate based on market conditions. There is no assurance or guarantee that the objectives of any investment product will be achieved.
 
 **Past Performance:**
@@ -46,7 +43,7 @@ Loan facilitation is provided for informational purposes. Interest rates, loan a
 Tax savings and benefits mentioned in the context of any financial product (e.g., Section 80C, Section 80D, Section 10(10D)) are based on current tax laws as of the date of communication. Tax laws are subject to change. The actual tax benefit available to an individual depends on their income, applicable tax regime, and other factors. Consult a Chartered Accountant for personalised tax advice.
 
 **Conflicts of Interest:**
-As a SEBI-registered investment advisor, Right Asset Management is required to disclose any conflicts of interest. Where we receive commissions or referral fees from product manufacturers or service providers, such compensation is disclosed to clients in accordance with SEBI (Investment Advisers) Regulations, 2013.`,
+Right Asset Management is committed to transparency. Where we receive commissions or referral fees from product manufacturers or service providers, such compensation is disclosed to clients before any engagement.`,
   },
   {
     id: "real-estate-disclaimer",
@@ -136,10 +133,7 @@ This limitation applies regardless of the legal theory under which liability is 
   {
     id: "regulatory",
     title: "9. Regulatory Information",
-    content: `**SEBI Registration:**
-Right Asset Management is registered with SEBI as an Investment Adviser under the SEBI (Investment Advisers) Regulations, 2013. Registration number and details are available on the SEBI website (sebi.gov.in).
-
-**Investor Grievances:**
+    content: `**Investor Grievances:**
 For grievances related to securities market transactions or investment advisory, you may approach SEBI through its SCORES (SEBI Complaints Redress System) portal at scores.sebi.gov.in.
 
 **Insurance Grievances:**
@@ -190,7 +184,7 @@ export default function DisclaimerPage() {
       <div className="bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
 
-          {/* SEBI Risk Warning Box */}
+          {/* Risk Warning Box */}
           <div
             className="rounded-2xl p-6 mb-10 flex gap-4"
             style={{ backgroundColor: "#FFF8F0", border: "1.5px solid #F59E0B55" }}
@@ -198,7 +192,7 @@ export default function DisclaimerPage() {
             <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "#D97706" }} />
             <div>
               <p className="font-bold text-sm mb-1.5" style={{ color: "#92400E" }}>
-                SEBI Mandatory Risk Disclosure
+                Important Risk Disclosure
               </p>
               <p className="text-sm leading-relaxed" style={{ color: "#78350F" }}>
                 <strong>Investments in securities market are subject to market risks. Read all the related documents carefully before investing.</strong> Past performance is not indicative of future returns. Please consider your specific investment requirements, risk tolerance, investment goal, time frame, risk and reward balance, and the cost associated with the investment before choosing a fund or designing a portfolio that suits your needs.

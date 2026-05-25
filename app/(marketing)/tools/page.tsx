@@ -220,7 +220,7 @@ export default function ToolsHubPage() {
                   Still Unsure?
                 </h3>
                 <p className="text-sm leading-relaxed mb-4" style={{ color: "rgba(255,255,255,0.65)" }}>
-                  Numbers can only tell you so much. Our SEBI-registered advisors can
+                  Numbers can only tell you so much. Our advisors can
                   look at your complete financial picture and give personalised guidance.
                 </p>
               </div>
@@ -242,8 +242,7 @@ export default function ToolsHubPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs" style={{ color: "#9CA3AF" }}>
             All calculators are for illustrative purposes only and do not constitute financial advice ·
-            Returns shown are estimates and may vary · Consult a qualified financial advisor before investing ·
-            Right Asset Management is SEBI-registered
+            Returns shown are estimates and may vary · Consult a qualified financial advisor before investing
           </p>
         </div>
       </div>

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 const TRUST = [
-  "SEBI-Registered Advisors",
   "Transparent Fee Structure",
   "500+ Clients Served",
   "Pan Bangalore Coverage",
@@ -22,10 +21,29 @@ export default function Hero() {
     <section
       className="relative overflow-hidden flex items-center"
       style={{
-        background: "linear-gradient(135deg, #1B3A6B 0%, #0D2347 55%, #071428 100%)",
         minHeight: "78vh",
       }}
     >
+      {/* ── Background image ────────────────────────────────────────────── */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: "url('/images/hero-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center 35%",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+
+      {/* ── Dark gradient overlay (navy-tinted) ─────────────────────────── */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(135deg, rgba(14,30,56,0.93) 0%, rgba(14,30,56,0.82) 40%, rgba(14,30,56,0.60) 100%)",
+        }}
+      />
+
       {/* ── Background decoration ───────────────────────────────────────── */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         {/* Gold grid */}
@@ -95,7 +113,7 @@ export default function Hero() {
             style={{ color: "rgba(255,255,255,0.7)" }}
           >
             One destination for 48+ expert services — investments, property, and legal help under
-            one roof. SEBI-registered advisors. Transparent fees. End-to-end execution.
+            one roof. Transparent fees. End-to-end execution.
           </motion.p>
 
           {/* CTA buttons */}

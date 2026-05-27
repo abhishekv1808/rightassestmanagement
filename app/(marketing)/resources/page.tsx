@@ -330,7 +330,6 @@ export default async function ResourcesPage({
           {/* H1 */}
           <h1
             style={{
-              fontFamily: "'Playfair Display', serif",
               fontSize: "clamp(28px, 5vw, 48px)",
               fontWeight: 800,
               color: "#FFFFFF",
@@ -437,8 +436,8 @@ export default async function ResourcesPage({
               }}
             >
               <p
+                className="font-heading"
                 style={{
-                  fontFamily: "'Playfair Display', serif",
                   fontSize: 28,
                   fontWeight: 800,
                   color: "#1B3A6B",
@@ -470,7 +469,6 @@ export default async function ResourcesPage({
           <div style={{ marginBottom: 32 }}>
             <h2
               style={{
-                fontFamily: "'Playfair Display', serif",
                 fontSize: "clamp(22px, 3vw, 32px)",
                 fontWeight: 700,
                 color: "#1B3A6B",
@@ -569,7 +567,6 @@ export default async function ResourcesPage({
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 20px" }}>
           <h2
             style={{
-              fontFamily: "'Playfair Display', serif",
               fontSize: "clamp(20px, 2.5vw, 28px)",
               fontWeight: 700,
               color: "#1B3A6B",
@@ -658,8 +655,8 @@ export default async function ResourcesPage({
         }}
       >
         <p
+          className="font-heading"
           style={{
-            fontFamily: "'Playfair Display', serif",
             fontSize: "clamp(20px, 3vw, 28px)",
             fontWeight: 700,
             color: "#FFFFFF",

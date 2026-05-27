@@ -124,7 +124,6 @@ export default function DownloadGateForm({ resource }: Props) {
         {/* Heading */}
         <h3
           style={{
-            fontFamily: "'Playfair Display', serif",
             fontSize: 20,
             fontWeight: 700,
             color: "#1B3A6B",
@@ -213,7 +212,6 @@ export default function DownloadGateForm({ resource }: Props) {
       <div style={{ padding: "24px 28px 0" }}>
         <h2
           style={{
-            fontFamily: "'Playfair Display', serif",
             fontSize: 20,
             fontWeight: 700,
             color: "#1B3A6B",

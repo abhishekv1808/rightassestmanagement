@@ -172,7 +172,6 @@ export default async function ResourceSlugPage({
               {/* H1 */}
               <h1
                 style={{
-                  fontFamily: "'Playfair Display', serif",
                   fontSize: "clamp(26px, 4vw, 38px)",
                   fontWeight: 800,
                   color: "#1B3A6B",
@@ -220,7 +219,6 @@ export default async function ResourceSlugPage({
               >
                 <h2
                   style={{
-                    fontFamily: "'Playfair Display', serif",
                     fontSize: 20,
                     fontWeight: 700,
                     color: "#1B3A6B",
@@ -327,7 +325,6 @@ export default async function ResourceSlugPage({
                   />
                   <h2
                     style={{
-                      fontFamily: "'Playfair Display', serif",
                       fontSize: 18,
                       fontWeight: 700,
                       color: "#1B3A6B",
@@ -446,7 +443,6 @@ export default async function ResourceSlugPage({
 
                   <h3
                     style={{
-                      fontFamily: "'Playfair Display', serif",
                       fontSize: "clamp(18px, 3vw, 26px)",
                       fontWeight: 800,
                       color: "#C9A84C",
@@ -509,7 +505,6 @@ export default async function ResourceSlugPage({
           <div style={{ marginTop: 64 }}>
             <h2
               style={{
-                fontFamily: "'Playfair Display', serif",
                 fontSize: 24,
                 fontWeight: 700,
                 color: "#1B3A6B",

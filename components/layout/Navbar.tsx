@@ -16,6 +16,7 @@ import {
   Scale,
 } from "lucide-react";
 import SearchModal from "@/components/layout/SearchModal";
+import UserAuthButton from "@/components/auth/UserAuthButton";
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 
@@ -381,6 +382,8 @@ export default function Navbar() {
               >
                 Free Consult
               </Link>
+
+              <UserAuthButton />
             </div>
 
             {/* ── Mobile Hamburger ────────────────────────────────────────── */}

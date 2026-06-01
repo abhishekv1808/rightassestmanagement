@@ -49,6 +49,8 @@ function getPageTitle(pathname: string): string {
   if (pathname === "/admin") return "Dashboard";
   if (pathname === "/admin/leads") return "Leads";
   if (pathname === "/admin/testimonials") return "Testimonials";
+  if (pathname === "/admin/blog/new") return "New Post";
+  if (pathname.startsWith("/admin/blog/") && pathname.endsWith("/edit")) return "Edit Post";
   if (pathname === "/admin/blog") return "Blog Posts";
   if (pathname === "/admin/settings") return "Settings";
   return "Admin";

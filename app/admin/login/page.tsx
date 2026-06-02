@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
@@ -184,7 +184,7 @@ export default function AdminLoginPage() {
                 letterSpacing: "-0.3px",
               }}
             >
-              Right Asset Management
+              Right Assets Management
             </h1>
 
             {/* Admin badge */}
@@ -374,7 +374,7 @@ export default function AdminLoginPage() {
               margin: 0,
             }}
           >
-            © 2025 Right Asset Management · All rights reserved
+            © 2025 Right Assets Management · All rights reserved
           </p>
         </div>
 
@@ -691,7 +691,7 @@ export default function AdminLoginPage() {
               color: "#CBD5E1",
             }}
           >
-            Right Asset Management · Admin Portal
+            Right Assets Management · Admin Portal
           </p>
         </div>
       </div>

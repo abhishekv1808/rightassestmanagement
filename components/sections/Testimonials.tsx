@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,7 +11,7 @@ const TESTIMONIALS = [
     location: "Jayanagar, Bangalore",
     service: "Portfolio Management & Mutual Funds",
     quote:
-      "Right Asset simplified my investment portfolio completely. What was scattered across eight different places is now professionally managed under one trusted advisor. Returns have improved and I finally have clarity on my financial future.",
+      "Right Assets simplified my investment portfolio completely. What was scattered across eight different places is now professionally managed under one trusted advisor. Returns have improved and I finally have clarity on my financial future.",
     rating: 5,
     initial: "RS",
     color: "#1B3A6B",
@@ -44,7 +44,7 @@ const TESTIMONIALS = [
     location: "Indiranagar, Bangalore",
     service: "Tax Planning & ITR Filing",
     quote:
-      "I used to panic every March. Right Asset took over my tax planning mid-year and saved me significantly. The filing was done before I even remembered the deadline. I wish I had found them sooner.",
+      "I used to panic every March. Right Assets took over my tax planning mid-year and saved me significantly. The filing was done before I even remembered the deadline. I wish I had found them sooner.",
     rating: 5,
     initial: "PN",
     color: "#C9A84C",

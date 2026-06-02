@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import {
   MapPin,
@@ -13,12 +13,12 @@ import { ALL_LOCALITIES } from "@/lib/localities-data";
 
 export const metadata: Metadata = {
   title:
-    "Right Asset Management — Financial, Real Estate & Legal Services Across Bangalore",
+    "Right Assets Management — Financial, Real Estate & Legal Services Across Bangalore",
   description:
-    "Right Asset Management serves 15 key localities across Bangalore — Whitefield, Koramangala, Indiranagar, HSR Layout, Jayanagar, and more. Find expert financial, real estate, and legal services near you.",
+    "Right Assets Management serves 15 key localities across Bangalore — Whitefield, Koramangala, Indiranagar, HSR Layout, Jayanagar, and more. Find expert financial, real estate, and legal services near you.",
   openGraph: {
     title:
-      "Financial, Real Estate & Legal Services Across Bangalore — Right Asset Management",
+      "Financial, Real Estate & Legal Services Across Bangalore — Right Assets Management",
     description:
       "Serving 15 Bangalore localities — investments, property, and legal advisory near you.",
     url: "https://rightasset.in/bangalore",
@@ -111,7 +111,7 @@ export default function BangaloreIndexPage() {
                 lineHeight: 1.15,
               }}
             >
-              Right Asset Management —{" "}
+              Right Assets Management —{" "}
               <span style={{ color: "#C9A84C" }}>Serving All of Bangalore</span>
             </h1>
 
@@ -282,7 +282,7 @@ export default function BangaloreIndexPage() {
         </div>
       </section>
 
-      {/* ── Why Right Asset ───────────────────────────────────────────────── */}
+      {/* ── Why Right Assets ───────────────────────────────────────────────── */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">

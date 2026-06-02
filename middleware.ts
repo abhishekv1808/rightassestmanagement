@@ -1,6 +1,11 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
+// The only email address that is allowed to access the admin portal.
+// Set ADMIN_EMAIL in your .env.local to override.
+const ADMIN_EMAIL =
+  (process.env.ADMIN_EMAIL ?? "admin@rightasset.in").toLowerCase();
+
 export async function middleware(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });
 
@@ -29,12 +34,21 @@ export async function middleware(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const isLoginPage = request.nextUrl.pathname === "/admin/login";
+  const { pathname } = request.nextUrl;
+  const isLoginPage = pathname === "/admin/login";
 
-  if (!user && !isLoginPage) {
+  // A user is only an admin if their exact email matches ADMIN_EMAIL.
+  // Google-authenticated client users must NEVER pass this check.
+  const isAdmin = user?.email?.toLowerCase() === ADMIN_EMAIL;
+
+  // Not admin (includes: no user, wrong email) and not already on the
+  // login page → send to login.
+  if (!isAdmin && !isLoginPage) {
     return NextResponse.redirect(new URL("/admin/login", request.url));
   }
-  if (user && isLoginPage) {
+
+  // Admin user visiting the login page → no need, send to dashboard.
+  if (isAdmin && isLoginPage) {
     return NextResponse.redirect(new URL("/admin", request.url));
   }
 

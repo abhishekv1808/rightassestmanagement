@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+﻿import { NextRequest, NextResponse } from "next/server";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -42,7 +42,7 @@ function buildEmailHtml(lead: LeadPayload): string {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>New Lead — Right Asset Management</title>
+  <title>New Lead — Right Assets Management</title>
 </head>
 <body style="margin:0;padding:0;background:#F9F8F5;font-family:'Inter',Arial,sans-serif;">
 
@@ -56,7 +56,7 @@ function buildEmailHtml(lead: LeadPayload): string {
           <tr>
             <td style="background:#1B3A6B;padding:28px 32px;">
               <p style="margin:0;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6);">
-                Right Asset Management
+                Right Assets Management
               </p>
               <h1 style="margin:8px 0 0;font-size:22px;font-weight:700;color:#ffffff;">
                 New Lead Enquiry
@@ -110,7 +110,7 @@ function buildEmailHtml(lead: LeadPayload): string {
           <tr>
             <td style="background:#F1F5F9;padding:16px 32px;border-top:1px solid #E2E8F0;">
               <p style="margin:0;font-size:11px;color:#94A3B8;text-align:center;">
-                This notification was sent automatically by the Right Asset Management website.
+                This notification was sent automatically by the Right Assets Management website.
                 Do not reply to this email directly.
               </p>
             </td>
@@ -157,7 +157,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Right Asset Management <notifications@rightasset.in>",
+        from: "Right Assets Management <notifications@rightasset.in>",
         to: [adminEmail],
         subject,
         html: buildEmailHtml(lead),

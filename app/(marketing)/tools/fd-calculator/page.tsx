@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import FDCalculator from "@/components/tools/FDCalculator";
 
 export const metadata: Metadata = {
-  title: "FD Maturity Calculator — Fixed Deposit Returns | Right Asset Management",
+  title: "FD Maturity Calculator — Fixed Deposit Returns | Right Assets Management",
   description:
-    "Calculate your Fixed Deposit maturity amount with quarterly, monthly, or annual compounding. Free FD calculator by Right Asset Management, Bangalore.",
+    "Calculate your Fixed Deposit maturity amount with quarterly, monthly, or annual compounding. Free FD calculator by Right Assets Management, Bangalore.",
 };
 
 export default function FDCalculatorPage() {

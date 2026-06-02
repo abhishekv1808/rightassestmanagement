@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
@@ -143,7 +143,7 @@ export default function EMICalculator() {
   const downloadExcel = useCallback(async () => {
     const XLSX = await import("xlsx");
     const wsData = [
-      ["Loan Amortization Schedule — Right Asset Management"],
+      ["Loan Amortization Schedule — Right Assets Management"],
       [
         `Loan Amount: ${fmtINR(loanAmount)}`,
         `Interest Rate: ${rate.toFixed(1)}%`,

@@ -1,17 +1,17 @@
-# CLAUDE.md — Right Asset Management Website
+﻿# CLAUDE.md — Right Assets Management Website
 > Developer brain file. Read this before touching any file.
 
 ---
 
 ## 1. PROJECT OVERVIEW
 
-**Client:** Right Asset Management
+**Client:** Right Assets Management
 **Developer:** Abhishek (Solo Freelancer — AVD Studio)
 **Project Type:** Full-scale business website — brand-integrated, SEO-optimized, lead-generation focused
 **Total Quote:** ₹93,000
 **Status:** Active — Build Phase Starting
 
-Right Asset Management is a Bangalore-based multi-vertical firm offering Financial Services, Real Estate Services, and Legal Services under one roof. The website must reflect trust, professionalism, and authority — targeting HNI individuals and businesses in Bangalore.
+Right Assets Management is a Bangalore-based multi-vertical firm offering Financial Services, Real Estate Services, and Legal Services under one roof. The website must reflect trust, professionalism, and authority — targeting HNI individuals and businesses in Bangalore.
 
 ---
 
@@ -74,7 +74,7 @@ Mono/Tags:  JetBrains Mono — for code-like tags only
 ### 4.1 Core Pages
 ```
 /                           → Home
-/about                      → About Us + Why Right Asset
+/about                      → About Us + Why Right Assets
 /contact                    → Contact
 /privacy-policy             → Privacy Policy
 /terms-of-service           → Terms of Service
@@ -180,7 +180,7 @@ Mono/Tags:  JetBrains Mono — for code-like tags only
 **Stats Bar**
 - 48+ Services | 500+ Clients Served | 10+ Years Experience | Pan Bangalore Coverage
 
-**Why Right Asset**
+**Why Right Assets**
 - 3 columns: Expert Guidance | End-to-End Support | Transparent Process
 
 **Featured Services** (6 service cards, 2 from each vertical)
@@ -202,14 +202,14 @@ Mono/Tags:  JetBrains Mono — for code-like tags only
 ### 5.2 About Page (/about)
 
 **Section 1 — Who We Are**
-- Paragraph: Right Asset Management was founded with a single mission — to make financial planning, real estate transactions, and legal support accessible, transparent, and reliable for every Bangalorean. We bring together expertise across three critical areas of life under one roof, so you never have to coordinate between multiple advisors.
+- Paragraph: Right Assets Management was founded with a single mission — to make financial planning, real estate transactions, and legal support accessible, transparent, and reliable for every Bangalorean. We bring together expertise across three critical areas of life under one roof, so you never have to coordinate between multiple advisors.
 
 **Section 2 — Our Three Verticals**
 - Financial: From SIPs to portfolio management, insurance to loans — we are your complete financial guide.
 - Real Estate: Buying, selling, legal documentation, government records — we handle all of it.
 - Legal: Property disputes, family cases, cyber crime — expert legal advisory without the confusion.
 
-**Section 3 — Why Choose Right Asset**
+**Section 3 — Why Choose Right Assets**
 - 48+ Services Under One Roof
 - Transparent fee structure
 - End-to-end execution support
@@ -227,7 +227,7 @@ Mono/Tags:  JetBrains Mono — for code-like tags only
 2. What is [Service]? — Plain language explanation (2–3 paragraphs)
 3. Who is this for? — Target audience bullets
 4. What we do — Step-by-step process (numbered list)
-5. Benefits of choosing Right Asset for this service
+5. Benefits of choosing Right Assets for this service
 6. Documents required (if applicable — loans, real estate, legal)
 7. FAQs (3–5 questions)
 8. CTA: Book a Consultation / WhatsApp us

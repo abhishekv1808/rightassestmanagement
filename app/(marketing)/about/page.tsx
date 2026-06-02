@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import {
   TrendingUp,
@@ -17,9 +17,9 @@ import {
 // ─── SEO ─────────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "About Us — Right Asset Management Bangalore",
+  title: "About Us — Right Assets Management Bangalore",
   description:
-    "Learn about Right Asset Management — Bangalore's trusted multi-vertical firm offering financial planning, real estate, and legal advisory services under one roof.",
+    "Learn about Right Assets Management — Bangalore's trusted multi-vertical firm offering financial planning, real estate, and legal advisory services under one roof.",
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -186,7 +186,7 @@ export default function AboutPage() {
               className="font-heading font-bold text-white mb-4"
               style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)", lineHeight: 1.15 }}
             >
-              About Right Asset Management
+              About Right Assets Management
             </h1>
             <p
               className="text-lg leading-relaxed"
@@ -221,7 +221,7 @@ export default function AboutPage() {
 
               <div className="space-y-5 text-gray-600 leading-relaxed">
                 <p>
-                  Right Asset Management was founded with a single mission — to make financial
+                  Right Assets Management was founded with a single mission — to make financial
                   planning, real estate transactions, and legal support accessible, transparent,
                   and reliable for every Bangalorean.
                 </p>
@@ -229,7 +229,7 @@ export default function AboutPage() {
                   We bring together expertise across three critical areas of life under one roof,
                   so you never have to coordinate between multiple advisors. Whether you&apos;re
                   planning your first SIP, registering a property, or navigating a legal dispute —
-                  one call to Right Asset Management is all it takes.
+                  one call to Right Assets Management is all it takes.
                 </p>
                 <p>
                   Over the years we have served 500+ clients across Bangalore — from salaried
@@ -414,7 +414,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── 4. Why Choose Right Asset ────────────────────────────────────── */}
+      {/* ── 4. Why Choose Right Assets ────────────────────────────────────── */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -429,7 +429,7 @@ export default function AboutPage() {
               className="font-heading font-bold text-4xl sm:text-5xl mb-4"
               style={{ color: "#1B3A6B" }}
             >
-              Why Choose Right Asset?
+              Why Choose Right Assets?
             </h2>
             <p className="text-gray-500 text-lg max-w-xl mx-auto">
               Five reasons clients consistently choose us over other advisors in Bangalore.
@@ -537,7 +537,7 @@ export default function AboutPage() {
             className="text-base max-w-xl mx-auto leading-relaxed mb-10"
             style={{ color: "rgba(255,255,255,0.6)" }}
           >
-            Every client engagement at Right Asset Management comes with a commitment: we
+            Every client engagement at Right Assets Management comes with a commitment: we
             take ownership of your outcome, not just your appointment. We follow through,
             follow up, and stay accountable until the job is done.
           </p>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ChevronRight,
@@ -13,9 +13,9 @@ import {
 // ─── SEO ─────────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Success Stories — Right Asset Management",
+  title: "Success Stories — Right Assets Management",
   description:
-    "Real client outcomes from Right Asset Management Bangalore — tax savings, property deals, legal victories across financial planning, real estate, and legal advisory.",
+    "Real client outcomes from Right Assets Management Bangalore — tax savings, property deals, legal victories across financial planning, real estate, and legal advisory.",
 };
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -47,7 +47,7 @@ const CASE_STUDIES: CaseStudy[] = [
     challenge:
       "An IT couple in Whitefield earning a combined ₹28L per annum had no structured tax planning. All savings were in a single savings account earning 3.5%, and they were paying the maximum tax slab with no exemptions or deductions beyond basic PF contributions.",
     solution:
-      "Right Asset Management restructured their salary components — optimising HRA, NPS employer contribution, and meal vouchers — and initiated ELSS SIP investments under Section 80C. A term life cover and health insurance were added to unlock Section 80D deductions, and they were guided through ITR filing with all applicable deductions correctly claimed.",
+      "Right Assets Management restructured their salary components — optimising HRA, NPS employer contribution, and meal vouchers — and initiated ELSS SIP investments under Section 80C. A term life cover and health insurance were added to unlock Section 80D deductions, and they were guided through ITR filing with all applicable deductions correctly claimed.",
     outcome:
       "The couple saved ₹3.2L in total tax outflow for FY 2024-25 and simultaneously built an ELSS corpus now growing at 16.4% CAGR.",
     metric: "₹3.2L Saved",
@@ -64,7 +64,7 @@ const CASE_STUDIES: CaseStudy[] = [
     challenge:
       "A retired government employee in Jayanagar inherited a 40-year-old residential property from his father. The property had incomplete encumbrance certificate records for a 12-year period, a missing khatha entry, and no mutation in the current owner's name — making registration legally impossible without resolving all three issues first.",
     solution:
-      "Right Asset Management filed for a fresh EC from the Sub-Registrar's office and coordinated the missing record gap with BBMP's records department. Simultaneously, a mutation application was filed with supporting heirship documents, and the khatha was transferred to the client's name. All three were tracked and expedited in parallel.",
+      "Right Assets Management filed for a fresh EC from the Sub-Registrar's office and coordinated the missing record gap with BBMP's records department. Simultaneously, a mutation application was filed with supporting heirship documents, and the khatha was transferred to the client's name. All three were tracked and expedited in parallel.",
     outcome:
       "The property was fully regularised and registered in the client's name in just 3 weeks — a process that typically takes 2–3 months when handled individually.",
     metric: "3 Weeks",
@@ -81,7 +81,7 @@ const CASE_STUDIES: CaseStudy[] = [
     challenge:
       "A small business owner in Rajajinagar paid ₹1.8L to a vendor for customised office equipment that was never delivered. The vendor became unresponsive after multiple follow-ups. The client was unfamiliar with the consumer forum process and had been told by a local lawyer it could take 2–3 years in court.",
     solution:
-      "Right Asset Management's legal team assessed the case and determined it was well-suited for consumer forum mediation under the Consumer Protection Act 2019. A formal complaint was drafted with all payment proofs and communication records, filed at the District Consumer Disputes Redressal Commission, and mediation was proposed to the opposite party before the first hearing.",
+      "Right Assets Management's legal team assessed the case and determined it was well-suited for consumer forum mediation under the Consumer Protection Act 2019. A formal complaint was drafted with all payment proofs and communication records, filed at the District Consumer Disputes Redressal Commission, and mediation was proposed to the opposite party before the first hearing.",
     outcome:
       "The vendor agreed to full settlement during pre-hearing mediation. The client recovered the entire ₹1.8L within 6 weeks — no court appearances required.",
     metric: "₹1.8L Recovered",
@@ -98,7 +98,7 @@ const CASE_STUDIES: CaseStudy[] = [
     challenge:
       "A 29-year-old software engineer in HSR Layout had accumulated ₹15L in a savings account earning 3.5% p.a. He had no investments, no health insurance, and no financial plan. He was aware he was losing to inflation but overwhelmed by the options — mutual funds, stocks, FDs, NPS — and had been postponing action for over a year.",
     solution:
-      "Right Asset Management built a full financial plan: a diversified SIP across large-cap, mid-cap, and flexi-cap funds (₹40,000/month); a 3-year FD ladder with quarterly renewals for liquidity; a comprehensive health insurance cover with critical illness rider; and a small-cap allocation for long-term aggressive growth. All investments were aligned to his 10-year financial goals.",
+      "Right Assets Management built a full financial plan: a diversified SIP across large-cap, mid-cap, and flexi-cap funds (₹40,000/month); a 3-year FD ladder with quarterly renewals for liquidity; a comprehensive health insurance cover with critical illness rider; and a small-cap allocation for long-term aggressive growth. All investments were aligned to his 10-year financial goals.",
     outcome:
       "Within 14 months of implementation, his portfolio is growing at a blended 14.2% CAGR with full liquidity coverage for 6 months of expenses maintained in the FD ladder.",
     metric: "14.2% CAGR",
@@ -115,7 +115,7 @@ const CASE_STUDIES: CaseStudy[] = [
     challenge:
       "An NRI based in the United States needed to sell an ancestral property in Indiranagar, Bangalore. She had no local representative and was unable to travel. The property had outstanding BBMP tax dues, an outdated khatha in her late father's name, and required a registered Power of Attorney to enable any local transactions.",
     solution:
-      "Right Asset Management coordinated end-to-end: a Power of Attorney was notarised in the US and apostilled, then registered in Bangalore with the Sub-Registrar. The outstanding BBMP dues were cleared, khatha was transferred to the NRI client's name, an EC was obtained for buyer due diligence, and the firm represented the client in all buyer negotiations and the final sale deed registration.",
+      "Right Assets Management coordinated end-to-end: a Power of Attorney was notarised in the US and apostilled, then registered in Bangalore with the Sub-Registrar. The outstanding BBMP dues were cleared, khatha was transferred to the NRI client's name, an EC was obtained for buyer due diligence, and the firm represented the client in all buyer negotiations and the final sale deed registration.",
     outcome:
       "The property was sold and fully registered within 45 days of initial engagement, with the sale proceeds remitted to the client's US bank account under FEMA guidelines.",
     metric: "45 Days",
@@ -132,7 +132,7 @@ const CASE_STUDIES: CaseStudy[] = [
     challenge:
       "A Koramangala startup founder's business UPI account was compromised through a SIM swap attack. ₹4.5L was fraudulently transferred across multiple accounts within a 2-hour window. The bank's initial response was that the transaction appeared authorised from the registered device, and the founder had no idea how to navigate the cybercrime complaint process.",
     solution:
-      "Right Asset Management's legal team immediately guided the client in filing an emergency complaint on cybercrime.gov.in and simultaneously escalating to the bank's grievance officer with a formal legal notice referencing RBI's circular on unauthorised electronic transactions (RBI/2017-18/15). The firm coordinated with the cyber cell and bank's fraud team, provided detailed transaction trace evidence, and tracked freezing orders on the recipient accounts.",
+      "Right Assets Management's legal team immediately guided the client in filing an emergency complaint on cybercrime.gov.in and simultaneously escalating to the bank's grievance officer with a formal legal notice referencing RBI's circular on unauthorised electronic transactions (RBI/2017-18/15). The firm coordinated with the cyber cell and bank's fraud team, provided detailed transaction trace evidence, and tracked freezing orders on the recipient accounts.",
     outcome:
       "₹3.8L out of ₹4.5L was successfully traced, frozen, and recovered within 11 weeks. A formal police complaint resulted in an FIR being registered against two identified intermediaries.",
     metric: "₹3.8L Recovered",

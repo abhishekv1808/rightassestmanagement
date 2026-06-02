@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import EMICalculator from "@/components/tools/EMICalculator";
 
 export const metadata: Metadata = {
-  title: "Loan EMI Calculator — Home, Personal & Vehicle Loans | Right Asset Management",
+  title: "Loan EMI Calculator — Home, Personal & Vehicle Loans | Right Assets Management",
   description:
-    "Calculate your monthly EMI for any loan — home loan, personal loan, or vehicle loan. Free EMI calculator with total interest breakdown by Right Asset Management.",
+    "Calculate your monthly EMI for any loan — home loan, personal loan, or vehicle loan. Free EMI calculator with total interest breakdown by Right Assets Management.",
 };
 
 export default function EMICalculatorPage() {

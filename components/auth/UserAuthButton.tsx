@@ -12,6 +12,13 @@ type AuthUser = {
   avatarUrl: string | null;
 };
 
+// Admin session must never appear as a client account in the marketing site
+const ADMIN_EMAIL = (
+  process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@rightasset.in"
+).toLowerCase();
+const isAdminEmail = (email?: string | null) =>
+  (email ?? "").toLowerCase() === ADMIN_EMAIL;
+
 export default function UserAuthButton() {
   const router = useRouter();
   const [user, setUser] = useState<AuthUser | null>(null);
@@ -24,7 +31,8 @@ export default function UserAuthButton() {
     const supabase = createClient();
 
     supabase.auth.getUser().then(({ data: { user } }) => {
-      if (user) {
+      // Admin account must not appear as a client user in the navbar
+      if (user && !isAdminEmail(user.email)) {
         setUser({
           email: user.email ?? "",
           name: user.user_metadata?.full_name ?? null,
@@ -34,7 +42,7 @@ export default function UserAuthButton() {
     });
 
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (session?.user) {
+      if (session?.user && !isAdminEmail(session.user.email)) {
         setUser({
           email: session.user.email ?? "",
           name: session.user.user_metadata?.full_name ?? null,

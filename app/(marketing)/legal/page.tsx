@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ChevronRight,
@@ -18,7 +18,7 @@ import { getServiceBySlug } from "@/lib/services-data";
 export const metadata: Metadata = {
   title: "Legal Services in Bangalore — Property, Family & Consumer Case Advisory",
   description:
-    "Expert legal advisory in Bangalore for property disputes, family cases, cyber crime, consumer disputes, labour cases, and more. Right Asset Management.",
+    "Expert legal advisory in Bangalore for property disputes, family cases, cyber crime, consumer disputes, labour cases, and more. Right Assets Management.",
 };
 
 // ─── Cards config ─────────────────────────────────────────────────────────────
@@ -43,7 +43,7 @@ export default function LegalHubPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What legal services does Right Asset Management offer?",
+        "name": "What legal services does Right Assets Management offer?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "We offer legal advisory across 8 areas: property disputes, criminal case advisory, family law (divorce, maintenance), labour cases, insurance claim disputes, banking and financial cases, cyber crime, and consumer disputes."
@@ -54,12 +54,12 @@ export default function LegalHubPage() {
         "name": "How do I file a cyber crime complaint in Bangalore?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can file a cyber crime complaint at cybercrime.gov.in or call the national helpline 1930. Right Asset Management's legal advisors can guide you through the entire complaint process and documentation."
+          "text": "You can file a cyber crime complaint at cybercrime.gov.in or call the national helpline 1930. Right Assets Management's legal advisors can guide you through the entire complaint process and documentation."
         }
       },
       {
         "@type": "Question",
-        "name": "Does Right Asset Management provide court representation?",
+        "name": "Does Right Assets Management provide court representation?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "We provide legal advisory and connect you with experienced attorneys in Bangalore for court representation. Our role is to guide, prepare your case, and connect you with the right legal professionals."
@@ -75,7 +75,7 @@ export default function LegalHubPage() {
       },
       {
         "@type": "Question",
-        "name": "Can Right Asset Management help resolve property disputes without going to court?",
+        "name": "Can Right Assets Management help resolve property disputes without going to court?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes, we first explore alternative dispute resolution (ADR) options like mediation and arbitration which are faster and less expensive than court proceedings. Court action is recommended only when necessary."
@@ -175,7 +175,7 @@ export default function LegalHubPage() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs" style={{ color: "#1B3A6B" }}>
-            <span className="font-semibold">Important:</span> Right Asset Management provides legal
+            <span className="font-semibold">Important:</span> Right Assets Management provides legal
             advisory and connects clients with qualified lawyers. We are not a law firm and do not
             provide legal representation directly.
           </p>
@@ -263,7 +263,7 @@ export default function LegalHubPage() {
 
           <p className="mt-8 text-center text-xs text-gray-400">
             All consultations are strictly confidential ·
-            Right Asset Management connects you with qualified lawyers suited to your specific case ·
+            Right Assets Management connects you with qualified lawyers suited to your specific case ·
             Not a law firm
           </p>
         </div>

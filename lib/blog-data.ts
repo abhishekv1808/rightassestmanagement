@@ -1,4 +1,4 @@
-// ─── Types ────────────────────────────────────────────────────────────────────
+﻿// ─── Types ────────────────────────────────────────────────────────────────────
 
 export type BlogSection = {
   heading: string;
@@ -60,7 +60,7 @@ const article1: BlogPost = {
   readTime: "9 min read",
   excerpt:
     "Should you invest ₹5,000 every month or put ₹60,000 in one shot? We compare SIP and lump sum investing with real numbers to help Bangalore professionals decide.",
-  author: { name: "Right Asset Management", role: "Financial Advisors" },
+  author: { name: "Right Assets Management", role: "Financial Advisors" },
   published: true,
 
   intro: [
@@ -139,7 +139,7 @@ const article1: BlogPost = {
       heading: "Why a Financial Advisor in Bangalore Can Help You Decide",
       paragraphs: [
         "A good financial advisor does not just say \"do SIP\" or \"invest lump sum\" — they evaluate your complete financial picture. Your income trajectory (Bangalore salaries often double every 4–5 years in tech), your EMI obligations, your tax-saving needs under Section 80C and 80D, your existing investments, and your life stage all influence the right investment strategy.",
-        "At Right Asset Management, our advisors work with Bangalore professionals to build personalised investment plans. Whether you want to start a ₹5,000 SIP, deploy a ₹10 lakh bonus, or restructure your entire portfolio — we provide clear, unbiased guidance with no commission-driven product pushing. Our first consultation is free, and we explain everything in plain language.",
+        "At Right Assets Management, our advisors work with Bangalore professionals to build personalised investment plans. Whether you want to start a ₹5,000 SIP, deploy a ₹10 lakh bonus, or restructure your entire portfolio — we provide clear, unbiased guidance with no commission-driven product pushing. Our first consultation is free, and we explain everything in plain language.",
       ],
     },
   ],
@@ -174,7 +174,7 @@ const article1: BlogPost = {
 
   conclusion: {
     text: "Both SIP and lump sum are powerful investment tools — the right choice depends on your cash flow, risk tolerance, and market conditions. For most salaried professionals in Bangalore, a monthly SIP forms the core strategy, supplemented by lump sum investments from bonuses and windfalls. The key is to start early, stay consistent, and seek expert guidance when deploying large sums.",
-    cta: "Need help choosing between SIP and lump sum? Right Asset Management offers personalised mutual fund advisory in Bangalore — transparent fees and no commission bias. Book a free consultation today.",
+    cta: "Need help choosing between SIP and lump sum? Right Assets Management offers personalised mutual fund advisory in Bangalore — transparent fees and no commission bias. Book a free consultation today.",
   },
 
   relatedSlugs: [
@@ -200,7 +200,7 @@ const article2: BlogPost = {
   readTime: "10 min read",
   excerpt:
     "Buying your first home in Bangalore? This guide covers eligibility, documents, interest rates, and the full loan process — everything you need to know in 2026.",
-  author: { name: "Right Asset Management", role: "Financial Advisors" },
+  author: { name: "Right Assets Management", role: "Financial Advisors" },
   published: true,
 
   intro: [
@@ -297,9 +297,9 @@ const article2: BlogPost = {
       ],
     },
     {
-      heading: "Why Work With Right Asset Management for Your Home Loan?",
+      heading: "Why Work With Right Assets Management for Your Home Loan?",
       paragraphs: [
-        "Right Asset Management works with all major banks and housing finance companies in Bangalore. As licensed advisors, we help you compare loan offers from SBI, HDFC, ICICI, Axis, Kotak, and LICHFL simultaneously — saving you weeks of running around.",
+        "Right Assets Management works with all major banks and housing finance companies in Bangalore. As licensed advisors, we help you compare loan offers from SBI, HDFC, ICICI, Axis, Kotak, and LICHFL simultaneously — saving you weeks of running around.",
         "We review your documents before submission, identify potential issues, and negotiate the best rate based on your profile. If your credit score is below ideal, we guide you on improving it before applying. We also handle the complete registration process — from booking the SRO appointment to handing you the registered sale deed.",
       ],
     },
@@ -335,7 +335,7 @@ const article2: BlogPost = {
 
   conclusion: {
     text: "A home loan is a 20–25 year commitment that shapes your financial life. Taking time to understand eligibility, compare lenders, and plan your budget properly is not optional — it is the difference between a manageable EMI and one that strains your finances for decades. The process is navigable with the right guidance, and the tax benefits and wealth creation from home ownership make it one of India's best long-term investments.",
-    cta: "Right Asset Management offers free home loan advisory in Bangalore. We compare offers from 10+ lenders, handle all documentation, and accompany you through registration. Book your free consultation today.",
+    cta: "Right Assets Management offers free home loan advisory in Bangalore. We compare offers from 10+ lenders, handle all documentation, and accompany you through registration. Book your free consultation today.",
   },
 
   relatedSlugs: [
@@ -359,7 +359,7 @@ const article3: BlogPost = {
   readTime: "8 min read",
   excerpt:
     "E-Khatha is essential for property ownership in Bangalore. Learn the step-by-step process to apply on the BBMP E-Aasthi portal, documents needed, and how to avoid rejections.",
-  author: { name: "Right Asset Management", role: "Real Estate Advisory" },
+  author: { name: "Right Assets Management", role: "Real Estate Advisory" },
   published: true,
 
   intro: [
@@ -425,7 +425,7 @@ const article3: BlogPost = {
     {
       heading: "Common Reasons for E-Khatha Rejection and How to Avoid Them",
       paragraphs: [
-        "Our real estate team at Right Asset Management processes dozens of Khatha applications every month. These are the most frequent reasons for rejection:",
+        "Our real estate team at Right Assets Management processes dozens of Khatha applications every month. These are the most frequent reasons for rejection:",
       ],
       bullets: [
         "Name mismatch: Applicant's name on the form differs from the registered sale deed — even minor spelling differences cause rejection. Use exactly the same spelling as the deed.",
@@ -448,7 +448,7 @@ const article3: BlogPost = {
       heading: "Why Professional Assistance Makes a Big Difference",
       paragraphs: [
         "While the E-Aasthi portal is designed for self-service, the documentation requirements, name-matching issues, and complexity of older properties mean that most applicants face at least one rejection before final approval. Each rejection and resubmission adds weeks to the timeline.",
-        "Right Asset Management handles end-to-end Khatha applications for Bangalore property owners — from obtaining the EC and verifying property tax status, to preparing documents with matching names, submitting the application, and following up with BBMP on your behalf. We have helped property owners in Whitefield, JP Nagar, Jayanagar, Indiranagar, Hebbal, and across BBMP limits get their E-Khatha issued without a single rejection.",
+        "Right Assets Management handles end-to-end Khatha applications for Bangalore property owners — from obtaining the EC and verifying property tax status, to preparing documents with matching names, submitting the application, and following up with BBMP on your behalf. We have helped property owners in Whitefield, JP Nagar, Jayanagar, Indiranagar, Hebbal, and across BBMP limits get their E-Khatha issued without a single rejection.",
       ],
     },
   ],
@@ -483,7 +483,7 @@ const article3: BlogPost = {
 
   conclusion: {
     text: "E-Khatha is not just a piece of paper — it is the foundation of your property's legal and civic standing in Bangalore. Whether you are transferring Khatha after a purchase, converting B to A-Khatha, or helping elderly parents get their property records in order, getting it done correctly the first time saves months of frustration. The process is straightforward when you have the right documents and know what BBMP is looking for.",
-    cta: "Right Asset Management handles E-Khatha applications across all BBMP zones in Bangalore — end-to-end, with zero rejections in straightforward cases. Book a free consultation to assess your property's Khatha status today.",
+    cta: "Right Assets Management handles E-Khatha applications across all BBMP zones in Bangalore — end-to-end, with zero rejections in straightforward cases. Book a free consultation to assess your property's Khatha status today.",
   },
 
   relatedSlugs: [
@@ -507,7 +507,7 @@ const article4: BlogPost = {
   readTime: "8 min read",
   excerpt:
     "Fallen victim to UPI fraud, online scams, or social media harassment? Here is the complete process to file a cyber crime complaint in India and what to expect.",
-  author: { name: "Right Asset Management", role: "Legal Advisory" },
+  author: { name: "Right Assets Management", role: "Legal Advisory" },
   published: true,
 
   intro: [
@@ -598,7 +598,7 @@ const article4: BlogPost = {
         "If your bank has not refunded money from a dispute within 30 days despite your complaint, you can escalate to the Banking Ombudsman through the RBI's Integrated Ombudsman Scheme (RBI CMS portal at cms.rbi.org.in). This is a free, bank-independent grievance mechanism with strong enforcement powers.",
     },
     {
-      heading: "How Right Asset Management's Legal Team Can Help",
+      heading: "How Right Assets Management's Legal Team Can Help",
       paragraphs: [
         "Navigating the cyber crime complaint process — especially when large amounts are involved or when police progress is slow — can be frustrating without legal expertise. Our legal advisory team helps cyber crime victims in Bangalore with drafting and filing formal legal notices to banks, assisting with police complaint documentation to ensure maximum evidentiary value, representing clients before the Banking Ombudsman and Consumer Forum when banks fail to act, and advising on civil litigation options for recovery when criminal proceedings are insufficient.",
         "We work on cases involving UPI fraud, fake investment schemes, online loan fraud, sextortion, and identity theft. If you have already filed a complaint but need help accelerating the process or escalating unresponsive banks, book a free consultation with our legal team.",
@@ -630,13 +630,13 @@ const article4: BlogPost = {
     {
       question: "Do I need a lawyer to file a cyber crime complaint?",
       answer:
-        "No, you can file a complaint on cybercrime.gov.in or at a police station without a lawyer. However, a lawyer is valuable when the fraud amount is large, when police response is slow, when you need to pursue civil recovery in addition to criminal complaint, or when you are taking action against a bank through the Ombudsman or Consumer Forum. Right Asset Management offers initial consultations at no charge to assess whether legal intervention is warranted.",
+        "No, you can file a complaint on cybercrime.gov.in or at a police station without a lawyer. However, a lawyer is valuable when the fraud amount is large, when police response is slow, when you need to pursue civil recovery in addition to criminal complaint, or when you are taking action against a bank through the Ombudsman or Consumer Forum. Right Assets Management offers initial consultations at no charge to assess whether legal intervention is warranted.",
     },
   ],
 
   conclusion: {
     text: "Cyber crime is not a technical problem — it is a legal problem with a clear process for reporting and recovery. The two most important things you can do are act immediately (call 1930 and your bank within the first hour) and document everything before deleting or ignoring communications. The criminal justice system in India has robust provisions for cyber crime; the key is engaging it correctly and promptly.",
-    cta: "If you have been a victim of cyber fraud or online crime and need legal guidance on filing, escalation, or bank disputes, Right Asset Management's legal team is here to help. Book a free consultation today.",
+    cta: "If you have been a victim of cyber fraud or online crime and need legal guidance on filing, escalation, or bank disputes, Right Assets Management's legal team is here to help. Book a free consultation today.",
   },
 
   relatedSlugs: [
@@ -660,7 +660,7 @@ const article5: BlogPost = {
   readTime: "9 min read",
   excerpt:
     "How much does property registration cost in Bangalore? We break down stamp duty, registration fees, and show exactly what you will pay for an ₹80 lakh apartment.",
-  author: { name: "Right Asset Management", role: "Real Estate Advisory" },
+  author: { name: "Right Assets Management", role: "Real Estate Advisory" },
   published: true,
 
   intro: [
@@ -771,7 +771,7 @@ const article5: BlogPost = {
       ],
     },
     {
-      heading: "How Right Asset Management Helps With Property Registration",
+      heading: "How Right Assets Management Helps With Property Registration",
       paragraphs: [
         "Property registration in Bangalore involves navigating government portals, lawyer coordination, SRO appointments, and ensuring all documents are in order simultaneously. One missing document or a mismatch in names causes the entire appointment to be rescheduled — costing time and sometimes the sale itself.",
         "Our real estate advisory team handles the complete registration process for buyers and sellers in Bangalore — from computing the exact stamp duty and guidance value, to drafting the sale deed, booking the SRO appointment, and attending the registration. We have completed hundreds of registrations across BBMP limits with zero appointment cancellations. Our fee is transparent and significantly lower than typical advocate rates for end-to-end assistance.",
@@ -809,7 +809,7 @@ const article5: BlogPost = {
 
   conclusion: {
     text: "Property registration costs in Bangalore are significant — typically 6–7% of the property value on top of the purchase price. Understanding these charges before you finalise a deal ensures your budget is realistic and prevents last-minute fund crunches at the SRO. With proper planning and the right advisor, the registration process itself is straightforward and can be completed in a single day.",
-    cta: "Right Asset Management handles end-to-end property registration in Bangalore — stamp duty calculation, sale deed drafting, SRO appointment, and registration attendance. Book your free consultation today.",
+    cta: "Right Assets Management handles end-to-end property registration in Bangalore — stamp duty calculation, sale deed drafting, SRO appointment, and registration attendance. Book your free consultation today.",
   },
 
   relatedSlugs: [
@@ -829,7 +829,7 @@ const article6: BlogPost = {
   publishedAt: "2026-05-20",
   readTime: "8 min read",
   excerpt: "STCG, LTCG, ELSS, dividend tax — mutual fund taxation in India can be confusing. This guide explains every tax rule in plain language with real examples.",
-  author: { name: "Right Asset Management", role: "Financial Advisors" },
+  author: { name: "Right Assets Management", role: "Financial Advisors" },
   published: false,
   intro: [], sections: [], faqs: [],
   conclusion: { text: "", cta: "" },
@@ -846,7 +846,7 @@ const article7: BlogPost = {
   publishedAt: "2026-05-20",
   readTime: "7 min read",
   excerpt: "An Encumbrance Certificate is mandatory for property sales and home loans. Learn what it is, how to apply on Karnataka's Kaveri portal, and red flags to watch for.",
-  author: { name: "Right Asset Management", role: "Real Estate Advisory" },
+  author: { name: "Right Assets Management", role: "Real Estate Advisory" },
   published: false,
   intro: [], sections: [], faqs: [],
   conclusion: { text: "", cta: "" },
@@ -863,7 +863,7 @@ const article8: BlogPost = {
   publishedAt: "2026-05-20",
   readTime: "8 min read",
   excerpt: "Term insurance is the most affordable way to protect your family. Learn how to calculate the right cover, compare plans, and avoid the mistakes most Indians make.",
-  author: { name: "Right Asset Management", role: "Financial Advisors" },
+  author: { name: "Right Assets Management", role: "Financial Advisors" },
   published: false,
   intro: [], sections: [], faqs: [],
   conclusion: { text: "", cta: "" },
@@ -880,7 +880,7 @@ const article9: BlogPost = {
   publishedAt: "2026-05-20",
   readTime: "9 min read",
   excerpt: "Facing a property dispute in Bangalore? Learn about common types, legal options (civil court, RERA, mediation), costs, and how to resolve them effectively.",
-  author: { name: "Right Asset Management", role: "Legal Advisory" },
+  author: { name: "Right Assets Management", role: "Legal Advisory" },
   published: false,
   intro: [], sections: [], faqs: [],
   conclusion: { text: "", cta: "" },
@@ -897,7 +897,7 @@ const article10: BlogPost = {
   publishedAt: "2026-05-20",
   readTime: "10 min read",
   excerpt: "A no-nonsense financial planning guide built for Bangalore salaries — covering the 50-30-20 rule, emergency funds, insurance, SIPs, and tax-saving strategies.",
-  author: { name: "Right Asset Management", role: "Financial Advisors" },
+  author: { name: "Right Assets Management", role: "Financial Advisors" },
   published: false,
   intro: [], sections: [], faqs: [],
   conclusion: { text: "", cta: "" },

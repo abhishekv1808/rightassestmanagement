@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -111,7 +111,7 @@ export default function SignInPage() {
                   <span style={{ fontSize: 20, fontWeight: 800, color: "#0A1628", fontFamily: "Georgia, serif" }}>R</span>
                 </div>
                 <div>
-                  <p style={{ fontSize: 16, fontWeight: 800, color: "#FFFFFF", margin: 0, letterSpacing: "-0.2px" }}>Right Asset</p>
+                  <p style={{ fontSize: 16, fontWeight: 800, color: "#FFFFFF", margin: 0, letterSpacing: "-0.2px" }}>Right Assets</p>
                   <p style={{ fontSize: 10, fontWeight: 600, color: "#C9A84C", margin: 0, letterSpacing: "0.15em", textTransform: "uppercase" }}>Management</p>
                 </div>
               </Link>
@@ -127,7 +127,7 @@ export default function SignInPage() {
 
               <p style={{ fontSize: 15, color: "rgba(255,255,255,0.58)", lineHeight: 1.65, margin: "0 0 36px", maxWidth: 380 }}>
                 Sign in to track your service requests, access free guides, and get personalised
-                advisory — exclusively for Right Asset clients in Bangalore.
+                advisory — exclusively for Right Assets clients in Bangalore.
               </p>
 
               {/* Benefits */}
@@ -263,7 +263,7 @@ export default function SignInPage() {
                   fontSize: 13, color: "rgba(255,255,255,0.45)",
                   textDecoration: "none", fontWeight: 500,
                 }}>
-                  ← Back to Right Asset Management
+                  ← Back to Right Assets Management
                 </Link>
               </div>
             </div>

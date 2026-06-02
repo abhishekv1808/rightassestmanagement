@@ -1,4 +1,4 @@
-# Right Asset Management — Site Structure & URL Architecture
+﻿# Right Assets Management — Site Structure & URL Architecture
 > Information Architecture + Internal Linking Map
 > Prepared: May 2026
 

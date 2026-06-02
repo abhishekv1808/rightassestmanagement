@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -338,7 +338,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col leading-none gap-0.5">
                 <span className="font-heading font-bold text-white text-base tracking-wide">
-                  Right Asset
+                  Right Assets
                 </span>
                 <span
                   className="font-body text-[10px] tracking-[0.22em] uppercase font-medium"
@@ -456,7 +456,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
             <p className="text-xs order-2 sm:order-1" style={{ color: "rgba(255,255,255,0.3)" }}>
-              © {year} Right Asset Management. All rights reserved. Designed by{" "}
+              © {year} Right Assets Management. All rights reserved. Designed by{" "}
               <span
                 className="transition-colors hover:text-white cursor-pointer"
                 style={{ color: "rgba(201,168,76,0.55)" }}

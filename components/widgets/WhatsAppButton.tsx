@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef, useEffect } from "react";
 
@@ -137,7 +137,7 @@ export default function WhatsAppButton() {
                     textOverflow: "ellipsis",
                   }}
                 >
-                  Right Asset Management
+                  Right Assets Management
                 </div>
                 <div
                   style={{

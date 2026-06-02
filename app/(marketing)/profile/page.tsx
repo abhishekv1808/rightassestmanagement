@@ -1,18 +1,26 @@
-import { redirect } from "next/navigation";
+﻿import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import ProfileForm from "@/components/auth/ProfileForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "My Profile | Right Asset Management",
+  title: "My Profile | Right Assets Management",
   robots: { index: false, follow: false },
 };
+
+const ADMIN_EMAIL = (
+  process.env.ADMIN_EMAIL ?? "admin@rightasset.in"
+).toLowerCase();
 
 export default async function ProfilePage() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
+  // Not logged in → send to sign in
   if (!user) redirect("/signin");
+
+  // Admin account → belongs in the admin portal, not the client profile page
+  if (user.email?.toLowerCase() === ADMIN_EMAIL) redirect("/admin");
 
   // Fetch profile — upsert to ensure a row always exists
   const { data: profile } = await supabase

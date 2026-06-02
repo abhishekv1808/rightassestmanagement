@@ -1,4 +1,4 @@
-// Shared inline SVG social platform icons — lucide-react v1.x doesn't include these
+﻿// Shared inline SVG social platform icons — lucide-react v1.x doesn't include these
 
 export const FacebookIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -55,7 +55,7 @@ export const SOCIAL_PLATFORMS = [
   {
     icon: LinkedinIcon,
     name: "LinkedIn",
-    handle: "Right Asset Management",
+    handle: "Right Assets Management",
     desc: "Market analysis, regulatory updates & professional insights",
     href: "https://linkedin.com/company/rightassetmanagement",
     accent: "#0A66C2",

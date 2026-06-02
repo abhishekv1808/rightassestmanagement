@@ -1,4 +1,4 @@
-# Right Asset Management — SEO Strategy
+﻿# Right Assets Management — SEO Strategy
 > Bangalore's 3-in-1 Financial + Real Estate + Legal Advisory
 > Prepared: May 2026 | Developer: Abhishek (AVD Studio)
 
@@ -6,7 +6,7 @@
 
 ## Executive Summary
 
-Right Asset Management holds an unusual competitive moat: **no direct competitor in Bangalore combines all three verticals** (Financial, Real Estate, Legal) under one brand. The SEO strategy exploits this by targeting 46 high-intent service keywords via individual landing pages, building local authority in Bangalore through neighborhood-level content, and establishing topical depth that no single-vertical firm can match.
+Right Assets Management holds an unusual competitive moat: **no direct competitor in Bangalore combines all three verticals** (Financial, Real Estate, Legal) under one brand. The SEO strategy exploits this by targeting 46 high-intent service keywords via individual landing pages, building local authority in Bangalore through neighborhood-level content, and establishing topical depth that no single-vertical firm can match.
 
 **Target:** 5,000+ monthly organic visits within 12 months from launch.
 **Primary conversion:** Lead form fills + WhatsApp clicks.
@@ -18,7 +18,7 @@ Right Asset Management holds an unusual competitive moat: **no direct competitor
 
 ### Unique Selling Proposition (SEO Angle)
 - "One advisor for your money, property, and legal matters — Bangalore"
-- Competitors force clients to coordinate 3 separate professionals; Right Asset eliminates that friction
+- Competitors force clients to coordinate 3 separate professionals; Right Assets eliminates that friction
 - This bundled positioning creates unique blog content and landing page hooks unavailable to single-vertical competitors
 
 ### Three Keyword Pillars
@@ -82,16 +82,16 @@ Right Asset Management holds an unusual competitive moat: **no direct competitor
 
 ### Title Tag Formula
 ```
-[Service Name] in Bangalore | Right Asset Management
+[Service Name] in Bangalore | Right Assets Management
 ```
 Examples:
-- `Mutual Fund Advisor in Bangalore | Right Asset Management`
-- `Property Registration Assistance in Bangalore | Right Asset Management`
-- `Cyber Crime Lawyer Consultation Bangalore | Right Asset Management`
+- `Mutual Fund Advisor in Bangalore | Right Assets Management`
+- `Property Registration Assistance in Bangalore | Right Assets Management`
+- `Cyber Crime Lawyer Consultation Bangalore | Right Assets Management`
 
 ### Meta Description Formula (max 155 chars)
 ```
-[Action verb] [service] in Bangalore with Right Asset Management. [Key benefit]. [CTA]. Free consultation available.
+[Action verb] [service] in Bangalore with Right Assets Management. [Key benefit]. [CTA]. Free consultation available.
 ```
 
 ### H1 Formula
@@ -274,7 +274,7 @@ Once core pages rank, add location-specific service pages targeting the top 5 Ba
 ### Lead Form Optimization
 - Keep form to 5 fields maximum on service pages (Name, Phone, Service, Message, Submit)
 - Use "Get Free Advice" as CTA text — not "Submit"
-- Add social proof near form: "Join 500+ Bangalore families who trust Right Asset"
+- Add social proof near form: "Join 500+ Bangalore families who trust Right Assets"
 
 ---
 
@@ -292,4 +292,4 @@ Once core pages rank, add location-specific service pages targeting the top 5 Ba
 
 ---
 
-*Strategy Version 1.0 | May 2026 | Prepared by AVD Studio for Right Asset Management*
+*Strategy Version 1.0 | May 2026 | Prepared by AVD Studio for Right Assets Management*

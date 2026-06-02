@@ -88,7 +88,7 @@ export default async function ResourceSlugPage({
             url: `https://rightasset.in/resources/${resource.slug}`,
             publisher: {
               "@type": "Organization",
-              name: "Right Asset Management",
+              name: "Right Assets Management",
               url: "https://rightasset.in",
             },
             isAccessibleForFree: true,
@@ -438,7 +438,7 @@ export default async function ResourceSlugPage({
                       marginBottom: 12,
                     }}
                   >
-                    Right Asset Management
+                    Right Assets Management
                   </p>
 
                   <h3

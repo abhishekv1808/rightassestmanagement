@@ -1,4 +1,4 @@
-export type Locality = {
+﻿export type Locality = {
   name: string;
   slug: string;
   tagline: string;
@@ -78,7 +78,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial, Real Estate & Legal Services in Whitefield, Bangalore",
     metaDescription:
-      "Right Asset Management serves Whitefield, Bangalore — home loans, SIP investments, property registration, e-Khatha, tax planning, and NRI services. Book a free consultation.",
+      "Right Assets Management serves Whitefield, Bangalore — home loans, SIP investments, property registration, e-Khatha, tax planning, and NRI services. Book a free consultation.",
   },
 
   // ─── 2. Koramangala ───────────────────────────────────────────────────────────
@@ -144,7 +144,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial, Real Estate & Legal Services in Koramangala, Bangalore",
     metaDescription:
-      "Right Asset Management serves Koramangala — financial planning, portfolio management, rent agreements, startup founder advisory, and property legal services. Book a free consultation.",
+      "Right Assets Management serves Koramangala — financial planning, portfolio management, rent agreements, startup founder advisory, and property legal services. Book a free consultation.",
   },
 
   // ─── 3. Indiranagar ───────────────────────────────────────────────────────────
@@ -210,7 +210,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial, Real Estate & Legal Services in Indiranagar, Bangalore",
     metaDescription:
-      "Right Asset Management serves Indiranagar — property buying/selling, sale deed drafting, property valuation, registration, and investment advisory. Book a free consultation.",
+      "Right Assets Management serves Indiranagar — property buying/selling, sale deed drafting, property valuation, registration, and investment advisory. Book a free consultation.",
   },
 
   // ─── 4. Electronic City ───────────────────────────────────────────────────────
@@ -276,7 +276,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial & Real Estate Services in Electronic City, Bangalore",
     metaDescription:
-      "Right Asset Management serves Electronic City — home loans, SIP investments, life insurance, property registration, and tax planning for IT professionals. Book a free consultation.",
+      "Right Assets Management serves Electronic City — home loans, SIP investments, life insurance, property registration, and tax planning for IT professionals. Book a free consultation.",
   },
 
   // ─── 5. HSR Layout ────────────────────────────────────────────────────────────
@@ -342,7 +342,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial, Real Estate & Legal Services in HSR Layout, Bangalore",
     metaDescription:
-      "Right Asset Management serves HSR Layout — home loans, SIP, financial planning, e-Khatha transfers, rent agreements, and health insurance. Book a free consultation.",
+      "Right Assets Management serves HSR Layout — home loans, SIP, financial planning, e-Khatha transfers, rent agreements, and health insurance. Book a free consultation.",
   },
 
   // ─── 6. BTM Layout ────────────────────────────────────────────────────────────
@@ -408,7 +408,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial & Real Estate Services in BTM Layout, Bangalore",
     metaDescription:
-      "Right Asset Management serves BTM Layout — home loans, personal loans, SIP, rent agreements, property registration, and health insurance. Book a free consultation.",
+      "Right Assets Management serves BTM Layout — home loans, personal loans, SIP, rent agreements, property registration, and health insurance. Book a free consultation.",
   },
 
   // ─── 7. Jayanagar ─────────────────────────────────────────────────────────────
@@ -474,7 +474,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial, Real Estate & Legal Services in Jayanagar, Bangalore",
     metaDescription:
-      "Right Asset Management serves Jayanagar — Vamshavruksha, encumbrance certificates, sale deeds, property disputes, and investment advisory for established Bangalore families.",
+      "Right Assets Management serves Jayanagar — Vamshavruksha, encumbrance certificates, sale deeds, property disputes, and investment advisory for established Bangalore families.",
   },
 
   // ─── 8. JP Nagar ──────────────────────────────────────────────────────────────
@@ -540,7 +540,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial & Real Estate Services in JP Nagar, Bangalore",
     metaDescription:
-      "Right Asset Management serves JP Nagar — home loans, mutual funds, health insurance, e-Khatha, property registration, and family financial planning. Book a free consultation.",
+      "Right Assets Management serves JP Nagar — home loans, mutual funds, health insurance, e-Khatha, property registration, and family financial planning. Book a free consultation.",
   },
 
   // ─── 9. Marathahalli ──────────────────────────────────────────────────────────
@@ -606,7 +606,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial & Real Estate Services in Marathahalli, Bangalore",
     metaDescription:
-      "Right Asset Management serves Marathahalli — home loans, mutual funds, rent agreements, property registration, and tax planning for IT professionals. Book a free consultation.",
+      "Right Assets Management serves Marathahalli — home loans, mutual funds, rent agreements, property registration, and tax planning for IT professionals. Book a free consultation.",
   },
 
   // ─── 10. Sarjapur Road ────────────────────────────────────────────────────────
@@ -672,7 +672,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial & Real Estate Services in Sarjapur Road, Bangalore",
     metaDescription:
-      "Right Asset Management serves Sarjapur Road — home loans, property registration, mutual funds, e-Khatha, and financial planning for Bangalore's fastest-growing IT corridor.",
+      "Right Assets Management serves Sarjapur Road — home loans, property registration, mutual funds, e-Khatha, and financial planning for Bangalore's fastest-growing IT corridor.",
   },
 
   // ─── 11. Hebbal ───────────────────────────────────────────────────────────────
@@ -738,7 +738,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial & Real Estate Services in Hebbal, Bangalore",
     metaDescription:
-      "Right Asset Management serves Hebbal — home loans, mutual funds, property registration, health insurance, and buy-sell advisory in North Bangalore. Book a free consultation.",
+      "Right Assets Management serves Hebbal — home loans, mutual funds, property registration, health insurance, and buy-sell advisory in North Bangalore. Book a free consultation.",
   },
 
   // ─── 12. Yelahanka ────────────────────────────────────────────────────────────
@@ -804,7 +804,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial & Real Estate Services in Yelahanka, Bangalore",
     metaDescription:
-      "Right Asset Management serves Yelahanka — home loans, land conversion, property registration, e-Khatha, mutual funds, and life insurance. Book a free consultation.",
+      "Right Assets Management serves Yelahanka — home loans, land conversion, property registration, e-Khatha, mutual funds, and life insurance. Book a free consultation.",
   },
 
   // ─── 13. Malleshwaram ─────────────────────────────────────────────────────────
@@ -870,7 +870,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial, Real Estate & Legal Services in Malleshwaram, Bangalore",
     metaDescription:
-      "Right Asset Management serves Malleshwaram — Vamshavruksha, property disputes, encumbrance certificates, sale deeds, and conservative investment advisory. Book a free consultation.",
+      "Right Assets Management serves Malleshwaram — Vamshavruksha, property disputes, encumbrance certificates, sale deeds, and conservative investment advisory. Book a free consultation.",
   },
 
   // ─── 14. Bannerghatta Road ────────────────────────────────────────────────────
@@ -936,7 +936,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial & Real Estate Services in Bannerghatta Road, Bangalore",
     metaDescription:
-      "Right Asset Management serves Bannerghatta Road — home loans, health insurance, property registration, rent agreements, and mutual fund advisory. Book a free consultation.",
+      "Right Assets Management serves Bannerghatta Road — home loans, health insurance, property registration, rent agreements, and mutual fund advisory. Book a free consultation.",
   },
 
   // ─── 15. Rajajinagar ──────────────────────────────────────────────────────────
@@ -1002,7 +1002,7 @@ export const ALL_LOCALITIES: Locality[] = [
     ],
     metaTitle: "Financial, Real Estate & Legal Services in Rajajinagar, Bangalore",
     metaDescription:
-      "Right Asset Management serves Rajajinagar — property registration, sale deeds, encumbrance certificates, property disputes, and investment advisory in West Bangalore.",
+      "Right Assets Management serves Rajajinagar — property registration, sale deeds, encumbrance certificates, property disputes, and investment advisory in West Bangalore.",
   },
 ];
 

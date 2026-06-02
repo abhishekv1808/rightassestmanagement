@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { TrendingUp, Building2, Scale, ArrowRight } from "lucide-react";
 
 const VERTICALS = [
@@ -54,7 +54,7 @@ export default function ServicesGrid() {
             Three Verticals. One Firm.
           </h2>
           <p className="text-gray-500 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
-            Right Asset Management brings together expertise across Finance, Real Estate, and Law
+            Right Assets Management brings together expertise across Finance, Real Estate, and Law
             so you never have to coordinate between multiple advisors.
           </p>
         </div>

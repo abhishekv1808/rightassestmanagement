@@ -1,4 +1,4 @@
-# Right Asset Management — SEO Implementation Roadmap
+﻿# Right Assets Management — SEO Implementation Roadmap
 > Phased Action Plan: Launch to Month 12
 > Prepared: May 2026
 
@@ -84,7 +84,7 @@
 
 **NAP Standard (confirm with client before submitting anywhere):**
 ```
-Name:    Right Asset Management
+Name:    Right Assets Management
 Address: [Full address — confirm with client]
 Phone:   [Client phone — confirm with client]
 Email:   [Client email — confirm with client]
@@ -158,7 +158,7 @@ Trigger: If Bangalore-wide service pages are ranking #3–10, create neighborhoo
 ---
 
 ## Phase 4 — Authority (Months 7–12)
-**Goal:** Establish Right Asset Management as the go-to Bangalore financial/real estate/legal brand.
+**Goal:** Establish Right Assets Management as the go-to Bangalore financial/real estate/legal brand.
 
 ### Month 7–9: E-E-A-T Signals
 
@@ -186,7 +186,7 @@ Trigger: If Bangalore-wide service pages are ranking #3–10, create neighborhoo
 
 - [ ] Add `llms.txt` file listing all 80+ pages with descriptions
 - [ ] Ensure every service description is 2–3 sentence plain-language summary (quotable by AI)
-- [ ] Check if ChatGPT / Perplexity mentions Right Asset for key queries — if not, focus on citation building
+- [ ] Check if ChatGPT / Perplexity mentions Right Assets for key queries — if not, focus on citation building
 - [ ] Update FAQ sections with questions phrased exactly as people ask AI assistants
 
 ---

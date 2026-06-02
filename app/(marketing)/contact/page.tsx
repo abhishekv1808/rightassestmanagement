@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import {
   MapPin,
@@ -16,7 +16,7 @@ import LeadForm from "@/components/forms/LeadForm";
 export const metadata: Metadata = {
   title: "Contact Us — Book a Free Consultation",
   description:
-    "Get in touch with Right Asset Management in Bangalore. Book a free consultation for financial planning, real estate documentation, or legal advisory services.",
+    "Get in touch with Right Assets Management in Bangalore. Book a free consultation for financial planning, real estate documentation, or legal advisory services.",
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -25,7 +25,7 @@ const CONTACT_ITEMS = [
   {
     Icon: MapPin,
     label: "Our Office",
-    line1: "Right Asset Management",
+    line1: "Right Assets Management",
     line2: "Bangalore, Karnataka — 560 001",
     color: "#C9A84C",
     lightBg: "#FBF5E6",
@@ -190,7 +190,7 @@ export default function ContactPage() {
                   Let&apos;s Talk
                 </h2>
                 <p className="text-gray-500 text-sm leading-relaxed mb-7">
-                  Right Asset Management offers a free 30-minute initial consultation —
+                  Right Assets Management offers a free 30-minute initial consultation —
                   no commitment, no sales pressure. Just straightforward guidance from
                   our experienced advisors.
                 </p>

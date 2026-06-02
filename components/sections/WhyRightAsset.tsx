@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { ShieldCheck, Workflow, FileCheck } from "lucide-react";
@@ -51,7 +51,7 @@ export default function WhyRightAsset() {
             className="font-heading font-bold text-4xl sm:text-5xl mb-4"
             style={{ color: "#1B3A6B" }}
           >
-            Why Choose Right Asset?
+            Why Choose Right Assets?
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto leading-relaxed">
             We built this firm to solve a real problem: great advice rarely comes with great execution.

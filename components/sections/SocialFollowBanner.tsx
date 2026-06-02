@@ -1,4 +1,4 @@
-import { ArrowUpRight, Users } from "lucide-react";
+﻿import { ArrowUpRight, Users } from "lucide-react";
 import { SOCIAL_PLATFORMS } from "@/components/icons/social-icons";
 
 export default function SocialFollowBanner() {
@@ -77,7 +77,7 @@ export default function SocialFollowBanner() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Follow Right Asset Management on ${name}`}
+              aria-label={`Follow Right Assets Management on ${name}`}
               className="group flex flex-col gap-4 p-5 rounded-2xl transition-all duration-250 hover:-translate-y-1.5"
               style={{
                 backgroundColor: "rgba(255,255,255,0.04)",

@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import InsurancePremiumEstimator from "@/components/tools/InsurancePremiumEstimator";
 
 export const metadata: Metadata = {
-  title: "Insurance Premium Estimator — Term Life & Health | Right Asset Management",
+  title: "Insurance Premium Estimator — Term Life & Health | Right Assets Management",
   description:
-    "Estimate your annual insurance premium for Term Life or Health Insurance based on your age and coverage amount. Free estimator by Right Asset Management, Bangalore.",
+    "Estimate your annual insurance premium for Term Life or Health Insurance based on your age and coverage amount. Free estimator by Right Assets Management, Bangalore.",
 };
 
 export default function InsurancePremiumPage() {

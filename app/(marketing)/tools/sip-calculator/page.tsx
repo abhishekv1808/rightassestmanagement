@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import SIPCalculator from "@/components/tools/SIPCalculator";
 
 export const metadata: Metadata = {
-  title: "SIP Returns Calculator — Free Tool | Right Asset Management",
+  title: "SIP Returns Calculator — Free Tool | Right Assets Management",
   description:
-    "Calculate your SIP maturity value for any monthly investment, expected return, and duration. Free SIP calculator by Right Asset Management, Bangalore.",
+    "Calculate your SIP maturity value for any monthly investment, expected return, and duration. Free SIP calculator by Right Assets Management, Bangalore.",
 };
 
 export default function SIPCalculatorPage() {

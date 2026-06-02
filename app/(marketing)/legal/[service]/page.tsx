@@ -225,7 +225,7 @@ export default async function LegalServicePage({
               {svc.benefits.length > 0 && (
                 <div className="rounded-2xl p-7" style={{ backgroundColor: "#F0EBF9" }}>
                   <h2 className="font-heading font-bold text-xl mb-5" style={{ color: "#6B46C1" }}>
-                    Why Choose Right Asset for {svc.title}?
+                    Why Choose Right Assets for {svc.title}?
                   </h2>
                   <ul className="space-y-3">
                     {svc.benefits.map((b, i) => (

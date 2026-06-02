@@ -1,4 +1,4 @@
-export type Resource = {
+﻿export type Resource = {
   slug: string;
   title: string;
   subtitle: string;
@@ -33,7 +33,7 @@ export const ALL_RESOURCES: Resource[] = [
     color: "#1B3A6B",
     lightBg: "#EEF2F8",
     downloadPath: "/downloads/sip-starter-kit.pdf",
-    metaTitle: "SIP Starter Kit — Free Guide | Right Asset Management",
+    metaTitle: "SIP Starter Kit — Free Guide | Right Assets Management",
     metaDescription:
       "Download our free 12-page SIP Starter Kit to learn how mutual fund SIPs work, how compounding builds wealth, and how to start investing in 20 minutes.",
   },
@@ -55,7 +55,7 @@ export const ALL_RESOURCES: Resource[] = [
     color: "#1B3A6B",
     lightBg: "#EEF2F8",
     downloadPath: "/downloads/home-loan-guide.pdf",
-    metaTitle: "Home Loan Buyer's Guide — Free Download | Right Asset Management",
+    metaTitle: "Home Loan Buyer's Guide — Free Download | Right Assets Management",
     metaDescription:
       "Free 16-page home loan guide for first-time buyers in Bangalore. Covers eligibility, document checklist, lender comparison, and tax benefits.",
   },
@@ -77,7 +77,7 @@ export const ALL_RESOURCES: Resource[] = [
     color: "#0D7E7E",
     lightBg: "#E6F4F4",
     downloadPath: "/downloads/property-registration-checklist.pdf",
-    metaTitle: "Property Registration Checklist Bangalore 2025 — Free Guide | Right Asset Management",
+    metaTitle: "Property Registration Checklist Bangalore 2025 — Free Guide | Right Assets Management",
     metaDescription:
       "Free 10-page property registration checklist for Bangalore with 2025 stamp duty rates, document requirements, and SRO appointment booking steps.",
   },
@@ -100,7 +100,7 @@ export const ALL_RESOURCES: Resource[] = [
     color: "#0D7E7E",
     lightBg: "#E6F4F4",
     downloadPath: "/downloads/e-khatha-guide.pdf",
-    metaTitle: "E-Khatha Application Guide Bangalore — Free Download | Right Asset Management",
+    metaTitle: "E-Khatha Application Guide Bangalore — Free Download | Right Assets Management",
     metaDescription:
       "Free 8-page guide to applying for E-Khatha in Bangalore. Covers BBMP vs Gram Panchayat Khatha, online process, documents, and handling rejections.",
   },
@@ -123,7 +123,7 @@ export const ALL_RESOURCES: Resource[] = [
     color: "#1B3A6B",
     lightBg: "#EEF2F8",
     downloadPath: "/downloads/tax-saving-guide.pdf",
-    metaTitle: "Tax Saving Guide 2025–26 — Free Download | Right Asset Management",
+    metaTitle: "Tax Saving Guide 2025–26 — Free Download | Right Assets Management",
     metaDescription:
       "Free 18-page tax saving guide for 2025–26. Compare new vs old tax regime, maximise 80C deductions, and file your ITR without missing a deadline.",
   },
@@ -146,7 +146,7 @@ export const ALL_RESOURCES: Resource[] = [
     color: "#0D7E7E",
     lightBg: "#E6F4F4",
     downloadPath: "/downloads/property-due-diligence.pdf",
-    metaTitle: "Property Due Diligence Checklist Bangalore — Free Guide | Right Asset Management",
+    metaTitle: "Property Due Diligence Checklist Bangalore — Free Guide | Right Assets Management",
     metaDescription:
       "Free 14-page property due diligence checklist. Covers title search, encumbrance certificates, RERA verification, and fraud red flags for Bangalore buyers.",
   },
@@ -169,7 +169,7 @@ export const ALL_RESOURCES: Resource[] = [
     color: "#1B3A6B",
     lightBg: "#EEF2F8",
     downloadPath: "/downloads/insurance-planning-starter.pdf",
-    metaTitle: "Insurance Planning Starter Guide — Free Download | Right Asset Management",
+    metaTitle: "Insurance Planning Starter Guide — Free Download | Right Assets Management",
     metaDescription:
       "Free 10-page insurance planning guide. Learn how much term life and health cover you need, avoid common mistakes, and handle claim rejections.",
   },
@@ -192,7 +192,7 @@ export const ALL_RESOURCES: Resource[] = [
     color: "#6B46C1",
     lightBg: "#F0EBF9",
     downloadPath: "/downloads/tenant-landlord-guide.pdf",
-    metaTitle: "Tenant & Landlord Rights Guide Bangalore — Free Download | Right Asset Management",
+    metaTitle: "Tenant & Landlord Rights Guide Bangalore — Free Download | Right Assets Management",
     metaDescription:
       "Free 12-page guide to tenant and landlord rights in Bangalore under the Karnataka Rent Act. Covers rent agreements, security deposits, and legal remedies.",
   },

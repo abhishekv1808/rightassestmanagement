@@ -1,4 +1,4 @@
-# Right Asset Management — Content Calendar
+﻿# Right Assets Management — Content Calendar
 > 12-Month Blog & Content Roadmap
 > Prepared: May 2026
 
@@ -9,7 +9,7 @@
 **Publishing cadence:** 2 blog posts/month at launch → 4/month by month 6
 **Content types:** How-to guides, comparison posts, government process walkthroughs, financial explainers
 **SEO angle:** Target long-tail, high-intent Bangalore-specific queries that competitors ignore
-**E-E-A-T signal:** All posts authored by Right Asset Management team with credentials listed; include real experience (client story anonymized, process screenshots)
+**E-E-A-T signal:** All posts authored by Right Assets Management team with credentials listed; include real experience (client story anonymized, process screenshots)
 
 ---
 
@@ -96,7 +96,7 @@ These 5 posts launch with the site. They are already planned in CLAUDE.md.
 ## Content Format Guidelines
 
 ### Every Blog Post Must Have:
-- [ ] Unique `<title>` (60 chars max): `[Topic] in Bangalore | Right Asset Management`
+- [ ] Unique `<title>` (60 chars max): `[Topic] in Bangalore | Right Assets Management`
 - [ ] Meta description (155 chars max) with target keyword
 - [ ] H1 with primary keyword
 - [ ] H2s for each major section
@@ -110,11 +110,11 @@ These 5 posts launch with the site. They are already planned in CLAUDE.md.
 ### CTA Templates
 
 **Mid-post CTA:**
-> **Need help with [topic]? Right Asset Management handles it end-to-end in Bangalore.**
+> **Need help with [topic]? Right Assets Management handles it end-to-end in Bangalore.**
 > [Book a Free Consultation →] [WhatsApp Us →]
 
 **End-of-post CTA:**
-> **Don't navigate this alone.** Right Asset Management has guided 500+ Bangalore clients through [service]. Book a free 30-minute consultation today.
+> **Don't navigate this alone.** Right Assets Management has guided 500+ Bangalore clients through [service]. Book a free 30-minute consultation today.
 
 ---
 

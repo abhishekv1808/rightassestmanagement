@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Right Asset Management",
+  title: "Privacy Policy | Right Assets Management",
   description:
-    "Privacy Policy of Right Asset Management — how we collect, use, and protect your personal information in compliance with India's Digital Personal Data Protection Act, 2023.",
+    "Privacy Policy of Right Assets Management — how we collect, use, and protect your personal information in compliance with India's Digital Personal Data Protection Act, 2023.",
   robots: { index: true, follow: true },
 };
 
@@ -15,7 +15,7 @@ const SECTIONS = [
   {
     id: "introduction",
     title: "1. Introduction",
-    content: `Right Asset Management ("we", "our", "us"), a financial advisory and services firm based in Bangalore, Karnataka, India, is committed to protecting the privacy and personal data of every individual who visits our website or engages our services.
+    content: `Right Assets Management ("we", "our", "us"), a financial advisory and services firm based in Bangalore, Karnataka, India, is committed to protecting the privacy and personal data of every individual who visits our website or engages our services.
 
 This Privacy Policy explains what personal information we collect, how we use it, how it is stored, with whom it may be shared, and what rights you hold over your data. This Policy applies to all visitors to rightasset.in (the "Website") and to all clients who engage us for Financial, Real Estate, or Legal advisory services.
 
@@ -77,7 +77,7 @@ Enquiry and contact form data submitted through our Website is stored in a secur
 **Security measures we implement:**
 — HTTPS encryption across all pages of the Website
 — Row-level security policies on our database to prevent unauthorised access
-— Access to client data is restricted to authorised personnel of Right Asset Management only
+— Access to client data is restricted to authorised personnel of Right Assets Management only
 — Regular review of access permissions and third-party integrations
 
 **Limitations:**
@@ -161,7 +161,7 @@ We encourage you to review this Policy periodically. Your continued use of our W
     title: "11. Contact & Grievance Officer",
     content: `For any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal data, you may contact us at:
 
-**Right Asset Management**
+**Right Assets Management**
 Bangalore, Karnataka, India
 Email: privacy@rightasset.in
 Phone: +91 99999 99999

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ChevronRight,
@@ -17,7 +17,7 @@ import type { Resource } from "@/lib/resources-data";
 
 export const metadata: Metadata = {
   title:
-    "Free Financial & Property Guides — Download Now | Right Asset Management",
+    "Free Financial & Property Guides — Download Now | Right Assets Management",
   description:
     "Download free expert guides on financial planning, property transactions, and legal rights in Bangalore. Practical, jargon-free, and written by our advisors.",
 };

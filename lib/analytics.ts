@@ -1,5 +1,5 @@
-/**
- * Typed GA4 event helpers for Right Asset Management.
+﻿/**
+ * Typed GA4 event helpers for Right Assets Management.
  *
  * All functions are safe to call server-side or before gtag loads —
  * they silently no-op when window / gtag is unavailable.

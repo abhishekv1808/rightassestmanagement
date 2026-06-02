@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -100,7 +100,7 @@ function ArticleCard({ post }: { post: BlogPost }) {
             </span>
             <span className="flex items-center gap-1">
               <User className="w-3.5 h-3.5" />
-              {post.author.name.replace("Right Asset Management", "RAM Team")}
+              {post.author.name.replace("Right Assets Management", "RAM Team")}
             </span>
           </div>
           <span>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ChevronRight,
@@ -25,7 +25,7 @@ import { getServiceBySlug } from "@/lib/services-data";
 export const metadata: Metadata = {
   title: "Real Estate Services in Bangalore — Property, Documentation & Registration",
   description:
-    "Complete real estate services in Bangalore — buy/sell properties, sale deed, khatha, EC, land conversion, property registration, and more. Right Asset Management.",
+    "Complete real estate services in Bangalore — buy/sell properties, sale deed, khatha, EC, land conversion, property registration, and more. Right Assets Management.",
 };
 
 // ─── Cards config ─────────────────────────────────────────────────────────────
@@ -59,7 +59,7 @@ export default function RealEstateHubPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What real estate services does Right Asset Management provide in Bangalore?",
+        "name": "What real estate services does Right Assets Management provide in Bangalore?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "We offer 17+ real estate services in Bangalore including property buying/selling, sale deed drafting, rent agreements, E-Khatha, land conversion, building plan approval, encumbrance certificates, property registration, mutation, and more."
@@ -67,7 +67,7 @@ export default function RealEstateHubPage() {
       },
       {
         "@type": "Question",
-        "name": "Can Right Asset Management help with property registration in Bangalore?",
+        "name": "Can Right Assets Management help with property registration in Bangalore?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes, we provide end-to-end property registration assistance in Bangalore — from document verification and stamp duty calculation to sub-registrar office coordination and final registration."
@@ -265,7 +265,7 @@ export default function RealEstateHubPage() {
 
           <p className="mt-8 text-center text-xs text-gray-400">
             All property transactions are subject to applicable Karnataka stamp duty and registration charges ·
-            Right Asset Management assists with documentation and coordination — not legal representation
+            Right Assets Management assists with documentation and coordination — not legal representation
           </p>
         </div>
       </section>

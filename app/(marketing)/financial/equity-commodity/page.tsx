@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -29,7 +29,7 @@ import ServiceStickyBar from "@/components/service/ServiceStickyBar";
 // ─── Metadata ──────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Equity & Commodity Market Advisory in Bangalore | Right Asset Management",
+  title: "Equity & Commodity Market Advisory in Bangalore | Right Assets Management",
   description:
     "Expert equity and commodity market advisory in Bangalore. Research-backed stock picks, commodity strategies on MCX/NCDEX, portfolio management, and tax-efficient exits. Book a free consultation today.",
 };
@@ -540,7 +540,7 @@ export default function EquityCommodityPage() {
         </div>
       </section>
 
-      {/* ── WHY RIGHT ASSET ──────────────────────────────────────────────── */}
+      {/* ── WHY Right Assets ──────────────────────────────────────────────── */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
@@ -556,7 +556,7 @@ export default function EquityCommodityPage() {
                 className="font-heading font-bold text-3xl mb-5 leading-tight"
                 style={{ color: "#1B3A6B" }}
               >
-                The Right Asset
+                The Right Assets
                 <br />
                 Difference
               </h2>
@@ -731,7 +731,7 @@ export default function EquityCommodityPage() {
             <h2
               className="font-heading font-bold text-2xl lg:text-3xl text-white"
             >
-              Why Invest With Right Asset Management?
+              Why Invest With Right Assets Management?
             </h2>
           </div>
 

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LocalBusinessSchema.tsx
  *
  * Renders the root FinancialService / LocalBusiness JSON-LD block.
@@ -33,8 +33,8 @@ export default function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "FinancialService",
     "@id": `${SITE_URL}/#organization`,
-    name: "Right Asset Management",
-    alternateName: "Right Asset",
+    name: "Right Assets Management",
+    alternateName: "Right Assets",
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
@@ -44,7 +44,7 @@ export default function LocalBusinessSchema() {
     },
     image: `${SITE_URL}/og-image.png`,
     description:
-      "Right Asset Management is Bangalore's trusted multi-vertical firm offering 48+ expert services across Financial Planning, Real Estate, and Legal Advisory under one roof.",
+      "Right Assets Management is Bangalore's trusted multi-vertical firm offering 48+ expert services across Financial Planning, Real Estate, and Legal Advisory under one roof.",
     telephone: BUSINESS_PHONE,
     email: BUSINESS_EMAIL,
     address: {
@@ -85,7 +85,7 @@ export default function LocalBusinessSchema() {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Right Asset Management Services",
+      name: "Right Assets Management Services",
       itemListElement: [
         {
           "@type": "OfferCatalog",
@@ -112,7 +112,7 @@ export default function LocalBusinessSchema() {
     ],
     founder: {
       "@type": "Person",
-      name: "Right Asset Management Founder", // TODO: replace with actual founder name
+      name: "Right Assets Management Founder", // TODO: replace with actual founder name
     },
     foundingDate: "2014", // TODO: confirm founding year with client
     numberOfEmployees: {

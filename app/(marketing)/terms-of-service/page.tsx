@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Right Asset Management",
+  title: "Terms of Service | Right Assets Management",
   description:
-    "Terms of Service governing the use of Right Asset Management's website and financial, real estate, and legal advisory services in Bangalore, India.",
+    "Terms of Service governing the use of Right Assets Management's website and financial, real estate, and legal advisory services in Bangalore, India.",
   robots: { index: true, follow: true },
 };
 
@@ -15,7 +15,7 @@ const SECTIONS = [
   {
     id: "acceptance",
     title: "1. Acceptance of Terms",
-    content: `These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "Client", "you") and Right Asset Management ("Company", "we", "us", "our"), a financial and advisory services firm registered and operating in Bangalore, Karnataka, India.
+    content: `These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "Client", "you") and Right Assets Management ("Company", "we", "us", "our"), a financial and advisory services firm registered and operating in Bangalore, Karnataka, India.
 
 By accessing this Website (rightasset.in), submitting an enquiry, booking a consultation, or engaging any of our services, you confirm that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you must not use our Website or services.
 
@@ -24,7 +24,7 @@ We reserve the right to update or modify these Terms at any time. Continued use 
   {
     id: "services",
     title: "2. Description of Services",
-    content: `Right Asset Management provides advisory and facilitation services across three verticals:
+    content: `Right Assets Management provides advisory and facilitation services across three verticals:
 
 **Financial Services:**
 Investment advisory, insurance advisory, loan facilitation, tax planning assistance, and related financial guidance for individuals and businesses.
@@ -44,16 +44,16 @@ All services are subject to the specific scope agreed upon between the Company a
 All investments in securities markets, mutual funds, equity, bonds, and other financial instruments are subject to market risk. Past performance of any fund, scheme, or instrument is not indicative of future results. The value of investments may rise or fall. Clients should read all scheme-related documents carefully before investing.
 
 **Insurance:**
-Insurance advisory is provided for general guidance only. Right Asset Management facilitates connection between clients and insurance providers. All insurance products are subject to the terms, conditions, and exclusions of the respective insurer. Policy terms should be reviewed carefully. IRDAI registration details of the insurer should be verified independently.
+Insurance advisory is provided for general guidance only. Right Assets Management facilitates connection between clients and insurance providers. All insurance products are subject to the terms, conditions, and exclusions of the respective insurer. Policy terms should be reviewed carefully. IRDAI registration details of the insurer should be verified independently.
 
 **Loans:**
-Loan facilitation services help clients connect with banks and non-banking financial companies (NBFCs). Right Asset Management does not lend money and is not a lending institution. Approval of loans, interest rates, and terms are determined solely by the lending institution. We do not guarantee loan approvals.
+Loan facilitation services help clients connect with banks and non-banking financial companies (NBFCs). Right Assets Management does not lend money and is not a lending institution. Approval of loans, interest rates, and terms are determined solely by the lending institution. We do not guarantee loan approvals.
 
 **Tax Planning:**
 Tax planning advice is provided for general informational purposes. Individual tax liability depends on personal circumstances, applicable tax laws, and decisions of tax authorities. Clients are advised to consult a qualified Chartered Accountant for their specific tax situation.
 
 **No Guaranteed Returns:**
-Right Asset Management makes no representation or warranty, express or implied, regarding the performance of any investment product or the financial outcome of any advisory engagement. No guaranteed returns are promised for any investment product.`,
+Right Assets Management makes no representation or warranty, express or implied, regarding the performance of any investment product or the financial outcome of any advisory engagement. No guaranteed returns are promised for any investment product.`,
   },
   {
     id: "real-estate-terms",
@@ -77,7 +77,7 @@ For any property transaction involving a registered RERA project, clients are ad
     id: "legal-advisory-terms",
     title: "5. Legal Advisory Services — Important Limitations",
     content: `**Not a Law Firm:**
-Right Asset Management is not a law firm and does not practice law. Legal advisory services are provided through empanelled advocates who are independent professionals enrolled with the Bar Council of Karnataka or Bar Council of India, as applicable.
+Right Assets Management is not a law firm and does not practice law. Legal advisory services are provided through empanelled advocates who are independent professionals enrolled with the Bar Council of Karnataka or Bar Council of India, as applicable.
 
 **No Solicitor-Client Relationship:**
 Accessing legal information through our Website or receiving initial advisory from our team does not create a solicitor-client or advocate-client relationship. A formal advocate-client relationship is established only upon execution of a written engagement agreement directly between the client and the concerned advocate.
@@ -124,11 +124,11 @@ Government fees (stamp duty, registration fees, e-filing charges, court fees, et
   {
     id: "intellectual-property",
     title: "8. Intellectual Property",
-    content: `All content on this Website — including text, graphics, logos, service descriptions, blog articles, calculator tools, and design elements — is the exclusive property of Right Asset Management or its licensed contributors, and is protected under the Copyright Act, 1957 and applicable intellectual property laws.
+    content: `All content on this Website — including text, graphics, logos, service descriptions, blog articles, calculator tools, and design elements — is the exclusive property of Right Assets Management or its licensed contributors, and is protected under the Copyright Act, 1957 and applicable intellectual property laws.
 
 You may not reproduce, republish, distribute, or commercially exploit any content from this Website without our prior written consent. You may share links to our Website and print pages for personal, non-commercial use.
 
-The Right Asset Management name, logo, and branding materials are proprietary and may not be used without our express written permission.`,
+The Right Assets Management name, logo, and branding materials are proprietary and may not be used without our express written permission.`,
   },
   {
     id: "limitation-of-liability",
@@ -136,13 +136,13 @@ The Right Asset Management name, logo, and branding materials are proprietary an
     content: `To the maximum extent permitted by applicable law:
 
 **No Liability for Investment Losses:**
-Right Asset Management is not liable for any financial loss, including loss of capital, arising from investments made on the basis of our advisory services. All investments carry inherent risk which the client acknowledges.
+Right Assets Management is not liable for any financial loss, including loss of capital, arising from investments made on the basis of our advisory services. All investments carry inherent risk which the client acknowledges.
 
 **No Liability for Government or Third-Party Actions:**
 We are not liable for losses or damages arising from delays, errors, or decisions of government authorities, courts, financial institutions, insurance companies, or any other third party.
 
 **No Consequential Damages:**
-In no event shall Right Asset Management be liable for indirect, incidental, consequential, punitive, or special damages of any kind arising out of or in connection with our services, even if we have been advised of the possibility of such damages.
+In no event shall Right Assets Management be liable for indirect, incidental, consequential, punitive, or special damages of any kind arising out of or in connection with our services, even if we have been advised of the possibility of such damages.
 
 **Maximum Liability:**
 Our total aggregate liability to any client for any claim arising from a specific engagement shall not exceed the total fees paid by that client to us for that specific engagement.
@@ -152,7 +152,7 @@ Nothing in these Terms excludes or limits liability for fraud, wilful misconduct
   {
     id: "indemnification",
     title: "10. Indemnification",
-    content: `You agree to indemnify, defend, and hold harmless Right Asset Management, its directors, employees, advisors, and empanelled advocates from and against any claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising from:
+    content: `You agree to indemnify, defend, and hold harmless Right Assets Management, its directors, employees, advisors, and empanelled advocates from and against any claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising from:
 
 — Your use of our Website or services
 — Your violation of these Terms
@@ -176,7 +176,7 @@ Nothing in these Terms affects your statutory rights as a consumer under the Con
   {
     id: "termination",
     title: "12. Termination of Services",
-    content: `Right Asset Management reserves the right to suspend or terminate your access to our services at any time, with or without notice, if:
+    content: `Right Assets Management reserves the right to suspend or terminate your access to our services at any time, with or without notice, if:
 
 — You provide false or misleading information
 — You engage in conduct that we reasonably believe to be unlawful, harmful, or abusive
@@ -189,7 +189,7 @@ You may discontinue using our services at any time. Obligations and liabilities 
     title: "13. Contact Us",
     content: `For questions, clarifications, or concerns regarding these Terms of Service, please contact:
 
-**Right Asset Management**
+**Right Assets Management**
 Bangalore, Karnataka, India
 Email: legal@rightasset.in
 Phone: +91 99999 99999
@@ -235,7 +235,7 @@ export default function TermsOfServicePage() {
               Important Notice
             </p>
             <p className="text-sm leading-relaxed" style={{ color: "#7A5C00" }}>
-              Right Asset Management operates across three domains — financial advisory,
+              Right Assets Management operates across three domains — financial advisory,
               real estate facilitation, and legal advisory (through empanelled advocates). Different regulatory frameworks
               apply to each vertical. Please read the relevant sections carefully before engaging our services.
             </p>

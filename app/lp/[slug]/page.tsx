@@ -108,7 +108,7 @@ export default async function LPPage({
           }}
         >
           <span style={{ fontSize: 18, fontWeight: 800, color: "#1B3A6B" }}>
-            Right Asset
+            Right Assets
           </span>
           <span style={{ fontSize: 13, color: "#C9A84C", fontWeight: 600 }}>
             Management
@@ -584,7 +584,7 @@ export default async function LPPage({
               textAlign: "center",
             }}
           >
-            Why Bangalore residents choose Right Asset Management
+            Why Bangalore residents choose Right Assets Management
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -656,7 +656,7 @@ export default async function LPPage({
                 marginBottom: 10,
               }}
             >
-              What You Get With Right Asset
+              What You Get With Right Assets
             </h2>
             <p style={{ fontSize: 15, color: "#64748B" }}>
               Everything included — no hidden charges, no confusing packages.
@@ -913,7 +913,7 @@ export default async function LPPage({
                 marginBottom: 10,
               }}
             >
-              Going It Alone vs Using Right Asset
+              Going It Alone vs Using Right Assets
             </h2>
             <p style={{ fontSize: 15, color: "#64748B" }}>
               See exactly where the difference shows up.
@@ -961,7 +961,7 @@ export default async function LPPage({
                       width: "35%",
                     }}
                   >
-                    With Right Asset
+                    With Right Assets
                   </th>
                 </tr>
               </thead>
@@ -1359,7 +1359,7 @@ export default async function LPPage({
         }}
       >
         <p style={{ fontSize: 12, color: "rgba(255,255,255,0.35)" }}>
-          © 2025 Right Asset Management. All rights reserved.&nbsp;·&nbsp;
+          © 2025 Right Assets Management. All rights reserved.&nbsp;·&nbsp;
           <Link
             href="/privacy-policy"
             style={{ color: "rgba(255,255,255,0.45)", textDecoration: "none" }}

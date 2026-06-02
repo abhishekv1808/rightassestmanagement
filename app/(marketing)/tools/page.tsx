@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ChevronRight,
@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "Free Financial Calculators — SIP, EMI, FD & More",
   description:
-    "Use Right Asset Management's free financial calculators to plan your investments, loans, and property returns. SIP calculator, EMI calculator, FD calculator, and more.",
+    "Use Right Assets Management's free financial calculators to plan your investments, loans, and property returns. SIP calculator, EMI calculator, FD calculator, and more.",
 };
 
 const TOOLS = [

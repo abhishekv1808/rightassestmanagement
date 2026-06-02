@@ -91,7 +91,7 @@ export default async function LocalityPage({
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: `Right Asset Management — ${locality.name}`,
+    name: `Right Assets Management — ${locality.name}`,
     description: `Financial, real estate, and legal services in ${locality.name}, Bangalore. ${locality.description}`,
     areaServed: `${locality.name}, Bangalore, Karnataka`,
     url: `https://rightasset.in/bangalore/${locality.slug}`,
@@ -437,7 +437,7 @@ export default async function LocalityPage({
               <span style={{ color: "#C9A84C" }}>{locality.name}</span>
             </h2>
             <p className="text-sm" style={{ color: "#64748B", maxWidth: "520px" }}>
-              The services most in demand from Right Asset Management clients
+              The services most in demand from Right Assets Management clients
               in {locality.name} — based on enquiries from your neighbourhood.
             </p>
           </div>

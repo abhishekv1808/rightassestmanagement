@@ -1,4 +1,4 @@
-export type LandingPage = {
+﻿export type LandingPage = {
   slug: string;
   metaTitle: string;
   vertical: "financial" | "real-estate" | "legal";
@@ -38,7 +38,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "home-loan",
     metaTitle:
-      "Home Loan in Bangalore | Free Expert Guidance — Right Asset Management",
+      "Home Loan in Bangalore | Free Expert Guidance — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
@@ -126,7 +126,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
     testimonials: [
       {
         quote:
-          "I was comparing home loan rates for 2 months and getting nowhere. Right Asset sorted my ₹65 lakh loan in 10 days at 8.4% — lower than what my own bank had offered. Absolutely recommend.",
+          "I was comparing home loan rates for 2 months and getting nowhere. Right Assets sorted my ₹65 lakh loan in 10 days at 8.4% — lower than what my own bank had offered. Absolutely recommend.",
         name: "Suresh Reddy",
         location: "Whitefield, Bangalore",
       },
@@ -138,7 +138,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
       },
       {
         quote:
-          "First-time home buyer, completely clueless. Right Asset explained everything — EMI, tenure, prepayment — and got my loan sanctioned in 4 days. The doorstep service saved me 2 days of leave.",
+          "First-time home buyer, completely clueless. Right Assets explained everything — EMI, tenure, prepayment — and got my loan sanctioned in 4 days. The doorstep service saved me 2 days of leave.",
         name: "Arun Nair",
         location: "JP Nagar, Bangalore",
       },
@@ -196,7 +196,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "mutual-funds-sip",
     metaTitle:
-      "SIP & Mutual Fund Investment in Bangalore | SEBI-Registered Advisor — Right Asset Management",
+      "SIP & Mutual Fund Investment in Bangalore | SEBI-Registered Advisor — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
@@ -284,13 +284,13 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
     testimonials: [
       {
         quote:
-          "Started a ₹10,000/month SIP through Right Asset 3 years ago. My portfolio is up 41% and they reviewed it twice without me even asking. Genuine advisors who actually care.",
+          "Started a ₹10,000/month SIP through Right Assets 3 years ago. My portfolio is up 41% and they reviewed it twice without me even asking. Genuine advisors who actually care.",
         name: "Priya Menon",
         location: "Koramangala, Bangalore",
       },
       {
         quote:
-          "I was putting money in FDs for years — safe but terrible returns. Right Asset moved me to a balanced portfolio with 13% CAGR over 4 years. I wish I had done this 10 years ago.",
+          "I was putting money in FDs for years — safe but terrible returns. Right Assets moved me to a balanced portfolio with 13% CAGR over 4 years. I wish I had done this 10 years ago.",
         name: "Rajesh Iyer",
         location: "Indiranagar, Bangalore",
       },
@@ -340,7 +340,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         a: "Mutual funds are market-linked and carry risk. However, with a long-term horizon (5+ years) and the right fund selection, equity funds have historically delivered 12–15% CAGR. Debt funds carry lower risk.",
       },
       {
-        q: "How is Right Asset different from online platforms like Groww or Zerodha?",
+        q: "How is Right Assets different from online platforms like Groww or Zerodha?",
         a: "Online platforms are self-service — you choose funds yourself. We are advisors who understand your complete financial picture and build a strategy. We also assist with tax implications, goal planning, and rebalancing.",
       },
     ],
@@ -350,7 +350,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "property-registration",
     metaTitle:
-      "Property Registration in Bangalore | Expert End-to-End Help — Right Asset Management",
+      "Property Registration in Bangalore | Expert End-to-End Help — Right Assets Management",
     vertical: "real-estate",
     accentColor: "#0D7E7E",
     lightBg: "#E6F4F4",
@@ -439,7 +439,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
     testimonials: [
       {
         quote:
-          "My property registration was stuck for 6 months due to a khata issue. Right Asset resolved it in 3 weeks — they handled the BBMP, the SRO, everything. Absolute lifesavers.",
+          "My property registration was stuck for 6 months due to a khata issue. Right Assets resolved it in 3 weeks — they handled the BBMP, the SRO, everything. Absolute lifesavers.",
         name: "Anand Kumar",
         location: "Jayanagar, Bangalore",
       },
@@ -451,7 +451,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
       },
       {
         quote:
-          "The seller's property had a wrong survey number in the old deed. Right Asset caught it before we registered and got it corrected. Could have been a very expensive mistake.",
+          "The seller's property had a wrong survey number in the old deed. Right Assets caught it before we registered and got it corrected. Could have been a very expensive mistake.",
         name: "Vivek Sharma",
         location: "Marathahalli, Bangalore",
       },
@@ -505,7 +505,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "tax-planning",
     metaTitle:
-      "Tax Planning & ITR Filing in Bangalore | Save More Tax — Right Asset Management",
+      "Tax Planning & ITR Filing in Bangalore | Save More Tax — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
@@ -593,13 +593,13 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
     testimonials: [
       {
         quote:
-          "I was paying ₹1.2L in tax every year. Right Asset showed me I was missing HRA and NPS deductions. My tax came down to ₹68,000 that same year. Wish I had known sooner.",
+          "I was paying ₹1.2L in tax every year. Right Assets showed me I was missing HRA and NPS deductions. My tax came down to ₹68,000 that same year. Wish I had known sooner.",
         name: "Kavitha Narayan",
         location: "HSR Layout, Bangalore",
       },
       {
         quote:
-          "I had freelance income alongside my salary and had no idea about advance tax. Got a demand notice from IT dept last year. Right Asset fixed everything and filed a revised return. Stress-free now.",
+          "I had freelance income alongside my salary and had no idea about advance tax. Got a demand notice from IT dept last year. Right Assets fixed everything and filed a revised return. Stress-free now.",
         name: "Rohit Desai",
         location: "Koramangala, Bangalore",
       },
@@ -659,7 +659,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "health-insurance",
     metaTitle:
-      "Best Health Insurance Plans in Bangalore | Compare & Buy — Right Asset Management",
+      "Best Health Insurance Plans in Bangalore | Compare & Buy — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
@@ -748,19 +748,19 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
     testimonials: [
       {
         quote:
-          "I had a health insurance plan for 4 years and thought I was fully covered. Right Asset reviewed it and found 3 critical exclusions I had no idea about. Switched to a better plan the same week.",
+          "I had a health insurance plan for 4 years and thought I was fully covered. Right Assets reviewed it and found 3 critical exclusions I had no idea about. Switched to a better plan the same week.",
         name: "Ramesh Gowda",
         location: "Bannerghatta Road, Bangalore",
       },
       {
         quote:
-          "My mother has diabetes and I could not find a plan that would cover her without a 4-year waiting period. Right Asset found a Care Supreme plan with a 2-year PED waiting period at a fair premium.",
+          "My mother has diabetes and I could not find a plan that would cover her without a 4-year waiting period. Right Assets found a Care Supreme plan with a 2-year PED waiting period at a fair premium.",
         name: "Anitha Murthy",
         location: "Malleshwaram, Bangalore",
       },
       {
         quote:
-          "When my husband was hospitalised, Right Asset helped us file the claim the same day. We did not have to worry about paperwork — they handled everything. That is the real value.",
+          "When my husband was hospitalised, Right Assets helped us file the claim the same day. We did not have to worry about paperwork — they handled everything. That is the real value.",
         name: "Divya Menon",
         location: "Indiranagar, Bangalore",
       },
@@ -814,7 +814,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "term-life-insurance",
     metaTitle:
-      "Term Life Insurance in Bangalore | ₹1 Crore Cover from ₹500/Month — Right Asset Management",
+      "Term Life Insurance in Bangalore | ₹1 Crore Cover from ₹500/Month — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
@@ -903,19 +903,19 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
     testimonials: [
       {
         quote:
-          "Took a ₹1.5 Cr term plan at 31 for just ₹850/month. Right Asset helped me choose a plan with a critical illness rider that my bank agent had never even mentioned. Very thorough.",
+          "Took a ₹1.5 Cr term plan at 31 for just ₹850/month. Right Assets helped me choose a plan with a critical illness rider that my bank agent had never even mentioned. Very thorough.",
         name: "Vikram Shetty",
         location: "Marathahalli, Bangalore",
       },
       {
         quote:
-          "I had a ULIP that my old LIC agent had sold me as 'life cover'. Right Asset showed me I was getting ₹8L cover for ₹1,500/month. Switched to a ₹1 Cr term plan for ₹720/month. Eye-opening.",
+          "I had a ULIP that my old LIC agent had sold me as 'life cover'. Right Assets showed me I was getting ₹8L cover for ₹1,500/month. Switched to a ₹1 Cr term plan for ₹720/month. Eye-opening.",
         name: "Karthik Rao",
         location: "BTM Layout, Bangalore",
       },
       {
         quote:
-          "My husband passed away last year. Because Right Asset had helped us get a term plan with the right nominee details and payout structure, the claim was settled in 12 days. In that moment, it was everything.",
+          "My husband passed away last year. Because Right Assets had helped us get a term plan with the right nominee details and payout structure, the claim was settled in 12 days. In that moment, it was everything.",
         name: "Name withheld on request",
         location: "Bangalore",
       },

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, ReactNode } from "react";
 import Link from "next/link";
@@ -163,7 +163,7 @@ export default function AdminShell({
                 letterSpacing: "-0.2px",
               }}
             >
-              Right Asset
+              Right Assets
             </p>
             <span
               style={{

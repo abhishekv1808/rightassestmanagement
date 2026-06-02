@@ -1,4 +1,4 @@
-# Right Asset Management — Competitor Analysis
+﻿# Right Assets Management — Competitor Analysis
 > Bangalore Financial, Real Estate & Legal Services Market
 > Prepared: May 2026
 
@@ -6,7 +6,7 @@
 
 ## Overview
 
-Right Asset Management competes in three separate verticals simultaneously. This analysis covers the competitive landscape for each vertical in Bangalore, identifies gaps, and defines the positioning strategy.
+Right Assets Management competes in three separate verticals simultaneously. This analysis covers the competitive landscape for each vertical in Bangalore, identifies gaps, and defines the positioning strategy.
 
 **Key Finding:** No competitor in Bangalore currently bundles all three verticals (Financial + Real Estate + Legal) under one brand. This is the core SEO and business moat.
 
@@ -25,7 +25,7 @@ Right Asset Management competes in three separate verticals simultaneously. This
 | ICICI Direct (local office) | National bank | Very High | Brand trust | Not personalized |
 | Local CAs / IFAs | Freelance advisors | Very Low | Existing client relationships | No SEO, no digital |
 
-**Gap:** No Bangalore-specific financial advisory firm ranks consistently for long-tail service keywords like "SIP advisor Koramangala" or "AIF investment advisor Bangalore". Right Asset can own this space.
+**Gap:** No Bangalore-specific financial advisory firm ranks consistently for long-tail service keywords like "SIP advisor Koramangala" or "AIF investment advisor Bangalore". Right Assets can own this space.
 
 ---
 
@@ -39,7 +39,7 @@ Right Asset Management competes in three separate verticals simultaneously. This
 | Local property agents | Freelance | None | Referral clients | Zero digital presence |
 | e-Aasthi (govt portal) | Government | N/A | Official EC/Khatha | Poor UX, no advisory |
 
-**Gap:** The real estate documentation and government-process-assistance space (e-khatha, mutation, encumbrance certificate, property registration) is almost entirely unoptimized by private firms. Government portals rank #1 but provide no service — Right Asset can rank #2–5 for all these queries and capture the service intent.
+**Gap:** The real estate documentation and government-process-assistance space (e-khatha, mutation, encumbrance certificate, property registration) is almost entirely unoptimized by private firms. Government portals rank #1 but provide no service — Right Assets can rank #2–5 for all these queries and capture the service intent.
 
 ---
 
@@ -53,7 +53,7 @@ Right Asset Management competes in three separate verticals simultaneously. This
 | Local law firms | Bangalore-based | Very Low | Specialization | No SEO |
 | IndiaFilings | National compliance | High | Business legal | Not personal legal |
 
-**Gap:** No local Bangalore legal firm ranks for consumer-relevant terms like "cyber crime complaint Bangalore", "divorce lawyer Bangalore help", or "consumer dispute lawyer Bangalore". National platforms rank but offer aggregation — not direct service. Right Asset can rank by being specific, local, and service-oriented.
+**Gap:** No local Bangalore legal firm ranks for consumer-relevant terms like "cyber crime complaint Bangalore", "divorce lawyer Bangalore help", or "consumer dispute lawyer Bangalore". National platforms rank but offer aggregation — not direct service. Right Assets can rank by being specific, local, and service-oriented.
 
 ---
 
@@ -135,9 +135,9 @@ Right Asset Management competes in three separate verticals simultaneously. This
 - Cost transparency (even ranges)
 
 ### Avoid their mistakes:
-- **Groww/Zerodha**: Too generic, no local advisory — Right Asset must emphasize human advisory
-- **99acres**: Too listing-focused, no service pages — Right Asset wins by offering service execution, not just listings
-- **LawRato**: Aggregator model feels impersonal — Right Asset wins by being a direct, local, trusted provider
+- **Groww/Zerodha**: Too generic, no local advisory — Right Assets must emphasize human advisory
+- **99acres**: Too listing-focused, no service pages — Right Assets wins by offering service execution, not just listings
+- **LawRato**: Aggregator model feels impersonal — Right Assets wins by being a direct, local, trusted provider
 
 ---
 

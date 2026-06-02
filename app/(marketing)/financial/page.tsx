@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ChevronRight,
@@ -30,7 +30,7 @@ import { getServiceBySlug } from "@/lib/services-data";
 export const metadata: Metadata = {
   title: "Financial Services in Bangalore — Investments, Insurance & Loans",
   description:
-    "Comprehensive financial services in Bangalore — mutual funds, SIP, insurance, home loans, tax planning, and more. Expert advisors at Right Asset Management.",
+    "Comprehensive financial services in Bangalore — mutual funds, SIP, insurance, home loans, tax planning, and more. Expert advisors at Right Assets Management.",
 };
 
 // ─── Cards config ─────────────────────────────────────────────────────────────
@@ -67,23 +67,23 @@ export default function FinancialHubPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What financial services does Right Asset Management offer in Bangalore?",
+        "name": "What financial services does Right Assets Management offer in Bangalore?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Right Asset Management offers 21+ financial services including mutual fund SIP, health and life insurance, home loans, personal loans, equity investments, fixed deposits, tax planning, NPS, PPF, portfolio management, and more — all under one roof in Bangalore."
+          "text": "Right Assets Management offers 21+ financial services including mutual fund SIP, health and life insurance, home loans, personal loans, equity investments, fixed deposits, tax planning, NPS, PPF, portfolio management, and more — all under one roof in Bangalore."
         }
       },
       {
         "@type": "Question",
-        "name": "Are Right Asset Management's advisors qualified?",
+        "name": "Are Right Assets Management's advisors qualified?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Right Asset Management's advisors bring deep domain expertise and work with you to make informed, well-researched investment decisions aligned with your financial goals."
+          "text": "Right Assets Management's advisors bring deep domain expertise and work with you to make informed, well-researched investment decisions aligned with your financial goals."
         }
       },
       {
         "@type": "Question",
-        "name": "How do I start investing with Right Asset Management?",
+        "name": "How do I start investing with Right Assets Management?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "You can book a free 30-minute consultation by calling us, WhatsApping, or filling the contact form on our website. Our advisor will assess your goals and recommend the right investment plan."
@@ -99,7 +99,7 @@ export default function FinancialHubPage() {
       },
       {
         "@type": "Question",
-        "name": "Does Right Asset Management charge fees for financial advisory?",
+        "name": "Does Right Assets Management charge fees for financial advisory?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Initial consultations are completely free. Fee structures vary by service — your advisor will explain all charges transparently before you commit to any plan."

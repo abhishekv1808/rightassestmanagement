@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -9,7 +9,7 @@ export default function NotFound() {
           <Link
             href="/"
             className="flex items-center gap-3 group"
-            aria-label="Right Asset Management — Home"
+            aria-label="Right Assets Management — Home"
           >
             {/* Compact wordmark logo */}
             <div className="w-9 h-9 rounded-md bg-[#1B3A6B] flex items-center justify-center flex-shrink-0">
@@ -18,7 +18,7 @@ export default function NotFound() {
               </span>
             </div>
             <span className="text-[#1B3A6B] font-semibold text-base leading-tight tracking-tight group-hover:text-[#C9A84C] transition-colors">
-              Right Asset Management
+              Right Assets Management
             </span>
           </Link>
         </div>
@@ -102,7 +102,7 @@ export default function NotFound() {
       {/* Minimal footer note */}
       <footer className="py-5 text-center">
         <p className="text-xs text-[#64748B]">
-          &copy; {new Date().getFullYear()} Right Asset Management. All rights
+          &copy; {new Date().getFullYear()} Right Assets Management. All rights
           reserved.
         </p>
       </footer>

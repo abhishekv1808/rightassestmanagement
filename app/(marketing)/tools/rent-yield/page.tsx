@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import RentYieldCalculator from "@/components/tools/RentYieldCalculator";
 
 export const metadata: Metadata = {
-  title: "Rental Yield Calculator — Is Your Property Earning Enough? | Right Asset Management",
+  title: "Rental Yield Calculator — Is Your Property Earning Enough? | Right Assets Management",
   description:
     "Calculate gross and net rental yield for any property in Bangalore. Know if your investment is generating healthy returns with our free rental yield calculator.",
 };

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
@@ -19,21 +19,21 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Right Asset Management — Financial, Real Estate & Legal Services in Bangalore",
-    template: "%s | Right Asset Management",
+    default: "Right Assets Management — Financial, Real Estate & Legal Services in Bangalore",
+    template: "%s | Right Assets Management",
   },
   description:
-    "Right Asset Management is Bangalore's trusted multi-vertical firm offering 48+ expert services across Financial Planning, Real Estate, and Legal Advisory under one roof.",
+    "Right Assets Management is Bangalore's trusted multi-vertical firm offering 48+ expert services across Financial Planning, Real Estate, and Legal Advisory under one roof.",
   keywords: [
     "financial advisor Bangalore",
     "real estate services Bangalore",
     "legal advisory Bangalore",
     "mutual fund advisor Bangalore",
     "property registration Bangalore",
-    "Right Asset Management",
+    "Right Assets Management",
   ],
-  authors: [{ name: "Right Asset Management" }],
-  creator: "Right Asset Management",
+  authors: [{ name: "Right Assets Management" }],
+  creator: "Right Assets Management",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightasset.in"
   ),
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightasset.in",
-    siteName: "Right Asset Management",
+    siteName: "Right Assets Management",
     title:
-      "Right Asset Management — Financial, Real Estate & Legal Services in Bangalore",
+      "Right Assets Management — Financial, Real Estate & Legal Services in Bangalore",
     description:
       "One destination for 48+ expert services — investments, property, and legal help under one roof.",
     images: [
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Right Asset Management",
+        alt: "Right Assets Management",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Right Asset Management — Bangalore",
+    title: "Right Assets Management — Bangalore",
     description:
       "48+ Financial, Real Estate & Legal services under one roof in Bangalore.",
     images: ["/og-image.png"],

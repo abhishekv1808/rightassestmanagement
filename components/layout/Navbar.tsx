@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -249,7 +249,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col leading-none">
                 <span className="font-heading font-bold text-white text-[15px] tracking-wide">
-                  Right Asset
+                  Right Assets
                 </span>
                 <span
                   className="font-body font-medium text-[9.5px] tracking-[0.22em] uppercase"
@@ -529,7 +529,7 @@ export default function Navbar() {
                   <div className="w-7 h-7 rounded-md flex items-center justify-center" style={{ backgroundColor: "#C9A84C" }}>
                     <span className="font-heading font-bold text-white text-xs">R</span>
                   </div>
-                  <span className="font-heading font-bold text-white text-sm">Right Asset Management</span>
+                  <span className="font-heading font-bold text-white text-sm">Right Assets Management</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <button

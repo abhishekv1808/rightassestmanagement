@@ -302,7 +302,7 @@ export default async function FinancialServicePage({
                     className="font-heading font-bold text-xl mb-5"
                     style={{ color: "#1B3A6B" }}
                   >
-                    Why Choose Right Asset for {svc.title}?
+                    Why Choose Right Assets for {svc.title}?
                   </h2>
                   <ul className="space-y-3">
                     {svc.benefits.map((b, i) => (

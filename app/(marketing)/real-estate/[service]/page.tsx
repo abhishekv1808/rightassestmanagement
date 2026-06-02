@@ -217,7 +217,7 @@ export default async function RealEstateServicePage({
               {svc.benefits.length > 0 && (
                 <div className="rounded-2xl p-7" style={{ backgroundColor: "#E6F4F4" }}>
                   <h2 className="font-heading font-bold text-xl mb-5" style={{ color: "#0D7E7E" }}>
-                    Why Choose Right Asset for {svc.title}?
+                    Why Choose Right Assets for {svc.title}?
                   </h2>
                   <ul className="space-y-3">
                     {svc.benefits.map((b, i) => (

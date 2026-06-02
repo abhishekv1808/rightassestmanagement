@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ServiceSchema.tsx
  *
  * Renders three JSON-LD blocks for every service page:
@@ -73,7 +73,7 @@ export default function ServiceSchema({ service }: ServiceSchemaProps) {
     provider: {
       "@type": "FinancialService",
       "@id": `${SITE_URL}/#organization`,
-      name: "Right Asset Management",
+      name: "Right Assets Management",
       url: SITE_URL,
     },
     areaServed: {
@@ -106,7 +106,7 @@ export default function ServiceSchema({ service }: ServiceSchemaProps) {
       provider: {
         "@type": "FinancialService",
         "@id": `${SITE_URL}/#organization`,
-        name: "Right Asset Management",
+        name: "Right Assets Management",
       },
     },
     offers: {
@@ -116,7 +116,7 @@ export default function ServiceSchema({ service }: ServiceSchemaProps) {
       availability: "https://schema.org/InStock",
       seller: {
         "@type": "FinancialService",
-        name: "Right Asset Management",
+        name: "Right Assets Management",
         url: SITE_URL,
       },
     },

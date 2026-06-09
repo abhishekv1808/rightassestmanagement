@@ -23,7 +23,10 @@ import ServiceStickyBar from "@/components/service/ServiceStickyBar";
 // ─── Static params (build all 21 pages at build time) ─────────────────────────
 
 export async function generateStaticParams() {
-  return getServicesByVertical("financial").map((s) => ({ service: s.slug }));
+  return getServicesByVertical("financial")
+    // personal-loan has its own dedicated page with a multistep form
+    .filter((s) => s.slug !== "personal-loan")
+    .map((s) => ({ service: s.slug }));
 }
 
 // ─── Dynamic metadata ─────────────────────────────────────────────────────────

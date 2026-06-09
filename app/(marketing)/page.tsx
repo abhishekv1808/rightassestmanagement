@@ -7,6 +7,8 @@ import WhyRightAsset from "@/components/sections/WhyRightAsset";
 import AllServicesSection from "@/components/sections/AllServicesSection";
 import ToolsTeaser from "@/components/sections/ToolsTeaser";
 import Testimonials from "@/components/sections/Testimonials";
+import LatestInsights from "@/components/sections/LatestInsights";
+import HomeFAQ from "@/components/sections/HomeFAQ";
 import CTABanner from "@/components/sections/CTABanner";
 import CTASection from "@/components/sections/CTASection";
 import MarketOverviewCard from "@/components/widgets/MarketOverviewCard";
@@ -41,6 +43,8 @@ export default function HomePage() {
       </section>
       <ToolsTeaser />
       <Testimonials />
+      <LatestInsights />
+      <HomeFAQ />
       <CTASection />
       <CTABanner />
     </>

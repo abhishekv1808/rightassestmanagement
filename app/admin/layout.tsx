@@ -25,22 +25,28 @@ export default async function AdminLayout({
     return <>{children}</>;
   }
 
-  const [{ count: leadCount }, { count: pendingCount }] = await Promise.all([
-    supabase
-      .from("leads")
-      .select("*", { count: "exact", head: true })
-      .eq("status", "new"),
-    supabase
-      .from("testimonials")
-      .select("*", { count: "exact", head: true })
-      .eq("approved", false),
-  ]);
+  const [{ count: leadCount }, { count: pendingCount }, { count: consultationCount }] =
+    await Promise.all([
+      supabase
+        .from("leads")
+        .select("*", { count: "exact", head: true })
+        .eq("status", "new"),
+      supabase
+        .from("testimonials")
+        .select("*", { count: "exact", head: true })
+        .eq("approved", false),
+      supabase
+        .from("consultations")
+        .select("*", { count: "exact", head: true })
+        .eq("status", "pending"),
+    ]);
 
   return (
     <AdminShell
       user={{ email: user.email ?? "" }}
       leadCount={leadCount ?? 0}
       pendingCount={pendingCount ?? 0}
+      consultationCount={consultationCount ?? 0}
     >
       {children}
     </AdminShell>

@@ -376,7 +376,7 @@ export default function Navbar() {
               </a>
 
               <Link
-                href="/contact"
+                href="/book-consultation"
                 className="px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:opacity-90 active:scale-95 whitespace-nowrap"
                 style={{ backgroundColor: "#C9A84C", color: "#1B3A6B" }}
               >

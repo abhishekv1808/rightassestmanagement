@@ -30,6 +30,7 @@ const leadSchema = z.object({
     .or(z.literal("")),
   city: z.string().optional(),
   state: z.string().optional(),
+  address: z.string().optional(),
   message: z.string().optional(),
   source: z.enum(["Google", "Referral", "Social Media", "Other", ""]).optional(),
 });
@@ -107,6 +108,7 @@ export default function LeadForm({
       pincode: "",
       city: "",
       state: "",
+      address: "",
       message: "",
       source: "",
     },
@@ -151,6 +153,7 @@ export default function LeadForm({
           pincode: "",
           city: "",
           state: "",
+          address: "",
           message: "",
           source: "",
           ...updates,
@@ -199,7 +202,12 @@ export default function LeadForm({
       const locationNote = locationParts.length
         ? `Location — ${locationParts.join(", ")}`
         : "";
-      const fullMessage = [locationNote, data.message].filter(Boolean).join("\n\n");
+      const addressNote = data.address?.trim()
+        ? `Address — ${data.address.trim()}`
+        : "";
+      const fullMessage = [addressNote, locationNote, data.message]
+        .filter(Boolean)
+        .join("\n\n");
 
       const supabase = createClient();
       const { error } = await supabase.from("leads").insert({
@@ -449,6 +457,23 @@ export default function LeadForm({
               {errors.pincode?.message ?? "Invalid pincode — enter city & state manually."}
             </p>
           )}
+        </div>
+
+        {/* Address */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Address{" "}
+            <span className="text-xs text-gray-400 font-normal">(optional)</span>
+          </label>
+          <textarea
+            rows={2}
+            placeholder="House / flat, street, area, landmark…"
+            {...register("address")}
+            className="w-full px-4 py-2 rounded-lg border text-sm outline-none transition-all resize-none"
+            style={{ borderColor: borderDefault }}
+            onFocus={(e) => (e.currentTarget.style.borderColor = borderFocus)}
+            onBlur={(e) => (e.currentTarget.style.borderColor = borderDefault)}
+          />
         </div>
 
         {/* Service Interested In */}

@@ -28,7 +28,9 @@ export async function submitPersonalLoan(
   try {
     const supabase = await createClient();
 
-    // Pack loan details into the message field (leads table has no dedicated columns)
+    // Loan-specific details go in the free-text message (no dedicated columns for
+    // those). The pincode, however, has its own column that the routing trigger
+    // reads first — so we write it structured below as the source of truth.
     const locationLine = [
       `Pincode: ${input.pincode}`,
       input.city && `City: ${input.city}`,
@@ -49,6 +51,7 @@ export async function submitPersonalLoan(
       phone: input.phone.trim(),
       email: input.email?.trim() || null,
       service_interested: "Personal Loan",
+      pincode: input.pincode.trim(), // structured column — routing reads this first
       message,
       source: "Personal Loan Page",
       status: "new",

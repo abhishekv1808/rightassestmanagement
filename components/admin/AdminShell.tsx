@@ -10,6 +10,7 @@ import {
   Users,
   Star,
   FileText,
+  CalendarClock,
   Settings,
   ExternalLink,
   LogOut,
@@ -22,6 +23,7 @@ interface AdminShellProps {
   user: { email: string };
   leadCount?: number;
   pendingCount?: number;
+  consultationCount?: number;
 }
 
 interface NavItem {
@@ -52,6 +54,7 @@ function getPageTitle(pathname: string): string {
   if (pathname === "/admin/blog/new") return "New Post";
   if (pathname.startsWith("/admin/blog/") && pathname.endsWith("/edit")) return "Edit Post";
   if (pathname === "/admin/blog") return "Blog Posts";
+  if (pathname === "/admin/consultations") return "Consultations";
   if (pathname === "/admin/settings") return "Settings";
   return "Admin";
 }
@@ -61,6 +64,7 @@ export default function AdminShell({
   user,
   leadCount = 0,
   pendingCount = 0,
+  consultationCount = 0,
 }: AdminShellProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
@@ -81,6 +85,12 @@ export default function AdminShell({
           icon: Users,
           href: "/admin/leads",
           badge: leadCount > 0 ? leadCount : undefined,
+        },
+        {
+          label: "Consultations",
+          icon: CalendarClock,
+          href: "/admin/consultations",
+          badge: consultationCount > 0 ? consultationCount : undefined,
         },
         {
           label: "Testimonials",

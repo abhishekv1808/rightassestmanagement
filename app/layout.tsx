@@ -46,21 +46,14 @@ export const metadata: Metadata = {
       "Right Assets Management — Financial, Real Estate & Legal Services in Bangalore",
     description:
       "One destination for 48+ expert services — investments, property, and legal help under one roof.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Right Assets Management",
-      },
-    ],
+    // og:image is provided automatically by app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
     title: "Right Assets Management — Bangalore",
     description:
       "48+ Financial, Real Estate & Legal services under one roof in Bangalore.",
-    images: ["/og-image.png"],
+    // twitter:image falls back to app/opengraph-image.tsx
   },
   robots: {
     index: true,

@@ -4,6 +4,7 @@ import { ChevronRight, CheckCircle2, Clock, ShieldCheck, Users } from "lucide-re
 import ConsultationBooking from "@/components/booking/ConsultationBooking";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/book-consultation" },
   title: "Book a Free Consultation in Bangalore | Right Assets Management",
   description:
     "Schedule a free consultation with our financial, real estate, or legal advisors in Bangalore. Pick a date and time that suits you — no commitment, no sales pressure.",

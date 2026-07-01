@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 
-const WA_NUMBER = "919999999999";
+const WA_NUMBER = "919742826804";
 const WA_BASE = `https://wa.me/${WA_NUMBER}`;
 
 const quickReplies = [

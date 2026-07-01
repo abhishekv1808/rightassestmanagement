@@ -41,6 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.metaTitle,
     description: post.metaDescription,
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
@@ -400,7 +401,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                       <a
-                        href="https://wa.me/919999999999"
+                        href="https://wa.me/919742826804"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all hover:bg-white/10"

@@ -23,6 +23,9 @@ const leadSchema = z.object({
     .optional()
     .or(z.literal("")),
   service_interested: z.string().optional(),
+  purpose: z.string().optional(),
+  budget: z.string().optional(),
+  area: z.string().optional(),
   pincode: z
     .string()
     .regex(/^\d{6}$/, "Must be exactly 6 digits")
@@ -54,6 +57,27 @@ const serviceOptions = [
   },
 ];
 
+// ─── Property requirement options (buy/sell + rental) ────────────────────────
+
+const PURCHASE_BUDGETS = [
+  "Under ₹25 Lakh",
+  "₹25 – 50 Lakh",
+  "₹50 – 75 Lakh",
+  "₹75 Lakh – 1 Crore",
+  "₹1 – 1.5 Crore",
+  "₹1.5 – 2 Crore",
+  "Above ₹2 Crore",
+];
+
+const RENTAL_BUDGETS = [
+  "Under ₹10,000 / month",
+  "₹10,000 – 20,000 / month",
+  "₹20,000 – 35,000 / month",
+  "₹35,000 – 50,000 / month",
+  "₹50,000 – 75,000 / month",
+  "Above ₹75,000 / month",
+];
+
 // ─── Shared input style helpers ───────────────────────────────────────────────
 
 const baseInput =
@@ -69,6 +93,21 @@ type LeadFormProps = {
   subtext?: string;
   defaultService?: string;
   className?: string;
+  /** Show the Buy / Sell / Rent purpose toggle (Buy & Sell Properties form). */
+  showPurpose?: boolean;
+  /** Show the budget dropdown (property buy/sell + rental enquiries). */
+  showBudget?: boolean;
+  /** Show the built-up area (sq.ft) field. */
+  showArea?: boolean;
+  /**
+   * Which budget ranges to show:
+   *  - "purchase": property price ranges
+   *  - "rental":   monthly rent ranges
+   *  - "auto":     follow the selected purpose (Rent → rental, else purchase)
+   */
+  budgetMode?: "purchase" | "rental" | "auto";
+  /** Purpose toggle choices — defaults to Buy / Sell / Rent. */
+  purposeOptions?: string[];
 };
 
 // ─── Component ───────────────────────────────────────────────────────────────
@@ -78,6 +117,11 @@ export default function LeadForm({
   subtext = "Fill in your details and we'll get back to you within 24 hours.",
   defaultService = "",
   className = "",
+  showPurpose = false,
+  showBudget = false,
+  showArea = false,
+  budgetMode = "auto",
+  purposeOptions = ["Buy", "Sell", "Rent"],
 }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -97,6 +141,7 @@ export default function LeadForm({
     handleSubmit,
     reset,
     setValue,
+    watch,
     formState: { errors },
   } = useForm<LeadFormData>({
     resolver: zodResolver(leadSchema),
@@ -105,6 +150,9 @@ export default function LeadForm({
       phone: "",
       email: "",
       service_interested: defaultService,
+      purpose: showPurpose ? purposeOptions[0] : "",
+      budget: "",
+      area: "",
       pincode: "",
       city: "",
       state: "",
@@ -113,6 +161,15 @@ export default function LeadForm({
       source: "",
     },
   });
+
+  // ── Budget ranges follow the selected purpose when in "auto" mode ───────────
+  const purpose = watch("purpose");
+  const effectiveBudgetMode =
+    budgetMode === "auto" ? (purpose === "Rent" ? "rental" : "purchase") : budgetMode;
+  const budgetChoices =
+    effectiveBudgetMode === "rental" ? RENTAL_BUDGETS : PURCHASE_BUDGETS;
+  const budgetLabel =
+    effectiveBudgetMode === "rental" ? "Monthly Rent Budget" : "Budget";
 
   // ── Auto-prefill from logged-in user's profile ─────────────────────────────
   const ADMIN_EMAIL_CLIENT = (
@@ -150,6 +207,9 @@ export default function LeadForm({
           phone: "",
           email: "",
           service_interested: defaultService,
+          purpose: showPurpose ? purposeOptions[0] : "",
+          budget: "",
+          area: "",
           pincode: "",
           city: "",
           state: "",
@@ -205,7 +265,18 @@ export default function LeadForm({
       const addressNote = data.address?.trim()
         ? `Address — ${data.address.trim()}`
         : "";
-      const fullMessage = [addressNote, locationNote, data.message]
+
+      // Property requirement note (buy/sell/rent + budget + area)
+      const requirementParts = [
+        data.purpose && `Looking to: ${data.purpose}`,
+        data.budget && `Budget: ${data.budget}`,
+        data.area && `Area: ${data.area} sq.ft`,
+      ].filter(Boolean);
+      const requirementNote = requirementParts.length
+        ? `Property Requirement — ${requirementParts.join(", ")}`
+        : "";
+
+      const fullMessage = [requirementNote, addressNote, locationNote, data.message]
         .filter(Boolean)
         .join("\n\n");
 
@@ -271,7 +342,7 @@ export default function LeadForm({
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <a
-            href="https://wa.me/919999999999"
+            href="https://wa.me/919742826804"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
@@ -390,6 +461,87 @@ export default function LeadForm({
             <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>
           )}
         </div>
+
+        {/* ── Property requirement: Purpose / Budget / Area ─────────────────── */}
+        {(showPurpose || showBudget || showArea) && (
+          <div className="rounded-xl p-3.5 space-y-3" style={{ backgroundColor: "#F7F5EF", border: "1px solid #ECE6D6" }}>
+
+            {/* Purpose toggle — Buy / Sell / Rent */}
+            {showPurpose && (
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  I&apos;m looking to <span style={{ color: "#C9A84C" }}>*</span>
+                </label>
+                <div className="grid grid-cols-3 gap-2">
+                  {purposeOptions.map((opt) => (
+                    <label
+                      key={opt}
+                      className="relative flex items-center justify-center px-2 py-2 rounded-lg border text-sm font-medium cursor-pointer transition-all"
+                      style={{
+                        borderColor: purpose === opt ? "#1B3A6B" : borderDefault,
+                        backgroundColor: purpose === opt ? "#1B3A6B" : "#fff",
+                        color: purpose === opt ? "#fff" : "#374151",
+                      }}
+                    >
+                      <input
+                        type="radio"
+                        value={opt}
+                        {...register("purpose")}
+                        className="sr-only"
+                      />
+                      {opt}
+                    </label>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Budget + Area row */}
+            {(showBudget || showArea) && (
+              <div className={showBudget && showArea ? "grid grid-cols-2 gap-2" : ""}>
+                {showBudget && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      {budgetLabel}{" "}
+                      <span className="text-xs text-gray-400 font-normal">(optional)</span>
+                    </label>
+                    <select
+                      {...register("budget")}
+                      className="w-full px-3 py-2 rounded-lg border text-sm outline-none transition-all bg-white"
+                      style={{ borderColor: borderDefault, color: "#374151" }}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = borderFocus)}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = borderDefault)}
+                    >
+                      <option value="">Select budget…</option>
+                      {budgetChoices.map((b) => (
+                        <option key={b} value={b}>{b}</option>
+                      ))}
+                    </select>
+                  </div>
+                )}
+
+                {showArea && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Area (sq.ft){" "}
+                      <span className="text-xs text-gray-400 font-normal">(optional)</span>
+                    </label>
+                    <input
+                      type="text"
+                      inputMode="numeric"
+                      placeholder="e.g. 1200"
+                      {...register("area")}
+                      className={baseInput}
+                      style={{ borderColor: borderDefault }}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = borderFocus)}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = borderDefault)}
+                    />
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* ── Location: Pincode + City + State in one row ───────────────────── */}
         <div>

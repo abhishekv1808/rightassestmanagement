@@ -29,6 +29,7 @@ import ServiceStickyBar from "@/components/service/ServiceStickyBar";
 // ─── Metadata ──────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/financial/equity-commodity" },
   title: "Equity & Commodity Market Advisory in Bangalore | Right Assets Management",
   description:
     "Expert equity and commodity market advisory in Bangalore. Research-backed stock picks, commodity strategies on MCX/NCDEX, portfolio management, and tax-efficient exits. Book a free consultation today.",
@@ -314,7 +315,7 @@ export default function EquityCommodityPage() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
-                  href="https://wa.me/919999999999"
+                  href="https://wa.me/919742826804"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:bg-white/10"
@@ -372,7 +373,7 @@ export default function EquityCommodityPage() {
                   clear, honest guidance for your investment goals.
                 </p>
                 <a
-                  href="https://wa.me/919999999999"
+                  href="https://wa.me/919742826804"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2.5 w-full px-5 py-3.5 rounded-xl font-semibold text-sm text-white transition-all hover:opacity-90 mb-3"
@@ -911,7 +912,7 @@ export default function EquityCommodityPage() {
               </div>
 
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/919742826804"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-white transition-all hover:opacity-90"

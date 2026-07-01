@@ -10,7 +10,7 @@ interface ServiceStickyBarProps {
 
 export default function ServiceStickyBar({
   serviceName,
-  whatsappNumber = "919999999999",
+  whatsappNumber = "919742826804",
 }: ServiceStickyBarProps) {
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);

@@ -28,6 +28,7 @@ import {
 import { getServiceBySlug } from "@/lib/services-data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/financial" },
   title: "Financial Services in Bangalore — Investments, Insurance & Loans",
   description:
     "Comprehensive financial services in Bangalore — mutual funds, SIP, insurance, home loans, tax planning, and more. Expert advisors at Right Assets Management.",
@@ -306,7 +307,7 @@ export default function FinancialHubPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/919742826804"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all hover:bg-white/10"

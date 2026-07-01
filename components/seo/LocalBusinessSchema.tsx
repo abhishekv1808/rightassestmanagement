@@ -22,10 +22,12 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightasset.in";
 
 // ─── Update these when the client confirms exact details ─────────────────────
 const BUSINESS_PHONE =
-  process.env.NEXT_PUBLIC_BUSINESS_PHONE ?? "+91-XXXXXXXXXX";
+  process.env.NEXT_PUBLIC_BUSINESS_PHONE ?? "+91-9742826804";
 const BUSINESS_EMAIL =
-  process.env.NEXT_PUBLIC_BUSINESS_EMAIL ?? "info@rightasset.in";
-const BUSINESS_STREET = process.env.NEXT_PUBLIC_BUSINESS_STREET ?? "Bangalore";
+  process.env.NEXT_PUBLIC_BUSINESS_EMAIL ?? "contact@rightassetsmanagement.com";
+const BUSINESS_STREET =
+  process.env.NEXT_PUBLIC_BUSINESS_STREET ??
+  "Sy. No 13/1, Site No. 21, 3rd Floor, Narasappa Road, Metro Pillar 471, T. Dasarahalli";
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function LocalBusinessSchema() {
@@ -38,9 +40,9 @@ export default function LocalBusinessSchema() {
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
-      url: `${SITE_URL}/logo.svg`,
-      width: 200,
-      height: 60,
+      url: `${SITE_URL}/images/right-assets-management-logo.png`,
+      width: 1630,
+      height: 391,
     },
     image: `${SITE_URL}/og-image.png`,
     description:
@@ -50,15 +52,15 @@ export default function LocalBusinessSchema() {
     address: {
       "@type": "PostalAddress",
       streetAddress: BUSINESS_STREET,
-      addressLocality: "Bangalore",
+      addressLocality: "Bengaluru",
       addressRegion: "Karnataka",
-      postalCode: "560001",
+      postalCode: "560057",
       addressCountry: "IN",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 12.9716,
-      longitude: 77.5946,
+      latitude: 13.0465,
+      longitude: 77.5121,
     },
     areaServed: {
       "@type": "City",
@@ -94,7 +96,7 @@ export default function LocalBusinessSchema() {
         },
         {
           "@type": "OfferCatalog",
-          name: "Real Estate Services",
+          name: "Realty Services",
           url: `${SITE_URL}/real-estate`,
         },
         {
@@ -110,11 +112,8 @@ export default function LocalBusinessSchema() {
       // "https://www.instagram.com/rightassetmanagement",
       // "https://www.linkedin.com/company/rightassetmanagement",
     ],
-    founder: {
-      "@type": "Person",
-      name: "Right Assets Management Founder", // TODO: replace with actual founder name
-    },
-    foundingDate: "2014", // TODO: confirm founding year with client
+    // NOTE: `founder` and `foundingDate` omitted until confirmed with the client —
+    // publishing placeholder values would be a false E-E-A-T signal.
     numberOfEmployees: {
       "@type": "QuantitativeValue",
       minValue: 10,

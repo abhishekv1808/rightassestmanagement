@@ -72,7 +72,7 @@ export default function CTASection() {
             {/* Contact options */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/919742826804"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-95 shadow-lg"
@@ -82,12 +82,12 @@ export default function CTASection() {
                 WhatsApp Us Now
               </a>
               <a
-                href="tel:+919999999999"
+                href="tel:+919742826804"
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:bg-white/10"
                 style={{ border: "1.5px solid rgba(255,255,255,0.28)", color: "white" }}
               >
                 <Phone className="w-5 h-5" />
-                +91 99999 99999
+                +91 97428 26804
               </a>
             </div>
           </motion.div>

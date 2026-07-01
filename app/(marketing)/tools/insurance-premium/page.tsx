@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 import InsurancePremiumEstimator from "@/components/tools/InsurancePremiumEstimator";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/tools/insurance-premium" },
   title: "Insurance Premium Estimator — Term Life & Health | Right Assets Management",
   description:
     "Estimate your annual insurance premium for Term Life or Health Insurance based on your age and coverage amount. Free estimator by Right Assets Management, Bangalore.",

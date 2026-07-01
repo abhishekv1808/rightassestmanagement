@@ -38,9 +38,9 @@ export async function generateMetadata({
 }
 
 // ─── Constants ─────────────────────────────────────────────────────────────────
-const PHONE_DISPLAY = "+91 99999 99999";
-const PHONE_HREF = "tel:+919999999999";
-const WA_NUMBER = "919999999999";
+const PHONE_DISPLAY = "+91 97428 26804";
+const PHONE_HREF = "tel:+919742826804";
+const WA_NUMBER = "919742826804";
 
 // ─── Page ──────────────────────────────────────────────────────────────────────
 export default async function LPPage({

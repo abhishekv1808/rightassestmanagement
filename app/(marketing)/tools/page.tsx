@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/tools" },
   title: "Free Financial Calculators — SIP, EMI, FD & More",
   description:
     "Use Right Assets Management's free financial calculators to plan your investments, loans, and property returns. SIP calculator, EMI calculator, FD calculator, and more.",

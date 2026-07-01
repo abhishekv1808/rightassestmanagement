@@ -337,7 +337,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
               {showEmpty && (
                 <div className="px-4 py-10 text-center">
                   <p className="text-sm font-semibold text-gray-500 mb-1">No results for &ldquo;{query}&rdquo;</p>
-                  <p className="text-xs text-gray-400">Try searching for "insurance", "property", "loan" or "legal"</p>
+                  <p className="text-xs text-gray-400">Try searching for &ldquo;insurance&rdquo;, &ldquo;property&rdquo;, &ldquo;loan&rdquo; or &ldquo;legal&rdquo;</p>
                 </div>
               )}
             </div>

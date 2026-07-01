@@ -88,7 +88,7 @@ export default function DownloadGateForm({ resource }: Props) {
   const waMessage = encodeURIComponent(
     `Hi, I just downloaded the ${resource.title} from your website. Please send it to this number as well. Thank you!`
   );
-  const waLink = `https://wa.me/919999999999?text=${waMessage}`;
+  const waLink = `https://wa.me/919742826804?text=${waMessage}`;
 
   // ─── Success state ─────────────────────────────────────────────────────────
 

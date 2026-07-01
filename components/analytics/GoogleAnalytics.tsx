@@ -41,7 +41,8 @@ export function trackEvent(
   eventName: string,
   params?: Record<string, unknown>
 ) {
-  if (typeof window !== "undefined" && (window as any).gtag) {
-    (window as any).gtag("event", eventName, params ?? {});
+  const w = window as Window & { gtag?: (...args: unknown[]) => void };
+  if (typeof window !== "undefined" && w.gtag) {
+    w.gtag("event", eventName, params ?? {});
   }
 }

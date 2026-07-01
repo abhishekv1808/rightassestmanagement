@@ -205,7 +205,7 @@ function TestimonialCard({
           overflow: "hidden",
         }}
       >
-        "{testimonial.quote}"
+        &ldquo;{testimonial.quote}&rdquo;
       </p>
 
       {/* Date */}

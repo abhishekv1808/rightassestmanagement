@@ -31,8 +31,9 @@ export async function generateMetadata({
   const svc = getServiceBySlug(service);
   if (!svc) return { title: "Service Not Found" };
   return {
-    title: svc.metaTitle,
+    title: { absolute: svc.metaTitle },
     description: svc.metaDescription,
+    alternates: { canonical: `/real-estate/${svc.slug}` },
   };
 }
 
@@ -80,7 +81,7 @@ export default async function RealEstateServicePage({
           >
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <Link href="/real-estate" className="hover:text-white transition-colors">Real Estate Services</Link>
+            <Link href="/real-estate" className="hover:text-white transition-colors">Realty Services</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <span style={{ color: "#C9A84C" }}>{svc.title}</span>
           </nav>
@@ -91,7 +92,7 @@ export default async function RealEstateServicePage({
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-5"
                 style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#C9A84C", border: "1px solid rgba(201,168,76,0.3)" }}
               >
-                Real Estate Services
+                Realty Services
               </div>
 
               <h1
@@ -114,7 +115,7 @@ export default async function RealEstateServicePage({
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
-                  href="https://wa.me/919999999999"
+                  href="https://wa.me/919742826804"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:bg-white/10"
@@ -139,7 +140,7 @@ export default async function RealEstateServicePage({
                   Talk to our real estate experts about {svc.title.toLowerCase()}.
                 </p>
                 <a
-                  href="https://wa.me/919999999999"
+                  href="https://wa.me/919742826804"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2.5 w-full px-5 py-3 rounded-xl font-semibold text-sm text-white transition-all hover:opacity-90"
@@ -282,11 +283,31 @@ export default async function RealEstateServicePage({
             </div>
 
             <div className="lg:col-span-5 lg:sticky lg:top-24">
-              <LeadForm
-                heading="Book a Free Consultation"
-                subtext={`Talk to our real estate experts about ${svc.title.toLowerCase()} — we handle all documentation end-to-end.`}
-                defaultService={svc.title}
-              />
+              {svc.slug === "buy-sell" ? (
+                <LeadForm
+                  heading="Share Your Property Requirement"
+                  subtext="Tell us whether you want to buy, sell or rent — with your budget and preferred size — and our advisors will match you with the right options."
+                  defaultService={svc.title}
+                  showPurpose
+                  showBudget
+                  showArea
+                  budgetMode="auto"
+                />
+              ) : svc.slug === "rent-agreement" ? (
+                <LeadForm
+                  heading="Looking for a Rental?"
+                  subtext="Share your monthly budget and preferred area — we'll help you find a rental home and handle the agreement end-to-end."
+                  defaultService={svc.title}
+                  showBudget
+                  budgetMode="rental"
+                />
+              ) : (
+                <LeadForm
+                  heading="Book a Free Consultation"
+                  subtext={`Talk to our real estate experts about ${svc.title.toLowerCase()} — we handle all documentation end-to-end.`}
+                  defaultService={svc.title}
+                />
+              )}
             </div>
           </div>
         </div>

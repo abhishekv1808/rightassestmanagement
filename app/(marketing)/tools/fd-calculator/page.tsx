@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 import FDCalculator from "@/components/tools/FDCalculator";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/tools/fd-calculator" },
   title: "FD Maturity Calculator — Fixed Deposit Returns | Right Assets Management",
   description:
     "Calculate your Fixed Deposit maturity amount with quarterly, monthly, or annual compounding. Free FD calculator by Right Assets Management, Bangalore.",

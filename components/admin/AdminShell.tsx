@@ -1,7 +1,8 @@
-﻿"use client";
+"use client";
 
 import { useState, ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import {
@@ -18,6 +19,8 @@ import {
   X,
 } from "lucide-react";
 
+const LOGO_SRC = "/images/right-assets-management-logo.png";
+
 interface AdminShellProps {
   children: ReactNode;
   user: { email: string };
@@ -28,7 +31,7 @@ interface AdminShellProps {
 
 interface NavItem {
   label: string;
-  icon: React.ComponentType<{ size?: number; color?: string }>;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
   href: string;
   badge?: number;
   external?: boolean;
@@ -41,9 +44,7 @@ interface NavSection {
 
 function getInitials(email: string): string {
   const parts = email.split("@")[0].split(/[._-]/);
-  if (parts.length >= 2) {
-    return (parts[0][0] + parts[1][0]).toUpperCase();
-  }
+  if (parts.length >= 2) return (parts[0][0] + parts[1][0]).toUpperCase();
   return email.slice(0, 2).toUpperCase();
 }
 
@@ -52,7 +53,8 @@ function getPageTitle(pathname: string): string {
   if (pathname === "/admin/leads") return "Leads";
   if (pathname === "/admin/testimonials") return "Testimonials";
   if (pathname === "/admin/blog/new") return "New Post";
-  if (pathname.startsWith("/admin/blog/") && pathname.endsWith("/edit")) return "Edit Post";
+  if (pathname.startsWith("/admin/blog/") && pathname.endsWith("/edit"))
+    return "Edit Post";
   if (pathname === "/admin/blog") return "Blog Posts";
   if (pathname === "/admin/consultations") return "Consultations";
   if (pathname === "/admin/settings") return "Settings";
@@ -71,38 +73,38 @@ export default function AdminShell({
 
   const navSections: NavSection[] = [
     {
-      section: "OVERVIEW",
+      section: "Overview",
       items: [
         { label: "Dashboard", icon: LayoutDashboard, href: "/admin" },
         { label: "Analytics", icon: BarChart3, href: "/admin" },
       ],
     },
     {
-      section: "MANAGEMENT",
+      section: "Management",
       items: [
         {
           label: "Leads",
           icon: Users,
           href: "/admin/leads",
-          badge: leadCount > 0 ? leadCount : undefined,
+          badge: leadCount || undefined,
         },
         {
           label: "Consultations",
           icon: CalendarClock,
           href: "/admin/consultations",
-          badge: consultationCount > 0 ? consultationCount : undefined,
+          badge: consultationCount || undefined,
         },
         {
           label: "Testimonials",
           icon: Star,
           href: "/admin/testimonials",
-          badge: pendingCount > 0 ? pendingCount : undefined,
+          badge: pendingCount || undefined,
         },
         { label: "Blog Posts", icon: FileText, href: "/admin/blog" },
       ],
     },
     {
-      section: "SETTINGS",
+      section: "Settings",
       items: [
         { label: "Settings", icon: Settings, href: "/admin/settings" },
         {
@@ -122,101 +124,39 @@ export default function AdminShell({
   };
 
   const SidebarContent = () => (
-    <div
-      style={{
-        width: "256px",
-        height: "100%",
-        backgroundColor: "#0F1A2E",
-        display: "flex",
-        flexDirection: "column",
-        overflow: "hidden",
-      }}
-    >
+    <div className="flex h-full w-64 flex-col overflow-hidden bg-gradient-to-b from-[#0F1A2E] to-[#0A1524]">
       {/* Logo area */}
-      <div
-        style={{
-          padding: "24px 20px 20px 20px",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-          <div
-            style={{
-              width: "40px",
-              height: "40px",
-              backgroundColor: "#C9A84C",
-              borderRadius: "10px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexShrink: 0,
-            }}
-          >
-            <span
-              style={{
-                fontSize: "18px",
-                fontWeight: "800",
-                color: "#0F1A2E",
-                fontFamily: "Georgia, serif",
-              }}
-            >
-              R
-            </span>
-          </div>
-          <div>
-            <p
-              style={{
-                margin: 0,
-                fontSize: "14px",
-                fontWeight: "700",
-                color: "#FFFFFF",
-                letterSpacing: "-0.2px",
-              }}
-            >
-              Right Assets
-            </p>
-            <span
-              style={{
-                display: "inline-block",
-                fontSize: "10px",
-                fontWeight: "600",
-                color: "#C9A84C",
-                backgroundColor: "rgba(201,168,76,0.15)",
-                padding: "1px 7px",
-                borderRadius: "20px",
-                letterSpacing: "0.5px",
-                marginTop: "2px",
-              }}
-            >
-              ADMIN
-            </span>
-          </div>
-        </div>
+      <div className="flex items-center justify-between border-b border-white/[0.06] px-5 py-5">
+        <Image
+          src={LOGO_SRC}
+          alt="Right Assets Management"
+          width={170}
+          height={41}
+          priority
+          className="h-8 w-auto"
+          style={{ filter: "brightness(0) invert(1)" }}
+        />
+        <button
+          onClick={() => setMobileOpen(false)}
+          className="rounded-md p-1 text-white/50 hover:bg-white/10 hover:text-white lg:hidden"
+          aria-label="Close menu"
+        >
+          <X size={18} />
+        </button>
       </div>
 
       {/* Nav sections */}
-      <nav style={{ flex: 1, overflowY: "auto", padding: "16px 12px" }}>
+      <nav className="flex-1 overflow-y-auto px-3 py-4">
         {navSections.map((section) => (
-          <div key={section.section} style={{ marginBottom: "24px" }}>
-            <p
-              style={{
-                fontSize: "10px",
-                fontWeight: "700",
-                color: "rgba(255,255,255,0.3)",
-                letterSpacing: "1.5px",
-                textTransform: "uppercase",
-                padding: "0 8px",
-                marginBottom: "6px",
-              }}
-            >
+          <div key={section.section} className="mb-6">
+            <p className="mb-1.5 px-2 text-[10px] font-bold uppercase tracking-[0.15em] text-white/30">
               {section.section}
             </p>
             {section.items.map((item) => {
               const isActive = pathname === item.href && !item.external;
               const Icon = item.icon;
-
               const linkProps = item.external
-                ? { target: "_blank", rel: "noopener noreferrer" }
+                ? { target: "_blank", rel: "noopener noreferrer" as const }
                 : {};
 
               return (
@@ -225,73 +165,29 @@ export default function AdminShell({
                   href={item.href}
                   {...linkProps}
                   onClick={() => setMobileOpen(false)}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    padding: "9px 10px",
-                    borderRadius: "8px",
-                    marginBottom: "2px",
-                    textDecoration: "none",
-                    transition: "background-color 0.15s",
-                    backgroundColor: isActive
-                      ? "rgba(201,168,76,0.1)"
-                      : "transparent",
-                    borderLeft: isActive
-                      ? "3px solid #C9A84C"
-                      : "3px solid transparent",
-                    color: isActive
-                      ? "#C9A84C"
-                      : "rgba(255,255,255,0.6)",
-                  }}
-                  onMouseEnter={(e) => {
-                    if (!isActive) {
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                        "rgba(255,255,255,0.05)";
-                      (e.currentTarget as HTMLAnchorElement).style.color =
-                        "rgba(255,255,255,0.9)";
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (!isActive) {
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                        "transparent";
-                      (e.currentTarget as HTMLAnchorElement).style.color =
-                        "rgba(255,255,255,0.6)";
-                    }
-                  }}
+                  className={[
+                    "group mb-0.5 flex items-center gap-3 rounded-lg px-2.5 py-2 text-[13.5px] transition-colors",
+                    isActive
+                      ? "bg-[#C9A84C]/10 font-semibold text-[#C9A84C]"
+                      : "font-medium text-white/60 hover:bg-white/[0.06] hover:text-white/90",
+                  ].join(" ")}
                 >
                   <Icon
-                    size={16}
-                    color={isActive ? "#C9A84C" : "rgba(255,255,255,0.4)"}
+                    size={17}
+                    className={
+                      isActive
+                        ? "text-[#C9A84C]"
+                        : "text-white/40 group-hover:text-white/70"
+                    }
                   />
-                  <span
-                    style={{
-                      fontSize: "13.5px",
-                      fontWeight: isActive ? "600" : "500",
-                      flex: 1,
-                    }}
-                  >
-                    {item.label}
-                  </span>
+                  <span className="flex-1">{item.label}</span>
                   {item.badge !== undefined && item.badge > 0 && (
-                    <span
-                      style={{
-                        backgroundColor: "#C9A84C",
-                        color: "#0F1A2E",
-                        fontSize: "10px",
-                        fontWeight: "700",
-                        padding: "1px 6px",
-                        borderRadius: "20px",
-                        minWidth: "18px",
-                        textAlign: "center",
-                      }}
-                    >
+                    <span className="min-w-[18px] rounded-full bg-[#C9A84C] px-1.5 text-center text-[10px] font-bold text-[#0F1A2E]">
                       {item.badge}
                     </span>
                   )}
                   {item.external && (
-                    <ExternalLink size={11} color="rgba(255,255,255,0.25)" />
+                    <ExternalLink size={11} className="text-white/25" />
                   )}
                 </Link>
               );
@@ -301,80 +197,20 @@ export default function AdminShell({
       </nav>
 
       {/* Bottom: user + sign out */}
-      <div
-        style={{
-          padding: "16px 12px",
-          borderTop: "1px solid rgba(255,255,255,0.06)",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-            marginBottom: "10px",
-            padding: "0 4px",
-          }}
-        >
-          <div
-            style={{
-              width: "32px",
-              height: "32px",
-              borderRadius: "50%",
-              backgroundColor: "#1B3A6B",
-              border: "1.5px solid rgba(201,168,76,0.4)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexShrink: 0,
-            }}
-          >
-            <span style={{ fontSize: "11px", fontWeight: "700", color: "#C9A84C" }}>
+      <div className="border-t border-white/[0.06] p-3">
+        <div className="mb-2 flex items-center gap-2.5 px-1">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#C9A84C]/40 bg-[#1B3A6B]">
+            <span className="text-[11px] font-bold text-[#C9A84C]">
               {getInitials(user.email)}
             </span>
           </div>
-          <span
-            style={{
-              fontSize: "12px",
-              color: "rgba(255,255,255,0.5)",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              whiteSpace: "nowrap",
-              flex: 1,
-            }}
-          >
+          <span className="flex-1 truncate text-[12px] text-white/50">
             {user.email}
           </span>
         </div>
         <button
           onClick={handleSignOut}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            width: "100%",
-            padding: "9px 10px",
-            backgroundColor: "transparent",
-            border: "none",
-            borderRadius: "8px",
-            cursor: "pointer",
-            color: "rgba(255,255,255,0.45)",
-            fontSize: "13px",
-            fontWeight: "500",
-            transition: "background-color 0.15s, color 0.15s",
-            textAlign: "left",
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-              "rgba(239,68,68,0.12)";
-            (e.currentTarget as HTMLButtonElement).style.color = "#FCA5A5";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-              "transparent";
-            (e.currentTarget as HTMLButtonElement).style.color =
-              "rgba(255,255,255,0.45)";
-          }}
+          className="flex w-full items-center gap-2 rounded-lg px-2.5 py-2 text-left text-[13px] font-medium text-white/45 transition-colors hover:bg-red-500/10 hover:text-red-300"
         >
           <LogOut size={15} />
           Sign Out
@@ -384,20 +220,9 @@ export default function AdminShell({
   );
 
   return (
-    <div style={{ display: "flex", minHeight: "100vh" }}>
+    <div className="flex min-h-screen bg-slate-100">
       {/* Desktop sidebar */}
-      <aside
-        style={{
-          position: "fixed",
-          left: 0,
-          top: 0,
-          bottom: 0,
-          width: "256px",
-          zIndex: 40,
-          display: "none",
-        }}
-        className="admin-sidebar-desktop"
-      >
+      <aside className="fixed inset-y-0 left-0 z-40 hidden w-64 lg:block">
         <SidebarContent />
       </aside>
 
@@ -405,113 +230,49 @@ export default function AdminShell({
       {mobileOpen && (
         <div
           onClick={() => setMobileOpen(false)}
-          style={{
-            position: "fixed",
-            inset: 0,
-            backgroundColor: "rgba(0,0,0,0.5)",
-            zIndex: 45,
-          }}
+          className="fixed inset-0 z-[45] bg-black/50 lg:hidden"
         />
       )}
 
       {/* Mobile sidebar drawer */}
       <aside
+        className="fixed inset-y-0 left-0 z-50 w-64 transition-transform duration-300 ease-out lg:hidden"
         style={{
-          position: "fixed",
-          left: 0,
-          top: 0,
-          bottom: 0,
-          width: "256px",
-          zIndex: 50,
           transform: mobileOpen ? "translateX(0)" : "translateX(-100%)",
-          transition: "transform 0.25s ease",
         }}
       >
         <SidebarContent />
       </aside>
 
       {/* Main content area */}
-      <div
-        style={{ flex: 1, display: "flex", flexDirection: "column" }}
-        className="admin-main-area"
-      >
+      <div className="flex flex-1 flex-col lg:ml-64">
         {/* Topbar */}
-        <header
-          style={{
-            position: "sticky",
-            top: 0,
-            zIndex: 30,
-            height: "64px",
-            backgroundColor: "#FFFFFF",
-            borderBottom: "1px solid #E2E8F0",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "0 24px",
-            boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
-          }}
-        >
-          <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-            {/* Mobile hamburger */}
+        <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-slate-200 bg-white/95 px-4 shadow-[0_1px_3px_rgba(0,0,0,0.04)] backdrop-blur sm:px-6">
+          <div className="flex items-center gap-3.5">
             <button
               onClick={() => setMobileOpen(true)}
-              style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                padding: "6px",
-                borderRadius: "6px",
-                color: "#1B3A6B",
-                display: "flex",
-                alignItems: "center",
-              }}
-              className="admin-hamburger"
+              className="flex items-center rounded-md p-1.5 text-[#1B3A6B] hover:bg-slate-100 lg:hidden"
+              aria-label="Open menu"
             >
               <Menu size={20} />
             </button>
-            <h1
-              style={{
-                fontSize: "18px",
-                fontWeight: "700",
-                color: "#1B3A6B",
-                margin: 0,
-              }}
-            >
-              {getPageTitle(pathname)}
-            </h1>
+            <div>
+              <h1 className="text-[17px] font-bold leading-tight text-[#1B3A6B]">
+                {getPageTitle(pathname)}
+              </h1>
+              <p className="hidden text-[11px] text-slate-400 sm:block">
+                Right Assets Management · Admin
+              </p>
+            </div>
           </div>
 
-          {/* Right: user avatar */}
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <span
-              style={{
-                fontSize: "13px",
-                color: "#64748B",
-                display: "none",
-              }}
-              className="admin-email-label"
-            >
+          {/* Right: user */}
+          <div className="flex items-center gap-3">
+            <span className="hidden text-[13px] text-slate-500 md:block">
               {user.email}
             </span>
-            <div
-              style={{
-                width: "36px",
-                height: "36px",
-                borderRadius: "50%",
-                backgroundColor: "#1B3A6B",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-              }}
-            >
-              <span
-                style={{
-                  fontSize: "12px",
-                  fontWeight: "700",
-                  color: "#C9A84C",
-                }}
-              >
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1B3A6B] ring-2 ring-[#C9A84C]/30">
+              <span className="text-[12px] font-bold text-[#C9A84C]">
                 {getInitials(user.email)}
               </span>
             </div>
@@ -519,35 +280,10 @@ export default function AdminShell({
         </header>
 
         {/* Page content */}
-        <main
-          style={{
-            flex: 1,
-            padding: "24px",
-            backgroundColor: "#F1F5F9",
-            minHeight: "calc(100vh - 64px)",
-          }}
-        >
+        <main className="min-h-[calc(100vh-4rem)] flex-1 p-4 sm:p-6">
           {children}
         </main>
       </div>
-
-      {/* CSS to handle responsive layout */}
-      <style>{`
-        @media (min-width: 1024px) {
-          .admin-sidebar-desktop {
-            display: block !important;
-          }
-          .admin-main-area {
-            margin-left: 256px;
-          }
-          .admin-hamburger {
-            display: none !important;
-          }
-          .admin-email-label {
-            display: block !important;
-          }
-        }
-      `}</style>
     </div>
   );
 }

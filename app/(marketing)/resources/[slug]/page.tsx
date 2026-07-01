@@ -31,6 +31,7 @@ export async function generateMetadata({
   return {
     title: resource.metaTitle,
     description: resource.metaDescription,
+    alternates: { canonical: `/resources/${resource.slug}` },
   };
 }
 

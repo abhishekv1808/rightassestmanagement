@@ -83,8 +83,8 @@ const VERTICALS: NavVertical[] = [
     ],
   },
   {
-    label: "Real Estate",
-    shortLabel: "Real Estate",
+    label: "Realty",
+    shortLabel: "Realty",
     href: "/real-estate",
     color: "#0D7E7E",
     lightBg: "#E6F4F4",
@@ -365,14 +365,14 @@ export default function Navbar() {
               <div className="w-px h-5 flex-shrink-0" style={{ backgroundColor: "rgba(255,255,255,0.16)" }} />
 
               <a
-                href="tel:+919999999999"
+                href="tel:+919742826804"
                 className="flex items-center gap-1.5 text-sm font-medium transition-colors whitespace-nowrap"
                 style={{ color: "rgba(255,255,255,0.72)" }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "#C9A84C"; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.72)"; }}
               >
                 <Phone className="w-3.5 h-3.5 flex-shrink-0" />
-                <span>+91 99999 99999</span>
+                <span>+91 97428 26804</span>
               </a>
 
               <Link
@@ -658,12 +658,12 @@ export default function Navbar() {
               {/* Drawer CTA */}
               <div className="flex-shrink-0 p-4 border-t border-gray-100 space-y-3">
                 <a
-                  href="tel:+919999999999"
+                  href="tel:+919742826804"
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl text-sm font-medium border-2 transition-colors"
                   style={{ borderColor: "#1B3A6B", color: "#1B3A6B" }}
                 >
                   <Phone className="w-4 h-4" />
-                  Call +91 99999 99999
+                  Call +91 97428 26804
                 </a>
                 <Link
                   href="/contact"

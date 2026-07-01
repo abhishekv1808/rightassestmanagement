@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/disclaimer" },
   title: "Disclaimer | Right Assets Management",
   description:
     "Important disclaimers for Right Assets Management's financial advisory, real estate, and legal services. Investments are subject to market risk. Read before proceeding.",
@@ -47,7 +48,7 @@ Right Assets Management is committed to transparency. Where we receive commissio
   },
   {
     id: "real-estate-disclaimer",
-    title: "3. Real Estate Services Disclaimer",
+    title: "3. Realty Services Disclaimer",
     content: `**Documentation Assistance Only:**
 Right Assets Management's real estate services constitute assistance with documentation, government liaison, and process guidance. We are not a real estate broker or developer. Property purchase and sale decisions are solely the responsibility of the buyer and seller.
 
@@ -149,8 +150,8 @@ For consumer disputes arising from our services, you may approach the appropriat
 
 **Right Assets Management**
 Bangalore, Karnataka, India
-Email: info@rightasset.in
-Phone: +91 99999 99999
+Email: contact@rightassetsmanagement.com
+Phone: +91 97428 26804
 
 We are committed to transparency and will address all queries promptly.`,
   },

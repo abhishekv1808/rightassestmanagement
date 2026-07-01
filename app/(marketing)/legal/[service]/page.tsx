@@ -31,8 +31,9 @@ export async function generateMetadata({
   const svc = getServiceBySlug(service);
   if (!svc) return { title: "Service Not Found" };
   return {
-    title: svc.metaTitle,
+    title: { absolute: svc.metaTitle },
     description: svc.metaDescription,
+    alternates: { canonical: `/legal/${svc.slug}` },
   };
 }
 
@@ -122,7 +123,7 @@ export default async function LegalServicePage({
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
-                  href="https://wa.me/919999999999"
+                  href="https://wa.me/919742826804"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:bg-white/10"
@@ -147,7 +148,7 @@ export default async function LegalServicePage({
                   Get clear guidance on your {svc.title.toLowerCase()} — confidential and without commitment.
                 </p>
                 <a
-                  href="https://wa.me/919999999999"
+                  href="https://wa.me/919742826804"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2.5 w-full px-5 py-3 rounded-xl font-semibold text-sm text-white transition-all hover:opacity-90"

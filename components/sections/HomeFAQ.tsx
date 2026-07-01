@@ -7,7 +7,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "What services does Right Assets Management offer?",
     answer:
-      "We offer 48+ services across three areas under one roof — Financial Services (mutual funds, insurance, loans, tax planning, portfolio management), Real Estate Services (buying, selling, property registration, khata, encumbrance certificates, legal documentation), and Legal Services (property disputes, family cases, cyber crime, consumer cases). This means you never have to coordinate between multiple advisors.",
+      "We offer 48+ services across three areas under one roof — Financial Services (mutual funds, insurance, loans, tax planning, portfolio management), Realty Services (buying, selling, property registration, khata, encumbrance certificates, legal documentation), and Legal Services (property disputes, family cases, cyber crime, consumer cases). This means you never have to coordinate between multiple advisors.",
   },
   {
     question: "Is the first consultation really free?",
@@ -115,7 +115,7 @@ export default function HomeFAQ() {
                     Contact Us
                   </Link>
                   <a
-                    href="https://wa.me/919999999999"
+                    href="https://wa.me/919742826804"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all hover:bg-white/10"

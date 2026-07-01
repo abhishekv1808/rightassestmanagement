@@ -23,6 +23,7 @@ import {
 import { getServiceBySlug } from "@/lib/services-data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/real-estate" },
   title: "Real Estate Services in Bangalore — Property, Documentation & Registration",
   description:
     "Complete real estate services in Bangalore — buy/sell properties, sale deed, khatha, EC, land conversion, property registration, and more. Right Assets Management.",
@@ -136,7 +137,7 @@ export default function RealEstateHubPage() {
           >
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span style={{ color: "#C9A84C" }}>Real Estate Services</span>
+            <span style={{ color: "#C9A84C" }}>Realty Services</span>
           </nav>
 
           <div className="max-w-3xl">
@@ -145,14 +146,14 @@ export default function RealEstateHubPage() {
               style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#C9A84C", border: "1px solid rgba(201,168,76,0.3)" }}
             >
               <Home className="w-3.5 h-3.5" />
-              17 Real Estate Services
+              17 Realty Services
             </div>
 
             <h1
               className="font-heading font-bold text-white mb-4"
               style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)", lineHeight: 1.15 }}
             >
-              Real Estate Services
+              Realty Services
               <br />
               <span style={{ color: "#C9A84C" }}>From Purchase to Registration</span>
             </h1>
@@ -195,7 +196,7 @@ export default function RealEstateHubPage() {
                 className="text-xs font-bold uppercase tracking-[0.2em]"
                 style={{ color: "#C9A84C" }}
               >
-                Real Estate Services
+                Realty Services
               </p>
               <div className="flex-1 h-px" style={{ backgroundColor: "#C9A84C", maxWidth: "60px" }} />
             </div>
@@ -293,7 +294,7 @@ export default function RealEstateHubPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/919742826804"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all hover:bg-white/10"

@@ -24,7 +24,7 @@ const ADMIN_EMAIL = (
   process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@rightasset.in"
 ).toLowerCase();
 
-const WA_NUMBER = "919999999999";
+const WA_NUMBER = "919742826804";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 

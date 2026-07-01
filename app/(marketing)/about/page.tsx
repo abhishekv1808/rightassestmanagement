@@ -17,6 +17,7 @@ import {
 // ─── SEO ─────────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About Us — Right Assets Management Bangalore",
   description:
     "Learn about Right Assets Management — Bangalore's trusted multi-vertical firm offering financial planning, real estate, and legal advisory services under one roof.",

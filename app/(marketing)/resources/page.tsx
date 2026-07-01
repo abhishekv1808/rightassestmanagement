@@ -16,6 +16,7 @@ import type { Resource } from "@/lib/resources-data";
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/resources" },
   title:
     "Free Financial & Property Guides — Download Now | Right Assets Management",
   description:

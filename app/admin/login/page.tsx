@@ -1,31 +1,33 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { createClient } from "@/lib/supabase/client";
 import {
-  Shield,
-  TrendingUp,
-  Users,
-  Mail,
-  Lock,
   Eye,
   EyeOff,
   AlertCircle,
+  CheckCircle2,
   Loader2,
-  BarChart3,
 } from "lucide-react";
+
+const LOGO_SRC = "/images/right-assets-management-logo.png";
 
 export default function AdminLoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [googleLoading, setGoogleLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
 
+  // ── Email + password sign-in ───────────────────────────────────────────────
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
+    setNotice(null);
 
     const supabase = createClient();
     const { error: signInError } = await supabase.auth.signInWithPassword({
@@ -42,6 +44,50 @@ export default function AdminLoginPage() {
     window.location.href = "/admin";
   };
 
+  // ── Google OAuth sign-in ───────────────────────────────────────────────────
+  const handleGoogleSignIn = async () => {
+    setGoogleLoading(true);
+    setError(null);
+    setNotice(null);
+
+    const supabase = createClient();
+    const { error: oauthError } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback?next=/admin`,
+        queryParams: { access_type: "offline", prompt: "consent" },
+      },
+    });
+
+    if (oauthError) {
+      setError(oauthError.message);
+      setGoogleLoading(false);
+    }
+  };
+
+  // ── Forgot password — sends a Supabase reset email ─────────────────────────
+  const handleForgotPassword = async () => {
+    setError(null);
+    setNotice(null);
+
+    if (!email) {
+      setError("Enter your email address above first, then click reset.");
+      return;
+    }
+
+    const supabase = createClient();
+    const { error: resetError } = await supabase.auth.resetPasswordForEmail(
+      email,
+      { redirectTo: `${window.location.origin}/admin/login` }
+    );
+
+    if (resetError) {
+      setError(resetError.message);
+      return;
+    }
+    setNotice(`Password reset link sent to ${email}. Check your inbox.`);
+  };
+
   return (
     <>
       <style>{`
@@ -49,29 +95,38 @@ export default function AdminLoginPage() {
           from { opacity: 0; transform: translateY(16px); }
           to   { opacity: 1; transform: translateY(0); }
         }
-        .login-card { animation: login-fadein 0.4s ease both; }
+        .login-card { animation: login-fadein 0.45s ease both; }
 
-        @keyframes float-ring {
-          0%, 100% { transform: scale(1); opacity: 0.06; }
-          50%       { transform: scale(1.04); opacity: 0.10; }
+        .ul-input {
+          width: 100%;
+          padding: 11px 2px;
+          font-size: 15px;
+          border: none;
+          border-bottom: 1.5px solid #E2E8F0;
+          outline: none;
+          color: #1A1A1A;
+          background-color: transparent;
+          transition: border-color 0.15s;
+          box-sizing: border-box;
+          font-family: inherit;
         }
-        .login-ring { animation: float-ring 8s ease-in-out infinite; }
-        .login-ring-2 { animation: float-ring 11s ease-in-out infinite reverse; }
+        .ul-input::placeholder { color: #9AA4B2; }
+        .ul-input:focus { border-bottom-color: #1B3A6B; }
 
-        .login-input:focus {
-          border-color: #1B3A6B !important;
-          background-color: #FFFFFF !important;
-          box-shadow: 0 0 0 3px rgba(27,58,107,0.08) !important;
-        }
-        .login-btn:hover:not(:disabled) {
-          background-color: #152E57 !important;
+        .primary-btn:hover:not(:disabled) {
+          background-color: #0E1B33 !important;
           transform: translateY(-1px);
-          box-shadow: 0 6px 20px rgba(27,58,107,0.35) !important;
+          box-shadow: 0 8px 22px rgba(18,32,59,0.32) !important;
         }
-        .login-btn:active:not(:disabled) {
-          transform: translateY(0);
+        .primary-btn:active:not(:disabled) { transform: translateY(0); }
+
+        .google-btn:hover:not(:disabled) {
+          background-color: #F8FAFC !important;
+          border-color: #CBD5E1 !important;
         }
-        @media (max-width: 768px) {
+        .link-btn:hover { color: #1B3A6B !important; }
+
+        @media (max-width: 860px) {
           .login-left  { display: none !important; }
           .login-right { flex: 1 !important; }
         }
@@ -80,301 +135,122 @@ export default function AdminLoginPage() {
       <div style={{ display: "flex", minHeight: "100vh", fontFamily: "inherit" }}>
 
         {/* ═══════════════════════════════════════════════════════════
-            LEFT PANEL — Brand identity
+            LEFT PANEL — Brand
         ═══════════════════════════════════════════════════════════ */}
         <div
           className="login-left"
           style={{
-            flex: "0 0 46%",
-            background: "linear-gradient(160deg, #0A1628 0%, #0F1A2E 50%, #071020 100%)",
+            flex: "0 0 50%",
+            background:
+              "linear-gradient(150deg, #24438A 0%, #1B3A6B 45%, #10254A 100%)",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            padding: "52px 56px",
+            padding: "48px 56px",
             position: "relative",
             overflow: "hidden",
+            borderTopRightRadius: 0,
           }}
         >
-          {/* Decorative rings */}
-          <div
-            className="login-ring"
+          {/* Decorative concentric arcs */}
+          <svg
+            width="620"
+            height="620"
+            viewBox="0 0 620 620"
+            aria-hidden="true"
             style={{
               position: "absolute",
-              top: -120,
-              right: -120,
-              width: 500,
-              height: 500,
-              borderRadius: "50%",
-              border: "1px solid rgba(201,168,76,0.15)",
+              right: -140,
+              top: 40,
+              opacity: 0.5,
               pointerEvents: "none",
             }}
-          />
+          >
+            {[260, 210, 160, 110, 60].map((r, i) => (
+              <path
+                key={r}
+                d={`M ${310 + r} 310 A ${r} ${r} 0 0 0 ${310} ${310 - r}`}
+                fill="none"
+                stroke="#C9A84C"
+                strokeWidth="1"
+                strokeOpacity={0.18 + i * 0.03}
+              />
+            ))}
+          </svg>
+          {/* Soft glow */}
           <div
-            className="login-ring-2"
             style={{
               position: "absolute",
-              top: -60,
-              right: -60,
-              width: 360,
-              height: 360,
-              borderRadius: "50%",
-              border: "1px solid rgba(201,168,76,0.1)",
-              pointerEvents: "none",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              bottom: -100,
-              left: -80,
+              bottom: -160,
+              left: -120,
               width: 420,
               height: 420,
               borderRadius: "50%",
-              border: "1px solid rgba(255,255,255,0.04)",
-              pointerEvents: "none",
-            }}
-          />
-          {/* Dot grid */}
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundImage:
-                "radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)",
-              backgroundSize: "28px 28px",
+              background:
+                "radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%)",
               pointerEvents: "none",
             }}
           />
 
-          {/* ── Top: Logo & Brand ── */}
+          {/* Logo (white) */}
           <div style={{ position: "relative" }}>
-            {/* Logo mark */}
-            <div
+            <Image
+              src={LOGO_SRC}
+              alt="Right Assets Management"
+              width={200}
+              height={48}
+              priority
               style={{
-                width: 60,
-                height: 60,
-                backgroundColor: "#C9A84C",
-                borderRadius: 16,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginBottom: 24,
-                boxShadow: "0 8px 28px rgba(201,168,76,0.35)",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: 26,
-                  fontWeight: 800,
-                  color: "#0A1628",
-                  fontFamily: "Georgia, serif",
-                  lineHeight: 1,
-                }}
-              >
-                R
-              </span>
-            </div>
-
-            <h1
-              style={{
-                fontSize: 24,
-                fontWeight: 800,
-                color: "#FFFFFF",
-                margin: "0 0 6px",
-                letterSpacing: "-0.3px",
-              }}
-            >
-              Right Assets Management
-            </h1>
-
-            {/* Admin badge */}
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 6,
-                padding: "4px 12px",
-                borderRadius: 999,
-                backgroundColor: "rgba(201,168,76,0.15)",
-                border: "1px solid rgba(201,168,76,0.3)",
-                marginBottom: 28,
-              }}
-            >
-              <div
-                style={{
-                  width: 6,
-                  height: 6,
-                  borderRadius: "50%",
-                  backgroundColor: "#C9A84C",
-                }}
-              />
-              <span
-                style={{
-                  fontSize: 11,
-                  fontWeight: 700,
-                  color: "#C9A84C",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                }}
-              >
-                Admin Portal
-              </span>
-            </div>
-
-            <p
-              style={{
-                fontSize: 15,
-                color: "rgba(255,255,255,0.5)",
-                lineHeight: 1.65,
-                maxWidth: 340,
-                margin: "0 0 32px",
-              }}
-            >
-              Your command centre for leads, blog posts,
-              testimonials, and site analytics.
-            </p>
-
-            {/* Gold divider */}
-            <div
-              style={{
-                width: 48,
-                height: 3,
-                backgroundColor: "#C9A84C",
-                borderRadius: 2,
-                marginBottom: 32,
-                opacity: 0.7,
+                height: 42,
+                width: "auto",
+                filter: "brightness(0) invert(1)",
               }}
             />
-
-            {/* Stats row */}
-            <div
-              style={{
-                display: "flex",
-                gap: 0,
-                marginBottom: 44,
-              }}
-            >
-              {[
-                { value: "500+", label: "Clients Served" },
-                { value: "48", label: "Services Live" },
-                { value: "10+", label: "Years of Trust" },
-              ].map((stat, i) => (
-                <div
-                  key={stat.label}
-                  style={{
-                    flex: 1,
-                    padding: "14px 0",
-                    borderRight:
-                      i < 2 ? "1px solid rgba(255,255,255,0.08)" : "none",
-                    paddingLeft: i > 0 ? 20 : 0,
-                    paddingRight: i < 2 ? 20 : 0,
-                  }}
-                >
-                  <p
-                    style={{
-                      fontSize: 22,
-                      fontWeight: 800,
-                      color: "#C9A84C",
-                      margin: "0 0 2px",
-                      lineHeight: 1,
-                    }}
-                  >
-                    {stat.value}
-                  </p>
-                  <p
-                    style={{
-                      fontSize: 11,
-                      color: "rgba(255,255,255,0.4)",
-                      margin: 0,
-                      fontWeight: 500,
-                    }}
-                  >
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Feature list */}
-            <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-              {[
-                {
-                  Icon: Users,
-                  title: "Lead Management",
-                  desc: "View, filter, and export all inbound enquiries in real time",
-                },
-                {
-                  Icon: BarChart3,
-                  title: "Blog & Content Editor",
-                  desc: "Write, schedule, and publish SEO articles without code",
-                },
-                {
-                  Icon: Shield,
-                  title: "Secure & Role-Protected",
-                  desc: "Supabase Auth with encrypted sessions and server-side guards",
-                },
-                {
-                  Icon: TrendingUp,
-                  title: "Live Analytics",
-                  desc: "Track lead sources, conversion rates, and service demand",
-                },
-              ].map(({ Icon, title, desc }) => (
-                <div
-                  key={title}
-                  style={{ display: "flex", alignItems: "flex-start", gap: 14 }}
-                >
-                  <div
-                    style={{
-                      width: 36,
-                      height: 36,
-                      borderRadius: 10,
-                      backgroundColor: "rgba(201,168,76,0.1)",
-                      border: "1px solid rgba(201,168,76,0.2)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                    }}
-                  >
-                    <Icon size={16} color="#C9A84C" />
-                  </div>
-                  <div>
-                    <p
-                      style={{
-                        margin: "0 0 2px",
-                        fontSize: 13.5,
-                        fontWeight: 600,
-                        color: "rgba(255,255,255,0.85)",
-                      }}
-                    >
-                      {title}
-                    </p>
-                    <p
-                      style={{
-                        margin: 0,
-                        fontSize: 12,
-                        color: "rgba(255,255,255,0.38)",
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      {desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
-          {/* ── Bottom: Copyright ── */}
+          {/* Middle: greeting */}
+          <div style={{ position: "relative" }}>
+            <h1
+              style={{
+                fontSize: "clamp(38px, 4.4vw, 56px)",
+                fontWeight: 800,
+                color: "#FFFFFF",
+                margin: "0 0 20px",
+                lineHeight: 1.05,
+                letterSpacing: "-1px",
+              }}
+            >
+              Hello
+              <br />
+              Admin!{" "}
+              <span role="img" aria-label="waving hand">
+                👋
+              </span>
+            </h1>
+            <p
+              style={{
+                fontSize: 16,
+                color: "rgba(255,255,255,0.72)",
+                lineHeight: 1.7,
+                maxWidth: 400,
+                margin: 0,
+              }}
+            >
+              Manage leads, blog posts, testimonials and enquiries — your entire
+              Right Assets Management command centre in one secure place.
+            </p>
+          </div>
+
+          {/* Bottom: copyright */}
           <p
             style={{
               position: "relative",
-              fontSize: 11,
-              color: "rgba(255,255,255,0.2)",
+              fontSize: 12.5,
+              color: "rgba(255,255,255,0.45)",
               margin: 0,
             }}
           >
-            © 2025 Right Assets Management · All rights reserved
+            © {new Date().getFullYear()} Right Assets Management. All rights reserved.
           </p>
         </div>
 
@@ -385,316 +261,269 @@ export default function AdminLoginPage() {
           className="login-right"
           style={{
             flex: 1,
-            backgroundColor: "#F4F6FA",
-            backgroundImage:
-              "radial-gradient(circle at 70% 30%, rgba(27,58,107,0.04) 0%, transparent 60%)",
+            backgroundColor: "#FFFFFF",
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
             justifyContent: "center",
-            padding: "40px 24px",
+            padding: "48px 24px",
+            position: "relative",
           }}
         >
-          {/* Card */}
           <div
             className="login-card"
-            style={{
-              width: "100%",
-              maxWidth: 420,
-            }}
+            style={{ width: "100%", maxWidth: 400, margin: "0 auto" }}
           >
-            {/* Card header */}
-            <div style={{ marginBottom: 32, textAlign: "center" }}>
-              {/* Mobile-only logo */}
-              <div
-                style={{
-                  display: "none",
-                  width: 48,
-                  height: 48,
-                  backgroundColor: "#C9A84C",
-                  borderRadius: 12,
-                  alignItems: "center",
-                  justifyContent: "center",
-                  margin: "0 auto 16px",
-                }}
-                className="login-mobile-logo"
-              >
-                <span
-                  style={{
-                    fontSize: 20,
-                    fontWeight: 800,
-                    color: "#0A1628",
-                    fontFamily: "Georgia, serif",
-                  }}
-                >
-                  R
-                </span>
-              </div>
+            {/* Brand logo (natural colours) */}
+            <Image
+              src={LOGO_SRC}
+              alt="Right Assets Management"
+              width={210}
+              height={50}
+              priority
+              style={{ height: 40, width: "auto", marginBottom: 56 }}
+            />
 
-              <h2
-                style={{
-                  fontSize: 28,
-                  fontWeight: 800,
-                  color: "#1B3A6B",
-                  margin: "0 0 6px",
-                  letterSpacing: "-0.4px",
-                }}
-              >
-                Welcome back
-              </h2>
-              <p style={{ fontSize: 14, color: "#64748B", margin: 0 }}>
-                Sign in to your admin account to continue
-              </p>
-            </div>
-
-            {/* Form card */}
-            <div
+            {/* Heading */}
+            <h2
               style={{
-                backgroundColor: "#FFFFFF",
-                borderRadius: 20,
-                padding: "36px 36px 28px",
-                boxShadow:
-                  "0 0 0 1px rgba(27,58,107,0.06), 0 8px 24px rgba(27,58,107,0.08), 0 2px 4px rgba(0,0,0,0.04)",
+                fontSize: 30,
+                fontWeight: 800,
+                color: "#111827",
+                margin: "0 0 8px",
+                letterSpacing: "-0.5px",
               }}
             >
-              <form onSubmit={handleSignIn}>
-                {/* Email */}
-                <div style={{ marginBottom: 18 }}>
-                  <label
-                    htmlFor="email"
-                    style={{
-                      display: "block",
-                      fontSize: 12,
-                      fontWeight: 700,
-                      color: "#374151",
-                      marginBottom: 7,
-                      letterSpacing: "0.03em",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    Email Address
-                  </label>
-                  <div style={{ position: "relative" }}>
-                    <div
-                      style={{
-                        position: "absolute",
-                        left: 13,
-                        top: "50%",
-                        transform: "translateY(-50%)",
-                        pointerEvents: "none",
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    >
-                      <Mail size={16} color="#94A3B8" />
-                    </div>
-                    <input
-                      id="email"
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="admin@rightasset.in"
-                      required
-                      autoComplete="email"
-                      className="login-input"
-                      style={{
-                        width: "100%",
-                        padding: "12px 14px 12px 42px",
-                        fontSize: 14,
-                        border: "1.5px solid #E2E8F0",
-                        borderRadius: 10,
-                        outline: "none",
-                        color: "#1A1A1A",
-                        backgroundColor: "#F8FAFC",
-                        transition: "border-color 0.15s, box-shadow 0.15s",
-                        boxSizing: "border-box",
-                        fontFamily: "inherit",
-                      }}
-                    />
-                  </div>
-                </div>
+              Welcome Back!
+            </h2>
+            <p style={{ fontSize: 13.5, color: "#64748B", margin: "0 0 34px", lineHeight: 1.5 }}>
+              Sign in to the admin dashboard to manage your website.
+            </p>
 
-                {/* Password */}
-                <div style={{ marginBottom: 8 }}>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      marginBottom: 7,
-                    }}
-                  >
-                    <label
-                      htmlFor="password"
-                      style={{
-                        fontSize: 12,
-                        fontWeight: 700,
-                        color: "#374151",
-                        letterSpacing: "0.03em",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      Password
-                    </label>
-                  </div>
-                  <div style={{ position: "relative" }}>
-                    <div
-                      style={{
-                        position: "absolute",
-                        left: 13,
-                        top: "50%",
-                        transform: "translateY(-50%)",
-                        pointerEvents: "none",
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    >
-                      <Lock size={16} color="#94A3B8" />
-                    </div>
-                    <input
-                      id="password"
-                      type={showPassword ? "text" : "password"}
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      placeholder="••••••••"
-                      required
-                      autoComplete="current-password"
-                      className="login-input"
-                      style={{
-                        width: "100%",
-                        padding: "12px 44px 12px 42px",
-                        fontSize: 14,
-                        border: "1.5px solid #E2E8F0",
-                        borderRadius: 10,
-                        outline: "none",
-                        color: "#1A1A1A",
-                        backgroundColor: "#F8FAFC",
-                        transition: "border-color 0.15s, box-shadow 0.15s",
-                        boxSizing: "border-box",
-                        fontFamily: "inherit",
-                      }}
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      tabIndex={-1}
-                      style={{
-                        position: "absolute",
-                        right: 13,
-                        top: "50%",
-                        transform: "translateY(-50%)",
-                        background: "none",
-                        border: "none",
-                        cursor: "pointer",
-                        padding: 2,
-                        color: "#94A3B8",
-                        display: "flex",
-                        alignItems: "center",
-                        lineHeight: 1,
-                      }}
-                    >
-                      {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
-                    </button>
-                  </div>
-                </div>
+            <form onSubmit={handleSignIn}>
+              {/* Email */}
+              <div style={{ marginBottom: 26 }}>
+                <input
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email address"
+                  required
+                  autoComplete="email"
+                  className="ul-input"
+                />
+              </div>
 
-                {/* Error message */}
-                {error && (
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      gap: 8,
-                      backgroundColor: "#FEF2F2",
-                      border: "1px solid #FECACA",
-                      borderRadius: 10,
-                      padding: "11px 14px",
-                      marginTop: 16,
-                      marginBottom: 4,
-                    }}
-                  >
-                    <AlertCircle
-                      size={15}
-                      color="#DC2626"
-                      style={{ flexShrink: 0, marginTop: 1 }}
-                    />
-                    <p
-                      style={{ fontSize: 13, color: "#DC2626", margin: 0, lineHeight: 1.5 }}
-                    >
-                      {error}
-                    </p>
-                  </div>
-                )}
-
-                {/* Submit button */}
+              {/* Password */}
+              <div style={{ marginBottom: 30, position: "relative" }}>
+                <input
+                  id="password"
+                  type={showPassword ? "text" : "password"}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Password"
+                  required
+                  autoComplete="current-password"
+                  className="ul-input"
+                  style={{ paddingRight: 34 }}
+                />
                 <button
-                  type="submit"
-                  disabled={loading}
-                  className="login-btn"
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  tabIndex={-1}
+                  aria-label={showPassword ? "Hide password" : "Show password"}
                   style={{
-                    width: "100%",
-                    marginTop: 24,
-                    padding: "13px",
-                    backgroundColor: "#1B3A6B",
-                    color: "#FFFFFF",
-                    fontWeight: 700,
-                    fontSize: 15,
+                    position: "absolute",
+                    right: 2,
+                    top: 10,
+                    background: "none",
                     border: "none",
-                    borderRadius: 10,
-                    cursor: loading ? "not-allowed" : "pointer",
-                    transition:
-                      "background-color 0.15s, transform 0.12s, box-shadow 0.15s",
+                    cursor: "pointer",
+                    padding: 2,
+                    color: "#94A3B8",
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center",
-                    gap: 8,
-                    opacity: loading ? 0.75 : 1,
-                    boxShadow: "0 4px 14px rgba(27,58,107,0.25)",
-                    letterSpacing: "0.01em",
+                    lineHeight: 1,
                   }}
                 >
-                  {loading ? (
-                    <>
-                      <Loader2 size={16} className="animate-spin" />
-                      Signing in…
-                    </>
-                  ) : (
-                    "Sign In →"
-                  )}
+                  {showPassword ? <EyeOff size={17} /> : <Eye size={17} />}
                 </button>
-              </form>
-            </div>
+              </div>
 
-            {/* Security note */}
-            <div
+              {/* Notice / Error */}
+              {notice && (
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: 8,
+                    backgroundColor: "#F0FDF4",
+                    border: "1px solid #BBF7D0",
+                    borderRadius: 10,
+                    padding: "11px 14px",
+                    marginBottom: 18,
+                  }}
+                >
+                  <CheckCircle2 size={15} color="#16A34A" style={{ flexShrink: 0, marginTop: 1 }} />
+                  <p style={{ fontSize: 13, color: "#15803D", margin: 0, lineHeight: 1.5 }}>
+                    {notice}
+                  </p>
+                </div>
+              )}
+              {error && (
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: 8,
+                    backgroundColor: "#FEF2F2",
+                    border: "1px solid #FECACA",
+                    borderRadius: 10,
+                    padding: "11px 14px",
+                    marginBottom: 18,
+                  }}
+                >
+                  <AlertCircle size={15} color="#DC2626" style={{ flexShrink: 0, marginTop: 1 }} />
+                  <p style={{ fontSize: 13, color: "#DC2626", margin: 0, lineHeight: 1.5 }}>
+                    {error}
+                  </p>
+                </div>
+              )}
+
+              {/* Login Now */}
+              <button
+                type="submit"
+                disabled={loading}
+                className="primary-btn"
+                style={{
+                  width: "100%",
+                  padding: "14px",
+                  backgroundColor: "#12203B",
+                  color: "#FFFFFF",
+                  fontWeight: 700,
+                  fontSize: 15,
+                  border: "none",
+                  borderRadius: 12,
+                  cursor: loading ? "not-allowed" : "pointer",
+                  transition: "background-color 0.15s, transform 0.12s, box-shadow 0.15s",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 8,
+                  opacity: loading ? 0.75 : 1,
+                  boxShadow: "0 6px 18px rgba(18,32,59,0.22)",
+                }}
+              >
+                {loading ? (
+                  <>
+                    <Loader2 size={16} className="animate-spin" />
+                    Signing in…
+                  </>
+                ) : (
+                  "Login Now"
+                )}
+              </button>
+            </form>
+
+            {/* Google */}
+            <button
+              type="button"
+              onClick={handleGoogleSignIn}
+              disabled={googleLoading}
+              className="google-btn"
               style={{
+                width: "100%",
+                marginTop: 14,
+                padding: "13px",
+                backgroundColor: "#FFFFFF",
+                color: "#374151",
+                fontWeight: 600,
+                fontSize: 14.5,
+                border: "1.5px solid #E2E8F0",
+                borderRadius: 12,
+                cursor: googleLoading ? "not-allowed" : "pointer",
+                transition: "background-color 0.15s, border-color 0.15s",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                gap: 6,
-                marginTop: 20,
+                gap: 10,
+                opacity: googleLoading ? 0.75 : 1,
               }}
             >
-              <Shield size={13} color="#94A3B8" />
-              <span style={{ fontSize: 12, color: "#94A3B8" }}>
-                Secured by Supabase Auth · 256-bit encrypted sessions
-              </span>
+              {googleLoading ? (
+                <Loader2 size={16} className="animate-spin" />
+              ) : (
+                <GoogleIcon />
+              )}
+              Login with Google
+            </button>
+
+            {/* Forgot password */}
+            <div style={{ textAlign: "center", marginTop: 26 }}>
+              <span style={{ fontSize: 13, color: "#64748B" }}>Forgot password? </span>
+              <button
+                type="button"
+                onClick={handleForgotPassword}
+                className="link-btn"
+                style={{
+                  background: "none",
+                  border: "none",
+                  padding: 0,
+                  fontSize: 13,
+                  fontWeight: 700,
+                  color: "#C9A84C",
+                  cursor: "pointer",
+                  textDecoration: "underline",
+                  textUnderlineOffset: 2,
+                  transition: "color 0.15s",
+                }}
+              >
+                Click here
+              </button>
             </div>
           </div>
 
-          {/* Bottom footer */}
+          {/* Footer note */}
           <p
             style={{
               position: "absolute",
               bottom: 20,
-              fontSize: 11,
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              fontSize: 11.5,
               color: "#CBD5E1",
+              margin: 0,
             }}
           >
-            Right Assets Management · Admin Portal
+            Secured by Supabase Auth · 256-bit encrypted sessions
           </p>
         </div>
       </div>
     </>
+  );
+}
+
+// ─── Google multi-colour "G" ───────────────────────────────────────────────
+function GoogleIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+      <path
+        fill="#4285F4"
+        d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"
+      />
+      <path
+        fill="#34A853"
+        d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+      />
+      <path
+        fill="#EA4335"
+        d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"
+      />
+    </svg>
   );
 }

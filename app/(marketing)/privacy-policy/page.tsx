@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy-policy" },
   title: "Privacy Policy | Right Assets Management",
   description:
     "Privacy Policy of Right Assets Management — how we collect, use, and protect your personal information in compliance with India's Digital Personal Data Protection Act, 2023.",
@@ -163,9 +164,9 @@ We encourage you to review this Policy periodically. Your continued use of our W
 
 **Right Assets Management**
 Bangalore, Karnataka, India
-Email: privacy@rightasset.in
-Phone: +91 99999 99999
-WhatsApp: +91 99999 99999
+Email: contact@rightassetsmanagement.com
+Phone: +91 97428 26804
+WhatsApp: +91 97428 26804
 
 We will acknowledge your request within 72 hours and resolve it within 30 days. If you are not satisfied with our response, you may approach the Data Protection Board of India as constituted under the DPDP Act, 2023.`,
   },

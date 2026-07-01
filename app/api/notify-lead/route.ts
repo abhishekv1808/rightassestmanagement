@@ -98,7 +98,7 @@ function buildEmailHtml(lead: LeadPayload): string {
                 Respond within <strong>24 hours</strong> to maximise conversion.
               </p>
               <a
-                href="https://wa.me/919999999999?text=Hi+${encodeURIComponent(lead.full_name)}%2C+this+is+the+Right+Asset+Management+team.+We+received+your+enquiry+and+would+love+to+help."
+                href="https://wa.me/919742826804?text=Hi+${encodeURIComponent(lead.full_name)}%2C+this+is+the+Right+Asset+Management+team.+We+received+your+enquiry+and+would+love+to+help."
                 style="display:inline-block;padding:12px 24px;background:#25D366;color:#ffffff;text-decoration:none;border-radius:8px;font-size:13px;font-weight:600;"
               >
                 Reply via WhatsApp

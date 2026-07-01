@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 import EMICalculator from "@/components/tools/EMICalculator";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/tools/emi-calculator" },
   title: "Loan EMI Calculator — Home, Personal & Vehicle Loans | Right Assets Management",
   description:
     "Calculate your monthly EMI for any loan — home loan, personal loan, or vehicle loan. Free EMI calculator with total interest breakdown by Right Assets Management.",

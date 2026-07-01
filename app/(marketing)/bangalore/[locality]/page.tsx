@@ -34,6 +34,7 @@ export async function generateMetadata({
   return {
     title: locality.metaTitle,
     description: locality.metaDescription,
+    alternates: { canonical: `/bangalore/${locality.slug}` },
     openGraph: {
       title: locality.metaTitle,
       description: locality.metaDescription,
@@ -56,7 +57,7 @@ const VERTICAL_CONFIG = {
     Icon: TrendingUp,
   },
   "real-estate": {
-    label: "Real Estate Services",
+    label: "Realty Services",
     color: "#0D7E7E",
     lightBg: "#E6F4F4",
     href: "/real-estate",

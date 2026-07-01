@@ -190,7 +190,7 @@ export default function StickyMobileCTA() {
 
         {/* ── Tab 4: WhatsApp ── */}
         <a
-          href="https://wa.me/919999999999"
+          href="https://wa.me/919742826804"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -215,7 +215,7 @@ export default function StickyMobileCTA() {
 
         {/* ── Tab 5: Call ── */}
         <a
-          href="tel:+919999999999"
+          href="tel:+919742826804"
           style={{
             flex: 1,
             display: "flex",

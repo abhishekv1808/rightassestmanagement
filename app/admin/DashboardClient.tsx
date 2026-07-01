@@ -3,34 +3,40 @@
 import Link from "next/link";
 import {
   Users, TrendingUp, CheckCircle, Star,
-  ArrowRight, Eye, FileText, PhoneCall,
+  ArrowRight, ArrowUpRight, Eye, FileText, PhoneCall,
 } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, PieChart, Pie, Legend, Label,
 } from "recharts";
+import {
+  Card, CardContent, CardDescription, CardHeader, CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { buttonClasses } from "@/components/ui/button";
 
 // ─── Status badge ─────────────────────────────────────────────────────────────
 
-const STATUS_CFG: Record<string, { bg: string; color: string; dot: string; label: string }> = {
-  new:       { bg: "#EFF6FF", color: "#1D4ED8", dot: "#3B82F6", label: "New" },
-  contacted: { bg: "#FFFBEB", color: "#B45309", dot: "#F59E0B", label: "Contacted" },
-  converted: { bg: "#ECFDF5", color: "#065F46", dot: "#10B981", label: "Converted" },
-  closed:    { bg: "#F9FAFB", color: "#374151", dot: "#9CA3AF", label: "Closed" },
+const STATUS_CFG: Record<
+  string,
+  { variant: "info" | "warning" | "success" | "muted"; dot: string; label: string }
+> = {
+  new:       { variant: "info",    dot: "#3B82F6", label: "New" },
+  contacted: { variant: "warning", dot: "#F59E0B", label: "Contacted" },
+  converted: { variant: "success", dot: "#10B981", label: "Converted" },
+  closed:    { variant: "muted",   dot: "#9CA3AF", label: "Closed" },
 };
 
 function StatusBadge({ status }: { status: string }) {
   const c = STATUS_CFG[status] ?? STATUS_CFG.new;
   return (
-    <span style={{
-      display: "inline-flex", alignItems: "center", gap: "5px",
-      padding: "4px 10px", borderRadius: "20px",
-      fontSize: "11px", fontWeight: "600",
-      backgroundColor: c.bg, color: c.color,
-    }}>
-      <span style={{ width: "5px", height: "5px", borderRadius: "50%", backgroundColor: c.dot, flexShrink: 0 }} />
+    <Badge variant={c.variant}>
+      <span
+        className="h-1.5 w-1.5 shrink-0 rounded-full"
+        style={{ backgroundColor: c.dot }}
+      />
       {c.label}
-    </span>
+    </Badge>
   );
 }
 
@@ -59,41 +65,33 @@ type StatCardProps = {
 
 function StatCard({ title, value, subtitle, icon: Icon, accent, href }: StatCardProps) {
   return (
-    <Link href={href} style={{ textDecoration: "none", display: "block" }}>
-      <div
-        style={{
-          backgroundColor: "#FFFFFF",
-          borderRadius: "16px",
-          padding: "22px 22px 20px",
-          boxShadow: "0 1px 4px rgba(0,0,0,0.06), 0 4px 14px rgba(0,0,0,0.04)",
-          borderTop: `3px solid ${accent}`,
-          transition: "box-shadow 0.2s, transform 0.2s",
-        }}
-        onMouseEnter={(e) => {
-          (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 20px rgba(0,0,0,0.1)";
-          (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)";
-        }}
-        onMouseLeave={(e) => {
-          (e.currentTarget as HTMLDivElement).style.boxShadow = "0 1px 4px rgba(0,0,0,0.06), 0 4px 14px rgba(0,0,0,0.04)";
-          (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "14px" }}>
-          <div style={{
-            width: "44px", height: "44px", borderRadius: "12px",
-            backgroundColor: `${accent}18`,
-            display: "flex", alignItems: "center", justifyContent: "center",
-          }}>
-            <Icon size={20} color={accent} />
+    <Link href={href} className="group block">
+      <Card className="relative overflow-hidden transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md">
+        {/* Accent top strip */}
+        <span
+          className="absolute inset-x-0 top-0 h-1"
+          style={{ backgroundColor: accent }}
+        />
+        <CardContent className="p-5">
+          <div className="mb-4 flex items-start justify-between">
+            <div
+              className="flex h-11 w-11 items-center justify-center rounded-xl"
+              style={{ backgroundColor: `${accent}15` }}
+            >
+              <Icon size={20} color={accent} />
+            </div>
+            <ArrowUpRight
+              size={16}
+              className="text-slate-300 transition-colors group-hover:text-slate-500"
+            />
           </div>
-          <ArrowRight size={14} color="#CBD5E1" />
-        </div>
-        <p style={{ fontSize: "34px", fontWeight: "800", color: "#1B3A6B", margin: "0 0 5px 0", lineHeight: 1 }}>
-          {value.toLocaleString()}
-        </p>
-        <p style={{ fontSize: "13px", fontWeight: "600", color: "#374151", margin: "0 0 3px 0" }}>{title}</p>
-        <p style={{ fontSize: "11px", color: "#9CA3AF", margin: 0 }}>{subtitle}</p>
-      </div>
+          <p className="mb-1 text-[32px] font-extrabold leading-none text-[#1B3A6B]">
+            {value.toLocaleString()}
+          </p>
+          <p className="text-[13px] font-semibold text-slate-700">{title}</p>
+          <p className="mt-0.5 text-[11px] text-slate-400">{subtitle}</p>
+        </CardContent>
+      </Card>
     </Link>
   );
 }
@@ -108,42 +106,25 @@ function QuickAction({
   href: string; accent: string;
 }) {
   return (
-    <Link
-      href={href}
-      style={{
-        display: "flex", alignItems: "center", gap: "14px",
-        padding: "16px 18px", borderRadius: "14px",
-        backgroundColor: "#FFFFFF", textDecoration: "none",
-        border: "1px solid #E2E8F0",
-        boxShadow: "0 1px 4px rgba(0,0,0,0.05)",
-        flex: 1, minWidth: "180px",
-        transition: "all 0.15s",
-      }}
-      onMouseEnter={(e) => {
-        const el = e.currentTarget as HTMLAnchorElement;
-        el.style.borderColor = accent;
-        el.style.boxShadow = `0 4px 16px ${accent}22`;
-        el.style.transform = "translateY(-1px)";
-      }}
-      onMouseLeave={(e) => {
-        const el = e.currentTarget as HTMLAnchorElement;
-        el.style.borderColor = "#E2E8F0";
-        el.style.boxShadow = "0 1px 4px rgba(0,0,0,0.05)";
-        el.style.transform = "translateY(0)";
-      }}
-    >
-      <div style={{
-        width: "38px", height: "38px", borderRadius: "10px",
-        backgroundColor: `${accent}15`,
-        display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
-      }}>
-        <Icon size={18} color={accent} />
-      </div>
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <p style={{ fontSize: "13px", fontWeight: "700", color: "#1B3A6B", margin: "0 0 2px 0" }}>{label}</p>
-        <p style={{ fontSize: "11px", color: "#94A3B8", margin: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{desc}</p>
-      </div>
-      <ArrowRight size={14} color="#CBD5E1" style={{ flexShrink: 0 }} />
+    <Link href={href} className="group block flex-1 min-w-[180px]">
+      <Card className="transition-all duration-150 group-hover:-translate-y-0.5 group-hover:border-slate-300 group-hover:shadow-md">
+        <CardContent className="flex items-center gap-3.5 p-4">
+          <div
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
+            style={{ backgroundColor: `${accent}15` }}
+          >
+            <Icon size={18} color={accent} />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="text-[13px] font-bold text-[#1B3A6B]">{label}</p>
+            <p className="truncate text-[11px] text-slate-400">{desc}</p>
+          </div>
+          <ArrowRight
+            size={15}
+            className="shrink-0 text-slate-300 transition-all group-hover:translate-x-0.5 group-hover:text-slate-500"
+          />
+        </CardContent>
+      </Card>
     </Link>
   );
 }
@@ -197,153 +178,157 @@ export default function DashboardClient({
   ];
 
   return (
-    <div>
+    <div className="space-y-5">
 
       {/* ── Welcome banner ──────────────────────────────────────────────── */}
-      <div style={{
-        background: "linear-gradient(135deg, #1B3A6B 0%, #0D2347 100%)",
-        borderRadius: "18px",
-        padding: "24px 28px",
-        marginBottom: "20px",
-        display: "flex", alignItems: "center", justifyContent: "space-between",
-        gap: "16px", flexWrap: "wrap",
-        boxShadow: "0 4px 24px rgba(27,58,107,0.2)",
-      }}>
-        <div>
-          <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.45)", margin: "0 0 6px 0", fontWeight: "600", letterSpacing: "0.5px", textTransform: "uppercase" }}>
-            {todayStr}
-          </p>
-          <h2 style={{ fontSize: "22px", fontWeight: "800", color: "#FFFFFF", margin: "0 0 6px 0" }}>
-            {getGreeting()}{userName ? `, ${userName}` : ""}! 👋
-          </h2>
-          <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.6)", margin: 0 }}>
-            {newLeads > 0
-              ? <><span style={{ color: "#93C5FD", fontWeight: "700" }}>{newLeads} new lead{newLeads !== 1 ? "s" : ""}</span> awaiting contact{pendingTestimonials > 0 ? ` · ${pendingTestimonials} testimonial${pendingTestimonials !== 1 ? "s" : ""} pending` : "."}</>
-              : "All leads are up to date. Great work!"}
-          </p>
-        </div>
-        <div style={{ display: "flex", gap: "10px", flexShrink: 0 }}>
-          <Link href="/admin/leads" style={{
-            display: "inline-flex", alignItems: "center", gap: "7px",
-            padding: "10px 18px", borderRadius: "10px",
-            backgroundColor: "rgba(255,255,255,0.12)",
-            border: "1px solid rgba(255,255,255,0.2)",
-            color: "#FFFFFF", fontSize: "13px", fontWeight: "600", textDecoration: "none",
-          }}>
-            <Eye size={14} /> View Leads
-          </Link>
-          <Link href="/admin/leads" style={{
-            display: "inline-flex", alignItems: "center", gap: "7px",
-            padding: "10px 18px", borderRadius: "10px",
-            backgroundColor: "#C9A84C",
-            color: "#1B3A6B", fontSize: "13px", fontWeight: "700", textDecoration: "none",
-          }}>
-            <PhoneCall size={14} /> Call Queue
-          </Link>
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1B3A6B] to-[#0D2347] p-6 shadow-lg shadow-[#1B3A6B]/20 sm:p-7">
+        {/* Decorative glow */}
+        <div
+          className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full"
+          style={{ background: "radial-gradient(circle, rgba(201,168,76,0.16) 0%, transparent 70%)" }}
+        />
+        <div className="relative flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wider text-white/45">
+              {todayStr}
+            </p>
+            <h2 className="mb-1.5 text-[22px] font-extrabold text-white">
+              {getGreeting()}{userName ? `, ${userName}` : ""}! 👋
+            </h2>
+            <p className="text-[13px] text-white/60">
+              {newLeads > 0 ? (
+                <>
+                  <span className="font-bold text-[#93C5FD]">
+                    {newLeads} new lead{newLeads !== 1 ? "s" : ""}
+                  </span>{" "}
+                  awaiting contact
+                  {pendingTestimonials > 0
+                    ? ` · ${pendingTestimonials} testimonial${pendingTestimonials !== 1 ? "s" : ""} pending`
+                    : "."}
+                </>
+              ) : (
+                "All leads are up to date. Great work!"
+              )}
+            </p>
+          </div>
+          <div className="flex shrink-0 gap-2.5">
+            <Link
+              href="/admin/leads"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-white/20"
+            >
+              <Eye size={15} /> View Leads
+            </Link>
+            <Link
+              href="/admin/leads"
+              className={buttonClasses({ variant: "gold", size: "default" })}
+            >
+              <PhoneCall size={15} /> Call Queue
+            </Link>
+          </div>
         </div>
       </div>
 
       {/* ── Stat cards ──────────────────────────────────────────────────── */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px", marginBottom: "20px" }} className="dash-stats">
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         {statCards.map((c) => <StatCard key={c.title} {...c} />)}
       </div>
 
       {/* ── Charts ──────────────────────────────────────────────────────── */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "16px", marginBottom: "20px" }} className="dash-charts">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-5">
 
         {/* Bar chart — leads this week */}
-        <div style={{ backgroundColor: "#FFFFFF", borderRadius: "16px", padding: "24px", boxShadow: "0 1px 4px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04)" }} className="dash-bar">
-          <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "20px", gap: "12px" }}>
+        <Card className="lg:col-span-3">
+          <CardHeader className="flex-row items-start justify-between gap-3 space-y-0">
             <div>
-              <h3 style={{ fontSize: "15px", fontWeight: "700", color: "#1B3A6B", margin: "0 0 3px 0" }}>Leads This Week</h3>
-              <p style={{ fontSize: "12px", color: "#94A3B8", margin: 0 }}>Daily submissions · last 7 days</p>
+              <CardTitle>Leads This Week</CardTitle>
+              <CardDescription className="mt-1">Daily submissions · last 7 days</CardDescription>
             </div>
-            <span style={{ fontSize: "11px", fontWeight: "700", backgroundColor: "rgba(201,168,76,0.12)", color: "#B8913A", padding: "4px 11px", borderRadius: "20px", flexShrink: 0 }}>
-              Today highlighted
-            </span>
-          </div>
-          <ResponsiveContainer width="100%" height={210}>
-            <BarChart data={weeklyChartData} margin={{ top: 4, right: 0, left: -26, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
-              <XAxis dataKey="label" tick={{ fontSize: 12, fill: "#94A3B8" }} axisLine={false} tickLine={false} />
-              <YAxis tick={{ fontSize: 12, fill: "#94A3B8" }} axisLine={false} tickLine={false} allowDecimals={false} />
-              <Tooltip
-                contentStyle={{ borderRadius: "10px", border: "none", boxShadow: "0 4px 20px rgba(0,0,0,0.12)", fontSize: "13px", padding: "8px 14px" }}
-                cursor={{ fill: "rgba(27,58,107,0.03)" }}
-              />
-              <Bar dataKey="count" radius={[6, 6, 0, 0]} name="Leads" fill="#1B3A6B" />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+            <Badge variant="gold" className="shrink-0">Today highlighted</Badge>
+          </CardHeader>
+          <CardContent>
+            <ResponsiveContainer width="100%" height={210}>
+              <BarChart data={weeklyChartData} margin={{ top: 4, right: 0, left: -26, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
+                <XAxis dataKey="label" tick={{ fontSize: 12, fill: "#94A3B8" }} axisLine={false} tickLine={false} />
+                <YAxis tick={{ fontSize: 12, fill: "#94A3B8" }} axisLine={false} tickLine={false} allowDecimals={false} />
+                <Tooltip
+                  contentStyle={{ borderRadius: "10px", border: "none", boxShadow: "0 4px 20px rgba(0,0,0,0.12)", fontSize: "13px", padding: "8px 14px" }}
+                  cursor={{ fill: "rgba(27,58,107,0.03)" }}
+                />
+                <Bar dataKey="count" radius={[6, 6, 0, 0]} name="Leads" fill="#1B3A6B" />
+              </BarChart>
+            </ResponsiveContainer>
+          </CardContent>
+        </Card>
 
         {/* Pie chart — leads by status */}
-        <div style={{ backgroundColor: "#FFFFFF", borderRadius: "16px", padding: "24px", boxShadow: "0 1px 4px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04)" }} className="dash-pie">
-          <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "20px", gap: "12px" }}>
+        <Card className="lg:col-span-2">
+          <CardHeader className="flex-row items-start justify-between gap-3 space-y-0">
             <div>
-              <h3 style={{ fontSize: "15px", fontWeight: "700", color: "#1B3A6B", margin: "0 0 3px 0" }}>Leads by Status</h3>
-              <p style={{ fontSize: "12px", color: "#94A3B8", margin: 0 }}>Pipeline breakdown</p>
+              <CardTitle>Leads by Status</CardTitle>
+              <CardDescription className="mt-1">Pipeline breakdown</CardDescription>
             </div>
             {conversionRate > 0 && (
-              <span style={{ fontSize: "11px", fontWeight: "700", backgroundColor: "#ECFDF5", color: "#065F46", padding: "4px 11px", borderRadius: "20px", flexShrink: 0 }}>
-                {conversionRate}% converted
-              </span>
+              <Badge variant="success" className="shrink-0">{conversionRate}% converted</Badge>
             )}
-          </div>
-          {totalStatusCount === 0 ? (
-            <div style={{ height: "200px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "10px" }}>
-              <Users size={36} color="#E2E8F0" />
-              <p style={{ color: "#94A3B8", fontSize: "13px", margin: 0 }}>No leads yet</p>
-            </div>
-          ) : (
-            <ResponsiveContainer width="100%" height={210}>
-              <PieChart>
-                <Pie
-                  data={statusData.map(d => ({ ...d, fill: d.color }))}
-                  cx="50%" cy="42%"
-                  innerRadius={58} outerRadius={84}
-                  paddingAngle={3}
-                  dataKey="value"
-                  strokeWidth={0}
-                >
-                  <Label
-                    content={(props) => {
-                      const vb = props.viewBox as { cx?: number; cy?: number };
-                      const cx = vb?.cx ?? 0;
-                      const cy = vb?.cy ?? 0;
-                      return (
-                        <g>
-                          <text x={cx} y={cy - 7} textAnchor="middle" dominantBaseline="middle"
-                            style={{ fontSize: "22px", fontWeight: "800", fill: "#1B3A6B" }}>
-                            {totalStatusCount}
-                          </text>
-                          <text x={cx} y={cy + 12} textAnchor="middle" dominantBaseline="middle"
-                            style={{ fontSize: "10px", fill: "#94A3B8", fontWeight: "700", letterSpacing: "1px" }}>
-                            TOTAL
-                          </text>
-                        </g>
-                      );
-                    }}
+          </CardHeader>
+          <CardContent>
+            {totalStatusCount === 0 ? (
+              <div className="flex h-[200px] flex-col items-center justify-center gap-2.5">
+                <Users size={36} color="#E2E8F0" />
+                <p className="text-[13px] text-slate-400">No leads yet</p>
+              </div>
+            ) : (
+              <ResponsiveContainer width="100%" height={210}>
+                <PieChart>
+                  <Pie
+                    data={statusData.map(d => ({ ...d, fill: d.color }))}
+                    cx="50%" cy="42%"
+                    innerRadius={58} outerRadius={84}
+                    paddingAngle={3}
+                    dataKey="value"
+                    strokeWidth={0}
+                  >
+                    <Label
+                      content={(props) => {
+                        const vb = props.viewBox as { cx?: number; cy?: number };
+                        const cx = vb?.cx ?? 0;
+                        const cy = vb?.cy ?? 0;
+                        return (
+                          <g>
+                            <text x={cx} y={cy - 7} textAnchor="middle" dominantBaseline="middle"
+                              style={{ fontSize: "22px", fontWeight: "800", fill: "#1B3A6B" }}>
+                              {totalStatusCount}
+                            </text>
+                            <text x={cx} y={cy + 12} textAnchor="middle" dominantBaseline="middle"
+                              style={{ fontSize: "10px", fill: "#94A3B8", fontWeight: "700", letterSpacing: "1px" }}>
+                              TOTAL
+                            </text>
+                          </g>
+                        );
+                      }}
+                    />
+                  </Pie>
+                  <Legend
+                    iconType="circle" iconSize={8}
+                    formatter={(v) => <span style={{ fontSize: "12px", color: "#64748B" }}>{v}</span>}
                   />
-                </Pie>
-                <Legend
-                  iconType="circle" iconSize={8}
-                  formatter={(v) => <span style={{ fontSize: "12px", color: "#64748B" }}>{v}</span>}
-                />
-                <Tooltip
-                  contentStyle={{ borderRadius: "10px", border: "none", boxShadow: "0 4px 20px rgba(0,0,0,0.12)", fontSize: "13px" }}
-                />
-              </PieChart>
-            </ResponsiveContainer>
-          )}
-        </div>
+                  <Tooltip
+                    contentStyle={{ borderRadius: "10px", border: "none", boxShadow: "0 4px 20px rgba(0,0,0,0.12)", fontSize: "13px" }}
+                  />
+                </PieChart>
+              </ResponsiveContainer>
+            )}
+          </CardContent>
+        </Card>
       </div>
 
       {/* ── Quick Actions ────────────────────────────────────────────────── */}
-      <div style={{ marginBottom: "20px" }}>
-        <p style={{ fontSize: "11px", fontWeight: "700", color: "#94A3B8", letterSpacing: "1px", textTransform: "uppercase", margin: "0 0 12px 2px" }}>
+      <div>
+        <p className="mb-3 ml-0.5 text-[11px] font-bold uppercase tracking-wider text-slate-400">
           Quick Actions
         </p>
-        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+        <div className="flex flex-wrap gap-3">
           <QuickAction label="All Leads" desc={`${totalLeads} total · ${newLeads} new`} icon={Users} href="/admin/leads" accent="#1B3A6B" />
           <QuickAction label="Approve Testimonials" desc={`${pendingTestimonials} pending approval`} icon={Star} href="/admin/testimonials" accent="#F59E0B" />
           <QuickAction label="Write Blog Post" desc="Create new article" icon={FileText} href="/admin/blog" accent="#8B5CF6" />
@@ -351,49 +336,40 @@ export default function DashboardClient({
       </div>
 
       {/* ── Recent leads ─────────────────────────────────────────────────── */}
-      <div style={{
-        backgroundColor: "#FFFFFF",
-        borderRadius: "16px",
-        overflow: "hidden",
-        boxShadow: "0 1px 4px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04)",
-      }}>
-        {/* Header */}
-        <div style={{
-          display: "flex", alignItems: "center", justifyContent: "space-between",
-          padding: "20px 24px 16px",
-          borderBottom: "1px solid #F1F5F9",
-        }}>
+      <Card className="overflow-hidden">
+        <div className="flex items-center justify-between border-b border-slate-100 p-5 sm:px-6">
           <div>
-            <h3 style={{ fontSize: "15px", fontWeight: "700", color: "#1B3A6B", margin: "0 0 3px 0" }}>Recent Leads</h3>
-            <p style={{ fontSize: "12px", color: "#94A3B8", margin: 0 }}>
+            <CardTitle>Recent Leads</CardTitle>
+            <CardDescription className="mt-1">
               Latest {Math.min(recentLeads.length, 8)} submissions
-            </p>
+            </CardDescription>
           </div>
-          <Link href="/admin/leads" style={{
-            display: "inline-flex", alignItems: "center", gap: "5px",
-            fontSize: "13px", color: "#C9A84C", fontWeight: "600", textDecoration: "none",
-          }}>
+          <Link
+            href="/admin/leads"
+            className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#C9A84C] transition-colors hover:text-[#a5842f]"
+          >
             View all <ArrowRight size={13} />
           </Link>
         </div>
 
         {recentLeads.length === 0 ? (
-          <div style={{ textAlign: "center", padding: "60px 20px" }}>
-            <Users size={40} color="#E2E8F0" style={{ margin: "0 auto 12px" }} />
-            <p style={{ color: "#94A3B8", fontSize: "14px", margin: "0 0 4px 0" }}>No leads yet</p>
-            <p style={{ color: "#CBD5E1", fontSize: "12px", margin: 0 }}>Leads submitted through the website will appear here.</p>
+          <div className="px-5 py-16 text-center">
+            <Users size={40} color="#E2E8F0" className="mx-auto mb-3" />
+            <p className="text-sm text-slate-400">No leads yet</p>
+            <p className="mt-1 text-xs text-slate-300">
+              Leads submitted through the website will appear here.
+            </p>
           </div>
         ) : (
-          <div style={{ overflowX: "auto" }}>
-            <table style={{ width: "100%", borderCollapse: "collapse" }}>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
               <thead>
-                <tr style={{ backgroundColor: "#F8FAFC" }}>
+                <tr className="bg-slate-50/70">
                   {["Lead", "Phone", "Service Interested", "Status", "Date"].map((h) => (
-                    <th key={h} style={{
-                      textAlign: "left", padding: "10px 20px",
-                      fontSize: "11px", fontWeight: "700", color: "#94A3B8",
-                      letterSpacing: "0.8px", textTransform: "uppercase", whiteSpace: "nowrap",
-                    }}>
+                    <th
+                      key={h}
+                      className="whitespace-nowrap px-5 py-2.5 text-left text-[11px] font-bold uppercase tracking-wide text-slate-400 sm:px-6"
+                    >
                       {h}
                     </th>
                   ))}
@@ -403,48 +379,42 @@ export default function DashboardClient({
                 {recentLeads.map((lead) => (
                   <tr
                     key={lead.id}
-                    style={{ borderTop: "1px solid #F8FAFC", transition: "background 0.1s" }}
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLTableRowElement).style.backgroundColor = "#F8FAFC"; }}
-                    onMouseLeave={(e) => { (e.currentTarget as HTMLTableRowElement).style.backgroundColor = "transparent"; }}
+                    className="border-t border-slate-50 transition-colors hover:bg-slate-50/70"
                   >
                     {/* Name with avatar */}
-                    <td style={{ padding: "14px 20px" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "11px" }}>
-                        <div style={{
-                          width: "34px", height: "34px", borderRadius: "50%",
-                          background: "linear-gradient(135deg, #1B3A6B, #2D5299)",
-                          display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
-                        }}>
-                          <span style={{ fontSize: "11px", fontWeight: "700", color: "#C9A84C" }}>
+                    <td className="px-5 py-3.5 sm:px-6">
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#1B3A6B] to-[#2D5299]">
+                          <span className="text-[11px] font-bold text-[#C9A84C]">
                             {getInitials(lead.full_name)}
                           </span>
                         </div>
-                        <span style={{ fontSize: "14px", fontWeight: "600", color: "#1A1A1A" }}>
+                        <span className="text-sm font-semibold text-slate-800">
                           {lead.full_name}
                         </span>
                       </div>
                     </td>
                     {/* Phone */}
-                    <td style={{ padding: "14px 20px" }}>
-                      <a href={`tel:${lead.phone}`} style={{
-                        fontSize: "13px", color: "#64748B", textDecoration: "none",
-                        fontFamily: "monospace", letterSpacing: "0.3px",
-                      }}>
+                    <td className="px-5 py-3.5 sm:px-6">
+                      <a
+                        href={`tel:${lead.phone}`}
+                        className="font-mono text-[13px] tracking-tight text-slate-500 hover:text-[#1B3A6B]"
+                      >
                         {lead.phone}
                       </a>
                     </td>
                     {/* Service */}
-                    <td style={{ padding: "14px 20px", maxWidth: "200px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                      <span style={{ fontSize: "13px", color: "#64748B" }}>
-                        {lead.service_interested ?? <span style={{ color: "#CBD5E1" }}>—</span>}
+                    <td className="max-w-[200px] truncate px-5 py-3.5 sm:px-6">
+                      <span className="text-[13px] text-slate-500">
+                        {lead.service_interested ?? <span className="text-slate-300">—</span>}
                       </span>
                     </td>
                     {/* Status */}
-                    <td style={{ padding: "14px 20px" }}>
+                    <td className="px-5 py-3.5 sm:px-6">
                       <StatusBadge status={lead.status} />
                     </td>
                     {/* Date */}
-                    <td style={{ padding: "14px 20px", color: "#94A3B8", fontSize: "12px", whiteSpace: "nowrap" }}>
+                    <td className="whitespace-nowrap px-5 py-3.5 text-xs text-slate-400 sm:px-6">
                       {new Date(lead.created_at).toLocaleDateString("en-IN", {
                         day: "numeric", month: "short", year: "numeric",
                       })}
@@ -455,14 +425,7 @@ export default function DashboardClient({
             </table>
           </div>
         )}
-      </div>
-
-      <style>{`
-        @media (min-width: 1024px) {
-          .dash-stats  { grid-template-columns: repeat(4, 1fr) !important; }
-          .dash-charts { grid-template-columns: 3fr 2fr !important; }
-        }
-      `}</style>
+      </Card>
     </div>
   );
 }

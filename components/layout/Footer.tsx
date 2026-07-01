@@ -361,7 +361,7 @@ export default function Footer() {
             {/* Contact details */}
             <div className="space-y-3 mb-7">
               <a
-                href="tel:+919999999999"
+                href="tel:+919742826804"
                 className="flex items-center gap-3 text-sm group/link"
                 style={{ color: "rgba(255,255,255,0.55)" }}
               >
@@ -371,10 +371,10 @@ export default function Footer() {
                 >
                   <Phone className="w-3.5 h-3.5" style={{ color: "#C9A84C" }} />
                 </div>
-                <span className="group-hover/link:text-white transition-colors">+91 99999 99999</span>
+                <span className="group-hover/link:text-white transition-colors">+91 97428 26804</span>
               </a>
               <a
-                href="mailto:info@rightasset.in"
+                href="mailto:contact@rightassetsmanagement.com"
                 className="flex items-center gap-3 text-sm group/link"
                 style={{ color: "rgba(255,255,255,0.55)" }}
               >
@@ -384,7 +384,7 @@ export default function Footer() {
                 >
                   <Mail className="w-3.5 h-3.5" style={{ color: "#C9A84C" }} />
                 </div>
-                <span className="group-hover/link:text-white transition-colors">info@rightasset.in</span>
+                <span className="group-hover/link:text-white transition-colors">contact@rightassetsmanagement.com</span>
               </a>
               <div
                 className="flex items-start gap-3 text-sm"
@@ -396,13 +396,13 @@ export default function Footer() {
                 >
                   <MapPin className="w-3.5 h-3.5" style={{ color: "#C9A84C" }} />
                 </div>
-                <span>Bangalore, Karnataka, India</span>
+                <span>3rd Floor, Narasappa Road, Metro Pillar 471, T. Dasarahalli, Bengaluru, Karnataka 560057</span>
               </div>
             </div>
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/919742826804"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold transition-opacity hover:opacity-85"

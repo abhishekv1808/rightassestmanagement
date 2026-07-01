@@ -89,9 +89,9 @@ export default function SocialFollowBanner() {
               <div className="flex items-center gap-3">
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-110"
-                  style={{ backgroundColor: `${accent}1A`, border: `1px solid ${accent}33` }}
+                  style={{ backgroundColor: `${accent}1A`, border: `1px solid ${accent}33`, color: accent }}
                 >
-                  <Icon className="w-5 h-5" style={{ color: accent }} />
+                  <Icon className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
                   <p className="font-semibold text-white text-sm leading-tight">{name}</p>

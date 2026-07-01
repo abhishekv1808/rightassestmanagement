@@ -14,6 +14,7 @@ import LeadForm from "@/components/forms/LeadForm";
 // ─── SEO ─────────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact Us — Book a Free Consultation",
   description:
     "Get in touch with Right Assets Management in Bangalore. Book a free consultation for financial planning, real estate documentation, or legal advisory services.",
@@ -25,8 +26,8 @@ const CONTACT_ITEMS = [
   {
     Icon: MapPin,
     label: "Our Office",
-    line1: "Right Assets Management",
-    line2: "Bangalore, Karnataka — 560 001",
+    line1: "Sy. No 13/1, Site No. 21, 3rd Floor, Narasappa Road, Metro Pillar 471",
+    line2: "T. Dasarahalli, Bengaluru, Karnataka 560057",
     color: "#C9A84C",
     lightBg: "#FBF5E6",
     href: null,
@@ -34,20 +35,20 @@ const CONTACT_ITEMS = [
   {
     Icon: Phone,
     label: "Call Us",
-    line1: "+91 99999 99999",
+    line1: "+91 97428 26804",
     line2: "Mon – Sat, 9 AM – 6 PM",
     color: "#1B3A6B",
     lightBg: "#EEF2F8",
-    href: "tel:+919999999999",
+    href: "tel:+919742826804",
   },
   {
     Icon: Mail,
     label: "Email Us",
-    line1: "info@rightasset.in",
+    line1: "contact@rightassetsmanagement.com",
     line2: "We reply within 24 hours",
     color: "#0D7E7E",
     lightBg: "#E6F4F4",
-    href: "mailto:info@rightasset.in",
+    href: "mailto:contact@rightassetsmanagement.com",
   },
   {
     Icon: Clock,
@@ -66,7 +67,7 @@ const QUICK_CONTACT = [
     label: "WhatsApp",
     desc: "Fastest response — usually within minutes",
     action: "Chat Now",
-    href: "https://wa.me/919999999999",
+    href: "https://wa.me/919742826804",
     bg: "#25D366",
     textColor: "white",
   },
@@ -74,8 +75,8 @@ const QUICK_CONTACT = [
     Icon: Phone,
     label: "Call Directly",
     desc: "Speak to an advisor — Mon to Sat, 9 AM–6 PM",
-    action: "+91 99999 99999",
-    href: "tel:+919999999999",
+    action: "+91 97428 26804",
+    href: "tel:+919742826804",
     bg: "#1B3A6B",
     textColor: "white",
   },
@@ -83,8 +84,8 @@ const QUICK_CONTACT = [
     Icon: Mail,
     label: "Send an Email",
     desc: "For detailed queries — we reply within 24 hours",
-    action: "info@rightasset.in",
-    href: "mailto:info@rightasset.in",
+    action: "contact@rightassetsmanagement.com",
+    href: "mailto:contact@rightassetsmanagement.com",
     bg: "#0D7E7E",
     textColor: "white",
   },
@@ -240,7 +241,7 @@ export default function ContactPage() {
 
                 {/* WhatsApp CTA */}
                 <a
-                  href="https://wa.me/919999999999"
+                  href="https://wa.me/919742826804"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 flex items-center justify-center gap-2.5 w-full px-5 py-3.5 rounded-xl font-semibold text-sm text-white transition-all hover:opacity-90 active:scale-[0.98]"
@@ -263,56 +264,30 @@ export default function ContactPage() {
                       className="text-sm font-semibold"
                       style={{ color: "#1B3A6B" }}
                     >
-                      Find Us in Bangalore
+                      Find Us in T. Dasarahalli, Bengaluru
                     </span>
                   </div>
                 </div>
-                {/*
-                  TODO: Replace this placeholder with the actual Google Maps embed.
-                  Steps: Google Maps → search office address → Share → Embed a map → copy the <iframe> src URL
-                  Then replace the div below with:
-                  <iframe
-                    src="PASTE_EMBED_URL_HERE"
-                    width="100%"
-                    height="280"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                */}
-                <div
-                  className="w-full h-[280px] flex flex-col items-center justify-center gap-3"
-                  style={{ backgroundColor: "#EEF2F8" }}
+                <iframe
+                  title="Right Assets Management office location"
+                  src="https://maps.google.com/maps?q=Sy.%20No%2013%2F1%2C%20Site%20No.%2021%2C%20Narasappa%20Road%2C%20Metro%20Pillar%20471%2C%20T.%20Dasarahalli%2C%20Bengaluru%2C%20Karnataka%20560057&z=15&output=embed"
+                  width="100%"
+                  height="280"
+                  style={{ border: 0, display: "block" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Sy.%20No%2013%2F1%2C%20Site%20No.%2021%2C%20Narasappa%20Road%2C%20Metro%20Pillar%20471%2C%20T.%20Dasarahalli%2C%20Bengaluru%2C%20Karnataka%20560057"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-1.5 px-5 py-3 text-xs font-semibold transition-opacity hover:opacity-70 border-t border-gray-100"
+                  style={{ color: "#1B3A6B" }}
                 >
-                  <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "rgba(27,58,107,0.1)" }}
-                  >
-                    <MapPin className="w-7 h-7" style={{ color: "#1B3A6B" }} />
-                  </div>
-                  <div className="text-center px-6">
-                    <p
-                      className="font-semibold text-sm mb-1"
-                      style={{ color: "#1B3A6B" }}
-                    >
-                      Map will be added here
-                    </p>
-                    <p className="text-xs text-gray-400">
-                      Office address to be confirmed with client
-                    </p>
-                  </div>
-                  <a
-                    href="https://www.google.com/maps/search/Bangalore"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-xs font-semibold transition-opacity hover:opacity-70"
-                    style={{ color: "#1B3A6B" }}
-                  >
-                    View Bangalore on Maps
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
-                </div>
+                  Get Directions on Google Maps
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
               </div>
             </div>
 

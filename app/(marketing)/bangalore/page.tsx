@@ -12,6 +12,7 @@ import { ALL_LOCALITIES } from "@/lib/localities-data";
 // ─── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/bangalore" },
   title:
     "Right Assets Management — Financial, Real Estate & Legal Services Across Bangalore",
   description:

@@ -13,6 +13,7 @@ import {
 // ─── SEO ─────────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/success-stories" },
   title: "Success Stories — Right Assets Management",
   description:
     "Real client outcomes from Right Assets Management Bangalore — tax savings, property deals, legal victories across financial planning, real estate, and legal advisory.",
@@ -575,7 +576,7 @@ export default function SuccessStoriesPage() {
             </Link>
 
             <a
-              href="https://wa.me/919999999999?text=Hi%2C%20I%20read%20your%20success%20stories%20and%20would%20like%20a%20free%20consultation."
+              href="https://wa.me/919742826804?text=Hi%2C%20I%20read%20your%20success%20stories%20and%20would%20like%20a%20free%20consultation."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-[15px] transition-all hover:opacity-80 border-2"

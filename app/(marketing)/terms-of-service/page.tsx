@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/terms-of-service" },
   title: "Terms of Service | Right Assets Management",
   description:
     "Terms of Service governing the use of Right Assets Management's website and financial, real estate, and legal advisory services in Bangalore, India.",
@@ -29,7 +30,7 @@ We reserve the right to update or modify these Terms at any time. Continued use 
 **Financial Services:**
 Investment advisory, insurance advisory, loan facilitation, tax planning assistance, and related financial guidance for individuals and businesses.
 
-**Real Estate Services:**
+**Realty Services:**
 Assistance with property transactions, documentation, government record extraction, regulatory approvals, and related real estate facilitation services in Karnataka, with a focus on Bangalore.
 
 **Legal Advisory Services:**
@@ -57,7 +58,7 @@ Right Assets Management makes no representation or warranty, express or implied,
   },
   {
     id: "real-estate-terms",
-    title: "4. Real Estate Services — Scope & Limitations",
+    title: "4. Realty Services — Scope & Limitations",
     content: `**Facilitation, Not Representation:**
 Our real estate services constitute documentation assistance and facilitation only. We are not a real estate agent or broker under RERA unless specifically registered as such. Clients should verify our role and applicable RERA registration for property transaction assistance.
 
@@ -191,8 +192,8 @@ You may discontinue using our services at any time. Obligations and liabilities 
 
 **Right Assets Management**
 Bangalore, Karnataka, India
-Email: legal@rightasset.in
-Phone: +91 99999 99999
+Email: contact@rightassetsmanagement.com
+Phone: +91 97428 26804
 
 We will endeavour to respond to all queries within 5 business days.`,
   },

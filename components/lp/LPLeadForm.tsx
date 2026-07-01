@@ -7,9 +7,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckCircle2, Phone, MessageCircle, Loader2 } from "lucide-react";
 import { submitLPLead } from "@/app/actions/submit-lp-lead";
 
-const WA_NUMBER = "919999999999";
-const PHONE_DISPLAY = "+91 99999 99999";
-const PHONE_HREF = "tel:+919999999999";
+const WA_NUMBER = "919742826804";
+const PHONE_DISPLAY = "+91 97428 26804";
+const PHONE_HREF = "tel:+919742826804";
 
 const schema = z.object({
   fullName: z.string().min(2, "Please enter your name"),

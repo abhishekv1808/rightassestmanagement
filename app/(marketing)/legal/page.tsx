@@ -16,6 +16,7 @@ import {
 import { getServiceBySlug } from "@/lib/services-data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/legal" },
   title: "Legal Services in Bangalore — Property, Family & Consumer Case Advisory",
   description:
     "Expert legal advisory in Bangalore for property disputes, family cases, cyber crime, consumer disputes, labour cases, and more. Right Assets Management.",
@@ -331,7 +332,7 @@ export default function LegalHubPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/919742826804"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all hover:bg-white/10"

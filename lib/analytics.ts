@@ -14,9 +14,11 @@
 
 // ─── Internal utility ─────────────────────────────────────────────────────────
 
+type GtagWindow = Window & { gtag?: (...args: unknown[]) => void };
+
 function gtag(event: string, params: Record<string, unknown> = {}) {
-  if (typeof window !== "undefined" && (window as any).gtag) {
-    (window as any).gtag("event", event, params);
+  if (typeof window !== "undefined" && (window as GtagWindow).gtag) {
+    (window as GtagWindow).gtag!("event", event, params);
   }
 }
 

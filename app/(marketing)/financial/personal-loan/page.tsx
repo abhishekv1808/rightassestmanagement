@@ -18,6 +18,7 @@ import ServiceStickyBar from "@/components/service/ServiceStickyBar";
 const svc = getServiceBySlug("personal-loan")!;
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/financial/personal-loan" },
   title: "Personal Loan in Bangalore — Lowest Rates, Quick Approval | Right Assets Management",
   description:
     "Apply for a personal loan in Bangalore with Right Assets Management. Compare offers from 15+ banks & NBFCs, get the lowest interest rate, and 24–48 hour approval. Check eligibility free.",

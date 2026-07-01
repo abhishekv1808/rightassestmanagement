@@ -257,7 +257,7 @@ const VERTICALS: VerticalConfig[] = [
   },
   {
     key: "real-estate",
-    label: "Real Estate Services",
+    label: "Realty Services",
     tagline: "Property Simplified, End to End",
     color: "#0D7E7E",
     lightBg: "#E6F4F4",

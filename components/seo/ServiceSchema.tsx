@@ -36,7 +36,7 @@ const VERTICAL_META: Record<
   { label: string; path: string }
 > = {
   financial: { label: "Financial Services", path: "financial" },
-  "real-estate": { label: "Real Estate Services", path: "real-estate" },
+  "real-estate": { label: "Realty Services", path: "real-estate" },
   legal: { label: "Legal Services", path: "legal" },
 };
 

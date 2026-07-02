@@ -4,7 +4,7 @@ import { allBlogPosts } from "@/lib/blog-data";
 import { ALL_LOCALITIES } from "@/lib/localities-data";
 import { ALL_RESOURCES } from "@/lib/resources-data";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightasset.in";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightassetsmanagement.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // ── Static core pages ──────────────────────────────────────────────────────

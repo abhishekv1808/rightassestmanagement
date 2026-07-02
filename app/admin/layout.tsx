@@ -4,7 +4,7 @@ import AdminShell from "@/components/admin/AdminShell";
 export const metadata = { title: "Admin — Right Assets Management" };
 
 const ADMIN_EMAIL =
-  (process.env.ADMIN_EMAIL ?? "admin@rightasset.in").toLowerCase();
+  (process.env.ADMIN_EMAIL ?? "admin@rightassetsmanagement.com").toLowerCase();
 
 export default async function AdminLayout({
   children,

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Phone,
   Mail,
@@ -329,24 +330,19 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-3 sm:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6 w-fit group">
-              <div
-                className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                style={{ backgroundColor: "#C9A84C" }}
-              >
-                <span className="font-heading font-bold text-white text-base">R</span>
-              </div>
-              <div className="flex flex-col leading-none gap-0.5">
-                <span className="font-heading font-bold text-white text-base tracking-wide">
-                  Right Assets
-                </span>
-                <span
-                  className="font-body text-[10px] tracking-[0.22em] uppercase font-medium"
-                  style={{ color: "#C9A84C" }}
-                >
-                  Management
-                </span>
-              </div>
+            <Link
+              href="/"
+              className="flex items-center mb-6 w-fit group"
+              aria-label="Right Assets Management — Home"
+            >
+              <Image
+                src="/images/Right-assets-management-logo.svg"
+                alt="Right Assets Management"
+                width={240}
+                height={58}
+                className="h-10 w-auto transition-transform group-hover:scale-[1.03]"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
             </Link>
 
             <p className="text-sm leading-relaxed mb-1.5" style={{ color: "rgba(255,255,255,0.5)" }}>

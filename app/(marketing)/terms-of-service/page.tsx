@@ -18,7 +18,7 @@ const SECTIONS = [
     title: "1. Acceptance of Terms",
     content: `These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "Client", "you") and Right Assets Management ("Company", "we", "us", "our"), a financial and advisory services firm registered and operating in Bangalore, Karnataka, India.
 
-By accessing this Website (rightasset.in), submitting an enquiry, booking a consultation, or engaging any of our services, you confirm that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you must not use our Website or services.
+By accessing this Website (rightassetsmanagement.com), submitting an enquiry, booking a consultation, or engaging any of our services, you confirm that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you must not use our Website or services.
 
 We reserve the right to update or modify these Terms at any time. Continued use of our Website or services after any such modification constitutes your acceptance of the revised Terms. The date of the most recent revision is indicated at the top of this page.`,
   },

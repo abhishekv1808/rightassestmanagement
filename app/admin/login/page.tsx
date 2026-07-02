@@ -11,7 +11,7 @@ import {
   Loader2,
 } from "lucide-react";
 
-const LOGO_SRC = "/images/right-assets-management-logo.png";
+const LOGO_SRC = "/images/Right-assets-management-logo.svg";
 
 export default function AdminLoginPage() {
   const [email, setEmail] = useState("");
@@ -200,6 +200,7 @@ export default function AdminLoginPage() {
               width={200}
               height={48}
               priority
+              unoptimized
               style={{
                 height: 42,
                 width: "auto",
@@ -280,6 +281,7 @@ export default function AdminLoginPage() {
               width={210}
               height={50}
               priority
+              unoptimized
               style={{ height: 40, width: "auto", marginBottom: 56 }}
             />
 

@@ -18,7 +18,7 @@
  *   ✅ openingHoursSpecification uses ISO 8601 time format
  */
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightasset.in";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightassetsmanagement.com";
 
 // ─── Update these when the client confirms exact details ─────────────────────
 const BUSINESS_PHONE =
@@ -40,7 +40,7 @@ export default function LocalBusinessSchema() {
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
-      url: `${SITE_URL}/images/right-assets-management-logo.png`,
+      url: `${SITE_URL}/images/Right-assets-management-logo.svg`,
       width: 1630,
       height: 391,
     },

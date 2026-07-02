@@ -1,4 +1,5 @@
 ﻿import Link from "next/link";
+import Image from "next/image";
 
 export default function NotFound() {
   return (
@@ -11,15 +12,14 @@ export default function NotFound() {
             className="flex items-center gap-3 group"
             aria-label="Right Assets Management — Home"
           >
-            {/* Compact wordmark logo */}
-            <div className="w-9 h-9 rounded-md bg-[#1B3A6B] flex items-center justify-center flex-shrink-0">
-              <span className="text-[#C9A84C] font-bold text-base leading-none font-serif">
-                R
-              </span>
-            </div>
-            <span className="text-[#1B3A6B] font-semibold text-base leading-tight tracking-tight group-hover:text-[#C9A84C] transition-colors">
-              Right Assets Management
-            </span>
+            <Image
+              src="/images/Right-assets-management-logo.svg"
+              alt="Right Assets Management"
+              width={220}
+              height={53}
+              priority
+              className="h-9 w-auto"
+            />
           </Link>
         </div>
       </header>

@@ -147,7 +147,15 @@ export async function POST(req: NextRequest) {
   }
 
   const subject = `New Lead: ${lead.full_name}${lead.service_interested ? ` — ${lead.service_interested}` : ""}`;
-  const adminEmail = process.env.ADMIN_EMAIL ?? "admin@rightasset.in";
+
+  // Where lead alerts are delivered.
+  const to = process.env.LEAD_NOTIFICATION_EMAIL ?? "rightassetsmanagement@gmail.com";
+  // Sending identity. Resend's shared "onboarding@resend.dev" domain works
+  // WITHOUT domain verification (it can deliver to your Resend account's own
+  // address). Once you verify a domain in Resend, set RESEND_FROM in the env,
+  // e.g. RESEND_FROM="Right Assets Management <leads@rightassetsmanagement.com>".
+  const from =
+    process.env.RESEND_FROM ?? "Right Assets Management <onboarding@resend.dev>";
 
   try {
     const res = await fetch("https://api.resend.com/emails", {
@@ -157,8 +165,10 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Right Assets Management <notifications@rightasset.in>",
-        to: [adminEmail],
+        from,
+        to: [to],
+        // Let the admin reply straight to the lead from the notification email.
+        reply_to: lead.email || undefined,
         subject,
         html: buildEmailHtml(lead),
       }),

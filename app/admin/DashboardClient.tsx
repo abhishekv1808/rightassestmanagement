@@ -1,19 +1,17 @@
 "use client";
 
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import {
   Users, TrendingUp, CheckCircle, Star,
-  ArrowRight, ArrowUpRight, Eye, FileText, PhoneCall,
+  MoreVertical, ArrowUpRight, ArrowDownRight, Calendar,
+  Search, ArrowRight,
 } from "lucide-react";
 import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, PieChart, Pie, Legend, Label,
+  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
+  PieChart, Pie, Cell, Label,
 } from "recharts";
-import {
-  Card, CardContent, CardDescription, CardHeader, CardTitle,
-} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { buttonClasses } from "@/components/ui/button";
 
 // ─── Status badge ─────────────────────────────────────────────────────────────
 
@@ -31,101 +29,92 @@ function StatusBadge({ status }: { status: string }) {
   const c = STATUS_CFG[status] ?? STATUS_CFG.new;
   return (
     <Badge variant={c.variant}>
-      <span
-        className="h-1.5 w-1.5 shrink-0 rounded-full"
-        style={{ backgroundColor: c.dot }}
-      />
+      <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: c.dot }} />
       {c.label}
     </Badge>
   );
 }
-
-// ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function getInitials(name: string) {
   const p = name.trim().split(" ");
   return p.length >= 2 ? (p[0][0] + p[1][0]).toUpperCase() : name.slice(0, 2).toUpperCase();
 }
 
-function getGreeting() {
-  const h = new Date().getHours();
-  return h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening";
-}
-
 // ─── Stat card ────────────────────────────────────────────────────────────────
 
 type StatCardProps = {
-  title: string;
+  label: string;
   value: number;
-  subtitle: string;
   icon: React.ComponentType<{ size?: number; color?: string }>;
-  accent: string;
+  tintBg: string;
+  tintFg: string;
   href: string;
+  trend: React.ReactNode;
 };
 
-function StatCard({ title, value, subtitle, icon: Icon, accent, href }: StatCardProps) {
+function StatCard({ label, value, icon: Icon, tintBg, tintFg, href, trend }: StatCardProps) {
   return (
-    <Link href={href} className="group block">
-      <Card className="relative overflow-hidden transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md">
-        {/* Accent top strip */}
-        <span
-          className="absolute inset-x-0 top-0 h-1"
-          style={{ backgroundColor: accent }}
-        />
-        <CardContent className="p-5">
-          <div className="mb-4 flex items-start justify-between">
-            <div
-              className="flex h-11 w-11 items-center justify-center rounded-xl"
-              style={{ backgroundColor: `${accent}15` }}
-            >
-              <Icon size={20} color={accent} />
-            </div>
-            <ArrowUpRight
-              size={16}
-              className="text-slate-300 transition-colors group-hover:text-slate-500"
-            />
-          </div>
-          <p className="mb-1 text-[32px] font-extrabold leading-none text-[#1B3A6B]">
-            {value.toLocaleString()}
-          </p>
-          <p className="text-[13px] font-semibold text-slate-700">{title}</p>
-          <p className="mt-0.5 text-[11px] text-slate-400">{subtitle}</p>
-        </CardContent>
-      </Card>
+    <Link
+      href={href}
+      className="group block rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_1px_2px_rgba(16,24,40,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+    >
+      <div className="mb-3.5 flex items-start justify-between">
+        <div
+          className="flex h-11 w-11 items-center justify-center rounded-full"
+          style={{ backgroundColor: tintBg }}
+        >
+          <Icon size={19} color={tintFg} />
+        </div>
+        <MoreVertical size={16} className="text-slate-300 group-hover:text-slate-400" />
+      </div>
+      <p className="text-[13px] font-medium text-slate-500">{label}</p>
+      <p className="mt-1 mb-2 text-[28px] font-extrabold leading-none text-[#1B3A6B]">
+        {value.toLocaleString()}
+      </p>
+      {trend}
     </Link>
   );
 }
 
-// ─── Quick action card ────────────────────────────────────────────────────────
-
-function QuickAction({
-  label, desc, icon: Icon, href, accent,
-}: {
-  label: string; desc: string;
-  icon: React.ComponentType<{ size?: number; color?: string }>;
-  href: string; accent: string;
-}) {
+function TrendUp({ pct, note }: { pct: number; note: string }) {
+  const positive = pct >= 0;
   return (
-    <Link href={href} className="group block flex-1 min-w-[180px]">
-      <Card className="transition-all duration-150 group-hover:-translate-y-0.5 group-hover:border-slate-300 group-hover:shadow-md">
-        <CardContent className="flex items-center gap-3.5 p-4">
-          <div
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
-            style={{ backgroundColor: `${accent}15` }}
-          >
-            <Icon size={18} color={accent} />
-          </div>
-          <div className="min-w-0 flex-1">
-            <p className="text-[13px] font-bold text-[#1B3A6B]">{label}</p>
-            <p className="truncate text-[11px] text-slate-400">{desc}</p>
-          </div>
-          <ArrowRight
-            size={15}
-            className="shrink-0 text-slate-300 transition-all group-hover:translate-x-0.5 group-hover:text-slate-500"
-          />
-        </CardContent>
-      </Card>
-    </Link>
+    <p className="flex items-center gap-1 text-[12px]">
+      <span
+        className="inline-flex items-center gap-0.5 font-bold"
+        style={{ color: positive ? "#16a34a" : "#dc2626" }}
+      >
+        {positive ? <ArrowUpRight size={13} /> : <ArrowDownRight size={13} />}
+        {Math.abs(pct)}%
+      </span>
+      <span className="text-slate-400">{note}</span>
+    </p>
+  );
+}
+
+function TrendNote({ text, color = "#94A3B8" }: { text: string; color?: string }) {
+  return <p className="text-[12px] font-medium" style={{ color }}>{text}</p>;
+}
+
+// ─── Chart callout tooltip (dark pill, like the reference) ─────────────────────
+
+type TooltipEntry = { value: number };
+function CalloutTooltip({
+  active, payload, label,
+}: {
+  active?: boolean;
+  payload?: TooltipEntry[];
+  label?: string;
+}) {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="rounded-lg bg-[#0F1A2E] px-3 py-2 text-center shadow-xl">
+      <p className="text-[10px] font-medium text-white/55">{label}</p>
+      <p className="text-[15px] font-bold text-white">
+        {payload[0].value.toLocaleString()}
+        <span className="ml-1 text-[10px] font-normal text-white/50">leads</span>
+      </p>
+    </div>
   );
 }
 
@@ -143,12 +132,13 @@ type RecentLead = {
 interface DashboardClientProps {
   totalLeads: number;
   newLeads: number;
+  contactedLeads: number;
   convertedLeads: number;
   pendingTestimonials: number;
-  weeklyChartData: { date: string; label: string; count: number }[];
+  monthlyChartData: { label: string; count: number }[];
+  leadsTrendPct: number;
   statusData: { name: string; value: number; color: string }[];
   recentLeads: RecentLead[];
-  userEmail?: string;
 }
 
 // ─── Dashboard ────────────────────────────────────────────────────────────────
@@ -158,150 +148,151 @@ export default function DashboardClient({
   newLeads,
   convertedLeads,
   pendingTestimonials,
-  weeklyChartData,
+  monthlyChartData,
+  leadsTrendPct,
   statusData,
   recentLeads,
-  userEmail,
 }: DashboardClientProps) {
+  const [query, setQuery] = useState("");
+
   const conversionRate = totalLeads > 0 ? Math.round((convertedLeads / totalLeads) * 100) : 0;
   const totalStatusCount = statusData.reduce((s, d) => s + d.value, 0);
-  const todayStr = new Date().toLocaleDateString("en-IN", {
-    weekday: "long", day: "numeric", month: "long", year: "numeric",
-  });
-  const userName = userEmail ? userEmail.split("@")[0] : null;
+
+  const rangeLabel =
+    monthlyChartData.length > 0
+      ? `${monthlyChartData[0].label} – ${monthlyChartData[monthlyChartData.length - 1].label} ${new Date().getFullYear()}`
+      : "Last 6 months";
+
+  const filteredLeads = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return recentLeads;
+    return recentLeads.filter(
+      (l) =>
+        l.full_name.toLowerCase().includes(q) ||
+        l.phone.includes(q) ||
+        (l.service_interested ?? "").toLowerCase().includes(q)
+    );
+  }, [query, recentLeads]);
 
   const statCards: StatCardProps[] = [
-    { title: "Total Leads", value: totalLeads, subtitle: "All time", icon: Users, accent: "#1B3A6B", href: "/admin/leads" },
-    { title: "New Leads", value: newLeads, subtitle: "Awaiting contact", icon: TrendingUp, accent: "#3B82F6", href: "/admin/leads" },
-    { title: "Converted", value: convertedLeads, subtitle: "Successful deals", icon: CheckCircle, accent: "#10B981", href: "/admin/leads" },
-    { title: "Pending Reviews", value: pendingTestimonials, subtitle: "Testimonials to approve", icon: Star, accent: "#F59E0B", href: "/admin/testimonials" },
+    {
+      label: "Total Leads", value: totalLeads, icon: Users,
+      tintBg: "#FBF3DF", tintFg: "#C9A84C", href: "/admin/leads",
+      trend: <TrendUp pct={leadsTrendPct} note="From last month" />,
+    },
+    {
+      label: "New Leads", value: newLeads, icon: TrendingUp,
+      tintBg: "#E7F0FF", tintFg: "#2563EB", href: "/admin/leads",
+      trend: <TrendNote text="Awaiting first contact" />,
+    },
+    {
+      label: "Converted", value: convertedLeads, icon: CheckCircle,
+      tintBg: "#E7F7EE", tintFg: "#059669", href: "/admin/leads",
+      trend: <TrendNote text={`${conversionRate}% conversion rate`} color="#059669" />,
+    },
+    {
+      label: "Pending Reviews", value: pendingTestimonials, icon: Star,
+      tintBg: "#F1ECFB", tintFg: "#7C3AED", href: "/admin/testimonials",
+      trend: <TrendNote text="Testimonials to approve" />,
+    },
   ];
 
   return (
     <div className="space-y-5">
 
-      {/* ── Welcome banner ──────────────────────────────────────────────── */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1B3A6B] to-[#0D2347] p-6 shadow-lg shadow-[#1B3A6B]/20 sm:p-7">
-        {/* Decorative glow */}
-        <div
-          className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(201,168,76,0.16) 0%, transparent 70%)" }}
-        />
-        <div className="relative flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wider text-white/45">
-              {todayStr}
-            </p>
-            <h2 className="mb-1.5 text-[22px] font-extrabold text-white">
-              {getGreeting()}{userName ? `, ${userName}` : ""}! 👋
-            </h2>
-            <p className="text-[13px] text-white/60">
-              {newLeads > 0 ? (
-                <>
-                  <span className="font-bold text-[#93C5FD]">
-                    {newLeads} new lead{newLeads !== 1 ? "s" : ""}
-                  </span>{" "}
-                  awaiting contact
-                  {pendingTestimonials > 0
-                    ? ` · ${pendingTestimonials} testimonial${pendingTestimonials !== 1 ? "s" : ""} pending`
-                    : "."}
-                </>
-              ) : (
-                "All leads are up to date. Great work!"
-              )}
-            </p>
-          </div>
-          <div className="flex shrink-0 gap-2.5">
-            <Link
-              href="/admin/leads"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-white/20"
-            >
-              <Eye size={15} /> View Leads
-            </Link>
-            <Link
-              href="/admin/leads"
-              className={buttonClasses({ variant: "gold", size: "default" })}
-            >
-              <PhoneCall size={15} /> Call Queue
-            </Link>
-          </div>
+      {/* ── Header ──────────────────────────────────────────────────────── */}
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <h2 className="text-[22px] font-extrabold text-[#1B3A6B]">Dashboard</h2>
+          <p className="text-[13px] text-slate-400">Here&apos;s your lead &amp; enquiry overview</p>
+        </div>
+        <div className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-[13px] font-semibold text-slate-600 shadow-sm">
+          <Calendar size={15} className="text-[#C9A84C]" />
+          {rangeLabel}
         </div>
       </div>
 
       {/* ── Stat cards ──────────────────────────────────────────────────── */}
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-        {statCards.map((c) => <StatCard key={c.title} {...c} />)}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {statCards.map((c) => <StatCard key={c.label} {...c} />)}
       </div>
 
-      {/* ── Charts ──────────────────────────────────────────────────────── */}
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-5">
+      {/* ── Charts row ──────────────────────────────────────────────────── */}
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
 
-        {/* Bar chart — leads this week */}
-        <Card className="lg:col-span-3">
-          <CardHeader className="flex-row items-start justify-between gap-3 space-y-0">
+        {/* Leads Overview — area chart */}
+        <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_1px_2px_rgba(16,24,40,0.04)] lg:col-span-2 sm:p-6">
+          <div className="mb-4 flex items-start justify-between">
             <div>
-              <CardTitle>Leads This Week</CardTitle>
-              <CardDescription className="mt-1">Daily submissions · last 7 days</CardDescription>
+              <h3 className="text-[15px] font-bold text-[#1B3A6B]">Leads Overview</h3>
+              <p className="text-xs text-slate-400">New enquiries · last 6 months</p>
             </div>
-            <Badge variant="gold" className="shrink-0">Today highlighted</Badge>
-          </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={210}>
-              <BarChart data={weeklyChartData} margin={{ top: 4, right: 0, left: -26, bottom: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
-                <XAxis dataKey="label" tick={{ fontSize: 12, fill: "#94A3B8" }} axisLine={false} tickLine={false} />
-                <YAxis tick={{ fontSize: 12, fill: "#94A3B8" }} axisLine={false} tickLine={false} allowDecimals={false} />
-                <Tooltip
-                  contentStyle={{ borderRadius: "10px", border: "none", boxShadow: "0 4px 20px rgba(0,0,0,0.12)", fontSize: "13px", padding: "8px 14px" }}
-                  cursor={{ fill: "rgba(27,58,107,0.03)" }}
-                />
-                <Bar dataKey="count" radius={[6, 6, 0, 0]} name="Leads" fill="#1B3A6B" />
-              </BarChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
+            <MoreVertical size={16} className="text-slate-300" />
+          </div>
+          <ResponsiveContainer width="100%" height={260}>
+            <AreaChart data={monthlyChartData} margin={{ top: 8, right: 8, left: -18, bottom: 0 }}>
+              <defs>
+                <linearGradient id="leadsFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#C9A84C" stopOpacity={0.28} />
+                  <stop offset="100%" stopColor="#C9A84C" stopOpacity={0} />
+                </linearGradient>
+              </defs>
+              <CartesianGrid strokeDasharray="4 4" stroke="#EEF2F6" vertical={false} />
+              <XAxis dataKey="label" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: "#94A3B8" }} dy={6} />
+              <YAxis
+                axisLine={false} tickLine={false} allowDecimals={false}
+                tick={{ fontSize: 12, fill: "#94A3B8" }}
+                width={40}
+                tickFormatter={(v) => (v >= 1000 ? `${v / 1000}k` : `${v}`)}
+              />
+              <Tooltip content={<CalloutTooltip />} cursor={{ stroke: "#C9A84C", strokeWidth: 1, strokeDasharray: "4 4" }} />
+              <Area
+                type="monotone" dataKey="count" stroke="#C9A84C" strokeWidth={3}
+                fill="url(#leadsFill)"
+                dot={false}
+                activeDot={{ r: 5, fill: "#C9A84C", stroke: "#fff", strokeWidth: 2 }}
+              />
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
 
-        {/* Pie chart — leads by status */}
-        <Card className="lg:col-span-2">
-          <CardHeader className="flex-row items-start justify-between gap-3 space-y-0">
+        {/* Leads by Status — donut */}
+        <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:p-6">
+          <div className="mb-2 flex items-start justify-between">
             <div>
-              <CardTitle>Leads by Status</CardTitle>
-              <CardDescription className="mt-1">Pipeline breakdown</CardDescription>
+              <h3 className="text-[15px] font-bold text-[#1B3A6B]">Leads by Status</h3>
+              <p className="text-xs text-slate-400">Pipeline breakdown</p>
             </div>
-            {conversionRate > 0 && (
-              <Badge variant="success" className="shrink-0">{conversionRate}% converted</Badge>
-            )}
-          </CardHeader>
-          <CardContent>
-            {totalStatusCount === 0 ? (
-              <div className="flex h-[200px] flex-col items-center justify-center gap-2.5">
-                <Users size={36} color="#E2E8F0" />
-                <p className="text-[13px] text-slate-400">No leads yet</p>
-              </div>
-            ) : (
-              <ResponsiveContainer width="100%" height={210}>
+            <MoreVertical size={16} className="text-slate-300" />
+          </div>
+
+          {totalStatusCount === 0 ? (
+            <div className="flex h-[200px] flex-col items-center justify-center gap-2.5">
+              <Users size={34} color="#E2E8F0" />
+              <p className="text-[13px] text-slate-400">No leads yet</p>
+            </div>
+          ) : (
+            <>
+              <ResponsiveContainer width="100%" height={186}>
                 <PieChart>
                   <Pie
-                    data={statusData.map(d => ({ ...d, fill: d.color }))}
-                    cx="50%" cy="42%"
-                    innerRadius={58} outerRadius={84}
-                    paddingAngle={3}
-                    dataKey="value"
-                    strokeWidth={0}
+                    data={statusData} dataKey="value"
+                    cx="50%" cy="50%"
+                    innerRadius={60} outerRadius={86}
+                    paddingAngle={3} cornerRadius={6} stroke="none"
                   >
+                    {statusData.map((d) => <Cell key={d.name} fill={d.color} />)}
                     <Label
-                      content={(props) => {
-                        const vb = props.viewBox as { cx?: number; cy?: number };
+                      content={({ viewBox }) => {
+                        const vb = viewBox as { cx?: number; cy?: number };
                         const cx = vb?.cx ?? 0;
                         const cy = vb?.cy ?? 0;
                         return (
                           <g>
-                            <text x={cx} y={cy - 7} textAnchor="middle" dominantBaseline="middle"
-                              style={{ fontSize: "22px", fontWeight: "800", fill: "#1B3A6B" }}>
+                            <text x={cx} y={cy - 6} textAnchor="middle" style={{ fontSize: 24, fontWeight: 800, fill: "#1B3A6B" }}>
                               {totalStatusCount}
                             </text>
-                            <text x={cx} y={cy + 12} textAnchor="middle" dominantBaseline="middle"
-                              style={{ fontSize: "10px", fill: "#94A3B8", fontWeight: "700", letterSpacing: "1px" }}>
+                            <text x={cx} y={cy + 14} textAnchor="middle" style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, fill: "#94A3B8" }}>
                               TOTAL
                             </text>
                           </g>
@@ -309,66 +300,70 @@ export default function DashboardClient({
                       }}
                     />
                   </Pie>
-                  <Legend
-                    iconType="circle" iconSize={8}
-                    formatter={(v) => <span style={{ fontSize: "12px", color: "#64748B" }}>{v}</span>}
-                  />
-                  <Tooltip
-                    contentStyle={{ borderRadius: "10px", border: "none", boxShadow: "0 4px 20px rgba(0,0,0,0.12)", fontSize: "13px" }}
-                  />
+                  <Tooltip contentStyle={{ borderRadius: 10, border: "none", boxShadow: "0 4px 20px rgba(0,0,0,0.12)", fontSize: 13 }} />
                 </PieChart>
               </ResponsiveContainer>
-            )}
-          </CardContent>
-        </Card>
-      </div>
 
-      {/* ── Quick Actions ────────────────────────────────────────────────── */}
-      <div>
-        <p className="mb-3 ml-0.5 text-[11px] font-bold uppercase tracking-wider text-slate-400">
-          Quick Actions
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <QuickAction label="All Leads" desc={`${totalLeads} total · ${newLeads} new`} icon={Users} href="/admin/leads" accent="#1B3A6B" />
-          <QuickAction label="Approve Testimonials" desc={`${pendingTestimonials} pending approval`} icon={Star} href="/admin/testimonials" accent="#F59E0B" />
-          <QuickAction label="Write Blog Post" desc="Create new article" icon={FileText} href="/admin/blog" accent="#8B5CF6" />
+              {/* Legend */}
+              <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2">
+                {statusData.map((d) => (
+                  <div key={d.name} className="flex items-center gap-2">
+                    <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ backgroundColor: d.color }} />
+                    <span className="text-[12px] text-slate-500">{d.name}</span>
+                    <span className="ml-auto text-[12px] font-bold text-slate-700">{d.value}</span>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
 
-      {/* ── Recent leads ─────────────────────────────────────────────────── */}
-      <Card className="overflow-hidden">
-        <div className="flex items-center justify-between border-b border-slate-100 p-5 sm:px-6">
+      {/* ── Recent leads table ──────────────────────────────────────────── */}
+      <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-[0_1px_2px_rgba(16,24,40,0.04)]">
+        <div className="flex flex-wrap items-center justify-between gap-3 p-5 sm:px-6">
           <div>
-            <CardTitle>Recent Leads</CardTitle>
-            <CardDescription className="mt-1">
-              Latest {Math.min(recentLeads.length, 8)} submissions
-            </CardDescription>
+            <h3 className="text-[15px] font-bold text-[#1B3A6B]">Recent Leads</h3>
+            <p className="text-xs text-slate-400">Latest enquiries from the website</p>
           </div>
-          <Link
-            href="/admin/leads"
-            className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#C9A84C] transition-colors hover:text-[#a5842f]"
-          >
-            View all <ArrowRight size={13} />
-          </Link>
+          <div className="flex items-center gap-3">
+            <div className="relative">
+              <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search leads…"
+                className="w-52 rounded-full border border-slate-200 bg-slate-50 py-2 pl-9 pr-3 text-[13px] text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#1B3A6B] focus:bg-white"
+              />
+            </div>
+            <Link
+              href="/admin/leads"
+              className="hidden items-center gap-1.5 text-[13px] font-semibold text-[#C9A84C] transition-colors hover:text-[#a5842f] sm:inline-flex"
+            >
+              View all <ArrowRight size={13} />
+            </Link>
+          </div>
         </div>
 
-        {recentLeads.length === 0 ? (
+        {filteredLeads.length === 0 ? (
           <div className="px-5 py-16 text-center">
-            <Users size={40} color="#E2E8F0" className="mx-auto mb-3" />
-            <p className="text-sm text-slate-400">No leads yet</p>
-            <p className="mt-1 text-xs text-slate-300">
-              Leads submitted through the website will appear here.
+            <Users size={38} color="#E2E8F0" className="mx-auto mb-3" />
+            <p className="text-sm text-slate-400">
+              {recentLeads.length === 0 ? "No leads yet" : "No leads match your search"}
             </p>
+            {recentLeads.length === 0 && (
+              <p className="mt-1 text-xs text-slate-300">Website enquiries will appear here.</p>
+            )}
           </div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-slate-50/70">
-                  {["Lead", "Phone", "Service Interested", "Status", "Date"].map((h) => (
+                <tr className="bg-[#FDF6EC]">
+                  {["No", "Lead", "Service Interested", "Phone", "Status", "Date"].map((h) => (
                     <th
                       key={h}
-                      className="whitespace-nowrap px-5 py-2.5 text-left text-[11px] font-bold uppercase tracking-wide text-slate-400 sm:px-6"
+                      className="whitespace-nowrap px-5 py-3 text-left text-[11px] font-bold uppercase tracking-wide text-[#9a7d2e] first:pl-6 sm:px-6"
                     >
                       {h}
                     </th>
@@ -376,48 +371,30 @@ export default function DashboardClient({
                 </tr>
               </thead>
               <tbody>
-                {recentLeads.map((lead) => (
-                  <tr
-                    key={lead.id}
-                    className="border-t border-slate-50 transition-colors hover:bg-slate-50/70"
-                  >
-                    {/* Name with avatar */}
+                {filteredLeads.map((lead, i) => (
+                  <tr key={lead.id} className="border-t border-slate-50 transition-colors hover:bg-slate-50/70">
+                    <td className="px-5 py-3.5 pl-6 text-[13px] font-medium text-slate-400">
+                      {String(i + 1).padStart(2, "0")}
+                    </td>
                     <td className="px-5 py-3.5 sm:px-6">
                       <div className="flex items-center gap-3">
                         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#1B3A6B] to-[#2D5299]">
-                          <span className="text-[11px] font-bold text-[#C9A84C]">
-                            {getInitials(lead.full_name)}
-                          </span>
+                          <span className="text-[11px] font-bold text-[#C9A84C]">{getInitials(lead.full_name)}</span>
                         </div>
-                        <span className="text-sm font-semibold text-slate-800">
-                          {lead.full_name}
-                        </span>
+                        <span className="text-sm font-semibold text-slate-800">{lead.full_name}</span>
                       </div>
                     </td>
-                    {/* Phone */}
+                    <td className="max-w-[220px] truncate px-5 py-3.5 text-[13px] text-slate-500 sm:px-6">
+                      {lead.service_interested ?? <span className="text-slate-300">—</span>}
+                    </td>
                     <td className="px-5 py-3.5 sm:px-6">
-                      <a
-                        href={`tel:${lead.phone}`}
-                        className="font-mono text-[13px] tracking-tight text-slate-500 hover:text-[#1B3A6B]"
-                      >
+                      <a href={`tel:${lead.phone}`} className="font-mono text-[13px] text-slate-500 hover:text-[#1B3A6B]">
                         {lead.phone}
                       </a>
                     </td>
-                    {/* Service */}
-                    <td className="max-w-[200px] truncate px-5 py-3.5 sm:px-6">
-                      <span className="text-[13px] text-slate-500">
-                        {lead.service_interested ?? <span className="text-slate-300">—</span>}
-                      </span>
-                    </td>
-                    {/* Status */}
-                    <td className="px-5 py-3.5 sm:px-6">
-                      <StatusBadge status={lead.status} />
-                    </td>
-                    {/* Date */}
+                    <td className="px-5 py-3.5 sm:px-6"><StatusBadge status={lead.status} /></td>
                     <td className="whitespace-nowrap px-5 py-3.5 text-xs text-slate-400 sm:px-6">
-                      {new Date(lead.created_at).toLocaleDateString("en-IN", {
-                        day: "numeric", month: "short", year: "numeric",
-                      })}
+                      {new Date(lead.created_at).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}
                     </td>
                   </tr>
                 ))}
@@ -425,7 +402,7 @@ export default function DashboardClient({
             </table>
           </div>
         )}
-      </Card>
+      </div>
     </div>
   );
 }

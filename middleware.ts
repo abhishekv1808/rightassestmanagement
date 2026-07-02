@@ -4,7 +4,7 @@ import { NextResponse, type NextRequest } from "next/server";
 // The only email address that is allowed to access the admin portal.
 // Set ADMIN_EMAIL in your .env.local to override.
 const ADMIN_EMAIL =
-  (process.env.ADMIN_EMAIL ?? "admin@rightasset.in").toLowerCase();
+  (process.env.ADMIN_EMAIL ?? "admin@rightassetsmanagement.com").toLowerCase();
 
 export async function middleware(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });

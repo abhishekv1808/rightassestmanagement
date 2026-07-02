@@ -21,7 +21,7 @@ import { getPincodeDetails } from "@/lib/api/pincode";
 import { submitPersonalLoan } from "@/app/actions/submit-personal-loan";
 
 const ADMIN_EMAIL = (
-  process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@rightasset.in"
+  process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@rightassetsmanagement.com"
 ).toLowerCase();
 
 const WA_NUMBER = "919742826804";

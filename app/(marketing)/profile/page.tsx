@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const ADMIN_EMAIL = (
-  process.env.ADMIN_EMAIL ?? "admin@rightasset.in"
+  process.env.ADMIN_EMAIL ?? "admin@rightassetsmanagement.com"
 ).toLowerCase();
 
 export default async function ProfilePage() {

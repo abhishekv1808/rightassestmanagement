@@ -38,7 +38,7 @@ export async function generateMetadata({
     openGraph: {
       title: locality.metaTitle,
       description: locality.metaDescription,
-      url: `https://rightasset.in/bangalore/${locality.slug}`,
+      url: `https://rightassetsmanagement.com/bangalore/${locality.slug}`,
       type: "website",
     },
   };
@@ -95,8 +95,8 @@ export default async function LocalityPage({
     name: `Right Assets Management — ${locality.name}`,
     description: `Financial, real estate, and legal services in ${locality.name}, Bangalore. ${locality.description}`,
     areaServed: `${locality.name}, Bangalore, Karnataka`,
-    url: `https://rightasset.in/bangalore/${locality.slug}`,
-    telephone: "+91-XXXXXXXXXX",
+    url: `https://rightassetsmanagement.com/bangalore/${locality.slug}`,
+    telephone: "+91-9742826804",
     address: {
       "@type": "PostalAddress",
       addressLocality: locality.name,
@@ -250,7 +250,7 @@ export default async function LocalityPage({
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="tel:+91XXXXXXXXXX"
+                href="tel:+919742826804"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:bg-white/10"
                 style={{
                   border: "1px solid rgba(255,255,255,0.25)",
@@ -673,7 +673,7 @@ export default async function LocalityPage({
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/91XXXXXXXXXX"
+              href="https://wa.me/919742826804"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:bg-white/10"

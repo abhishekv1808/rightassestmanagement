@@ -14,7 +14,7 @@ type AuthUser = {
 
 // Admin session must never appear as a client account in the marketing site
 const ADMIN_EMAIL = (
-  process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@rightasset.in"
+  process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@rightassetsmanagement.com"
 ).toLowerCase();
 const isAdminEmail = (email?: string | null) =>
   (email ?? "").toLowerCase() === ADMIN_EMAIL;
@@ -96,9 +96,9 @@ export default function UserAuthButton() {
           gap: 6,
           padding: "7px 14px",
           borderRadius: 8,
-          border: "1.5px solid rgba(255,255,255,0.25)",
-          backgroundColor: "rgba(255,255,255,0.07)",
-          color: "rgba(255,255,255,0.85)",
+          border: "1.5px solid #CBD5E1",
+          backgroundColor: "#FFFFFF",
+          color: "#1B3A6B",
           fontSize: 13,
           fontWeight: 600,
           textDecoration: "none",
@@ -107,15 +107,15 @@ export default function UserAuthButton() {
         }}
         onMouseEnter={(e) => {
           const el = e.currentTarget as HTMLAnchorElement;
-          el.style.backgroundColor = "rgba(255,255,255,0.14)";
-          el.style.borderColor = "rgba(255,255,255,0.45)";
-          el.style.color = "#FFFFFF";
+          el.style.backgroundColor = "#F1F5F9";
+          el.style.borderColor = "#94A3B8";
+          el.style.color = "#1B3A6B";
         }}
         onMouseLeave={(e) => {
           const el = e.currentTarget as HTMLAnchorElement;
-          el.style.backgroundColor = "rgba(255,255,255,0.07)";
-          el.style.borderColor = "rgba(255,255,255,0.25)";
-          el.style.color = "rgba(255,255,255,0.85)";
+          el.style.backgroundColor = "#FFFFFF";
+          el.style.borderColor = "#CBD5E1";
+          el.style.color = "#1B3A6B";
         }}
       >
         <LogIn size={14} />
@@ -135,24 +135,20 @@ export default function UserAuthButton() {
           gap: 7,
           padding: "5px 10px 5px 5px",
           borderRadius: 9,
-          backgroundColor: dropdownOpen
-            ? "rgba(255,255,255,0.14)"
-            : "rgba(255,255,255,0.08)",
-          border: "1.5px solid rgba(255,255,255,0.18)",
-          color: "rgba(255,255,255,0.9)",
+          backgroundColor: dropdownOpen ? "#E9EEF5" : "#F1F5F9",
+          border: "1.5px solid #E2E8F0",
+          color: "#1B3A6B",
           cursor: "pointer",
           fontSize: 13,
           fontWeight: 600,
           transition: "background-color 0.15s",
         }}
         onMouseEnter={(e) => {
-          (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-            "rgba(255,255,255,0.14)";
+          (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#E9EEF5";
         }}
         onMouseLeave={(e) => {
           if (!dropdownOpen)
-            (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-              "rgba(255,255,255,0.08)";
+            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#F1F5F9";
         }}
       >
         {/* Avatar */}

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       "Financial, Real Estate & Legal Services Across Bangalore — Right Assets Management",
     description:
       "Serving 15 Bangalore localities — investments, property, and legal advisory near you.",
-    url: "https://rightasset.in/bangalore",
+    url: "https://rightassetsmanagement.com/bangalore",
     type: "website",
   },
 };
@@ -135,7 +135,7 @@ export default function BangaloreIndexPage() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="https://wa.me/91XXXXXXXXXX"
+                href="https://wa.me/919742826804"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:bg-white/10"
@@ -382,7 +382,7 @@ export default function BangaloreIndexPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/91XXXXXXXXXX"
+              href="https://wa.me/919742826804"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:bg-white/10"

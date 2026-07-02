@@ -86,11 +86,11 @@ export default async function ResourceSlugPage({
             "@type": "CreativeWork",
             name: resource.title,
             description: resource.metaDescription,
-            url: `https://rightasset.in/resources/${resource.slug}`,
+            url: `https://rightassetsmanagement.com/resources/${resource.slug}`,
             publisher: {
               "@type": "Organization",
               name: "Right Assets Management",
-              url: "https://rightasset.in",
+              url: "https://rightassetsmanagement.com",
             },
             isAccessibleForFree: true,
             inLanguage: "en-IN",

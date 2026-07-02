@@ -173,7 +173,7 @@ export default function LeadForm({
 
   // ── Auto-prefill from logged-in user's profile ─────────────────────────────
   const ADMIN_EMAIL_CLIENT = (
-    process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@rightasset.in"
+    process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@rightassetsmanagement.com"
   ).toLowerCase();
 
   useEffect(() => {

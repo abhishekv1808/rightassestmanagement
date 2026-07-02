@@ -16,7 +16,7 @@ const SECTIONS = [
   {
     id: "general",
     title: "1. General Disclaimer",
-    content: `The information contained on this Website (rightasset.in) and provided through any channel of communication by Right Assets Management — including in-person consultations, telephone conversations, WhatsApp messages, email correspondence, and written reports — is for general informational and advisory purposes only.
+    content: `The information contained on this Website (rightassetsmanagement.com) and provided through any channel of communication by Right Assets Management — including in-person consultations, telephone conversations, WhatsApp messages, email correspondence, and written reports — is for general informational and advisory purposes only.
 
 Nothing on this Website or communicated by our team constitutes a guarantee, representation, or warranty of any kind regarding financial performance, property transactions, or legal outcomes. All information is provided in good faith, but Right Assets Management makes no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of any information.
 

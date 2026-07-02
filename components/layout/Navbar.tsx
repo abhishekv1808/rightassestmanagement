@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -233,35 +234,30 @@ export default function Navbar() {
     <>
       {/* ── Fixed Navbar Bar ─────────────────────────────────────────────── */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-300${scrolled ? " shadow-xl" : ""}`}
-        style={{ backgroundColor: "#1B3A6B" }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-300${scrolled ? " shadow-lg" : ""}`}
+        style={{ backgroundColor: "#FFFFFF", borderBottom: "1px solid #E7EAF0" }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-[72px] gap-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="flex items-center justify-between h-16 lg:h-20 gap-5">
 
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0 flex items-center gap-2.5 group">
-              <div
-                className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105"
-                style={{ backgroundColor: "#C9A84C" }}
-              >
-                <span className="font-heading font-bold text-white text-sm leading-none">R</span>
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="font-heading font-bold text-white text-[15px] tracking-wide">
-                  Right Assets
-                </span>
-                <span
-                  className="font-body font-medium text-[9.5px] tracking-[0.22em] uppercase"
-                  style={{ color: "#C9A84C" }}
-                >
-                  Management
-                </span>
-              </div>
+            <Link
+              href="/"
+              className="flex-shrink-0 flex items-center group"
+              aria-label="Right Assets Management — Home"
+            >
+              <Image
+                src="/images/Right-assets-management-logo.svg"
+                alt="Right Assets Management"
+                width={220}
+                height={53}
+                priority
+                className="h-9 lg:h-11 w-auto transition-transform group-hover:scale-[1.03]"
+              />
             </Link>
 
             {/* ── Desktop Navigation ──────────────────────────────────────── */}
-            <div className="hidden lg:flex items-center gap-0.5 flex-1 justify-center">
+            <div className="hidden lg:flex items-center gap-1 flex-1 justify-center">
               {VERTICALS.map((v) => (
                 <div
                   key={v.label}
@@ -274,8 +270,8 @@ export default function Navbar() {
                     style={{
                       color:
                         isActive(v.href) || activeMenu === v.label
-                          ? "#C9A84C"
-                          : "rgba(255,255,255,0.82)",
+                          ? "#1B3A6B"
+                          : "#475569",
                     }}
                   >
                     {v.shortLabel}
@@ -298,7 +294,7 @@ export default function Navbar() {
               ))}
 
               {/* Divider */}
-              <div className="w-px h-4 mx-2 flex-shrink-0" style={{ backgroundColor: "rgba(255,255,255,0.18)" }} />
+              <div className="w-px h-4 mx-2 flex-shrink-0" style={{ backgroundColor: "#E2E8F0" }} />
 
               {DESKTOP_SECONDARY.map((link) => (
                 <Link
@@ -306,7 +302,7 @@ export default function Navbar() {
                   href={link.href}
                   className="relative px-3.5 py-2.5 rounded-md text-sm font-medium transition-colors whitespace-nowrap"
                   style={{
-                    color: isActive(link.href) ? "#C9A84C" : "rgba(255,255,255,0.75)",
+                    color: isActive(link.href) ? "#1B3A6B" : "#475569",
                   }}
                 >
                   {link.label}
@@ -321,29 +317,29 @@ export default function Navbar() {
             </div>
 
             {/* ── Desktop Right Actions ────────────────────────────────────── */}
-            <div className="hidden lg:flex items-center gap-2.5 flex-shrink-0">
+            <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
 
               {/* Visible search bar */}
               <button
                 onClick={() => setSearchOpen(true)}
                 className="flex items-center gap-2.5 px-3.5 py-2 rounded-full text-sm transition-all duration-200"
                 style={{
-                  backgroundColor: "rgba(255,255,255,0.09)",
-                  border: "1px solid rgba(255,255,255,0.16)",
-                  color: "rgba(255,255,255,0.58)",
+                  backgroundColor: "#F1F5F9",
+                  border: "1px solid #E2E8F0",
+                  color: "#64748B",
                   minWidth: "192px",
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget as HTMLElement;
-                  el.style.backgroundColor = "rgba(255,255,255,0.14)";
-                  el.style.borderColor = "rgba(255,255,255,0.28)";
-                  el.style.color = "rgba(255,255,255,0.9)";
+                  el.style.backgroundColor = "#E9EEF5";
+                  el.style.borderColor = "#CBD5E1";
+                  el.style.color = "#334155";
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget as HTMLElement;
-                  el.style.backgroundColor = "rgba(255,255,255,0.09)";
-                  el.style.borderColor = "rgba(255,255,255,0.16)";
-                  el.style.color = "rgba(255,255,255,0.58)";
+                  el.style.backgroundColor = "#F1F5F9";
+                  el.style.borderColor = "#E2E8F0";
+                  el.style.color = "#64748B";
                 }}
                 aria-label="Search services (Ctrl+K)"
               >
@@ -352,9 +348,9 @@ export default function Navbar() {
                 <kbd
                   className="text-[10px] font-mono leading-none px-1.5 py-0.5 rounded flex-shrink-0"
                   style={{
-                    backgroundColor: "rgba(255,255,255,0.1)",
-                    border: "1px solid rgba(255,255,255,0.12)",
-                    color: "rgba(255,255,255,0.38)",
+                    backgroundColor: "#FFFFFF",
+                    border: "1px solid #E2E8F0",
+                    color: "#94A3B8",
                   }}
                 >
                   ⌘K
@@ -362,14 +358,14 @@ export default function Navbar() {
               </button>
 
               {/* Divider */}
-              <div className="w-px h-5 flex-shrink-0" style={{ backgroundColor: "rgba(255,255,255,0.16)" }} />
+              <div className="w-px h-5 flex-shrink-0" style={{ backgroundColor: "#E2E8F0" }} />
 
               <a
                 href="tel:+919742826804"
                 className="flex items-center gap-1.5 text-sm font-medium transition-colors whitespace-nowrap"
-                style={{ color: "rgba(255,255,255,0.72)" }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "#C9A84C"; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.72)"; }}
+                style={{ color: "#475569" }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "#1B3A6B"; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "#475569"; }}
               >
                 <Phone className="w-3.5 h-3.5 flex-shrink-0" />
                 <span>+91 97428 26804</span>
@@ -390,7 +386,7 @@ export default function Navbar() {
             <button
               onClick={() => setMobileOpen((v) => !v)}
               className="lg:hidden p-2 rounded-md transition-colors flex-shrink-0"
-              style={{ color: "white" }}
+              style={{ color: "#1B3A6B" }}
               aria-label="Toggle navigation menu"
             >
               {mobileOpen
@@ -401,8 +397,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Subtle bottom border */}
-        <div className="absolute bottom-0 left-0 right-0 h-px" style={{ backgroundColor: "rgba(255,255,255,0.08)" }} />
 
         {/* ── Desktop Mega Menu Panel ─────────────────────────────────────── */}
         <AnimatePresence>
@@ -421,7 +415,7 @@ export default function Navbar() {
                 className="absolute left-0 right-0 bg-white shadow-2xl border-t-[3px]"
                 style={{ borderTopColor: v.color }}
               >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-8">
                   {/* Panel header */}
                   <div className="flex items-center justify-between mb-6 pb-5 border-b border-gray-100">
                     <div className="flex items-center gap-3">
@@ -525,12 +519,14 @@ export default function Navbar() {
                 className="flex items-center justify-between px-5 py-4 flex-shrink-0"
                 style={{ backgroundColor: "#1B3A6B" }}
               >
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-md flex items-center justify-center" style={{ backgroundColor: "#C9A84C" }}>
-                    <span className="font-heading font-bold text-white text-xs">R</span>
-                  </div>
-                  <span className="font-heading font-bold text-white text-sm">Right Assets Management</span>
-                </div>
+                <Image
+                  src="/images/Right-assets-management-logo.svg"
+                  alt="Right Assets Management"
+                  width={200}
+                  height={48}
+                  className="h-7 w-auto"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                />
                 <div className="flex items-center gap-1">
                   <button
                     onClick={() => { setMobileOpen(false); setSearchOpen(true); }}
@@ -679,7 +675,7 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Spacer so page content clears the fixed navbar */}
-      <div className="h-16 lg:h-[72px]" aria-hidden="true" />
+      <div className="h-16 lg:h-20" aria-hidden="true" />
 
       {/* Search modal */}
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />

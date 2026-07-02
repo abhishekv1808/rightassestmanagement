@@ -28,7 +28,7 @@ import type { Service } from "@/lib/services-data";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightasset.in";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightassetsmanagement.com";
 
 /** Maps the Service vertical to its hub label and URL path. */
 const VERTICAL_META: Record<

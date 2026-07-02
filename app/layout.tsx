@@ -35,12 +35,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Right Assets Management" }],
   creator: "Right Assets Management",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightasset.in"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightassetsmanagement.com"
   ),
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightasset.in",
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightassetsmanagement.com",
     siteName: "Right Assets Management",
     title:
       "Right Assets Management — Financial, Real Estate & Legal Services in Bangalore",

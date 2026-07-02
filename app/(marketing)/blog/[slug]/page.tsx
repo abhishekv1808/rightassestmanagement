@@ -81,7 +81,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
     publisher: {
       "@type": "Organization",
       name: "Right Assets Management",
-      url: "https://rightasset.in",
+      url: "https://rightassetsmanagement.com",
     },
   };
 

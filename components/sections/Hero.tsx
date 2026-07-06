@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 const TRUST = [
@@ -24,15 +25,17 @@ export default function Hero() {
         minHeight: "78vh",
       }}
     >
-      {/* ── Background image ────────────────────────────────────────────── */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "url('/images/hero-bg.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center 35%",
-          backgroundRepeat: "no-repeat",
-        }}
+      {/* ── Background image (optimized + preloaded via next/image) ─────── */}
+      <Image
+        src="/images/hero-bg.png"
+        alt=""
+        fill
+        priority
+        fetchPriority="high"
+        sizes="100vw"
+        quality={70}
+        className="object-cover"
+        style={{ objectPosition: "center 35%" }}
       />
 
       {/* ── Dark gradient overlay (navy-tinted) ─────────────────────────── */}

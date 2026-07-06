@@ -165,7 +165,7 @@ export default function DisclaimerPage() {
         className="relative"
         style={{ background: "linear-gradient(135deg, #1B3A6B 0%, #0D2347 100%)" }}
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] mb-3" style={{ color: "#C9A84C" }}>
             Legal
           </p>
@@ -183,7 +183,7 @@ export default function DisclaimerPage() {
 
       {/* Content */}
       <div className="bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20">
 
           {/* Risk Warning Box */}
           <div
@@ -225,7 +225,7 @@ export default function DisclaimerPage() {
           </div>
 
           {/* Sections */}
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {SECTIONS.map((section) => (
               <section key={section.id} id={section.id}>
                 <h2

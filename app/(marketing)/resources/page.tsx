@@ -242,8 +242,8 @@ export default async function ResourcesPage({
           background: "linear-gradient(135deg, #1B3A6B 0%, #0D2347 55%, #071428 100%)",
           position: "relative",
           overflow: "hidden",
-          paddingTop: "clamp(60px, 8vw, 100px)",
-          paddingBottom: "clamp(60px, 8vw, 100px)",
+          paddingTop: "clamp(44px, 8vw, 100px)",
+          paddingBottom: "clamp(44px, 8vw, 100px)",
         }}
       >
         {/* Decorative circles */}

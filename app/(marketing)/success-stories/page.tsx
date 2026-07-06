@@ -377,7 +377,7 @@ export default function SuccessStoriesPage() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
           {/* Breadcrumb */}
           <nav
             className="flex items-center gap-1.5 text-sm mb-6"
@@ -407,7 +407,7 @@ export default function SuccessStoriesPage() {
             <h1
               className="font-heading font-bold text-white mb-5"
               style={{
-                fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
+                fontSize: "clamp(1.75rem, 4.5vw, 3.25rem)",
                 lineHeight: 1.15,
               }}
             >
@@ -455,7 +455,7 @@ export default function SuccessStoriesPage() {
       </div>
 
       {/* ── 2. Case Studies Grid ─────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>
+      <section className="py-12 sm:py-16 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Section header */}
@@ -467,7 +467,7 @@ export default function SuccessStoriesPage() {
               6 Case Studies — All Verticals
             </p>
             <h2
-              className="font-heading font-bold text-3xl sm:text-4xl mb-4"
+              className="font-heading font-bold text-2xl sm:text-4xl mb-3 sm:mb-4"
               style={{ color: "#1B3A6B" }}
             >
               Client Outcomes That Speak for Themselves
@@ -507,7 +507,7 @@ export default function SuccessStoriesPage() {
 
       {/* ── 4. Bottom CTA ────────────────────────────────────────────────── */}
       <section
-        className="py-20 lg:py-28 relative overflow-hidden"
+        className="py-14 sm:py-20 lg:py-28 relative overflow-hidden"
         style={{ backgroundColor: "#1B3A6B" }}
       >
         {/* Background pattern */}

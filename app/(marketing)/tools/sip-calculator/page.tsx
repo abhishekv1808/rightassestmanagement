@@ -33,7 +33,7 @@ export default function SIPCalculatorPage() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20">
           <nav
             className="flex items-center gap-1.5 text-sm mb-6 flex-wrap"
             style={{ color: "rgba(255,255,255,0.5)" }}
@@ -63,7 +63,7 @@ export default function SIPCalculatorPage() {
       <SIPCalculator />
 
       {/* ── Info section ──────────────────────────────────────────────── */}
-      <section className="py-14 bg-white">
+      <section className="py-10 sm:py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading font-bold text-2xl mb-6" style={{ color: "#1B3A6B" }}>
             What is SIP and How Does It Work?

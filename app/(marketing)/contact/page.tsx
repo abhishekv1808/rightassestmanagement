@@ -132,7 +132,7 @@ export default function ContactPage() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           {/* Breadcrumb */}
           <nav
             className="flex items-center gap-1.5 text-sm mb-6"
@@ -151,12 +151,12 @@ export default function ContactPage() {
 
           <h1
             className="font-heading font-bold text-white mb-3"
-            style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)", lineHeight: 1.15 }}
+            style={{ fontSize: "clamp(1.75rem, 4.5vw, 3.25rem)", lineHeight: 1.15 }}
           >
             Get in Touch
           </h1>
           <p
-            className="text-lg max-w-xl"
+            className="text-base sm:text-lg max-w-xl"
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
             Book a free consultation, ask a question, or just say hello — we&apos;re
@@ -166,9 +166,9 @@ export default function ContactPage() {
       </div>
 
       {/* ── Main contact section ─────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>
+      <section className="py-12 sm:py-16 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-start">
 
             {/* ── Left: contact info ──────────────────────────────────────── */}
             <div className="lg:col-span-5 space-y-6">
@@ -185,7 +185,7 @@ export default function ContactPage() {
                   We&apos;d love to hear from you
                 </p>
                 <h2
-                  className="font-heading font-bold text-3xl mb-3"
+                  className="font-heading font-bold text-2xl sm:text-3xl mb-3"
                   style={{ color: "#1B3A6B" }}
                 >
                   Let&apos;s Talk
@@ -323,7 +323,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── Quick contact strip ──────────────────────────────────────────── */}
-      <section style={{ backgroundColor: "#1B3A6B" }} className="py-14">
+      <section style={{ backgroundColor: "#1B3A6B" }} className="py-12 sm:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p
             className="text-center text-xs font-semibold uppercase tracking-[0.18em] mb-8"

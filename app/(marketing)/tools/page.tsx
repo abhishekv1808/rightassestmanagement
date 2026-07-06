@@ -94,7 +94,7 @@ export default function ToolsHubPage() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
           <nav
             className="flex items-center gap-1.5 text-sm mb-6"
             style={{ color: "rgba(255,255,255,0.5)" }}
@@ -116,14 +116,14 @@ export default function ToolsHubPage() {
 
             <h1
               className="font-heading font-bold text-white mb-4"
-              style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)", lineHeight: 1.15 }}
+              style={{ fontSize: "clamp(1.75rem, 4.5vw, 3.25rem)", lineHeight: 1.15 }}
             >
               Free Financial Tools
               <br />
               <span style={{ color: "#C9A84C" }}>Plan Smarter, Invest Better</span>
             </h1>
 
-            <p className="text-lg max-w-2xl" style={{ color: "rgba(255,255,255,0.7)" }}>
+            <p className="text-base sm:text-lg max-w-2xl" style={{ color: "rgba(255,255,255,0.7)" }}>
               Use our free calculators to plan your SIP, estimate your EMI, evaluate an FD,
               or check rental yields — no login, no ads, just numbers.
             </p>
@@ -132,9 +132,9 @@ export default function ToolsHubPage() {
       </div>
 
       {/* ── Tools grid ────────────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-8 sm:mb-10">
             <div className="flex items-center gap-3 mb-3">
               <p className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "#C9A84C" }}>
                 Free Tools

@@ -160,7 +160,7 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
           {/* Breadcrumb */}
           <nav
             className="flex items-center gap-1.5 text-sm mb-6"
@@ -185,12 +185,12 @@ export default function AboutPage() {
             </span>
             <h1
               className="font-heading font-bold text-white mb-4"
-              style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)", lineHeight: 1.15 }}
+              style={{ fontSize: "clamp(1.75rem, 4.5vw, 3.25rem)", lineHeight: 1.15 }}
             >
               About Right Assets Management
             </h1>
             <p
-              className="text-lg leading-relaxed"
+              className="text-base sm:text-lg leading-relaxed"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
               We were built to solve a real problem — great financial, property, and legal
@@ -201,9 +201,9 @@ export default function AboutPage() {
       </div>
 
       {/* ── 2. Who We Are ────────────────────────────────────────────────── */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-14 sm:py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-start">
 
             {/* Left — narrative */}
             <div className="lg:col-span-7">
@@ -214,7 +214,7 @@ export default function AboutPage() {
                 Our Story
               </p>
               <h2
-                className="font-heading font-bold text-4xl sm:text-5xl mb-8"
+                className="font-heading font-bold text-[26px] sm:text-5xl mb-6 sm:mb-8"
                 style={{ color: "#1B3A6B", lineHeight: 1.15 }}
               >
                 Who We Are
@@ -260,7 +260,7 @@ export default function AboutPage() {
                   Our Mission
                 </p>
                 <p
-                  className="text-white font-medium text-lg leading-relaxed"
+                  className="text-white font-medium text-base sm:text-lg leading-relaxed"
                   style={{ lineHeight: 1.65 }}
                 >
                   To make financial planning, real estate, and legal services accessible,
@@ -280,7 +280,7 @@ export default function AboutPage() {
                     }}
                   >
                     <p
-                      className="font-heading font-bold text-3xl mb-1"
+                      className="font-heading font-bold text-2xl sm:text-3xl mb-1"
                       style={{ color: "#1B3A6B" }}
                     >
                       {s.value}
@@ -321,10 +321,10 @@ export default function AboutPage() {
       </section>
 
       {/* ── 3. Three Verticals ──────────────────────────────────────────── */}
-      <section className="py-20 lg:py-28" style={{ backgroundColor: "#F9F8F5" }}>
+      <section className="py-14 sm:py-20 lg:py-28" style={{ backgroundColor: "#F9F8F5" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div className="text-center mb-14">
+          <div className="text-center mb-9 sm:mb-14">
             <p
               className="text-xs font-semibold uppercase tracking-[0.18em] mb-3"
               style={{ color: "#C9A84C" }}
@@ -332,12 +332,12 @@ export default function AboutPage() {
               Our Three Verticals
             </p>
             <h2
-              className="font-heading font-bold text-4xl sm:text-5xl mb-4"
+              className="font-heading font-bold text-[26px] sm:text-5xl mb-3 sm:mb-4"
               style={{ color: "#1B3A6B" }}
             >
               Everything Under One Roof
             </h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
               Three specialised verticals. One cohesive team. No need to coordinate
               between different firms ever again.
             </p>
@@ -416,10 +416,10 @@ export default function AboutPage() {
       </section>
 
       {/* ── 4. Why Choose Right Assets ────────────────────────────────────── */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-14 sm:py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div className="text-center mb-14">
+          <div className="text-center mb-9 sm:mb-14">
             <p
               className="text-xs font-semibold uppercase tracking-[0.18em] mb-3"
               style={{ color: "#C9A84C" }}
@@ -427,12 +427,12 @@ export default function AboutPage() {
               Why Us
             </p>
             <h2
-              className="font-heading font-bold text-4xl sm:text-5xl mb-4"
+              className="font-heading font-bold text-[26px] sm:text-5xl mb-3 sm:mb-4"
               style={{ color: "#1B3A6B" }}
             >
               Why Choose Right Assets?
             </h2>
-            <p className="text-gray-500 text-lg max-w-xl mx-auto">
+            <p className="text-gray-500 text-base sm:text-lg max-w-xl mx-auto">
               Five reasons clients consistently choose us over other advisors in Bangalore.
             </p>
           </div>
@@ -489,7 +489,7 @@ export default function AboutPage() {
 
       {/* ── 5. Our Promise ───────────────────────────────────────────────── */}
       <section
-        className="py-20 lg:py-28 relative overflow-hidden"
+        className="py-14 sm:py-20 lg:py-28 relative overflow-hidden"
         style={{ backgroundColor: "#1B3A6B" }}
       >
         {/* Gold grid + glow */}
@@ -535,7 +535,7 @@ export default function AboutPage() {
           </blockquote>
 
           <p
-            className="text-base max-w-xl mx-auto leading-relaxed mb-10"
+            className="text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-7 sm:mb-10"
             style={{ color: "rgba(255,255,255,0.6)" }}
           >
             Every client engagement at Right Assets Management comes with a commitment: we
@@ -573,7 +573,7 @@ export default function AboutPage() {
         />
 
         {/* Content — centered */}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24 text-center flex flex-col items-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24 text-center flex flex-col items-center">
           {/* Badge */}
           <span
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.16em] mb-6"

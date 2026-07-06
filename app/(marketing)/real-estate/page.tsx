@@ -129,9 +129,9 @@ export default function RealEstateHubPage() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
           <nav
-            className="flex items-center gap-1.5 text-sm mb-6"
+            className="flex items-center gap-1.5 text-sm mb-4 sm:mb-6"
             style={{ color: "rgba(255,255,255,0.5)" }}
             aria-label="Breadcrumb"
           >
@@ -151,14 +151,14 @@ export default function RealEstateHubPage() {
 
             <h1
               className="font-heading font-bold text-white mb-4"
-              style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)", lineHeight: 1.15 }}
+              style={{ fontSize: "clamp(1.75rem, 4.5vw, 3.25rem)", lineHeight: 1.15 }}
             >
               Realty Services
               <br />
               <span style={{ color: "#C9A84C" }}>From Purchase to Registration</span>
             </h1>
 
-            <p className="text-lg mb-8 max-w-2xl" style={{ color: "rgba(255,255,255,0.7)" }}>
+            <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl" style={{ color: "rgba(255,255,255,0.7)" }}>
               Buying, selling, or managing property in Bangalore? We handle every aspect —
               documentation, government records, legal verification, and registration —
               all under one roof.
@@ -186,11 +186,11 @@ export default function RealEstateHubPage() {
       </div>
 
       {/* ── Services grid ─────────────────────────────────────────────── */}
-      <section id="services" className="py-16 lg:py-24 bg-white">
+      <section id="services" className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Section header */}
-          <div className="mb-10">
+          <div className="mb-8 sm:mb-10">
             <div className="flex items-center gap-3 mb-3">
               <p
                 className="text-xs font-bold uppercase tracking-[0.2em]"
@@ -214,7 +214,7 @@ export default function RealEstateHubPage() {
           </div>
 
           {/* 4-col card grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-5">
+          <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-2 gap-y-4 sm:gap-3 md:gap-5">
             {CARDS.map((card) => {
               const svc = getServiceBySlug(card.slug);
               if (!svc) return null;
@@ -222,9 +222,21 @@ export default function RealEstateHubPage() {
                 <Link
                   key={card.slug}
                   href={`/real-estate/${card.slug}`}
-                  className="group relative flex flex-col gap-2.5 p-4 md:p-5 rounded-2xl bg-white transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
-                  style={{ border: "1px solid #E5E7EB", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}
+                  className="group block h-full"
                 >
+                  {/* Mobile: compact icon tile */}
+                  <div className="flex sm:hidden flex-col items-center text-center gap-1.5 transition-transform active:scale-95">
+                    <div className="flex h-[52px] w-[52px] items-center justify-center rounded-2xl" style={{ backgroundColor: card.lightBg }}>
+                      <card.Icon className="h-6 w-6" style={{ color: card.color }} />
+                    </div>
+                    <span className="line-clamp-2 text-[11px] font-medium leading-tight text-gray-600">{svc.title}</span>
+                  </div>
+
+                  {/* Tablet / desktop: full card */}
+                  <div
+                    className="relative hidden h-full flex-col gap-2.5 rounded-2xl bg-white p-4 transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-xl sm:flex md:p-5"
+                    style={{ border: "1px solid #E5E7EB", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}
+                  >
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex-1 min-w-0">
                       <p
@@ -259,6 +271,7 @@ export default function RealEstateHubPage() {
                     Learn more
                     <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                   </div>
+                  </div>
                 </Link>
               );
             })}
@@ -273,11 +286,11 @@ export default function RealEstateHubPage() {
 
       {/* ── CTA ───────────────────────────────────────────────────────── */}
       <section
-        className="py-16"
+        className="py-12 sm:py-16"
         style={{ background: "linear-gradient(135deg, #1B3A6B 0%, #0D2347 100%)" }}
       >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-heading font-bold text-3xl text-white mb-4">
+          <h2 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-4">
             Planning a Property Transaction?
           </h2>
           <p className="text-base mb-8" style={{ color: "rgba(255,255,255,0.7)" }}>

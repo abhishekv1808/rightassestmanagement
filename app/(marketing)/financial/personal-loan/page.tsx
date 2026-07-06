@@ -67,9 +67,9 @@ export default function PersonalLoanPage() {
           </svg>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 text-sm mb-7 flex-wrap" style={{ color: "rgba(255,255,255,0.5)" }} aria-label="Breadcrumb">
+          <nav className="flex items-center gap-1.5 text-sm mb-4 sm:mb-7 flex-wrap" style={{ color: "rgba(255,255,255,0.5)" }} aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link href="/financial" className="hover:text-white transition-colors">Financial Services</Link>
@@ -77,7 +77,7 @@ export default function PersonalLoanPage() {
             <span style={{ color: "#C9A84C" }}>Personal Loans</span>
           </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-start">
             {/* Left — pitch */}
             <div className="lg:col-span-6">
               <div
@@ -87,17 +87,17 @@ export default function PersonalLoanPage() {
                 Personal Loan · Bangalore
               </div>
 
-              <h1 className="font-heading font-bold text-white mb-4" style={{ fontSize: "clamp(1.85rem, 4vw, 2.85rem)", lineHeight: 1.15 }}>
+              <h1 className="font-heading font-bold text-white mb-4" style={{ fontSize: "clamp(1.65rem, 4vw, 2.85rem)", lineHeight: 1.15 }}>
                 Get a Personal Loan at the{" "}
                 <span style={{ color: "#C9A84C" }}>Lowest Rate</span> in Bangalore
               </h1>
-              <p className="text-lg mb-8" style={{ color: "rgba(255,255,255,0.72)", lineHeight: 1.6 }}>
+              <p className="text-base sm:text-lg mb-6 sm:mb-8" style={{ color: "rgba(255,255,255,0.72)", lineHeight: 1.6 }}>
                 We compare offers from 15+ banks and NBFCs to get you the best interest rate
                 for your profile — with approval in as little as 24 hours. 100% free, no obligation.
               </p>
 
               {/* Highlights grid */}
-              <div className="grid grid-cols-2 gap-3 mb-8" style={{ maxWidth: 460 }}>
+              <div className="grid grid-cols-2 gap-3 mb-6 sm:mb-8" style={{ maxWidth: 460 }}>
                 {HIGHLIGHTS.map(({ Icon, title, sub }) => (
                   <div
                     key={title}
@@ -154,8 +154,8 @@ export default function PersonalLoanPage() {
       </div>
 
       {/* ── Main content ──────────────────────────────────────────────── */}
-      <section className="py-16 lg:py-20" style={{ backgroundColor: "#F9F8F5" }}>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+      <section className="py-12 sm:py-16 lg:py-20" style={{ backgroundColor: "#F9F8F5" }}>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-14">
 
           {/* What is it */}
           <div>
@@ -259,7 +259,7 @@ export default function PersonalLoanPage() {
 
       {/* ── Related services ──────────────────────────────────────────── */}
       {related.length > 0 && (
-        <section className="py-16 bg-white">
+        <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: "#C9A84C" }}>
               You May Also Need

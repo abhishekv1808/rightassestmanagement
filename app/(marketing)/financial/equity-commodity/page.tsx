@@ -242,7 +242,7 @@ export default function EquityCommodityPage() {
             <span style={{ color: "#C9A84C" }}>Equity & Commodity Market</span>
           </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-start">
             {/* Left — headline & CTAs */}
             <div className="lg:col-span-7">
               <div
@@ -260,7 +260,7 @@ export default function EquityCommodityPage() {
               <h1
                 className="font-heading font-bold text-white mb-5"
                 style={{
-                  fontSize: "clamp(2rem, 4.5vw, 3rem)",
+                  fontSize: "clamp(1.75rem, 4.5vw, 3rem)",
                   lineHeight: 1.15,
                 }}
               >
@@ -270,7 +270,7 @@ export default function EquityCommodityPage() {
               </h1>
 
               <p
-                className="text-lg mb-8 max-w-xl leading-relaxed"
+                className="text-base sm:text-lg mb-6 sm:mb-8 max-w-xl leading-relaxed"
                 style={{ color: "rgba(255,255,255,0.72)" }}
               >
                 Expert, research-backed guidance for stock market and commodity
@@ -406,7 +406,7 @@ export default function EquityCommodityPage() {
       </section>
 
       {/* ── LIVE MARKET DATA ─────────────────────────────────────────────── */}
-      <section className="py-12 lg:py-16" style={{ backgroundColor: "#F9F8F5" }}>
+      <section className="py-10 sm:py-12 lg:py-16" style={{ backgroundColor: "#F9F8F5" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-6">
             <div>
@@ -432,7 +432,7 @@ export default function EquityCommodityPage() {
       </section>
 
       {/* ── WHAT WE OFFER ────────────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p
@@ -442,7 +442,7 @@ export default function EquityCommodityPage() {
               Our Services
             </p>
             <h2
-              className="font-heading font-bold text-3xl mb-4"
+              className="font-heading font-bold text-2xl sm:text-3xl mb-4"
               style={{ color: "#1B3A6B" }}
             >
               What We Offer
@@ -490,7 +490,7 @@ export default function EquityCommodityPage() {
 
       {/* ── MARKETS WE COVER ─────────────────────────────────────────────── */}
       <section
-        className="py-16 lg:py-20"
+        className="py-12 sm:py-16 lg:py-20"
         style={{ backgroundColor: "#F9F8F5" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -542,7 +542,7 @@ export default function EquityCommodityPage() {
       </section>
 
       {/* ── WHY Right Assets ──────────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
             {/* Left — pitch */}
@@ -554,7 +554,7 @@ export default function EquityCommodityPage() {
                 Why Choose Us
               </p>
               <h2
-                className="font-heading font-bold text-3xl mb-5 leading-tight"
+                className="font-heading font-bold text-2xl sm:text-3xl mb-5 leading-tight"
                 style={{ color: "#1B3A6B" }}
               >
                 The Right Assets
@@ -614,7 +614,7 @@ export default function EquityCommodityPage() {
 
       {/* ── WHO IS THIS FOR ──────────────────────────────────────────────── */}
       <section
-        className="py-16 lg:py-20"
+        className="py-12 sm:py-16 lg:py-20"
         style={{ backgroundColor: "#F9F8F5" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -652,7 +652,7 @@ export default function EquityCommodityPage() {
       </section>
 
       {/* ── HOW WE HELP — PROCESS ────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p
@@ -716,7 +716,7 @@ export default function EquityCommodityPage() {
 
       {/* ── BENEFITS — DARK SECTION ──────────────────────────────────────── */}
       <section
-        className="py-16 lg:py-20"
+        className="py-12 sm:py-16 lg:py-20"
         style={{
           background: "linear-gradient(135deg, #1B3A6B 0%, #0D2347 100%)",
         }}
@@ -781,7 +781,7 @@ export default function EquityCommodityPage() {
 
       {/* ── DOCUMENTS REQUIRED ───────────────────────────────────────────── */}
       {svc.documentsRequired && (
-        <section className="py-14 lg:py-20 bg-white">
+        <section className="py-10 sm:py-14 lg:py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
               <p
@@ -822,7 +822,7 @@ export default function EquityCommodityPage() {
 
       {/* ── FAQ ──────────────────────────────────────────────────────────── */}
       <section
-        className="py-16 lg:py-24"
+        className="py-12 sm:py-16 lg:py-24"
         style={{ backgroundColor: "#F9F8F5" }}
       >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -873,9 +873,9 @@ export default function EquityCommodityPage() {
       </section>
 
       {/* ── CONSULTATION CTA + LEAD FORM ─────────────────────────────────── */}
-      <section id="consultation" className="py-16 lg:py-24 bg-white">
+      <section id="consultation" className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
             {/* Left — pitch */}
             <div className="lg:pt-4">
               <p
@@ -885,7 +885,7 @@ export default function EquityCommodityPage() {
                 Get Started
               </p>
               <h2
-                className="font-heading font-bold text-3xl mb-5 leading-tight"
+                className="font-heading font-bold text-2xl sm:text-3xl mb-5 leading-tight"
                 style={{ color: "#1B3A6B" }}
               >
                 Ready to Build Wealth
@@ -937,7 +937,7 @@ export default function EquityCommodityPage() {
 
       {/* ── RELATED SERVICES ─────────────────────────────────────────────── */}
       {related.length > 0 && (
-        <section className="py-16" style={{ backgroundColor: "#F9F8F5" }}>
+        <section className="py-12 sm:py-16" style={{ backgroundColor: "#F9F8F5" }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p
               className="text-xs font-semibold uppercase tracking-[0.18em] mb-3"

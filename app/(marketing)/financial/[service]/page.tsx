@@ -84,9 +84,9 @@ export default async function FinancialServicePage({
           </svg>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20">
           <nav
-            className="flex items-center gap-1.5 text-sm mb-6 flex-wrap"
+            className="flex items-center gap-1.5 text-sm mb-4 sm:mb-6 flex-wrap"
             style={{ color: "rgba(255,255,255,0.5)" }}
             aria-label="Breadcrumb"
           >
@@ -97,7 +97,7 @@ export default async function FinancialServicePage({
             <span style={{ color: "#C9A84C" }}>{svc.title}</span>
           </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-7">
               <div
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-5"
@@ -113,7 +113,7 @@ export default async function FinancialServicePage({
                 {svc.title}
               </h1>
               <p
-                className="text-lg mb-8"
+                className="text-base sm:text-lg mb-6 sm:mb-8"
                 style={{ color: "rgba(255,255,255,0.7)" }}
               >
                 {svc.tagline}
@@ -217,11 +217,11 @@ export default async function FinancialServicePage({
       )}
 
       {/* ── Main content ──────────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>
+      <section className="py-12 sm:py-16 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
             {/* ── Left: content ────────────────────────────────────────── */}
-            <div className="lg:col-span-7 space-y-12">
+            <div className="lg:col-span-7 space-y-8 sm:space-y-12">
 
               {/* What is this service */}
               {svc.description && (
@@ -406,7 +406,7 @@ export default async function FinancialServicePage({
 
       {/* ── Related services ──────────────────────────────────────────── */}
       {related.length > 0 && (
-        <section className="py-16 bg-white">
+        <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p
               className="text-xs font-semibold uppercase tracking-[0.18em] mb-3"

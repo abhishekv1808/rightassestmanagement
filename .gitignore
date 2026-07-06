@@ -36,3 +36,7 @@ next-env.d.ts
 # sitemap
 /public/sitemap*.xml
 /public/robots.txt
+
+# Never commit data exports (may contain customer PII)
+public/images/*.xlsx
+*.xlsx

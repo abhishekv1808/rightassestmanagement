@@ -97,36 +97,51 @@ function ServiceCard({ card }: { card: CardConfig }) {
       : `${card.vertical}/${card.slug}`;
 
   return (
-    <Link
-      href={`/${path}`}
-      className="group relative flex flex-col gap-2.5 p-4 md:p-5 rounded-2xl bg-white transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
-      style={{ border: "1px solid #E5E7EB", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}
-    >
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex-1 min-w-0">
-          <p className="font-heading font-bold text-base leading-snug" style={{ color: "#1A1A1A" }}>
-            {svc.title}
-          </p>
-          <p className="text-xs font-semibold mt-1" style={{ color: card.color }}>
-            {card.highlight}
-          </p>
-        </div>
+    <Link href={`/${path}`} className="group block h-full">
+      {/* ── Mobile: compact icon tile (PhonePe-style grid) ─────────────── */}
+      <div className="flex sm:hidden flex-col items-center text-center gap-1.5 transition-transform active:scale-95">
         <div
-          className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+          className="flex h-[52px] w-[52px] items-center justify-center rounded-2xl"
           style={{ backgroundColor: card.lightBg }}
         >
-          <card.Icon className="w-5 h-5" style={{ color: card.color }} />
+          <card.Icon className="h-6 w-6" style={{ color: card.color }} />
         </div>
+        <span className="line-clamp-2 text-[11px] font-medium leading-tight text-gray-600">
+          {svc.title}
+        </span>
       </div>
 
-      <p className="text-xs text-gray-400 leading-relaxed flex-1">{svc.tagline}</p>
-
+      {/* ── Tablet / desktop: full card (unchanged) ────────────────────── */}
       <div
-        className="flex items-center gap-1 text-xs font-semibold transition-all duration-200 group-hover:gap-2"
-        style={{ color: card.color }}
+        className="relative hidden h-full flex-col gap-2.5 rounded-2xl bg-white p-4 transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-xl sm:flex md:p-5"
+        style={{ border: "1px solid #E5E7EB", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}
       >
-        Learn more
-        <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex-1 min-w-0">
+            <p className="font-heading font-bold text-base leading-snug" style={{ color: "#1A1A1A" }}>
+              {svc.title}
+            </p>
+            <p className="text-xs font-semibold mt-1" style={{ color: card.color }}>
+              {card.highlight}
+            </p>
+          </div>
+          <div
+            className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+            style={{ backgroundColor: card.lightBg }}
+          >
+            <card.Icon className="w-5 h-5" style={{ color: card.color }} />
+          </div>
+        </div>
+
+        <p className="text-xs text-gray-400 leading-relaxed flex-1">{svc.tagline}</p>
+
+        <div
+          className="flex items-center gap-1 text-xs font-semibold transition-all duration-200 group-hover:gap-2"
+          style={{ color: card.color }}
+        >
+          Learn more
+          <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
+        </div>
       </div>
     </Link>
   );
@@ -151,9 +166,9 @@ function VerticalGroup({ config }: { config: VerticalConfig }) {
   const remaining = hidden.length;
 
   return (
-    <div className="mb-16 last:mb-0">
+    <div className="mb-12 sm:mb-16 last:mb-0">
       {/* Group header */}
-      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-6 sm:mb-8">
         <div>
           <div className="flex items-center gap-3 mb-2">
             <p
@@ -185,7 +200,7 @@ function VerticalGroup({ config }: { config: VerticalConfig }) {
       </div>
 
       {/* Always-visible cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-5">
+      <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-2 gap-y-4 sm:gap-3 md:gap-5">
         {visible.map((card) => (
           <ServiceCard key={card.slug} card={card} />
         ))}
@@ -202,7 +217,7 @@ function VerticalGroup({ config }: { config: VerticalConfig }) {
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-5 mt-3 md:mt-5">
+            <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-2 gap-y-4 sm:gap-3 md:gap-5 mt-3 md:mt-5">
               {hidden.map((card, i) => (
                 <motion.div
                   key={card.slug}
@@ -278,7 +293,7 @@ const VERTICALS: VerticalConfig[] = [
 // ─── Section ──────────────────────────────────────────────────────
 export default function AllServicesSection() {
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-14 sm:py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
@@ -287,7 +302,7 @@ export default function AllServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.55 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <p
             className="text-xs font-semibold uppercase tracking-[0.2em] mb-3"
@@ -302,13 +317,13 @@ export default function AllServicesSection() {
             48+ Services.{" "}
             <span style={{ color: "#C9A84C" }}>Three Verticals.</span>
           </h2>
-          <p className="text-gray-500 text-base max-w-xl mx-auto">
+          <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
             Financial planning, real estate documentation, and legal advisory — all under one roof in Bangalore.
           </p>
         </motion.div>
 
         {/* Divider */}
-        <div className="h-px w-full mb-16" style={{ backgroundColor: "#E5E7EB" }} />
+        <div className="h-px w-full mb-10 sm:mb-16" style={{ backgroundColor: "#E5E7EB" }} />
 
         {/* Three vertical groups */}
         {VERTICALS.map((v) => (

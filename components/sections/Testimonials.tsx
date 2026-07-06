@@ -61,7 +61,7 @@ export default function Testimonials() {
 
   return (
     <section
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative py-14 sm:py-24 lg:py-32 overflow-hidden"
       style={{ backgroundColor: "#F9F8F5" }}
     >
       {/* Subtle dot pattern */}
@@ -84,7 +84,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.55 }}
-          className="mb-14"
+          className="mb-9 sm:mb-14"
         >
           <div className="flex items-center gap-3 mb-3">
             <span className="block h-px w-10" style={{ backgroundColor: "#C9A84C" }} />
@@ -105,12 +105,12 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Main layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-start">
 
           {/* Featured quote card */}
           <div className="lg:col-span-8">
             <div
-              className="relative rounded-3xl overflow-hidden p-8 sm:p-10 lg:p-12 min-h-[340px] flex flex-col justify-between bg-white"
+              className="relative rounded-3xl overflow-hidden p-6 sm:p-10 lg:p-12 min-h-[300px] sm:min-h-[340px] flex flex-col justify-between bg-white"
               style={{
                 border: "1px solid #E5E7EB",
                 boxShadow: "0 4px 32px 0 rgba(27,58,107,0.08)",
@@ -131,7 +131,7 @@ export default function Testimonials() {
               </div>
 
               {/* Service badge + stars */}
-              <div className="flex flex-wrap items-center gap-3 mb-8">
+              <div className="flex flex-wrap items-center gap-3 mb-6 sm:mb-8">
                 <span
                   className="px-3 py-1.5 rounded-full text-xs font-semibold"
                   style={{
@@ -157,7 +157,7 @@ export default function Testimonials() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -16 }}
                   transition={{ duration: 0.4 }}
-                  className="relative z-10 flex-1 font-heading italic leading-relaxed mb-10"
+                  className="relative z-10 flex-1 font-heading italic leading-relaxed mb-7 sm:mb-10"
                   style={{
                     color: "#1A1A1A",
                     fontSize: "clamp(1rem, 2vw, 1.2rem)",
@@ -295,10 +295,10 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-16 pt-10"
+          className="mt-10 sm:mt-16 pt-8 sm:pt-10"
           style={{ borderTop: "1px solid #E5E7EB" }}
         >
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 text-center">
             {[
               { value: "4.9 / 5", label: "Average Rating" },
               { value: "500+", label: "Clients Served" },
@@ -312,7 +312,7 @@ export default function Testimonials() {
                       <Star key={s} className="w-3.5 h-3.5 fill-current" style={{ color: "#C9A84C" }} />
                     ))}
                 </div>
-                <p className="font-heading font-bold text-3xl mb-1" style={{ color: "#1B3A6B" }}>
+                <p className="font-heading font-bold text-2xl sm:text-3xl mb-1" style={{ color: "#1B3A6B" }}>
                   {stat.value}
                 </p>
                 <p className="text-xs uppercase tracking-wider" style={{ color: "#64748B" }}>

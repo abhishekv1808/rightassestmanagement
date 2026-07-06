@@ -31,7 +31,7 @@ const TOOLS = [
 export default function ToolsTeaser() {
   return (
     <section
-      className="py-20 lg:py-28 relative overflow-hidden"
+      className="py-14 sm:py-20 lg:py-28 relative overflow-hidden"
       style={{ background: "linear-gradient(135deg, #0D2347 0%, #1B3A6B 100%)" }}
     >
       {/* Subtle grid overlay */}
@@ -49,7 +49,7 @@ export default function ToolsTeaser() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-8 sm:mb-12">
           <div>
             <p
               className="text-xs font-semibold uppercase tracking-[0.18em] mb-3"
@@ -57,10 +57,10 @@ export default function ToolsTeaser() {
             >
               Free Tools
             </p>
-            <h2 className="font-heading font-bold text-white text-4xl sm:text-5xl">
+            <h2 className="font-heading font-bold text-white text-[26px] sm:text-5xl">
               Financial Calculators
             </h2>
-            <p className="mt-3 text-base max-w-xl" style={{ color: "rgba(255,255,255,0.6)" }}>
+            <p className="mt-3 text-sm sm:text-base max-w-xl" style={{ color: "rgba(255,255,255,0.6)" }}>
               Make smarter money decisions with our free, instant calculators — no sign-up needed.
             </p>
           </div>
@@ -75,12 +75,12 @@ export default function ToolsTeaser() {
         </div>
 
         {/* Tool cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {TOOLS.map((t) => (
             <Link
               key={t.href}
               href={t.href}
-              className="group flex flex-col gap-4 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1.5"
+              className="group flex flex-col gap-4 p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1.5"
               style={{
                 background: "rgba(255,255,255,0.06)",
                 border: "1px solid rgba(255,255,255,0.1)",

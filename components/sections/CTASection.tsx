@@ -12,7 +12,7 @@ const BENEFITS = [
 
 export default function CTASection() {
   return (
-    <section style={{ backgroundColor: "#1B3A6B" }} className="py-20 lg:py-28 relative overflow-hidden">
+    <section style={{ backgroundColor: "#1B3A6B" }} className="py-14 sm:py-20 lg:py-28 relative overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <svg className="absolute inset-0 w-full h-full" style={{ opacity: 0.04 }}>
@@ -30,7 +30,7 @@ export default function CTASection() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
 
           {/* Left — copy */}
           <motion.div
@@ -46,13 +46,13 @@ export default function CTASection() {
               Get Started Today
             </p>
             <h2
-              className="font-heading font-bold text-white mb-5"
-              style={{ fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: 1.18 }}
+              className="font-heading font-bold text-white mb-4 sm:mb-5"
+              style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: 1.18 }}
             >
               Ready to Take Control of Your Finances &amp; Property?
             </h2>
             <p
-              className="text-base leading-relaxed mb-8 max-w-md"
+              className="text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-md"
               style={{ color: "rgba(255,255,255,0.68)" }}
             >
               Book a free consultation today. Our advisors will understand your situation and
@@ -60,7 +60,7 @@ export default function CTASection() {
             </p>
 
             {/* Benefits */}
-            <ul className="space-y-3 mb-10">
+            <ul className="space-y-3 mb-7 sm:mb-10">
               {BENEFITS.map((b) => (
                 <li key={b} className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 flex-shrink-0" style={{ color: "#C9A84C" }} />

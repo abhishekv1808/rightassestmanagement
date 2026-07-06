@@ -83,10 +83,10 @@ export default function LatestInsights() {
   if (latest.length === 0) return null;
 
   return (
-    <section className="py-14 lg:py-20" style={{ backgroundColor: "#F9F8F5" }}>
+    <section className="py-10 sm:py-14 lg:py-20" style={{ backgroundColor: "#F9F8F5" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-8">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-1.5" style={{ color: "#C9A84C" }}>
               Insights & Guides

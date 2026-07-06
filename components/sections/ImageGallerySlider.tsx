@@ -22,7 +22,7 @@ export default function ImageGallerySlider() {
       style={{ backgroundColor: "#F9F8F5" }}
     >
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
           <div>
             <div className="flex items-center gap-3 mb-3">
@@ -57,7 +57,7 @@ export default function ImageGallerySlider() {
         </div>
 
         {/* Gold divider */}
-        <div className="mt-8 flex items-center gap-3">
+        <div className="mt-6 sm:mt-8 flex items-center gap-3">
           <div className="flex-1 h-px" style={{ backgroundColor: "#E5E7EB" }} />
           <div
             className="h-1.5 w-1.5 rounded-full"

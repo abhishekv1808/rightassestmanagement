@@ -51,14 +51,14 @@ export default function HomeFAQ() {
   };
 
   return (
-    <section className="py-14 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>
+    <section className="py-10 sm:py-14 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-start">
 
           {/* ── Left: sticky intro + contact card ───────────────────────── */}
           <div className="lg:col-span-5 lg:sticky lg:top-24">
@@ -76,7 +76,7 @@ export default function HomeFAQ() {
             >
               Frequently Asked Questions
             </h2>
-            <p className="text-[15px] text-gray-500 leading-relaxed mb-8 max-w-md">
+            <p className="text-sm sm:text-[15px] text-gray-500 leading-relaxed mb-6 sm:mb-8 max-w-md">
               Everything you need to know before getting in touch. Can&apos;t find
               your answer? Our team is one message away.
             </p>

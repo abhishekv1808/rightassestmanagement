@@ -107,10 +107,9 @@ export default function LocalBusinessSchema() {
       ],
     },
     sameAs: [
-      // TODO: replace with actual social profile URLs once client confirms
-      // "https://www.facebook.com/rightassetmanagement",
-      // "https://www.instagram.com/rightassetmanagement",
-      // "https://www.linkedin.com/company/rightassetmanagement",
+      "https://www.facebook.com/rightassetsmanagement/",
+      "https://www.instagram.com/rightassetsmanagement",
+      "https://www.linkedin.com/company/right-assets-management",
     ],
     // NOTE: `founder` and `foundingDate` omitted until confirmed with the client —
     // publishing placeholder values would be a false E-E-A-T signal.

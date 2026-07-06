@@ -70,8 +70,8 @@ function IndexCard({ d }: { d: IndexData }) {
 
       {/* Price */}
       <p
-        className="font-heading font-bold tabular-nums leading-none"
-        style={{ color: "#1A1A1A", fontSize: "1.6rem" }}
+        className="font-heading font-bold tabular-nums leading-none text-[1.25rem] sm:text-[1.6rem]"
+        style={{ color: "#1A1A1A" }}
       >
         {fmt(d.price)}
       </p>

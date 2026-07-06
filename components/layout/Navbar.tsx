@@ -514,57 +514,36 @@ export default function Navbar() {
               transition={{ type: "spring", stiffness: 320, damping: 32 }}
               className="fixed top-0 right-0 bottom-0 w-[85vw] max-w-sm bg-white z-50 lg:hidden flex flex-col overflow-hidden"
             >
-              {/* Drawer header */}
+              {/* Drawer header — search bar + close */}
               <div
-                className="flex items-center justify-between px-5 py-4 flex-shrink-0"
+                className="flex items-center gap-2 px-3.5 py-3 flex-shrink-0"
                 style={{ backgroundColor: "#1B3A6B" }}
               >
-                <Image
-                  src="/images/Right-assets-management-logo.svg"
-                  alt="Right Assets Management"
-                  width={200}
-                  height={48}
-                  className="h-7 w-auto"
-                  style={{ filter: "brightness(0) invert(1)" }}
-                />
-                <div className="flex items-center gap-1">
-                  <button
-                    onClick={() => { setMobileOpen(false); setSearchOpen(true); }}
-                    className="p-1.5 rounded transition-colors"
-                    style={{ color: "rgba(255,255,255,0.8)" }}
-                    aria-label="Search services"
-                  >
-                    <Search className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={() => setMobileOpen(false)}
-                    className="p-1.5 rounded transition-colors"
-                    style={{ color: "rgba(255,255,255,0.8)" }}
-                    aria-label="Close menu"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
+                <button
+                  onClick={() => { setMobileOpen(false); setSearchOpen(true); }}
+                  className="flex-1 flex items-center gap-2.5 px-3.5 py-2.5 rounded-lg text-left transition-colors"
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.1)",
+                    border: "1px solid rgba(255,255,255,0.18)",
+                    color: "rgba(255,255,255,0.7)",
+                  }}
+                  aria-label="Search services"
+                >
+                  <Search className="w-4 h-4 flex-shrink-0" />
+                  <span className="text-sm">Search 48+ services…</span>
+                </button>
+                <button
+                  onClick={() => setMobileOpen(false)}
+                  className="p-2 rounded-lg transition-colors flex-shrink-0"
+                  style={{ color: "rgba(255,255,255,0.85)" }}
+                  aria-label="Close menu"
+                >
+                  <X className="w-5 h-5" />
+                </button>
               </div>
 
               {/* Drawer body */}
               <nav className="flex-1 overflow-y-auto p-4 space-y-0.5">
-                {/* Mobile search trigger */}
-                <button
-                  onClick={() => { setMobileOpen(false); setSearchOpen(true); }}
-                  className="w-full flex items-center gap-3 px-4 py-3 rounded-xl mb-2 text-left transition-colors"
-                  style={{ backgroundColor: "#F1F5F9", color: "#64748B" }}
-                >
-                  <Search className="w-4 h-4 flex-shrink-0" />
-                  <span className="text-sm">Search 48+ services…</span>
-                  <kbd
-                    className="ml-auto text-[10px] font-mono px-1.5 py-0.5 rounded flex-shrink-0"
-                    style={{ backgroundColor: "#E2E8F0", color: "#94A3B8" }}
-                  >
-                    Ctrl K
-                  </kbd>
-                </button>
-
                 <Link
                   href="/"
                   className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-gray-50 transition-colors"

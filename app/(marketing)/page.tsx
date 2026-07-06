@@ -22,15 +22,15 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <AllServicesSection />
       <MutualFundTicker />
       <ServicesGrid />
       <StatsBar />
       <WhyRightAsset />
       <ImageGallerySlider />
-      <AllServicesSection />
-      <section className="py-14 lg:py-20" style={{ backgroundColor: "#FFFFFF" }}>
+      <section className="py-10 sm:py-14 lg:py-20" style={{ backgroundColor: "#FFFFFF" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-8">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-1.5" style={{ color: "#C9A84C" }}>
                 Live Market Data

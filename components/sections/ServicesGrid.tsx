@@ -36,11 +36,11 @@ const VERTICALS = [
 
 export default function ServicesGrid() {
   return (
-    <section id="services" className="py-20 lg:py-28 bg-white">
+    <section id="services" className="py-14 sm:py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-9 sm:mb-14">
           <p
             className="text-xs font-semibold uppercase tracking-[0.18em] mb-3"
             style={{ color: "#C9A84C" }}
@@ -60,7 +60,7 @@ export default function ServicesGrid() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
           {VERTICALS.map((v) => (
             <Link
               key={v.name}

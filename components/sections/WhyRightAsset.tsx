@@ -30,7 +30,7 @@ const PILLARS = [
 
 export default function WhyRightAsset() {
   return (
-    <section className="py-20 lg:py-28" style={{ backgroundColor: "#F9F8F5" }}>
+    <section className="py-14 sm:py-20 lg:py-28" style={{ backgroundColor: "#F9F8F5" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -39,7 +39,7 @@ export default function WhyRightAsset() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.55 }}
-          className="text-center mb-14"
+          className="text-center mb-9 sm:mb-14"
         >
           <p
             className="text-xs font-semibold uppercase tracking-[0.18em] mb-3"
@@ -48,19 +48,19 @@ export default function WhyRightAsset() {
             Why Us
           </p>
           <h2
-            className="font-heading font-bold text-4xl sm:text-5xl mb-4"
+            className="font-heading font-bold text-[26px] sm:text-5xl mb-3 sm:mb-4"
             style={{ color: "#1B3A6B" }}
           >
             Why Choose Right Assets?
           </h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-gray-500 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
             We built this firm to solve a real problem: great advice rarely comes with great execution.
             We changed that.
           </p>
         </motion.div>
 
         {/* Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
           {PILLARS.map((p, i) => (
             <motion.div
               key={p.title}
@@ -68,7 +68,7 @@ export default function WhyRightAsset() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.55, delay: i * 0.12 }}
-              className="bg-white rounded-2xl p-8"
+              className="bg-white rounded-2xl p-6 sm:p-8"
               style={{ boxShadow: "0 2px 24px rgba(0,0,0,0.06)" }}
             >
               <div
@@ -94,7 +94,7 @@ export default function WhyRightAsset() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-12 text-base font-medium italic"
+          className="text-center mt-9 sm:mt-12 text-sm sm:text-base font-medium italic"
           style={{ color: "#1B3A6B" }}
         >
           &ldquo;We don&apos;t just advise — we execute. From the first consultation to the final outcome, we stay with you.&rdquo;

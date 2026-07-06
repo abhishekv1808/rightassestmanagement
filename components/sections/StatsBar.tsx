@@ -39,14 +39,14 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
 
 export default function StatsBar() {
   return (
-    <section style={{ backgroundColor: "#1B3A6B" }} className="py-16">
+    <section style={{ backgroundColor: "#1B3A6B" }} className="py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-6">
           {STATS.map((stat, i) => (
             <div key={i} className="text-center">
               <p
                 className="font-heading font-bold text-white mb-1.5"
-                style={{ fontSize: "clamp(2.4rem, 5vw, 3.25rem)", lineHeight: 1 }}
+                style={{ fontSize: "clamp(2rem, 5vw, 3.25rem)", lineHeight: 1 }}
               >
                 <CountUp target={stat.value} suffix={stat.suffix} />
               </p>

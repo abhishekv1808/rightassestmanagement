@@ -72,13 +72,13 @@ export default function Hero() {
       </div>
 
       {/* ── Content ─────────────────────────────────────────────────────── */}
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-28">
         <div className="max-w-[780px]">
 
           {/* Eyebrow */}
           <motion.div {...fadeUp(0)}>
             <span
-              className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium mb-7"
+              className="inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[13px] sm:text-sm font-medium mb-5 sm:mb-7"
               style={{
                 background: "rgba(201,168,76,0.12)",
                 border: "1px solid rgba(201,168,76,0.3)",
@@ -96,8 +96,8 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             {...fadeUp(0.08)}
-            className="font-heading font-bold text-white mb-6"
-            style={{ fontSize: "clamp(2.15rem, 5.2vw, 3.9rem)", lineHeight: 1.13 }}
+            className="font-heading font-bold text-white mb-4 sm:mb-6"
+            style={{ fontSize: "clamp(1.75rem, 5.2vw, 3.9rem)", lineHeight: 1.15 }}
           >
             Your Trusted Partner for{" "}
             <span style={{ color: "#C9A84C" }}>Financial,&nbsp;Real&nbsp;Estate</span>
@@ -109,7 +109,7 @@ export default function Hero() {
           {/* Subheadline */}
           <motion.p
             {...fadeUp(0.17)}
-            className="text-[1.125rem] leading-[1.75] mb-10 max-w-[640px]"
+            className="text-[0.95rem] sm:text-[1.125rem] leading-[1.7] sm:leading-[1.75] mb-7 sm:mb-10 max-w-[640px]"
             style={{ color: "rgba(255,255,255,0.7)" }}
           >
             One destination for 48+ expert services — investments, property, and legal help under
@@ -120,7 +120,7 @@ export default function Hero() {
           <motion.div {...fadeUp(0.25)} className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-[15px] shadow-xl transition-all hover:opacity-90 active:scale-[0.97]"
+              className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-sm sm:text-[15px] shadow-xl transition-all hover:opacity-90 active:scale-[0.97]"
               style={{ backgroundColor: "#C9A84C", color: "#1B3A6B" }}
             >
               Book a Free Consultation
@@ -128,7 +128,7 @@ export default function Hero() {
             </Link>
             <a
               href="#services"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-[15px] text-white transition-all hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-sm sm:text-[15px] text-white transition-all hover:bg-white/10"
               style={{ border: "1.5px solid rgba(255,255,255,0.25)" }}
             >
               Explore Services
@@ -140,7 +140,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.45 }}
-            className="flex flex-wrap items-center gap-x-7 gap-y-3 mt-12"
+            className="flex flex-wrap items-center gap-x-5 sm:gap-x-7 gap-y-2.5 sm:gap-y-3 mt-8 sm:mt-12"
           >
             {TRUST.map((t) => (
               <div key={t} className="flex items-center gap-2">

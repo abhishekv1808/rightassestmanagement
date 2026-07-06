@@ -228,7 +228,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -12, scale: 0.98 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed left-1/2 z-[61] w-full max-w-2xl -translate-x-1/2 rounded-2xl overflow-hidden shadow-2xl"
+            className="fixed left-1/2 z-[61] w-[calc(100%-2rem)] max-w-2xl -translate-x-1/2 rounded-2xl overflow-hidden shadow-2xl"
             style={{ top: "80px", border: "1px solid #E5E7EB" }}
           >
             {/* Search input row */}

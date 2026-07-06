@@ -77,7 +77,7 @@ export default function BangaloreIndexPage() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
           {/* Breadcrumb */}
           <nav
             className="flex items-center gap-1.5 text-sm mb-6"
@@ -108,7 +108,7 @@ export default function BangaloreIndexPage() {
             <h1
               className="font-heading font-bold text-white mb-4"
               style={{
-                fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
+                fontSize: "clamp(1.75rem, 4.5vw, 3.25rem)",
                 lineHeight: 1.15,
               }}
             >
@@ -117,7 +117,7 @@ export default function BangaloreIndexPage() {
             </h1>
 
             <p
-              className="text-lg mb-8 max-w-2xl"
+              className="text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl"
               style={{ color: "rgba(255,255,255,0.72)" }}
             >
               Find our financial, real estate &amp; legal services near your
@@ -179,9 +179,9 @@ export default function BangaloreIndexPage() {
       </section>
 
       {/* ── Localities grid ───────────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>
+      <section className="py-12 sm:py-16 lg:py-24" style={{ backgroundColor: "#F9F8F5" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-8 sm:mb-10">
             <div className="flex items-center gap-3 mb-3">
               <p
                 className="text-xs font-bold uppercase tracking-[0.2em]"
@@ -284,9 +284,9 @@ export default function BangaloreIndexPage() {
       </section>
 
       {/* ── Why Right Assets ───────────────────────────────────────────────── */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8 sm:mb-10">
             <p
               className="text-xs font-bold uppercase tracking-[0.2em] mb-2"
               style={{ color: "#C9A84C" }}
@@ -351,7 +351,7 @@ export default function BangaloreIndexPage() {
 
       {/* ── CTA ───────────────────────────────────────────────────────────── */}
       <section
-        className="py-16"
+        className="py-12 sm:py-16"
         style={{
           background:
             "linear-gradient(135deg, #1B3A6B 0%, #0D2347 100%)",

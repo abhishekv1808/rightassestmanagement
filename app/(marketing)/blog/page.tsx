@@ -235,7 +235,7 @@ export default function BlogPage() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
           <nav
             className="flex items-center gap-1.5 text-sm mb-6"
             style={{ color: "rgba(255,255,255,0.5)" }}
@@ -264,7 +264,7 @@ export default function BlogPage() {
             <h1
               className="font-heading font-bold text-white mb-4"
               style={{
-                fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
+                fontSize: "clamp(1.75rem, 4.5vw, 3.25rem)",
                 lineHeight: 1.15,
               }}
             >
@@ -276,7 +276,7 @@ export default function BlogPage() {
             </h1>
 
             <p
-              className="text-lg max-w-2xl"
+              className="text-base sm:text-lg max-w-2xl"
               style={{ color: "rgba(255,255,255,0.7)" }}
             >
               Expert guides on financial planning, real estate documentation,
@@ -288,10 +288,10 @@ export default function BlogPage() {
       </div>
 
       {/* ── Filter + Articles ─────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category filters */}
-          <div className="flex flex-wrap gap-3 mb-12">
+          <div className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-12">
             {FILTERS.map((f) => {
               const isActive = activeFilter === f.key;
               return (
@@ -329,7 +329,7 @@ export default function BlogPage() {
                   style={{ backgroundColor: "#C9A84C", maxWidth: "60px" }}
                 />
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mb-10 sm:mb-16">
                 {filteredPublished.map((post) => (
                   <ArticleCard key={post.slug} post={post} />
                 ))}
@@ -381,14 +381,14 @@ export default function BlogPage() {
 
       {/* ── CTA ───────────────────────────────────────────────────────── */}
       <section
-        className="py-16"
+        className="py-12 sm:py-16"
         style={{
           background:
             "linear-gradient(135deg, #1B3A6B 0%, #0D2347 100%)",
         }}
       >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-heading font-bold text-3xl text-white mb-4">
+          <h2 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-4">
             Have Questions? Talk to an Expert.
           </h2>
           <p

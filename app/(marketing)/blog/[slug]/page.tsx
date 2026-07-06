@@ -156,7 +156,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           {/* Breadcrumb */}
           <nav
             className="flex items-center gap-1.5 text-sm mb-6"
@@ -236,9 +236,9 @@ export default async function BlogArticlePage({ params }: PageProps) {
       </div>
 
       {/* ── Article body ─────────────────────────────────────────────── */}
-      <section className="py-12 lg:py-20" style={{ backgroundColor: "#F9F8F5" }}>
+      <section className="py-10 sm:py-12 lg:py-20" style={{ backgroundColor: "#F9F8F5" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-start">
             {/* Main content */}
             <article className="lg:col-span-8">
               <div

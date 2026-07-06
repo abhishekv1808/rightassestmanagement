@@ -181,7 +181,7 @@ export default async function LocalityPage({
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
           {/* Breadcrumb */}
           <nav
             className="flex items-center gap-1.5 text-sm mb-6 flex-wrap"
@@ -220,7 +220,7 @@ export default async function LocalityPage({
             <h1
               className="font-heading font-bold text-white mb-4"
               style={{
-                fontSize: "clamp(1.875rem, 4.5vw, 3rem)",
+                fontSize: "clamp(1.6rem, 4.5vw, 3rem)",
                 lineHeight: 1.15,
               }}
             >
@@ -266,7 +266,7 @@ export default async function LocalityPage({
       </div>
 
       {/* ── B. Quick Stats strip ──────────────────────────────────────────── */}
-      <section className="py-10 bg-white border-b border-gray-100">
+      <section className="py-8 sm:py-10 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {/* Avg Property Price */}
@@ -337,9 +337,9 @@ export default async function LocalityPage({
       </section>
 
       {/* ── C. Three Verticals ────────────────────────────────────────────── */}
-      <section className="py-16 lg:py-20" style={{ backgroundColor: "#F9F8F5" }}>
+      <section className="py-12 sm:py-16 lg:py-20" style={{ backgroundColor: "#F9F8F5" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 text-center">
+          <div className="mb-8 sm:mb-10 text-center">
             <p
               className="text-xs font-bold uppercase tracking-[0.2em] mb-2"
               style={{ color: "#C9A84C" }}
@@ -412,9 +412,9 @@ export default async function LocalityPage({
       </section>
 
       {/* ── D. Most Requested Services ────────────────────────────────────── */}
-      <section className="py-16 lg:py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-8 sm:mb-10">
             <div className="flex items-center gap-3 mb-3">
               <p
                 className="text-xs font-bold uppercase tracking-[0.2em]"
@@ -509,9 +509,9 @@ export default async function LocalityPage({
       </section>
 
       {/* ── E. Local Insights ─────────────────────────────────────────────── */}
-      <section className="py-16 lg:py-20" style={{ backgroundColor: "#F9F8F5" }}>
+      <section className="py-12 sm:py-16 lg:py-20" style={{ backgroundColor: "#F9F8F5" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-8 sm:mb-10">
             <div className="flex items-center gap-3 mb-3">
               <p
                 className="text-xs font-bold uppercase tracking-[0.2em]"
@@ -568,9 +568,9 @@ export default async function LocalityPage({
       </section>
 
       {/* ── F. FAQs ───────────────────────────────────────────────────────── */}
-      <section className="py-16 lg:py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 text-center">
+          <div className="mb-8 sm:mb-10 text-center">
             <p
               className="text-xs font-bold uppercase tracking-[0.2em] mb-2"
               style={{ color: "#C9A84C" }}
@@ -620,7 +620,7 @@ export default async function LocalityPage({
 
       {/* ── G. CTA Banner ─────────────────────────────────────────────────── */}
       <section
-        className="py-16 lg:py-20"
+        className="py-12 sm:py-16 lg:py-20"
         style={{
           background:
             "linear-gradient(135deg, #1B3A6B 0%, #0D2347 55%, #071428 100%)",

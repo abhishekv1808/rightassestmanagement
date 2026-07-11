@@ -44,7 +44,7 @@ const VERTICALS: NavVertical[] = [
     color: "#1B3A6B",
     lightBg: "#EEF2F8",
     Icon: TrendingUp,
-    description: "20 services — investments, insurance, loans & more",
+    description: "21 services — investments, insurance, loans & more",
     groups: [
       {
         category: "Investments",

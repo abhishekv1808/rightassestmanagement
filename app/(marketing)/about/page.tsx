@@ -224,7 +224,7 @@ export default function AboutPage() {
                 <p>
                   Right Assets Management was founded with a single mission — to make financial
                   planning, real estate transactions, and legal support accessible, transparent,
-                  and reliable for every Indiaan.
+                  and reliable for every Indian.
                 </p>
                 <p>
                   We bring together expertise across three critical areas of life under one roof,
@@ -264,7 +264,7 @@ export default function AboutPage() {
                   style={{ lineHeight: 1.65 }}
                 >
                   To make financial planning, real estate, and legal services accessible,
-                  transparent, and reliable for every Indiaan.
+                  transparent, and reliable for every Indian.
                 </p>
               </div>
 

@@ -77,9 +77,9 @@ export default function ServiceSchema({ service }: ServiceSchemaProps) {
       url: SITE_URL,
     },
     areaServed: {
-      "@type": "City",
+      "@type": "Country",
       name: "India",
-      sameAs: "https://www.wikidata.org/wiki/Q1355",
+      sameAs: "https://www.wikidata.org/wiki/Q668",
     },
     audience: {
       "@type": "Audience",

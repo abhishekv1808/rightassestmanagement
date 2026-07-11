@@ -19,7 +19,6 @@ import {
   Star,
   Clock,
   Gem,
-  Rocket,
   Calculator,
   CreditCard,
   Target,

@@ -8,7 +8,7 @@ import {
   // Financial icons
   PieChart, Heart, Home, Shield, Banknote, Car, BarChart3,
   PiggyBank, FileText, Building2, Landmark, Coins, Star,
-  Clock, Gem, Rocket, Calculator, CreditCard, Target, TrendingUp,
+  Clock, Gem, Calculator, CreditCard, Target, TrendingUp,
   // Real Estate icons
   Key, MapPin, Layers, RefreshCw, Users, BarChart2, Receipt,
   CheckSquare, PenLine, Wallet, Award, ScrollText,

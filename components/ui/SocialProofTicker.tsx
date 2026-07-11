@@ -48,7 +48,7 @@ const NOTIFICATIONS: Notification[] = [
   },
   {
     name: "Vikram N.",
-    action: "asked about E-Khatha services",
+    action: "asked about Khata Certificate services",
     location: "Electronic City",
     time: "21 mins ago",
   },
@@ -302,7 +302,7 @@ export default function SocialProofTicker() {
                   color: "#94A3B8",
                 }}
               >
-                {current.location}, Bangalore
+                {current.location}, India
               </span>
             </div>
           </div>

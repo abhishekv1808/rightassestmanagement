@@ -230,7 +230,7 @@ export default function ToolsHubPage() {
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition-all hover:opacity-90"
                 style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
               >
-                Book Free Consultation
+                Book Consultation
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

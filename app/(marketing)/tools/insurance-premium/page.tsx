@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/tools/insurance-premium" },
   title: "Insurance Premium Estimator — Term Life & Health | Right Assets Management",
   description:
-    "Estimate your annual insurance premium for Term Life or Health Insurance based on your age and coverage amount. Free estimator by Right Assets Management, Bangalore.",
+    "Estimate your annual insurance premium for Term Life or Health Insurance based on your age and coverage amount. Free estimator by Right Assets Management, India.",
 };
 
 export default function InsurancePremiumPage() {
@@ -74,7 +74,7 @@ export default function InsurancePremiumPage() {
             <p>
               For <strong>Health Insurance</strong>, a ₹5 lakh individual cover was adequate a decade ago,
               but medical inflation (around 15% p.a.) means ₹10–15 lakhs is now the recommended
-              minimum for a family of 4 in a metro city like Bangalore.
+              minimum for a family of 4 in a metro city like India.
             </p>
             <p>
               Our advisors compare plans from 30+ insurers to find the right balance of cover,

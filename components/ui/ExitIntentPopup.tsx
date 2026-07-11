@@ -67,7 +67,7 @@ export default function ExitIntentPopup() {
           full_name: form.name.trim(),
           phone: form.phone.trim(),
           source: "exit_intent",
-          service_interested: "Free Consultation",
+          service_interested: "Consultation",
         }),
       });
 
@@ -380,7 +380,7 @@ export default function ExitIntentPopup() {
                       "#C9A84C";
                 }}
               >
-                {loading ? "Booking…" : "Book My Free Consultation"}
+                {loading ? "Booking…" : "Book My Consultation"}
               </button>
             </form>
 

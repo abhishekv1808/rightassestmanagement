@@ -113,7 +113,7 @@ type LeadFormProps = {
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export default function LeadForm({
-  heading = "Book a Free Consultation",
+  heading = "Book a Consultation",
   subtext = "Fill in your details and we'll get back to you within 24 hours.",
   defaultService = "",
   className = "",

@@ -9,6 +9,8 @@ import {
   Briefcase,
   CreditCard,
   Landmark,
+  FileText,
+  ScrollText,
   Wifi,
   ShoppingBag,
   MessageCircle,
@@ -17,9 +19,9 @@ import { getServiceBySlug } from "@/lib/services-data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/legal" },
-  title: "Legal Services in Bangalore — Property, Family & Consumer Case Advisory",
+  title: "Legal Services across India — Property, Family & Consumer Case Advisory",
   description:
-    "Expert legal advisory in Bangalore for property disputes, family cases, cyber crime, consumer disputes, labour cases, and more. Right Assets Management.",
+    "Expert legal advisory across India for property disputes, family cases, cyber crime, consumer disputes, labour cases, and more. Right Assets Management.",
 };
 
 // ─── Cards config ─────────────────────────────────────────────────────────────
@@ -33,6 +35,9 @@ const CARDS = [
   { slug: "cyber-crime",        Icon: Wifi,       color: "#0D7E7E", lightBg: "#E6F4F4",  badge: "Growing Need", highlight: "Online Fraud & Hacking" },
   { slug: "insurance-claims",   Icon: CreditCard, color: "#1B3A6B", lightBg: "#EEF2F8",  badge: null,           highlight: "Claim Dispute Advisory" },
   { slug: "banking-cases",      Icon: Landmark,   color: "#C9A84C", lightBg: "#FBF5E6",  badge: null,           highlight: "Banking & Finance Law" },
+  { slug: "partition-deed",     Icon: Users,      color: "#6B46C1", lightBg: "#F0EBF9",  badge: null,           highlight: "Divide Family Property" },
+  { slug: "will",               Icon: FileText,   color: "#1B3A6B", lightBg: "#EEF2F8",  badge: null,           highlight: "Secure Your Estate" },
+  { slug: "release-deed",       Icon: ScrollText, color: "#0D7E7E", lightBg: "#E6F4F4",  badge: null,           highlight: "Relinquish a Share" },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -47,12 +52,12 @@ export default function LegalHubPage() {
         "name": "What legal services does Right Assets Management offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer legal advisory across 8 areas: property disputes, criminal case advisory, family law (divorce, maintenance), labour cases, insurance claim disputes, banking and financial cases, cyber crime, and consumer disputes."
+          "text": "We offer legal advisory across 11 areas: property disputes, criminal case advisory, family law (divorce, maintenance), labour cases, insurance claim disputes, banking and financial cases, cyber crime, consumer disputes, partition deeds, wills, and release deeds."
         }
       },
       {
         "@type": "Question",
-        "name": "How do I file a cyber crime complaint in Bangalore?",
+        "name": "How do I file a cyber crime complaint across India?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "You can file a cyber crime complaint at cybercrime.gov.in or call the national helpline 1930. Right Assets Management's legal advisors can guide you through the entire complaint process and documentation."
@@ -63,7 +68,7 @@ export default function LegalHubPage() {
         "name": "Does Right Assets Management provide court representation?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We provide legal advisory and connect you with experienced attorneys in Bangalore for court representation. Our role is to guide, prepare your case, and connect you with the right legal professionals."
+          "text": "We provide legal advisory and connect you with experienced attorneys across India for court representation. Our role is to guide, prepare your case, and connect you with the right legal professionals."
         }
       },
       {
@@ -130,7 +135,7 @@ export default function LegalHubPage() {
               style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#C9A84C", border: "1px solid rgba(201,168,76,0.3)" }}
             >
               <Scale className="w-3.5 h-3.5" />
-              8 Legal Services
+              11 Legal Services
             </div>
 
             <h1
@@ -154,7 +159,7 @@ export default function LegalHubPage() {
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98]"
                 style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
               >
-                Book a Free Consultation
+                Book a Consultation
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
@@ -203,7 +208,7 @@ export default function LegalHubPage() {
               style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", color: "#1A1A1A" }}
             >
               Expert Advisory Across{" "}
-              <span style={{ color: "#1B3A6B" }}>8 Case Types</span>
+              <span style={{ color: "#1B3A6B" }}>11 Case Types</span>
             </h2>
             <p className="text-gray-500 text-sm max-w-lg">
               From property disputes and family law to cyber crime and consumer forums —
@@ -300,7 +305,7 @@ export default function LegalHubPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
             {[
-              { step: "01", title: "Free Consultation", desc: "Tell us about your legal situation — no details are too complex." },
+              { step: "01", title: "Consultation", desc: "Tell us about your legal situation — no details are too complex." },
               { step: "02", title: "Case Assessment", desc: "We assess the case type, urgency, and the right legal approach." },
               { step: "03", title: "Lawyer Matching", desc: "We connect you with an experienced lawyer for your specific case." },
               { step: "04", title: "Ongoing Support", desc: "We stay involved to ensure you understand every development." },
@@ -341,7 +346,7 @@ export default function LegalHubPage() {
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98]"
               style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
             >
-              Book Free Consultation
+              Book Consultation
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a

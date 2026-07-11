@@ -57,14 +57,14 @@ export const ALL_RESOURCES: Resource[] = [
     downloadPath: "/downloads/home-loan-guide.pdf",
     metaTitle: "Home Loan Buyer's Guide — Free Download | Right Assets Management",
     metaDescription:
-      "Free 16-page home loan guide for first-time buyers in Bangalore. Covers eligibility, document checklist, lender comparison, and tax benefits.",
+      "Free 16-page home loan guide for first-time buyers across India. Covers eligibility, document checklist, lender comparison, and tax benefits.",
   },
   {
     slug: "property-registration-checklist",
     title: "Property Registration Checklist",
-    subtitle: "Step-by-step guide for Bangalore property buyers",
+    subtitle: "Step-by-step guide for India property buyers",
     description:
-      "Property registration in Bangalore involves stamp duty, SRO appointments, and a stack of documents that can overwhelm any first-time buyer. This 10-page checklist walks you through every step — from document preparation to post-registration follow-up — with 2025-updated stamp duty rates for Karnataka so there are no surprises on registration day.",
+      "Property registration across India involves stamp duty, SRO appointments, and a stack of documents that can overwhelm any first-time buyer. This 10-page checklist walks you through every step — from document preparation to post-registration follow-up — with 2025-updated stamp duty rates for Karnataka so there are no surprises on registration day.",
     category: "real-estate",
     pages: 10,
     highlights: [
@@ -73,20 +73,20 @@ export const ALL_RESOURCES: Resource[] = [
       "How to book your SRO appointment on Kaveri Online",
       "5 common registration mistakes that cause delays",
     ],
-    forWhom: "Anyone buying or selling property in Bangalore",
+    forWhom: "Anyone buying or selling property across India",
     color: "#0D7E7E",
     lightBg: "#E6F4F4",
     downloadPath: "/downloads/property-registration-checklist.pdf",
-    metaTitle: "Property Registration Checklist Bangalore 2025 — Free Guide | Right Assets Management",
+    metaTitle: "Property Registration Checklist India 2025 — Free Guide | Right Assets Management",
     metaDescription:
-      "Free 10-page property registration checklist for Bangalore with 2025 stamp duty rates, document requirements, and SRO appointment booking steps.",
+      "Free 10-page property registration checklist for India with 2025 stamp duty rates, document requirements, and SRO appointment booking steps.",
   },
   {
-    slug: "e-khatha-guide",
-    title: "E-Khatha Application Guide",
-    subtitle: "Get your Bangalore property Khatha without the run-around",
+    slug: "khata-certificate-guide",
+    title: "Khata Certificate Application Guide",
+    subtitle: "Get your India property Khatha without the run-around",
     description:
-      "Khatha is mandatory for property tax payment, construction approvals, and most property transactions in Bangalore — yet getting it can feel like a maze. This 8-page guide explains the difference between BBMP and Gram Panchayat Khatha, walks through the online application process step by step, and tells you exactly how to handle rejection notices.",
+      "Khatha is mandatory for property tax payment, construction approvals, and most property transactions across India — yet getting it can feel like a maze. This 8-page guide explains the difference between BBMP and Gram Panchayat Khatha, walks through the online application process step by step, and tells you exactly how to handle rejection notices.",
     category: "real-estate",
     pages: 8,
     highlights: [
@@ -96,13 +96,13 @@ export const ALL_RESOURCES: Resource[] = [
       "How to handle rejection notices and appeals",
     ],
     forWhom:
-      "Bangalore property owners needing Khatha for transactions or tax payment",
+      "India property owners needing Khatha for transactions or tax payment",
     color: "#0D7E7E",
     lightBg: "#E6F4F4",
-    downloadPath: "/downloads/e-khatha-guide.pdf",
-    metaTitle: "E-Khatha Application Guide Bangalore — Free Download | Right Assets Management",
+    downloadPath: "/downloads/khata-certificate-guide.pdf",
+    metaTitle: "Khata Certificate Application Guide India — Free Download | Right Assets Management",
     metaDescription:
-      "Free 8-page guide to applying for E-Khatha in Bangalore. Covers BBMP vs Gram Panchayat Khatha, online process, documents, and handling rejections.",
+      "Free 8-page guide to applying for Khata Certificate across India. Covers BBMP vs Gram Panchayat Khatha, online process, documents, and handling rejections.",
   },
   {
     slug: "tax-saving-guide",
@@ -146,9 +146,9 @@ export const ALL_RESOURCES: Resource[] = [
     color: "#0D7E7E",
     lightBg: "#E6F4F4",
     downloadPath: "/downloads/property-due-diligence.pdf",
-    metaTitle: "Property Due Diligence Checklist Bangalore — Free Guide | Right Assets Management",
+    metaTitle: "Property Due Diligence Checklist India — Free Guide | Right Assets Management",
     metaDescription:
-      "Free 14-page property due diligence checklist. Covers title search, encumbrance certificates, RERA verification, and fraud red flags for Bangalore buyers.",
+      "Free 14-page property due diligence checklist. Covers title search, encumbrance certificates, RERA verification, and fraud red flags for India buyers.",
   },
   {
     slug: "insurance-planning-starter",
@@ -178,7 +178,7 @@ export const ALL_RESOURCES: Resource[] = [
     title: "Tenant & Landlord Rights Guide",
     subtitle: "Know your legal rights before signing any rent agreement",
     description:
-      "Disputes between tenants and landlords in Bangalore most often arise from one thing: a poorly drafted or misunderstood rent agreement. This 12-page guide explains the legal difference between a registered and a notarised agreement, outlines Karnataka Rent Act rules on security deposits and rent increases, and tells you the exact legal process to follow if things go wrong.",
+      "Disputes between tenants and landlords across India most often arise from one thing: a poorly drafted or misunderstood rent agreement. This 12-page guide explains the legal difference between a registered and a notarised agreement, outlines Karnataka Rent Act rules on security deposits and rent increases, and tells you the exact legal process to follow if things go wrong.",
     category: "legal",
     pages: 12,
     highlights: [
@@ -188,13 +188,13 @@ export const ALL_RESOURCES: Resource[] = [
       "Rent increase limits and proper notice procedures",
     ],
     forWhom:
-      "Tenants and landlords in Bangalore navigating rental agreements",
+      "Tenants and landlords across India navigating rental agreements",
     color: "#6B46C1",
     lightBg: "#F0EBF9",
     downloadPath: "/downloads/tenant-landlord-guide.pdf",
-    metaTitle: "Tenant & Landlord Rights Guide Bangalore — Free Download | Right Assets Management",
+    metaTitle: "Tenant & Landlord Rights Guide India — Free Download | Right Assets Management",
     metaDescription:
-      "Free 12-page guide to tenant and landlord rights in Bangalore under the Karnataka Rent Act. Covers rent agreements, security deposits, and legal remedies.",
+      "Free 12-page guide to tenant and landlord rights across India under the Karnataka Rent Act. Covers rent agreements, security deposits, and legal remedies.",
   },
 ];
 

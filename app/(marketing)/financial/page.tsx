@@ -29,9 +29,9 @@ import { getServiceBySlug } from "@/lib/services-data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/financial" },
-  title: "Financial Services in Bangalore — Investments, Insurance & Loans",
+  title: "Financial Services across India — Investments, Insurance & Loans",
   description:
-    "Comprehensive financial services in Bangalore — mutual funds, SIP, insurance, home loans, tax planning, and more. Expert advisors at Right Assets Management.",
+    "Comprehensive financial services across India — mutual funds, SIP, insurance, home loans, tax planning, and more. Expert advisors at Right Assets Management.",
 };
 
 // ─── Cards config ─────────────────────────────────────────────────────────────
@@ -55,7 +55,7 @@ const CARDS = [
   { slug: "credit-score",       Icon: CreditCard,  color: "#6B46C1", lightBg: "#F0EBF9",  badge: null,           highlight: "Improve in 30–90 Days" },
   { slug: "aif",                Icon: Building2,   color: "#1B3A6B", lightBg: "#EEF2F8",  badge: null,           highlight: "Min. ₹1 Cr Investment" },
   { slug: "sukanya-samriddhi",  Icon: Star,        color: "#0D7E7E", lightBg: "#E6F4F4",  badge: null,           highlight: "For Girl Child" },
-  { slug: "startup-funding",    Icon: Rocket,      color: "#C9A84C", lightBg: "#FBF5E6",  badge: null,           highlight: "Startup Advisory" },
+  { slug: "vehicle-insurance",  Icon: Car,         color: "#C9A84C", lightBg: "#FBF5E6",  badge: null,           highlight: "Car · Bike · Commercial" },
   { slug: "atal-pension",       Icon: Clock,       color: "#6B46C1", lightBg: "#F0EBF9",  badge: null,           highlight: "Guaranteed Pension" },
 ];
 
@@ -68,10 +68,10 @@ export default function FinancialHubPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What financial services does Right Assets Management offer in Bangalore?",
+        "name": "What financial services does Right Assets Management offer across India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Right Assets Management offers 21+ financial services including mutual fund SIP, health and life insurance, home loans, personal loans, equity investments, fixed deposits, tax planning, NPS, PPF, portfolio management, and more — all under one roof in Bangalore."
+          "text": "Right Assets Management offers 21+ financial services including mutual fund SIP, health and life insurance, home loans, personal loans, equity investments, fixed deposits, tax planning, NPS, PPF, portfolio management, and more — all under one roof across India."
         }
       },
       {
@@ -177,7 +177,7 @@ export default function FinancialHubPage() {
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98]"
                 style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
               >
-                Book a Free Consultation
+                Book a Consultation
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
@@ -315,7 +315,7 @@ export default function FinancialHubPage() {
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98]"
               style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
             >
-              Book Free Consultation
+              Book Consultation
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a

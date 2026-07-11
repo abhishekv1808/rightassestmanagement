@@ -28,9 +28,9 @@ const FEATURED = [
     verticalColor: "#0D7E7E",
     verticalBg: "#E6F4F4",
     Icon: Building2,
-    title: "E-Khatha Application",
-    tagline: "Get your E-Khatha certificate in Bangalore — fast, correct, and without queues.",
-    href: "/real-estate/e-khatha",
+    title: "Khata Certificate Application",
+    tagline: "Get your Khata Certificate certificate across India — fast, correct, and without queues.",
+    href: "/real-estate/khata-certificate",
   },
   {
     vertical: "Real Estate",

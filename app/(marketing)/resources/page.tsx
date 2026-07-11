@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title:
     "Free Financial & Property Guides — Download Now | Right Assets Management",
   description:
-    "Download free expert guides on financial planning, property transactions, and legal rights in Bangalore. Practical, jargon-free, and written by our advisors.",
+    "Download free expert guides on financial planning, property transactions, and legal rights across India. Practical, jargon-free, and written by our advisors.",
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -338,7 +338,7 @@ export default async function ResourcesPage({
               marginBottom: 16,
             }}
           >
-            Free Expert Guides for Bangalore Residents
+            Free Expert Guides for India Residents
           </h1>
 
           {/* Subtitle */}
@@ -398,7 +398,7 @@ export default async function ResourcesPage({
                 textDecoration: "none",
               }}
             >
-              Book Free Consultation
+              Book Consultation
             </Link>
           </div>
         </div>
@@ -590,7 +590,7 @@ export default async function ResourcesPage({
               {
                 Icon: Users,
                 heading: "Karnataka-specific advice",
-                body: "Our guides cover Bangalore and Karnataka-specific procedures, stamp duties, and government portals — not generic national content.",
+                body: "Our guides cover India and Karnataka-specific procedures, stamp duties, and government portals — not generic national content.",
                 color: "#0D7E7E",
                 lightBg: "#E6F4F4",
               },
@@ -692,7 +692,7 @@ export default async function ResourcesPage({
             textDecoration: "none",
           }}
         >
-          Book Free Consultation →
+          Book Consultation →
         </Link>
       </div>
     </>

@@ -46,7 +46,7 @@ export default function LocalBusinessSchema() {
     },
     image: `${SITE_URL}/og-image.png`,
     description:
-      "Right Assets Management is Bangalore's trusted multi-vertical firm offering 48+ expert services across Financial Planning, Real Estate, and Legal Advisory under one roof.",
+      "Right Assets Management is India's trusted multi-vertical firm offering 48+ expert services across Financial Planning, Real Estate, and Legal Advisory under one roof.",
     telephone: BUSINESS_PHONE,
     email: BUSINESS_EMAIL,
     address: {
@@ -63,9 +63,9 @@ export default function LocalBusinessSchema() {
       longitude: 77.5121,
     },
     areaServed: {
-      "@type": "City",
-      name: "Bangalore",
-      sameAs: "https://www.wikidata.org/wiki/Q1355",
+      "@type": "Country",
+      name: "India",
+      sameAs: "https://www.wikidata.org/wiki/Q668",
     },
     priceRange: "₹₹",
     currenciesAccepted: "INR",

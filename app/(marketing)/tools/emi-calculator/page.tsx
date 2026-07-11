@@ -87,7 +87,7 @@ export default function EMICalculatorPage() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:opacity-90"
               style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
             >
-              Get Best Loan Rates — Free Consultation
+              Get Best Loan Rates — Consultation
             </Link>
             <Link
               href="/financial/home-loan"

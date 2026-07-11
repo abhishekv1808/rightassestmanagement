@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 // Route segment config
 export const alt =
-  "Right Assets Management — Financial, Real Estate & Legal Services in Bangalore";
+  "Right Assets Management — Financial, Real Estate & Legal Services across India";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -82,7 +82,7 @@ export default function OpengraphImage() {
               maxWidth: "1000px",
             }}
           >
-            Financial, Real Estate &amp; Legal Services in Bangalore
+            Financial, Real Estate &amp; Legal Services across India
           </div>
           <div style={{ fontSize: "30px", color: "rgba(255,255,255,0.72)" }}>
             48+ expert services — investments, property &amp; legal help under one roof.
@@ -91,7 +91,7 @@ export default function OpengraphImage() {
 
         {/* Bottom: stat chips */}
         <div style={{ display: "flex", gap: "16px" }}>
-          {["500+ Clients Served", "10+ Years Experience", "Pan-Bangalore"].map(
+          {["500+ Clients Served", "10+ Years Experience", "Pan-India"].map(
             (chip) => (
               <div
                 key={chip}

@@ -51,21 +51,21 @@ export const CATEGORY_META: Record<
 const article1: BlogPost = {
   slug: "sip-vs-lumpsum-bangalore",
   title: "SIP vs Lump Sum — Which Investment Strategy is Better for You in 2026?",
-  metaTitle: "SIP vs Lump Sum Investment Bangalore | 2026 Guide",
+  metaTitle: "SIP vs Lump Sum Investment India | 2026 Guide",
   metaDescription:
-    "SIP vs lump sum — which is better for Bangalore investors in 2026? Compare strategies, real returns, and find the right approach for your financial goals.",
+    "SIP vs lump sum — which is better for India investors in 2026? Compare strategies, real returns, and find the right approach for your financial goals.",
   category: "financial",
-  targetKeyword: "SIP vs lump sum investment Bangalore",
+  targetKeyword: "SIP vs lump sum investment India",
   publishedAt: "2026-05-20",
   readTime: "9 min read",
   excerpt:
-    "Should you invest ₹5,000 every month or put ₹60,000 in one shot? We compare SIP and lump sum investing with real numbers to help Bangalore professionals decide.",
+    "Should you invest ₹5,000 every month or put ₹60,000 in one shot? We compare SIP and lump sum investing with real numbers to help India professionals decide.",
   author: { name: "Right Assets Management", role: "Financial Advisors" },
   published: true,
 
   intro: [
-    "Every month, thousands of IT professionals in Bangalore face the same question after their salary hits their bank account — should I start a SIP or invest a lump sum? Both are proven strategies to build wealth through mutual funds, but the right choice depends on your income pattern, how much you have available, and your comfort with market volatility.",
-    "In this guide, we compare both approaches with real numbers, real scenarios, and practical advice tailored for Bangalore's salaried workforce. By the end, you will know exactly which strategy — or which combination — works best for your situation.",
+    "Every month, thousands of IT professionals across India face the same question after their salary hits their bank account — should I start a SIP or invest a lump sum? Both are proven strategies to build wealth through mutual funds, but the right choice depends on your income pattern, how much you have available, and your comfort with market volatility.",
+    "In this guide, we compare both approaches with real numbers, real scenarios, and practical advice tailored for India's salaried workforce. By the end, you will know exactly which strategy — or which combination — works best for your situation.",
   ],
 
   sections: [
@@ -75,14 +75,14 @@ const article1: BlogPost = {
         "A Systematic Investment Plan (SIP) is a method of investing a fixed amount in a mutual fund at regular intervals — most commonly monthly. You can start a SIP with as little as ₹500 per month in most mutual funds available in India today.",
         "Here is how it works: you choose a mutual fund scheme, decide your monthly investment amount (say ₹5,000), and select a debit date. Every month on that date, the amount is automatically deducted from your bank account and used to buy units of the fund at the prevailing NAV (Net Asset Value). You do not need to time the market or make any active decisions after the initial setup.",
         "The biggest advantage of SIP is a concept called rupee cost averaging. When markets fall and NAVs drop, your fixed ₹5,000 automatically buys more mutual fund units. When markets rise and NAVs increase, you buy fewer units. Over months and years, this averaging effect smooths out your purchase price and significantly reduces the impact of short-term market volatility on your portfolio.",
-        "For salaried professionals in Bangalore — especially those in IT, fintech, and startup roles earning between ₹50,000 and ₹2,00,000 per month — SIPs are a natural fit because they align perfectly with monthly cash flow. You invest from income, not from accumulated savings.",
+        "For salaried professionals across India — especially those in IT, fintech, and startup roles earning between ₹50,000 and ₹2,00,000 per month — SIPs are a natural fit because they align perfectly with monthly cash flow. You invest from income, not from accumulated savings.",
       ],
     },
     {
       heading: "What is Lump Sum Investing?",
       paragraphs: [
         "Lump sum investing means putting a large amount of money into a mutual fund or investment in one single transaction. Instead of investing ₹5,000 every month, you invest ₹6,00,000 all at once.",
-        "This approach is commonly used when you receive a windfall — an annual performance bonus (extremely common in Bangalore tech companies during April–June), proceeds from selling a property, an inheritance, matured FD payouts, or simply accumulated savings that have been sitting idle in a savings account earning 3–4% interest.",
+        "This approach is commonly used when you receive a windfall — an annual performance bonus (extremely common across India tech companies during April–June), proceeds from selling a property, an inheritance, matured FD payouts, or simply accumulated savings that have been sitting idle in a savings account earning 3–4% interest.",
         "The advantage is simple: your entire corpus starts compounding from day one. If the market delivers 12% returns over the next year, your full ₹6,00,000 benefits from that growth — unlike a SIP where only the first installment gets 12 months of compounding while the last installment gets just one month.",
         "The risk, however, is equally straightforward. If the market drops 15% right after you invest, your entire ₹6,00,000 takes the hit. There is no rupee cost averaging to soften the blow.",
       ],
@@ -93,7 +93,7 @@ const article1: BlogPost = {
         "Let us compare both strategies using the same total investment of ₹6,00,000 and an assumed annual return of 12% — approximately the long-term average return of diversified equity mutual funds in India.",
         "SIP route: ₹5,000 per month for 10 years (120 installments). Total amount invested: ₹6,00,000. Estimated maturity value at 12% annual return: approximately ₹11,61,695. Wealth gained: ₹5,61,695.",
         "Lump sum route: ₹6,00,000 invested entirely on day one, compounded at 12% annually for 10 years. Estimated maturity value: approximately ₹18,63,547. Wealth gained: ₹12,63,547.",
-        "At first glance, lump sum wins by a massive margin — and mathematically, it does, because the full ₹6,00,000 compounds for the entire 10-year period. But here is the critical caveat: the SIP investor only needed ₹5,000 per month from their salary, while the lump sum investor needed ₹6,00,000 in idle cash on day one. Most salaried professionals in Bangalore simply do not have ₹6 lakh sitting in their bank account ready to deploy.",
+        "At first glance, lump sum wins by a massive margin — and mathematically, it does, because the full ₹6,00,000 compounds for the entire 10-year period. But here is the critical caveat: the SIP investor only needed ₹5,000 per month from their salary, while the lump sum investor needed ₹6,00,000 in idle cash on day one. Most salaried professionals across India simply do not have ₹6 lakh sitting in their bank account ready to deploy.",
         "Additionally, lump sum returns are highly sensitive to entry timing. If you invested your ₹6,00,000 right before a market correction — like the crashes in March 2020 or June 2022 — your returns would have been dramatically lower for the first few years. SIP would have averaged through the dip and emerged stronger on the other side.",
       ],
       callout:
@@ -103,7 +103,7 @@ const article1: BlogPost = {
       heading: "When Should You Choose SIP?",
       paragraphs: [
         "SIP is the better choice if you are a salaried professional with a regular monthly income and want to build an investment habit without worrying about market timing. It is especially suitable for first-time investors entering equity markets for the first time, and for anyone who feels uncomfortable making large investment decisions.",
-        "For Bangalore's tech workforce — where monthly salaries are predictable but annual bonuses vary — starting a SIP from your salary is the most practical and stress-free approach to long-term wealth creation.",
+        "For India's tech workforce — where monthly salaries are predictable but annual bonuses vary — starting a SIP from your salary is the most practical and stress-free approach to long-term wealth creation.",
       ],
       bullets: [
         "You are a first-time investor who wants to start small and learn",
@@ -116,7 +116,7 @@ const article1: BlogPost = {
     {
       heading: "When Does Lump Sum Make More Sense?",
       paragraphs: [
-        "Lump sum investing is the right choice when you already have a significant amount of money sitting idle and want to put it to work immediately. Common scenarios in Bangalore include receiving an annual bonus (₹2–10 lakh is typical in mid-to-senior tech roles), selling a property, redeeming an old FD or LIC policy, or receiving an inheritance.",
+        "Lump sum investing is the right choice when you already have a significant amount of money sitting idle and want to put it to work immediately. Common scenarios across India include receiving an annual bonus (₹2–10 lakh is typical in mid-to-senior tech roles), selling a property, redeeming an old FD or LIC policy, or receiving an inheritance.",
         "The key principle is: if you have already decided to invest in equity funds, delaying deployment by converting it into a SIP does not reduce risk — it simply means your money earns savings-account interest (3.5%) instead of equity returns (12%) while you wait. However, if you are nervous about market conditions, consider a Systematic Transfer Plan (STP) — invest the lump sum in a liquid fund and automatically transfer to equity over 6–12 months.",
       ],
       bullets: [
@@ -130,16 +130,16 @@ const article1: BlogPost = {
     {
       heading: "The Smart Approach — Combine Both Strategies",
       paragraphs: [
-        "The best investors do not pick one over the other — they use both strategies together. Here is a practical framework that works for most salaried professionals in Bangalore.",
+        "The best investors do not pick one over the other — they use both strategies together. Here is a practical framework that works for most salaried professionals across India.",
         "Set up a monthly SIP of 15–20% of your take-home salary into 2–3 diversified equity mutual funds. This is your core, long-term wealth-building engine — it runs on autopilot every month. Whenever you receive a lump sum — annual bonus, variable pay, freelance income, or matured FDs — deploy it separately into the same or different funds based on current market conditions and your asset allocation.",
         "This combined approach gives you the discipline of SIP along with the higher compounding potential of lump sum investing. Over a career spanning 20–25 years, this dual strategy can create significantly more wealth than either approach used alone.",
       ],
     },
     {
-      heading: "Why a Financial Advisor in Bangalore Can Help You Decide",
+      heading: "Why a Financial Advisor across India Can Help You Decide",
       paragraphs: [
-        "A good financial advisor does not just say \"do SIP\" or \"invest lump sum\" — they evaluate your complete financial picture. Your income trajectory (Bangalore salaries often double every 4–5 years in tech), your EMI obligations, your tax-saving needs under Section 80C and 80D, your existing investments, and your life stage all influence the right investment strategy.",
-        "At Right Assets Management, our advisors work with Bangalore professionals to build personalised investment plans. Whether you want to start a ₹5,000 SIP, deploy a ₹10 lakh bonus, or restructure your entire portfolio — we provide clear, unbiased guidance with no commission-driven product pushing. Our first consultation is free, and we explain everything in plain language.",
+        "A good financial advisor does not just say \"do SIP\" or \"invest lump sum\" — they evaluate your complete financial picture. Your income trajectory (India salaries often double every 4–5 years in tech), your EMI obligations, your tax-saving needs under Section 80C and 80D, your existing investments, and your life stage all influence the right investment strategy.",
+        "At Right Assets Management, our advisors work with India professionals to build personalised investment plans. Whether you want to start a ₹5,000 SIP, deploy a ₹10 lakh bonus, or restructure your entire portfolio — we provide clear, unbiased guidance with no commission-driven product pushing. Our first consultation is free, and we explain everything in plain language.",
       ],
     },
   ],
@@ -173,8 +173,8 @@ const article1: BlogPost = {
   ],
 
   conclusion: {
-    text: "Both SIP and lump sum are powerful investment tools — the right choice depends on your cash flow, risk tolerance, and market conditions. For most salaried professionals in Bangalore, a monthly SIP forms the core strategy, supplemented by lump sum investments from bonuses and windfalls. The key is to start early, stay consistent, and seek expert guidance when deploying large sums.",
-    cta: "Need help choosing between SIP and lump sum? Right Assets Management offers personalised mutual fund advisory in Bangalore — transparent fees and no commission bias. Book a free consultation today.",
+    text: "Both SIP and lump sum are powerful investment tools — the right choice depends on your cash flow, risk tolerance, and market conditions. For most salaried professionals across India, a monthly SIP forms the core strategy, supplemented by lump sum investments from bonuses and windfalls. The key is to start early, stay consistent, and seek expert guidance when deploying large sums.",
+    cta: "Need help choosing between SIP and lump sum? Right Assets Management offers personalised mutual fund advisory across India — transparent fees and no commission bias. Book a free consultation today.",
   },
 
   relatedSlugs: [
@@ -190,31 +190,31 @@ const article1: BlogPost = {
 
 const article2: BlogPost = {
   slug: "home-loan-guide-bangalore-2026",
-  title: "Complete Home Loan Guide for First-Time Buyers in Bangalore (2026)",
-  metaTitle: "Home Loan Guide Bangalore 2026 | First-Time Buyers",
+  title: "Complete Home Loan Guide for First-Time Buyers across India (2026)",
+  metaTitle: "Home Loan Guide India 2026 | First-Time Buyers",
   metaDescription:
-    "Everything first-time home buyers in Bangalore need to know about home loans in 2026 — eligibility, documents, interest rates, and the complete step-by-step process.",
+    "Everything first-time home buyers across India need to know about home loans in 2026 — eligibility, documents, interest rates, and the complete step-by-step process.",
   category: "financial",
-  targetKeyword: "home loan guide Bangalore 2026",
+  targetKeyword: "home loan guide India 2026",
   publishedAt: "2026-05-20",
   readTime: "10 min read",
   excerpt:
-    "Buying your first home in Bangalore? This guide covers eligibility, documents, interest rates, and the full loan process — everything you need to know in 2026.",
+    "Buying your first home across India? This guide covers eligibility, documents, interest rates, and the full loan process — everything you need to know in 2026.",
   author: { name: "Right Assets Management", role: "Financial Advisors" },
   published: true,
 
   intro: [
-    "Buying a home in Bangalore is one of the most significant financial decisions of your life — and a home loan will almost certainly be the largest debt you ever take. With property prices across Whitefield, Sarjapur Road, Hebbal, and Electronic City ranging from ₹60 lakh to several crores, most first-time buyers are heavily dependent on bank financing to make the purchase happen.",
+    "Buying a home across India is one of the most significant financial decisions of your life — and a home loan will almost certainly be the largest debt you ever take. With property prices across Whitefield, Sarjapur Road, Hebbal, and Electronic City ranging from ₹60 lakh to several crores, most first-time buyers are heavily dependent on bank financing to make the purchase happen.",
     "The good news is that home loans in India are well-regulated, competitively priced, and come with meaningful tax benefits. The challenge lies in navigating the paperwork, comparing lenders, understanding floating vs fixed rates, and avoiding the expensive mistakes that cost buyers lakhs over the loan tenure. This guide covers everything you need to know before you walk into a bank.",
   ],
 
   sections: [
     {
-      heading: "Who is Eligible for a Home Loan in Bangalore?",
+      heading: "Who is Eligible for a Home Loan across India?",
       paragraphs: [
         "Most banks and housing finance companies (HFCs) in India will lend to salaried employees, self-employed professionals, and business owners between the ages of 21 and 60 (or 65 for self-employed). Non-resident Indians (NRIs) with Indian citizenship can also apply for home loans on Indian properties.",
         "The three primary factors lenders evaluate are income stability, credit score, and debt-to-income ratio. A CIBIL score of 750 or above is considered excellent and qualifies you for the best interest rates. Scores between 700 and 749 still get approved but at slightly higher rates. Below 700, lenders become cautious.",
-        "Most banks will approve a loan amount of approximately 4 to 5 times your annual gross income. For a Bangalore IT professional earning ₹12 lakh per year (₹1 lakh per month), the eligible loan amount typically falls between ₹48 lakh and ₹60 lakh. Banks also cap the EMI at 40–50% of net monthly income to ensure you can comfortably service the debt.",
+        "Most banks will approve a loan amount of approximately 4 to 5 times your annual gross income. For a India IT professional earning ₹12 lakh per year (₹1 lakh per month), the eligible loan amount typically falls between ₹48 lakh and ₹60 lakh. Banks also cap the EMI at 40–50% of net monthly income to ensure you can comfortably service the debt.",
       ],
       bullets: [
         "Salaried employees: minimum ₹25,000–₹30,000 net monthly income, 2+ years job stability",
@@ -267,8 +267,8 @@ const article2: BlogPost = {
       heading: "How Much Home Loan Can You Actually Afford?",
       paragraphs: [
         "Banks tell you how much they are willing to lend — not how much you should borrow. These are very different numbers. A common financial planning rule is to keep your total EMI burden (home loan + car loan + personal loans) below 40% of your net monthly take-home salary.",
-        "For a Bangalore IT professional earning ₹1.2 lakh per month take-home, this means total EMIs should not exceed ₹48,000. If a ₹50 lakh home loan at 9% for 20 years results in an EMI of approximately ₹45,000, you can technically afford it — but you would have very little flexibility for savings, emergencies, or lifestyle expenses.",
-        "Also factor in the down payment (minimum 10–20% of property value, which the bank does not finance), stamp duty and registration charges (additional 6–8% of property value in Karnataka), interior and furnishing costs, and the society/maintenance deposits. On an ₹80 lakh flat in Bangalore, total upfront cash requirement often exceeds ₹20–25 lakh.",
+        "For a India IT professional earning ₹1.2 lakh per month take-home, this means total EMIs should not exceed ₹48,000. If a ₹50 lakh home loan at 9% for 20 years results in an EMI of approximately ₹45,000, you can technically afford it — but you would have very little flexibility for savings, emergencies, or lifestyle expenses.",
+        "Also factor in the down payment (minimum 10–20% of property value, which the bank does not finance), stamp duty and registration charges (additional 6–8% of property value in Karnataka), interior and furnishing costs, and the society/maintenance deposits. On an ₹80 lakh flat across India, total upfront cash requirement often exceeds ₹20–25 lakh.",
       ],
     },
     {
@@ -284,7 +284,7 @@ const article2: BlogPost = {
     {
       heading: "Common Mistakes First-Time Home Buyers Make",
       paragraphs: [
-        "After helping hundreds of Bangalore families navigate home loans, our advisors see the same costly mistakes repeatedly. Avoiding these saves you significant money and stress.",
+        "After helping hundreds of India families navigate home loans, our advisors see the same costly mistakes repeatedly. Avoiding these saves you significant money and stress.",
       ],
       bullets: [
         "Not checking credit score before applying — a rejected application itself lowers your CIBIL score",
@@ -299,7 +299,7 @@ const article2: BlogPost = {
     {
       heading: "Why Work With Right Assets Management for Your Home Loan?",
       paragraphs: [
-        "Right Assets Management works with all major banks and housing finance companies in Bangalore. As licensed advisors, we help you compare loan offers from SBI, HDFC, ICICI, Axis, Kotak, and LICHFL simultaneously — saving you weeks of running around.",
+        "Right Assets Management works with all major banks and housing finance companies across India. As licensed advisors, we help you compare loan offers from SBI, HDFC, ICICI, Axis, Kotak, and LICHFL simultaneously — saving you weeks of running around.",
         "We review your documents before submission, identify potential issues, and negotiate the best rate based on your profile. If your credit score is below ideal, we guide you on improving it before applying. We also handle the complete registration process — from booking the SRO appointment to handing you the registered sale deed.",
       ],
     },
@@ -307,7 +307,7 @@ const article2: BlogPost = {
 
   faqs: [
     {
-      question: "What CIBIL score do I need for a home loan in Bangalore?",
+      question: "What CIBIL score do I need for a home loan across India?",
       answer:
         "Most banks require a minimum CIBIL score of 700–720 to approve a home loan. However, scores of 750 and above qualify for the best interest rates. Scores below 700 may still get approved with certain HFCs, but at significantly higher rates. If your score is low, wait 6–12 months, clear outstanding dues, and avoid new credit applications before applying.",
     },
@@ -335,7 +335,7 @@ const article2: BlogPost = {
 
   conclusion: {
     text: "A home loan is a 20–25 year commitment that shapes your financial life. Taking time to understand eligibility, compare lenders, and plan your budget properly is not optional — it is the difference between a manageable EMI and one that strains your finances for decades. The process is navigable with the right guidance, and the tax benefits and wealth creation from home ownership make it one of India's best long-term investments.",
-    cta: "Right Assets Management offers free home loan advisory in Bangalore. We compare offers from 10+ lenders, handle all documentation, and accompany you through registration. Book your free consultation today.",
+    cta: "Right Assets Management offers free home loan advisory across India. We compare offers from 10+ lenders, handle all documentation, and accompany you through registration. Book your free consultation today.",
   },
 
   relatedSlugs: [
@@ -349,21 +349,21 @@ const article2: BlogPost = {
 
 const article3: BlogPost = {
   slug: "ekhatha-bangalore-guide",
-  title: "How to Get E-Khatha in Bangalore — Complete Step-by-Step Guide (2026)",
-  metaTitle: "E-Khatha Bangalore Guide 2026 | Step by Step Process",
+  title: "How to Get Khata Certificate across India — Complete Step-by-Step Guide (2026)",
+  metaTitle: "Khata Certificate India Guide 2026 | Step by Step Process",
   metaDescription:
-    "Learn how to apply for E-Khatha in Bangalore — eligibility, documents, BBMP E-Aasthi portal process, fees, and how to avoid rejection. Complete 2026 guide.",
+    "Learn how to apply for Khata Certificate across India — eligibility, documents, BBMP E-Aasthi portal process, fees, and how to avoid rejection. Complete 2026 guide.",
   category: "real-estate",
-  targetKeyword: "how to get e-khatha Bangalore",
+  targetKeyword: "how to get khata-certificate India",
   publishedAt: "2026-05-20",
   readTime: "8 min read",
   excerpt:
-    "E-Khatha is essential for property ownership in Bangalore. Learn the step-by-step process to apply on the BBMP E-Aasthi portal, documents needed, and how to avoid rejections.",
+    "Khata Certificate is essential for property ownership across India. Learn the step-by-step process to apply on the BBMP E-Aasthi portal, documents needed, and how to avoid rejections.",
   author: { name: "Right Assets Management", role: "Real Estate Advisory" },
   published: true,
 
   intro: [
-    "If you own property in Bangalore, your Khatha is one of the most important documents you will ever need — yet it is also one of the most misunderstood. The Khatha is a revenue record maintained by the Bruhat Bengaluru Mahanagara Palike (BBMP) that identifies you as the owner of a specific property for tax assessment purposes. Without it, you cannot pay property tax, obtain building permits, transfer the property, or secure a home loan from most banks.",
+    "If you own property across India, your Khatha is one of the most important documents you will ever need — yet it is also one of the most misunderstood. The Khatha is a revenue record maintained by the Bruhat Bengaluru Mahanagara Palike (BBMP) that identifies you as the owner of a specific property for tax assessment purposes. Without it, you cannot pay property tax, obtain building permits, transfer the property, or secure a home loan from most banks.",
     "The BBMP has moved the Khatha process online through the E-Aasthi portal, replacing the old, paper-heavy system that required repeated visits to ARO (Assistant Revenue Officer) offices. While the digital process is more transparent, it still requires the right documents, accurate information, and knowledge of the system to avoid rejection. This guide walks you through every step.",
   ],
 
@@ -373,13 +373,13 @@ const article3: BlogPost = {
       paragraphs: [
         "A Khatha (the word means 'account' in Kannada) is a property account record in the BBMP's revenue system. It captures the property's location, dimensions, ownership details, and tax assessment. Every property within BBMP limits must have a Khatha registered in the owner's name.",
         "It is critical to understand that a Khatha is NOT a title document — it does not prove ownership. The registered sale deed is the actual ownership document. A Khatha is a municipal record used primarily for taxation and civic services. However, without a Khatha transfer to your name, you cannot sell the property, obtain building plan approval, get water/electricity connections for new constructions, or take a home loan in most cases.",
-        "There are two types of Khatha in Bangalore: A-Khatha and B-Khatha. A-Khatha is issued for properties in legally approved layouts that meet all building regulations. B-Khatha is issued for properties in layouts that have not been fully regularized — they can pay property tax but cannot receive full civic services like building plan approval or formal loans.",
+        "There are two types of Khatha across India: A-Khatha and B-Khatha. A-Khatha is issued for properties in legally approved layouts that meet all building regulations. B-Khatha is issued for properties in layouts that have not been fully regularized — they can pay property tax but cannot receive full civic services like building plan approval or formal loans.",
       ],
     },
     {
       heading: "A-Khatha vs B-Khatha — A Critical Distinction",
       paragraphs: [
-        "This is one of the most important questions a property buyer in Bangalore must ask before purchasing. The difference between an A-Khatha and B-Khatha property significantly affects what you can do with the property.",
+        "This is one of the most important questions a property buyer across India must ask before purchasing. The difference between an A-Khatha and B-Khatha property significantly affects what you can do with the property.",
         "A-Khatha properties are in BBMP-approved layouts with proper sanction and development plan compliance. They can receive all government services — building plan approval, water and sewage connections, trade licenses, and home loans from any bank. B-Khatha properties are in layouts that are either unauthorized or in areas where layout formation has not been formally approved by BBMP or BDA.",
       ],
       bullets: [
@@ -387,11 +387,11 @@ const article3: BlogPost = {
         "B-Khatha: may be in unauthorized layout, limited services, harder to get bank loans",
         "Converting B to A-Khatha requires paying betterment charges to BBMP (ranges from ₹5 to ₹500 per sq ft based on location)",
         "Properties in E-Aasthi will mention A or B classification clearly",
-        "Always check Khatha status before buying any resale property in Bangalore",
+        "Always check Khatha status before buying any resale property across India",
       ],
     },
     {
-      heading: "Documents Required for E-Khatha Application",
+      heading: "Documents Required for Khata Certificate Application",
       paragraphs: [
         "Having complete documents before starting the application significantly reduces the risk of rejection. BBMP verifies all documents against government records, so any mismatch in name, survey number, or dimensions leads to rejection.",
       ],
@@ -407,7 +407,7 @@ const article3: BlogPost = {
       ],
     },
     {
-      heading: "Step-by-Step: How to Apply for E-Khatha via the BBMP E-Aasthi Portal",
+      heading: "Step-by-Step: How to Apply for Khata Certificate via the BBMP E-Aasthi Portal",
       paragraphs: [
         "The BBMP has made the application process fully online through the E-Aasthi portal. Here is the complete step-by-step process.",
       ],
@@ -417,13 +417,13 @@ const article3: BlogPost = {
         { title: "Select the application type", desc: "Choose 'New Khatha' (for properties with no existing Khatha) or 'Khatha Transfer' (for resale properties where you are transferring from the previous owner)." },
         { title: "Fill in applicant details", desc: "Enter your name exactly as it appears on the sale deed and Aadhaar. Any spelling discrepancy is a common reason for rejection." },
         { title: "Upload all required documents", desc: "Scan and upload sale deed, EC, previous Khatha (if applicable), tax receipts, and ID proof. Each file should be under 2MB in PDF format." },
-        { title: "Pay the E-Khatha fee", desc: "Fees vary based on property type and size but typically range from ₹500 to ₹2,000. Payment is online via UPI, net banking, or debit/credit card." },
+        { title: "Pay the Khata Certificate fee", desc: "Fees vary based on property type and size but typically range from ₹500 to ₹2,000. Payment is online via UPI, net banking, or debit/credit card." },
         { title: "Receive acknowledgment number", desc: "After submission, note your application reference number. You can track the status on the portal using this number." },
         { title: "Inspection and approval", desc: "A BBMP revenue inspector may physically verify the property. Processing typically takes 30–45 working days. Approved Khatha can be downloaded directly from the portal." },
       ],
     },
     {
-      heading: "Common Reasons for E-Khatha Rejection and How to Avoid Them",
+      heading: "Common Reasons for Khata Certificate Rejection and How to Avoid Them",
       paragraphs: [
         "Our real estate team at Right Assets Management processes dozens of Khatha applications every month. These are the most frequent reasons for rejection:",
       ],
@@ -437,10 +437,10 @@ const article3: BlogPost = {
       ],
     },
     {
-      heading: "E-Khatha Fees and Expected Timeline",
+      heading: "Khata Certificate Fees and Expected Timeline",
       paragraphs: [
         "BBMP charges a service fee based on the type of application. For a standard Khatha transfer on a residential apartment, expect to pay ₹500–₹2,000. For a new Khatha on a vacant site or independent house, the fee is calculated based on property area and location.",
-        "Processing time: in straightforward cases with complete documents, E-Khatha is typically issued within 30–45 working days. Complex cases — disputed properties, old construction without original approval plans, or properties with encumbrances — can take 3–6 months.",
+        "Processing time: in straightforward cases with complete documents, Khata Certificate is typically issued within 30–45 working days. Complex cases — disputed properties, old construction without original approval plans, or properties with encumbrances — can take 3–6 months.",
         "If your application is stuck or rejected, you can file a grievance through the BBMP portal or approach the ARO of your zone — Mahadevapura, East, West, South, Dasarahalli, Bommanahalli, Yelahanka, or Rajarajeshwarinagar, depending on your property location.",
       ],
     },
@@ -448,7 +448,7 @@ const article3: BlogPost = {
       heading: "Why Professional Assistance Makes a Big Difference",
       paragraphs: [
         "While the E-Aasthi portal is designed for self-service, the documentation requirements, name-matching issues, and complexity of older properties mean that most applicants face at least one rejection before final approval. Each rejection and resubmission adds weeks to the timeline.",
-        "Right Assets Management handles end-to-end Khatha applications for Bangalore property owners — from obtaining the EC and verifying property tax status, to preparing documents with matching names, submitting the application, and following up with BBMP on your behalf. We have helped property owners in Whitefield, JP Nagar, Jayanagar, Indiranagar, Hebbal, and across BBMP limits get their E-Khatha issued without a single rejection.",
+        "Right Assets Management handles end-to-end Khatha applications for India property owners — from obtaining the EC and verifying property tax status, to preparing documents with matching names, submitting the application, and following up with BBMP on your behalf. We have helped property owners in Whitefield, JP Nagar, Jayanagar, Indiranagar, Hebbal, and across BBMP limits get their Khata Certificate issued without a single rejection.",
       ],
     },
   ],
@@ -460,7 +460,7 @@ const article3: BlogPost = {
         "Technically, property registration does not require a Khatha, but most buyers will insist on it — especially if they are taking a home loan, as banks require Khatha in the seller's name. Additionally, BBMP will not process the new Khatha transfer to the buyer's name without a proper chain of Khatha history. It is strongly recommended to get Khatha transferred before selling.",
     },
     {
-      question: "How long does E-Khatha take to get issued in Bangalore?",
+      question: "How long does Khata Certificate take to get issued across India?",
       answer:
         "For a standard Khatha transfer on a residential property with complete, error-free documents, BBMP typically takes 30–45 working days. For new Khatha on sites or independent houses, or for properties with any complications, it can take 2–4 months. Tracking the application on the E-Aasthi portal and following up with the ARO office can help if processing is delayed.",
     },
@@ -475,15 +475,15 @@ const article3: BlogPost = {
         "Yes, B-Khatha properties can be upgraded to A-Khatha if the layout is regularized under the Akrama-Sakrama scheme or similar government programs. The process involves paying betterment charges to BBMP, obtaining layout regularization approval, and then applying for A-Khatha. The betterment charges vary significantly by location and property size — our advisors can assess your specific situation.",
     },
     {
-      question: "Is E-Khatha accepted for home loan applications?",
+      question: "Is Khata Certificate accepted for home loan applications?",
       answer:
-        "Yes, most banks and HFCs accept E-Khatha downloaded from the BBMP E-Aasthi portal for home loan processing. The digitally signed E-Khatha is equivalent to the physical Khatha certificate. However, the bank's legal team will independently verify the Khatha status on the BBMP portal before loan sanction.",
+        "Yes, most banks and HFCs accept Khata Certificate downloaded from the BBMP E-Aasthi portal for home loan processing. The digitally signed Khata Certificate is equivalent to the physical Khatha certificate. However, the bank's legal team will independently verify the Khatha status on the BBMP portal before loan sanction.",
     },
   ],
 
   conclusion: {
-    text: "E-Khatha is not just a piece of paper — it is the foundation of your property's legal and civic standing in Bangalore. Whether you are transferring Khatha after a purchase, converting B to A-Khatha, or helping elderly parents get their property records in order, getting it done correctly the first time saves months of frustration. The process is straightforward when you have the right documents and know what BBMP is looking for.",
-    cta: "Right Assets Management handles E-Khatha applications across all BBMP zones in Bangalore — end-to-end, with zero rejections in straightforward cases. Book a free consultation to assess your property's Khatha status today.",
+    text: "Khata Certificate is not just a piece of paper — it is the foundation of your property's legal and civic standing across India. Whether you are transferring Khatha after a purchase, converting B to A-Khatha, or helping elderly parents get their property records in order, getting it done correctly the first time saves months of frustration. The process is straightforward when you have the right documents and know what BBMP is looking for.",
+    cta: "Right Assets Management handles Khata Certificate applications across all BBMP zones across India — end-to-end, with zero rejections in straightforward cases. Book a free consultation to assess your property's Khatha status today.",
   },
 
   relatedSlugs: [
@@ -567,7 +567,7 @@ const article4: BlogPost = {
       heading: "Filing a Physical Complaint at a Cyber Crime Police Station",
       paragraphs: [
         "For large financial losses (typically above ₹1–2 lakh), identity theft, ongoing harassment, or sextortion, filing a physical complaint at a dedicated cyber crime police station is advisable in addition to the online portal. A physical FIR is stronger legal documentation for banking disputes and court proceedings.",
-        "In Bangalore, the dedicated cyber crime investigation units are the CEN (Cyber, Economic and Narcotics) cells operating within each police division — North, South, East, West, and Whitefield. You can visit the CEN unit of your area or file at the nearest police station which will forward the complaint to the CEN unit.",
+        "In India, the dedicated cyber crime investigation units are the CEN (Cyber, Economic and Narcotics) cells operating within each police division — North, South, East, West, and Whitefield. You can visit the CEN unit of your area or file at the nearest police station which will forward the complaint to the CEN unit.",
         "When you visit, bring printed copies of all your evidence — screenshots, bank statements, email printouts, and the complaint acknowledgment number from the cybercrime.gov.in portal if you have already filed online. The police will register an FIR, assign a case number, and designate an investigating officer.",
       ],
     },
@@ -600,7 +600,7 @@ const article4: BlogPost = {
     {
       heading: "How Right Assets Management's Legal Team Can Help",
       paragraphs: [
-        "Navigating the cyber crime complaint process — especially when large amounts are involved or when police progress is slow — can be frustrating without legal expertise. Our legal advisory team helps cyber crime victims in Bangalore with drafting and filing formal legal notices to banks, assisting with police complaint documentation to ensure maximum evidentiary value, representing clients before the Banking Ombudsman and Consumer Forum when banks fail to act, and advising on civil litigation options for recovery when criminal proceedings are insufficient.",
+        "Navigating the cyber crime complaint process — especially when large amounts are involved or when police progress is slow — can be frustrating without legal expertise. Our legal advisory team helps cyber crime victims across India with drafting and filing formal legal notices to banks, assisting with police complaint documentation to ensure maximum evidentiary value, representing clients before the Banking Ombudsman and Consumer Forum when banks fail to act, and advising on civil litigation options for recovery when criminal proceedings are insufficient.",
         "We work on cases involving UPI fraud, fake investment schemes, online loan fraud, sextortion, and identity theft. If you have already filed a complaint but need help accelerating the process or escalating unresponsive banks, book a free consultation with our legal team.",
       ],
     },
@@ -650,29 +650,29 @@ const article4: BlogPost = {
 
 const article5: BlogPost = {
   slug: "property-registration-cost-bangalore",
-  title: "Property Registration Charges in Bangalore — Complete Cost Breakdown (2026)",
-  metaTitle: "Property Registration Cost Bangalore 2026 | Stamp Duty Guide",
+  title: "Property Registration Charges across India — Complete Cost Breakdown (2026)",
+  metaTitle: "Property Registration Cost India 2026 | Stamp Duty Guide",
   metaDescription:
-    "Complete breakdown of property registration charges in Bangalore 2026 — stamp duty, registration fees, BBMP cess, and exact cost for an ₹80 lakh apartment.",
+    "Complete breakdown of property registration charges across India 2026 — stamp duty, registration fees, BBMP cess, and exact cost for an ₹80 lakh apartment.",
   category: "real-estate",
-  targetKeyword: "property registration cost Bangalore 2026",
+  targetKeyword: "property registration cost India 2026",
   publishedAt: "2026-05-20",
   readTime: "9 min read",
   excerpt:
-    "How much does property registration cost in Bangalore? We break down stamp duty, registration fees, and show exactly what you will pay for an ₹80 lakh apartment.",
+    "How much does property registration cost across India? We break down stamp duty, registration fees, and show exactly what you will pay for an ₹80 lakh apartment.",
   author: { name: "Right Assets Management", role: "Real Estate Advisory" },
   published: true,
 
   intro: [
-    "When you negotiate a property deal in Bangalore, the price you agree with the seller is just the beginning. The Karnataka state government levies stamp duty and registration fees on every property transaction — and in Bangalore, these charges are significant enough to derail your budget if you have not accounted for them. On an apartment priced at ₹80 lakh, the registration-related costs alone can add ₹5–6 lakh to your bill.",
-    "In this guide, we break down every charge you will encounter during property registration in Bangalore — stamp duty rates, registration fees, BBMP Khatha charges, and other incidentals — with a complete worked example so you know exactly what to budget before you sign.",
+    "When you negotiate a property deal across India, the price you agree with the seller is just the beginning. The Karnataka state government levies stamp duty and registration fees on every property transaction — and across India, these charges are significant enough to derail your budget if you have not accounted for them. On an apartment priced at ₹80 lakh, the registration-related costs alone can add ₹5–6 lakh to your bill.",
+    "In this guide, we break down every charge you will encounter during property registration across India — stamp duty rates, registration fees, BBMP Khatha charges, and other incidentals — with a complete worked example so you know exactly what to budget before you sign.",
   ],
 
   sections: [
     {
       heading: "What Charges Apply During Property Registration in Karnataka?",
       paragraphs: [
-        "Property registration in Bangalore involves multiple layers of government charges. Some are mandatory state levies; others are fees for ancillary services. Understanding each one prevents the surprise of a larger-than-expected cheque at the Sub-Registrar Office (SRO).",
+        "Property registration across India involves multiple layers of government charges. Some are mandatory state levies; others are fees for ancillary services. Understanding each one prevents the surprise of a larger-than-expected cheque at the Sub-Registrar Office (SRO).",
       ],
       bullets: [
         "Stamp duty: the primary tax levied on the sale deed, calculated on the property value",
@@ -687,7 +687,7 @@ const article5: BlogPost = {
       heading: "Stamp Duty Rates in Karnataka (2026)",
       paragraphs: [
         "Stamp duty in Karnataka is levied as a percentage of either the property's market value (the price agreed between buyer and seller) or the guidance value (the government's minimum benchmark price for the area) — whichever is higher. You cannot pay stamp duty on a value lower than the guidance value, even if you bought the property for less.",
-        "Karnataka uses a slab-based stamp duty system. In addition to the base stamp duty, a surcharge is also levied. For most residential purchases in Bangalore above ₹35 lakh, the effective stamp duty rate including surcharge works out to approximately 5.6%.",
+        "Karnataka uses a slab-based stamp duty system. In addition to the base stamp duty, a surcharge is also levied. For most residential purchases across India above ₹35 lakh, the effective stamp duty rate including surcharge works out to approximately 5.6%.",
       ],
       bullets: [
         "Properties valued up to ₹20 lakh: 2% stamp duty",
@@ -704,7 +704,7 @@ const article5: BlogPost = {
       heading: "Registration Fee in Karnataka",
       paragraphs: [
         "In addition to stamp duty, a separate registration fee is payable to officially record the sale deed in the Sub-Registrar's office. This fee is 1% of the property value or guidance value — whichever is higher.",
-        "The Karnataka government has capped the registration fee at ₹15 lakh for high-value transactions. This means for properties above ₹1.5 crore, the registration fee is a flat ₹15 lakh regardless of how much higher the property value goes. For most residential purchases in Bangalore under ₹1.5 crore, the registration fee is simply 1% of the transaction value.",
+        "The Karnataka government has capped the registration fee at ₹15 lakh for high-value transactions. This means for properties above ₹1.5 crore, the registration fee is a flat ₹15 lakh regardless of how much higher the property value goes. For most residential purchases across India under ₹1.5 crore, the registration fee is simply 1% of the transaction value.",
       ],
     },
     {
@@ -722,9 +722,9 @@ const article5: BlogPost = {
       ],
     },
     {
-      heading: "Complete Cost Breakdown — ₹80 Lakh Apartment in Bangalore",
+      heading: "Complete Cost Breakdown — ₹80 Lakh Apartment across India",
       paragraphs: [
-        "Let us apply all these rates to a concrete example: an apartment in Whitefield, Bangalore, with an agreed sale price of ₹80 lakh. The guidance value for the area is ₹72 lakh — since the market value (₹80 lakh) is higher, all calculations are on ₹80 lakh.",
+        "Let us apply all these rates to a concrete example: an apartment in Whitefield, India, with an agreed sale price of ₹80 lakh. The guidance value for the area is ₹72 lakh — since the market value (₹80 lakh) is higher, all calculations are on ₹80 lakh.",
       ],
       numberedList: [
         { title: "Base stamp duty (5% on ₹80 lakh)", desc: "₹4,00,000" },
@@ -736,17 +736,17 @@ const article5: BlogPost = {
         { title: "Total additional registration cost", desc: "Approximately ₹5,36,000–₹5,45,000 on top of the ₹80 lakh property price" },
       ],
       callout:
-        "This means you need roughly ₹85.4 lakh in total to complete the purchase of an ₹80 lakh apartment in Bangalore — not including interior costs, society deposits, or your own legal fees. Always factor this 6–7% overhead into your property purchase budget.",
+        "This means you need roughly ₹85.4 lakh in total to complete the purchase of an ₹80 lakh apartment across India — not including interior costs, society deposits, or your own legal fees. Always factor this 6–7% overhead into your property purchase budget.",
     },
     {
       heading: "How to Pay Stamp Duty and Complete Registration",
       paragraphs: [
-        "Property registration in Bangalore follows a specific process managed by the Department of Stamps and Registration, Karnataka.",
+        "Property registration across India follows a specific process managed by the Department of Stamps and Registration, Karnataka.",
       ],
       numberedList: [
         { title: "Verify guidance value", desc: "Check the guidance value of your property on the Kaveri Online Services portal (kaverionline.karnataka.gov.in) by searching for your area and property type." },
         { title: "Pay stamp duty online via SHCIL or Kaveri", desc: "Stamp duty is paid through Stock Holding Corporation of India Limited (SHCIL) e-stamp or via Kaveri Online Payment portal. You receive an e-stamp certificate which must be presented at the SRO." },
-        { title: "Book SRO appointment", desc: "Book a slot at your local Sub-Registrar Office through the Kaveri Online Services portal. Bangalore has multiple SROs — Whitefield, Mahadevapura, JP Nagar, Indiranagar, etc. Choose the one for your property's jurisdiction." },
+        { title: "Book SRO appointment", desc: "Book a slot at your local Sub-Registrar Office through the Kaveri Online Services portal. India has multiple SROs — Whitefield, Mahadevapura, JP Nagar, Indiranagar, etc. Choose the one for your property's jurisdiction." },
         { title: "Attend the SRO on the appointment date", desc: "Both buyer and seller must be present with original Aadhaar cards for biometric verification. Two witnesses are also required. Bring all original documents and copies." },
         { title: "Document verification and signature", desc: "The Sub-Registrar verifies documents, both parties sign the sale deed and confirmation letters, and biometric verification is completed." },
         { title: "Collect registered documents", desc: "The registered sale deed is either given same day or can be collected within 1–3 working days. The SRO retains one copy and gives the original to the buyer." },
@@ -773,15 +773,15 @@ const article5: BlogPost = {
     {
       heading: "How Right Assets Management Helps With Property Registration",
       paragraphs: [
-        "Property registration in Bangalore involves navigating government portals, lawyer coordination, SRO appointments, and ensuring all documents are in order simultaneously. One missing document or a mismatch in names causes the entire appointment to be rescheduled — costing time and sometimes the sale itself.",
-        "Our real estate advisory team handles the complete registration process for buyers and sellers in Bangalore — from computing the exact stamp duty and guidance value, to drafting the sale deed, booking the SRO appointment, and attending the registration. We have completed hundreds of registrations across BBMP limits with zero appointment cancellations. Our fee is transparent and significantly lower than typical advocate rates for end-to-end assistance.",
+        "Property registration across India involves navigating government portals, lawyer coordination, SRO appointments, and ensuring all documents are in order simultaneously. One missing document or a mismatch in names causes the entire appointment to be rescheduled — costing time and sometimes the sale itself.",
+        "Our real estate advisory team handles the complete registration process for buyers and sellers across India — from computing the exact stamp duty and guidance value, to drafting the sale deed, booking the SRO appointment, and attending the registration. We have completed hundreds of registrations across BBMP limits with zero appointment cancellations. Our fee is transparent and significantly lower than typical advocate rates for end-to-end assistance.",
       ],
     },
   ],
 
   faqs: [
     {
-      question: "Is stamp duty calculated on guidance value or market value in Bangalore?",
+      question: "Is stamp duty calculated on guidance value or market value across India?",
       answer:
         "Stamp duty is calculated on whichever is higher — the actual transaction price (market value) or the government's guidance value (also called circle rate) for that area. You cannot declare a lower value to save on stamp duty; the SRO will reject the deed if the stated value is below guidance value. If the guidance value exceeds the market value, stamp duty is paid on the guidance value.",
     },
@@ -791,7 +791,7 @@ const article5: BlogPost = {
         "The Sub-Registrar has authority to reject the registration if the declared value is below guidance value, or to refer the property for re-valuation. Deliberate under-valuation to evade stamp duty is a punishable offence under the Stamp Act and Registration Act, with penalties including fines and potential prosecution. Always declare the actual transaction value.",
     },
     {
-      question: "How long does property registration take in Bangalore?",
+      question: "How long does property registration take across India?",
       answer:
         "The actual registration appointment at the SRO typically takes 1–3 hours if all documents are in order and biometric verification goes smoothly. Both buyer and seller receive a confirmed appointment date at booking. The registered document is issued the same day or within 1–3 working days. Booking an SRO appointment through Kaveri Online Services is now mandatory and eliminates the need to stand in queues.",
     },
@@ -808,8 +808,8 @@ const article5: BlogPost = {
   ],
 
   conclusion: {
-    text: "Property registration costs in Bangalore are significant — typically 6–7% of the property value on top of the purchase price. Understanding these charges before you finalise a deal ensures your budget is realistic and prevents last-minute fund crunches at the SRO. With proper planning and the right advisor, the registration process itself is straightforward and can be completed in a single day.",
-    cta: "Right Assets Management handles end-to-end property registration in Bangalore — stamp duty calculation, sale deed drafting, SRO appointment, and registration attendance. Book your free consultation today.",
+    text: "Property registration costs across India are significant — typically 6–7% of the property value on top of the purchase price. Understanding these charges before you finalise a deal ensures your budget is realistic and prevents last-minute fund crunches at the SRO. With proper planning and the right advisor, the registration process itself is straightforward and can be completed in a single day.",
+    cta: "Right Assets Management handles end-to-end property registration across India — stamp duty calculation, sale deed drafting, SRO appointment, and registration attendance. Book your free consultation today.",
   },
 
   relatedSlugs: [
@@ -838,11 +838,11 @@ const article6: BlogPost = {
 
 const article7: BlogPost = {
   slug: "encumbrance-certificate-bangalore",
-  title: "What is an Encumbrance Certificate and How to Get One in Bangalore",
-  metaTitle: "Encumbrance Certificate Bangalore | How to Get",
-  metaDescription: "What is an EC, why you need it, and how to apply online in Bangalore via Kaveri portal. Step-by-step guide with fees and timelines.",
+  title: "What is an Encumbrance Certificate and How to Get One across India",
+  metaTitle: "Encumbrance Certificate India | How to Get",
+  metaDescription: "What is an EC, why you need it, and how to apply online across India via Kaveri portal. Step-by-step guide with fees and timelines.",
   category: "real-estate",
-  targetKeyword: "encumbrance certificate Bangalore how to get",
+  targetKeyword: "encumbrance certificate India how to get",
   publishedAt: "2026-05-20",
   readTime: "7 min read",
   excerpt: "An Encumbrance Certificate is mandatory for property sales and home loans. Learn what it is, how to apply on Karnataka's Kaveri portal, and red flags to watch for.",
@@ -872,14 +872,14 @@ const article8: BlogPost = {
 
 const article9: BlogPost = {
   slug: "property-dispute-bangalore-guide",
-  title: "Property Disputes in Bangalore — Types, Legal Options, and How to Resolve Them",
-  metaTitle: "Property Dispute Resolution Bangalore | Guide",
-  metaDescription: "Common property disputes in Bangalore — boundary issues, title fraud, builder delays. Learn your legal options including civil court, RERA, and mediation.",
+  title: "Property Disputes across India — Types, Legal Options, and How to Resolve Them",
+  metaTitle: "Property Dispute Resolution India | Guide",
+  metaDescription: "Common property disputes across India — boundary issues, title fraud, builder delays. Learn your legal options including civil court, RERA, and mediation.",
   category: "legal",
-  targetKeyword: "property dispute resolution Bangalore",
+  targetKeyword: "property dispute resolution India",
   publishedAt: "2026-05-20",
   readTime: "9 min read",
-  excerpt: "Facing a property dispute in Bangalore? Learn about common types, legal options (civil court, RERA, mediation), costs, and how to resolve them effectively.",
+  excerpt: "Facing a property dispute across India? Learn about common types, legal options (civil court, RERA, mediation), costs, and how to resolve them effectively.",
   author: { name: "Right Assets Management", role: "Legal Advisory" },
   published: false,
   intro: [], sections: [], faqs: [],
@@ -889,14 +889,14 @@ const article9: BlogPost = {
 
 const article10: BlogPost = {
   slug: "financial-planning-guide-bangalore",
-  title: "A Simple Financial Planning Guide for Salaried Professionals in Bangalore (2026)",
-  metaTitle: "Financial Planning Guide Bangalore Salaried 2026",
-  metaDescription: "A practical financial planning guide for Bangalore salaried professionals — 50-30-20 rule, emergency funds, insurance, investments, and tax planning.",
+  title: "A Simple Financial Planning Guide for Salaried Professionals across India (2026)",
+  metaTitle: "Financial Planning Guide India Salaried 2026",
+  metaDescription: "A practical financial planning guide for India salaried professionals — 50-30-20 rule, emergency funds, insurance, investments, and tax planning.",
   category: "financial",
-  targetKeyword: "financial planning guide Bangalore salaried",
+  targetKeyword: "financial planning guide India salaried",
   publishedAt: "2026-05-20",
   readTime: "10 min read",
-  excerpt: "A no-nonsense financial planning guide built for Bangalore salaries — covering the 50-30-20 rule, emergency funds, insurance, SIPs, and tax-saving strategies.",
+  excerpt: "A no-nonsense financial planning guide built for India salaries — covering the 50-30-20 rule, emergency funds, insurance, SIPs, and tax-saving strategies.",
   author: { name: "Right Assets Management", role: "Financial Advisors" },
   published: false,
   intro: [], sections: [], faqs: [],

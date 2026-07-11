@@ -43,12 +43,12 @@ const FINANCIAL_LINKS = [
 const REAL_ESTATE_LINKS = [
   { label: "Buy & Sell Properties",    href: "/real-estate/buy-sell" },
   { label: "Property Registration",    href: "/real-estate/property-registration" },
-  { label: "E-Khatha Application",     href: "/real-estate/e-khatha" },
+  { label: "Khata Certificate Application",     href: "/real-estate/khata-certificate" },
   { label: "Encumbrance Certificate",  href: "/real-estate/encumbrance" },
   { label: "Sale Deed & Agreement",    href: "/real-estate/sale-deed" },
   { label: "Rent Agreement",           href: "/real-estate/rent-agreement" },
   { label: "Property Valuation",       href: "/real-estate/property-valuation" },
-  { label: "Land Conversion",          href: "/real-estate/land-conversion" },
+  { label: "DC Conversion",          href: "/real-estate/dc-conversion" },
 ];
 
 const LEGAL_LINKS = [
@@ -346,12 +346,12 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm leading-relaxed mb-1.5" style={{ color: "rgba(255,255,255,0.5)" }}>
-              Bangalore&apos;s trusted multi-vertical firm offering expert services across
+              India&apos;s trusted multi-vertical firm offering expert services across
               Financial Planning, Real Estate, and Legal Advisory — all under one roof.
             </p>
 
             <p className="text-[11px] mb-7 font-medium tracking-wide" style={{ color: "rgba(201,168,76,0.65)" }}>
-              Pan Bangalore
+              Pan India
             </p>
 
             {/* Contact details */}
@@ -430,7 +430,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <ColHeading icon={Scale} label="Legal" />
             <LinkList links={LEGAL_LINKS} />
-            <ViewAll href="/legal" count="8" label="services" />
+            <ViewAll href="/legal" count="11" label="services" />
           </div>
 
           {/* Quick Links + Tools */}

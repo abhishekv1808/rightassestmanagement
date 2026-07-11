@@ -208,7 +208,7 @@ export default function ServiceStickyBar({
         </p>
         <hr style={{ border: "none", borderTop: "1px solid #E5E7EB", margin: "2px 0" }} />
         <Link href={consultHref} className="ssb-btn-gold">
-          Free Consultation
+          Consultation
         </Link>
         <a href={waHref} target="_blank" rel="noopener noreferrer" className="ssb-btn-wa">
           WhatsApp Now
@@ -228,7 +228,7 @@ export default function ServiceStickyBar({
           <span>Free consult</span>
         </div>
         <Link href={consultHref} className="ssb-mobile-cta">
-          Free Consult&nbsp;&#8594;
+          Consult&nbsp;&#8594;
         </Link>
       </div>
     </>

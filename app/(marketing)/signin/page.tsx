@@ -127,7 +127,7 @@ export default function SignInPage() {
 
               <p style={{ fontSize: 15, color: "rgba(255,255,255,0.58)", lineHeight: 1.65, margin: "0 0 36px", maxWidth: 380 }}>
                 Sign in to track your service requests, access free guides, and get personalised
-                advisory — exclusively for Right Assets clients in Bangalore.
+                advisory — exclusively for Right Assets clients across India.
               </p>
 
               {/* Benefits */}

@@ -201,7 +201,7 @@ export default function LPLeadForm({
             marginBottom: 4,
           }}
         >
-          Free Consultation
+          Consultation
         </p>
         <p
           style={{

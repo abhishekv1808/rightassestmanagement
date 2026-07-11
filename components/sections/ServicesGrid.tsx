@@ -20,12 +20,12 @@ const VERTICALS = [
     lightBg: "#E6F4F4",
     href: "/real-estate",
     description:
-      "Buy, sell, register property, get E-Khatha, encumbrance certificates, mutation, land conversion, and sale deed documentation — all in Bangalore.",
+      "Buy, sell, register property, get Khata Certificate, encumbrance certificates, mutation, land conversion, and sale deed documentation — all across India.",
   },
   {
     Icon: Scale,
     name: "Legal Services",
-    count: 8,
+    count: 11,
     color: "#6B46C1",
     lightBg: "#F0EBF9",
     href: "/legal",

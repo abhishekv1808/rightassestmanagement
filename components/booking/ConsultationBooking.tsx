@@ -279,7 +279,7 @@ export default function ConsultationBooking() {
       {/* Header + step indicator */}
       <div style={{ background: "linear-gradient(135deg, #1B3A6B 0%, #0D2347 100%)", padding: "22px 28px 20px" }}>
         <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#C9A84C", marginBottom: 4 }}>
-          Book a Free Consultation
+          Book a Consultation
         </p>
         <h2 style={{ fontSize: 19, fontWeight: 800, color: "#FFFFFF", margin: 0 }}>
           Pick a time that works for you
@@ -539,7 +539,7 @@ export default function ConsultationBooking() {
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
                   rows={2}
-                  placeholder={mode === "in-person" ? "Where should our advisor meet you? Flat / street / area, Bangalore" : "Your address (helps us serve you better)"}
+                  placeholder={mode === "in-person" ? "Where should our advisor meet you? Flat / street / area, India" : "Your address (helps us serve you better)"}
                   style={{ width: "100%", padding: "11px 14px 11px 42px", borderRadius: 10, border: `1.5px solid ${fieldErrors.address ? "#EF4444" : "#E2E8F0"}`, fontSize: 14, outline: "none", fontFamily: "inherit", backgroundColor: "#FAFAFA", boxSizing: "border-box", resize: "vertical", lineHeight: 1.5 }}
                 />
               </div>

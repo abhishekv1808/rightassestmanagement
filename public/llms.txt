@@ -1,8 +1,8 @@
 # Right Assets Management
 
-> Bangalore-based multi-vertical advisory firm offering 48+ expert services across Financial Planning, Real Estate (Realty), and Legal Advisory under one roof. Tagline: "Where Assets Meet Assurance."
+> India-based multi-vertical advisory firm offering 48+ expert services across Financial Planning, Real Estate (Realty), and Legal Advisory under one roof. Tagline: "Where Assets Meet Assurance."
 
-Right Assets Management helps individuals and businesses in Bangalore with investments, insurance, loans, property transactions and documentation, government records, and legal advisory. Contact: +91 97428 26804 · contact@rightassetsmanagement.com · Sy. No 13/1, Site No. 21, 3rd Floor, Narasappa Road, Metro Pillar 471, T. Dasarahalli, Bengaluru, Karnataka 560057.
+Right Assets Management helps individuals and businesses across India with investments, insurance, loans, property transactions and documentation, government records, and legal advisory. Contact: +91 97428 26804 · contact@rightassetsmanagement.com · Sy. No 13/1, Site No. 21, 3rd Floor, Narasappa Road, Metro Pillar 471, T. Dasarahalli, Bengaluru, Karnataka 560057.
 
 ## Core Pages
 - [Home](https://rightassetsmanagement.com/): Overview of all services
@@ -22,8 +22,8 @@ Right Assets Management helps individuals and businesses in Bangalore with inves
 - [Rental Yield Calculator](https://rightassetsmanagement.com/tools/rent-yield)
 
 ## Guides & Insights
-- [Blog](https://rightassetsmanagement.com/blog): Practical, jargon-free guides on finance, property, and legal matters in Bangalore
-- [Bangalore Localities](https://rightassetsmanagement.com/bangalore): Locality-specific financial, realty, and legal services across Bangalore
+- [Blog](https://rightassetsmanagement.com/blog): Practical, jargon-free guides on finance, property, and legal matters across India
+- [India Localities](https://rightassetsmanagement.com/bangalore): Locality-specific financial, realty, and legal services across India
 
 ## Notes
 - Right Assets Management is an advisory and facilitation service, not a law firm, broker, or lending institution.

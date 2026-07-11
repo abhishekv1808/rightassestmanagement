@@ -19,17 +19,17 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Right Assets Management — Financial, Real Estate & Legal Services in Bangalore",
+    default: "Right Assets Management — Financial, Real Estate & Legal Services across India",
     template: "%s | Right Assets Management",
   },
   description:
-    "Right Assets Management is Bangalore's trusted multi-vertical firm offering 48+ expert services across Financial Planning, Real Estate, and Legal Advisory under one roof.",
+    "Right Assets Management is India's trusted multi-vertical firm offering 48+ expert services across Financial Planning, Real Estate, and Legal Advisory under one roof.",
   keywords: [
-    "financial advisor Bangalore",
-    "real estate services Bangalore",
-    "legal advisory Bangalore",
-    "mutual fund advisor Bangalore",
-    "property registration Bangalore",
+    "financial advisor India",
+    "real estate services India",
+    "legal advisory India",
+    "mutual fund advisor India",
+    "property registration India",
     "Right Assets Management",
   ],
   authors: [{ name: "Right Assets Management" }],
@@ -43,16 +43,16 @@ export const metadata: Metadata = {
     url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightassetsmanagement.com",
     siteName: "Right Assets Management",
     title:
-      "Right Assets Management — Financial, Real Estate & Legal Services in Bangalore",
+      "Right Assets Management — Financial, Real Estate & Legal Services across India",
     description:
       "One destination for 48+ expert services — investments, property, and legal help under one roof.",
     // og:image is provided automatically by app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
-    title: "Right Assets Management — Bangalore",
+    title: "Right Assets Management — India",
     description:
-      "48+ Financial, Real Estate & Legal services under one roof in Bangalore.",
+      "48+ Financial, Real Estate & Legal services under one roof across India.",
     // twitter:image falls back to app/opengraph-image.tsx
   },
   robots: {

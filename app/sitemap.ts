@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { allServices } from "@/lib/services-data";
 import { allBlogPosts } from "@/lib/blog-data";
-import { ALL_LOCALITIES } from "@/lib/localities-data";
 import { ALL_RESOURCES } from "@/lib/resources-data";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightassetsmanagement.com";
@@ -131,22 +130,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // ── Bangalore locality landing pages (local SEO) ───────────────────────────
-  const bangalorePages: MetadataRoute.Sitemap = [
-    {
-      url: `${SITE_URL}/bangalore`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    ...ALL_LOCALITIES.map((l) => ({
-      url: `${SITE_URL}/bangalore/${l.slug}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })),
-  ];
-
   // ── Free resources / guides (lead magnets) ─────────────────────────────────
   const resourcePages: MetadataRoute.Sitemap = [
     {
@@ -190,7 +173,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...legalPages,
     ...toolPages,
     ...secondaryPages,
-    ...bangalorePages,
     ...resourcePages,
     ...blogIndex,
     ...blogPostPages,

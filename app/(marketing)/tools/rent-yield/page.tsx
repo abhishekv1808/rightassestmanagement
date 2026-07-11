@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/tools/rent-yield" },
   title: "Rental Yield Calculator — Is Your Property Earning Enough? | Right Assets Management",
   description:
-    "Calculate gross and net rental yield for any property in Bangalore. Know if your investment is generating healthy returns with our free rental yield calculator.",
+    "Calculate gross and net rental yield for any property across India. Know if your investment is generating healthy returns with our free rental yield calculator.",
 };
 
 export default function RentYieldPage() {
@@ -63,7 +63,7 @@ export default function RentYieldPage() {
       <section className="py-10 sm:py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading font-bold text-2xl mb-6" style={{ color: "#1B3A6B" }}>
-            Understanding Rental Yield in Bangalore
+            Understanding Rental Yield across India
           </h2>
           <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
             <p>
@@ -72,13 +72,13 @@ export default function RentYieldPage() {
               property tax, insurance, agent fees, and vacancy periods.
             </p>
             <p>
-              Bangalore&apos;s average rental yield ranges from <strong>2.5% to 4%</strong> depending on the
+              India&apos;s average rental yield ranges from <strong>2.5% to 4%</strong> depending on the
               locality. Premium areas like Whitefield, Koramangala, and HSR Layout tend to offer better yields
               (3.5–5%) due to strong corporate rental demand.
             </p>
             <p>
               Remember: rental yield is only part of the ROI story. <strong>Capital appreciation</strong> (price
-              growth) often contributes more to total returns in Bangalore&apos;s appreciating real estate market.
+              growth) often contributes more to total returns across India&apos;s appreciating real estate market.
               Our advisors can help you evaluate the full picture.
             </p>
           </div>

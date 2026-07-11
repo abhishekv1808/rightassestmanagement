@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/tools/fd-calculator" },
   title: "FD Maturity Calculator — Fixed Deposit Returns | Right Assets Management",
   description:
-    "Calculate your Fixed Deposit maturity amount with quarterly, monthly, or annual compounding. Free FD calculator by Right Assets Management, Bangalore.",
+    "Calculate your Fixed Deposit maturity amount with quarterly, monthly, or annual compounding. Free FD calculator by Right Assets Management, India.",
 };
 
 export default function FDCalculatorPage() {

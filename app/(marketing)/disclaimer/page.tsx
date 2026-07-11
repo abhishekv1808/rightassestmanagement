@@ -64,7 +64,7 @@ Property valuations provided by us are indicative estimates based on prevailing 
 Right Assets Management does not verify RERA compliance of individual properties or projects unless explicitly contracted to do so. Buyers of residential or commercial properties in RERA-registered projects should independently verify registration on the Karnataka RERA portal (rera.karnataka.gov.in).
 
 **Government Processing Times:**
-Timelines for government approvals (E-Khatha, building plan sanction, land conversion, mutation, etc.) are entirely at the discretion of the respective government departments and are subject to change. We do not guarantee or represent specific timelines.
+Timelines for government approvals (Khata Certificate, building plan sanction, land conversion, mutation, etc.) are entirely at the discretion of the respective government departments and are subject to change. We do not guarantee or represent specific timelines.
 
 **Legal Ownership:**
 Right Assets Management does not assume any liability for disputes regarding ownership, title defects, encumbrances, or third-party claims on any property that is the subject of our services. Independent legal due diligence by a qualified advocate is strongly recommended.`,
@@ -88,7 +88,7 @@ Legal outcomes are inherently uncertain. They depend on the specific facts of ea
 Advocates empanelled with Right Assets Management are independent professionals and are not employees of the Company. The Company does not supervise or control the professional conduct of empanelled advocates, which is governed by the Bar Council of India and the State Bar Council.
 
 **Jurisdiction:**
-Legal advisory is primarily focused on matters arising under Karnataka law and before courts and authorities in Bangalore. For matters in other jurisdictions, clients are advised to engage advocates practising in the relevant jurisdiction.`,
+Legal advisory is primarily focused on matters arising under Karnataka law and before courts and authorities across India. For matters in other jurisdictions, clients are advised to engage advocates practising in the relevant jurisdiction.`,
   },
   {
     id: "website-content",
@@ -149,7 +149,7 @@ For consumer disputes arising from our services, you may approach the appropriat
     content: `If you have questions about this Disclaimer or require clarification before engaging our services, please contact:
 
 **Right Assets Management**
-Bangalore, Karnataka, India
+India
 Email: contact@rightassetsmanagement.com
 Phone: +91 97428 26804
 
@@ -279,7 +279,7 @@ export default function DisclaimerPage() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:opacity-90"
               style={{ backgroundColor: "#1B3A6B", color: "#fff" }}
             >
-              Book a Free Consultation <ArrowRight className="w-4 h-4" />
+              Book a Consultation <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 

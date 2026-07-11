@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/success-stories" },
   title: "Success Stories — Right Assets Management",
   description:
-    "Real client outcomes from Right Assets Management Bangalore — tax savings, property deals, legal victories across financial planning, real estate, and legal advisory.",
+    "Real client outcomes from Right Assets Management India — tax savings, property deals, legal victories across financial planning, real estate, and legal advisory.",
 };
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -110,13 +110,13 @@ const CASE_STUDIES: CaseStudy[] = [
   {
     id: "nri-ancestral-property-sale",
     vertical: "real-estate",
-    title: "NRI client sold Bangalore ancestral property remotely in 45 days",
+    title: "NRI client sold India ancestral property remotely in 45 days",
     client: "Deepa R., USA (property in Indiranagar)",
     service: "Power of Attorney, Property Sale & Khatha Transfer",
     challenge:
-      "An NRI based in the United States needed to sell an ancestral property in Indiranagar, Bangalore. She had no local representative and was unable to travel. The property had outstanding BBMP tax dues, an outdated khatha in her late father's name, and required a registered Power of Attorney to enable any local transactions.",
+      "An NRI based in the United States needed to sell an ancestral property in Indiranagar, India. She had no local representative and was unable to travel. The property had outstanding BBMP tax dues, an outdated khatha in her late father's name, and required a registered Power of Attorney to enable any local transactions.",
     solution:
-      "Right Assets Management coordinated end-to-end: a Power of Attorney was notarised in the US and apostilled, then registered in Bangalore with the Sub-Registrar. The outstanding BBMP dues were cleared, khatha was transferred to the NRI client's name, an EC was obtained for buyer due diligence, and the firm represented the client in all buyer negotiations and the final sale deed registration.",
+      "Right Assets Management coordinated end-to-end: a Power of Attorney was notarised in the US and apostilled, then registered across India with the Sub-Registrar. The outstanding BBMP dues were cleared, khatha was transferred to the NRI client's name, an EC was obtained for buyer due diligence, and the firm represented the client in all buyer negotiations and the final sale deed registration.",
     outcome:
       "The property was sold and fully registered within 45 days of initial engagement, with the sale proceeds remitted to the client's US bank account under FEMA guidelines.",
     metric: "45 Days",
@@ -419,7 +419,7 @@ export default function SuccessStoriesPage() {
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
               Real clients, real outcomes — anonymised to protect privacy. See how Right
-              Asset Management has helped hundreds of Bangalore families and businesses
+              Asset Management has helped hundreds of India families and businesses
               achieve their financial, property, and legal goals.
             </p>
 
@@ -571,7 +571,7 @@ export default function SuccessStoriesPage() {
               className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-[15px] transition-all hover:opacity-90 active:scale-[0.97] shadow-lg"
               style={{ backgroundColor: "#C9A84C", color: "#1B3A6B" }}
             >
-              Book Free Consultation
+              Book Consultation
               <ArrowRight className="w-5 h-5" />
             </Link>
 

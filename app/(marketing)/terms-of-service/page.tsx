@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/terms-of-service" },
   title: "Terms of Service | Right Assets Management",
   description:
-    "Terms of Service governing the use of Right Assets Management's website and financial, real estate, and legal advisory services in Bangalore, India.",
+    "Terms of Service governing the use of Right Assets Management's website and financial, real estate, and legal advisory services in India.",
   robots: { index: true, follow: true },
 };
 
@@ -16,7 +16,7 @@ const SECTIONS = [
   {
     id: "acceptance",
     title: "1. Acceptance of Terms",
-    content: `These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "Client", "you") and Right Assets Management ("Company", "we", "us", "our"), a financial and advisory services firm registered and operating in Bangalore, Karnataka, India.
+    content: `These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "Client", "you") and Right Assets Management ("Company", "we", "us", "our"), a financial and advisory services firm registered and operating in India.
 
 By accessing this Website (rightassetsmanagement.com), submitting an enquiry, booking a consultation, or engaging any of our services, you confirm that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you must not use our Website or services.
 
@@ -31,7 +31,7 @@ We reserve the right to update or modify these Terms at any time. Continued use 
 Investment advisory, insurance advisory, loan facilitation, tax planning assistance, and related financial guidance for individuals and businesses.
 
 **Realty Services:**
-Assistance with property transactions, documentation, government record extraction, regulatory approvals, and related real estate facilitation services in Karnataka, with a focus on Bangalore.
+Assistance with property transactions, documentation, government record extraction, regulatory approvals, and related real estate facilitation services in Karnataka, with a focus on India.
 
 **Legal Advisory Services:**
 General legal guidance and advisory support through empanelled advocates across civil, family, labour, consumer, cyber crime, criminal, insurance, and banking dispute matters. This is not a law firm.
@@ -63,7 +63,7 @@ Right Assets Management makes no representation or warranty, express or implied,
 Our real estate services constitute documentation assistance and facilitation only. We are not a real estate agent or broker under RERA unless specifically registered as such. Clients should verify our role and applicable RERA registration for property transaction assistance.
 
 **Title & Due Diligence:**
-While we assist with document extraction (Encumbrance Certificate, RTC/Pahani, E-Khatha, etc.), the ultimate responsibility for title verification and legal due diligence rests with the client and their appointed advocate. We do not guarantee the accuracy of records obtained from government portals or offices, as these are subject to errors in official records.
+While we assist with document extraction (Encumbrance Certificate, RTC/Pahani, Khata Certificate, etc.), the ultimate responsibility for title verification and legal due diligence rests with the client and their appointed advocate. We do not guarantee the accuracy of records obtained from government portals or offices, as these are subject to errors in official records.
 
 **Government Delays:**
 Document processing timelines depend on government departments (BBMP, BDA, Sub-Registrar's Office, Gram Panchayat, Revenue Department, etc.). We do not guarantee specific timelines for government processes and are not liable for delays caused by government authorities.
@@ -166,10 +166,10 @@ Nothing in these Terms excludes or limits liability for fraud, wilful misconduct
     content: `These Terms shall be governed by and construed in accordance with the laws of India.
 
 **Jurisdiction:**
-Any dispute arising out of or in connection with these Terms or our services shall be subject to the exclusive jurisdiction of the courts of Bangalore, Karnataka, India.
+Any dispute arising out of or in connection with these Terms or our services shall be subject to the exclusive jurisdiction of the courts of India.
 
 **Dispute Resolution:**
-In the event of any dispute, both parties agree to first attempt to resolve the matter amicably through good-faith negotiation within 30 days of written notice of the dispute. If the dispute cannot be resolved through negotiation, either party may pursue legal remedies before the competent courts in Bangalore.
+In the event of any dispute, both parties agree to first attempt to resolve the matter amicably through good-faith negotiation within 30 days of written notice of the dispute. If the dispute cannot be resolved through negotiation, either party may pursue legal remedies before the competent courts across India.
 
 **Consumer Rights:**
 Nothing in these Terms affects your statutory rights as a consumer under the Consumer Protection Act, 2019.`,
@@ -191,7 +191,7 @@ You may discontinue using our services at any time. Obligations and liabilities 
     content: `For questions, clarifications, or concerns regarding these Terms of Service, please contact:
 
 **Right Assets Management**
-Bangalore, Karnataka, India
+India
 Email: contact@rightassetsmanagement.com
 Phone: +91 97428 26804
 

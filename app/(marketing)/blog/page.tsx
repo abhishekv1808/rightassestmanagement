@@ -280,7 +280,7 @@ export default function BlogPage() {
               style={{ color: "rgba(255,255,255,0.7)" }}
             >
               Expert guides on financial planning, real estate documentation,
-              and legal advisory — written for Bangalore professionals in plain,
+              and legal advisory — written for India professionals in plain,
               actionable language.
             </p>
           </div>
@@ -403,7 +403,7 @@ export default function BlogPage() {
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98]"
             style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
           >
-            Book Free Consultation
+            Book Consultation
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

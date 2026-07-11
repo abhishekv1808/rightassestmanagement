@@ -138,7 +138,7 @@ export default function ServicesCarousel() {
               <span style={{ color: "#C9A84C" }}>One Trusted Partner.</span>
             </h2>
             <p className="mt-3 text-sm max-w-xl" style={{ color: "#64748B" }}>
-              Financial planning, real estate transactions, and legal advisory — all under one roof in Bangalore.
+              Financial planning, real estate transactions, and legal advisory — all under one roof across India.
             </p>
           </div>
           <div className="flex flex-wrap gap-2 shrink-0">
@@ -173,7 +173,7 @@ export default function ServicesCarousel() {
           className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98]"
           style={{ backgroundColor: "#1B3A6B", color: "#fff" }}
         >
-          Book a Free Consultation
+          Book a Consultation
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>

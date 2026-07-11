@@ -108,7 +108,7 @@ export default function RentYieldCalculator() {
               <div className="mx-7 mb-7 p-4 rounded-xl flex gap-3" style={{ backgroundColor: "#EEF2F8", border: "1px solid #D6E0F0" }}>
                 <div className="w-1 rounded-full flex-shrink-0" style={{ backgroundColor: "#1B3A6B" }} />
                 <div className="flex-1">
-                  <p className="text-xs font-semibold mb-3" style={{ color: "#1B3A6B" }}>Rental Yield Benchmarks (Bangalore)</p>
+                  <p className="text-xs font-semibold mb-3" style={{ color: "#1B3A6B" }}>Rental Yield Benchmarks (India)</p>
                   <div className="space-y-2">
                     {[
                       { label: "Excellent", range: "≥ 5%", color: "#059669" },
@@ -123,7 +123,7 @@ export default function RentYieldCalculator() {
                     ))}
                   </div>
                   <p className="text-xs mt-3" style={{ color: "#9CA3AF" }}>
-                    Bangalore average: 2.5% – 3.5%. Premium localities (Whitefield, Koramangala) can reach 4–5%.
+                    India average: 2.5% – 3.5%. Premium localities (Whitefield, Koramangala) can reach 4–5%.
                   </p>
                 </div>
               </div>

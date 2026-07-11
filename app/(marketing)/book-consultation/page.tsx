@@ -5,9 +5,9 @@ import ConsultationBooking from "@/components/booking/ConsultationBooking";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/book-consultation" },
-  title: "Book a Free Consultation in Bangalore | Right Assets Management",
+  title: "Book a Consultation across India | Right Assets Management",
   description:
-    "Schedule a free consultation with our financial, real estate, or legal advisors in Bangalore. Pick a date and time that suits you — no commitment, no sales pressure.",
+    "Schedule a free consultation with our financial, real estate, or legal advisors across India. Pick a date and time that suits you — no commitment, no sales pressure.",
 };
 
 const POINTS = [
@@ -44,7 +44,7 @@ export default function BookConsultationPage() {
           {/* Left — pitch */}
           <div className="lg:col-span-6 lg:pt-4">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-5" style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#C9A84C", border: "1px solid rgba(201,168,76,0.3)" }}>
-              Free Consultation
+              Consultation
             </div>
             <h1 className="font-heading font-bold text-white mb-4" style={{ fontSize: "clamp(1.65rem, 4vw, 2.85rem)", lineHeight: 1.15 }}>
               Talk to an Expert —{" "}
@@ -52,7 +52,7 @@ export default function BookConsultationPage() {
             </h1>
             <p className="text-base sm:text-lg mb-6 sm:mb-8" style={{ color: "rgba(255,255,255,0.72)", lineHeight: 1.6 }}>
               Book a free, no-obligation consultation with our advisors. Choose a phone call,
-              video meeting, or visit our Bangalore office — at a time that works for you.
+              video meeting, or visit our India office — at a time that works for you.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3" style={{ maxWidth: 500 }}>

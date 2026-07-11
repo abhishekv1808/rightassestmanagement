@@ -19,9 +19,9 @@ const svc = getServiceBySlug("personal-loan")!;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/financial/personal-loan" },
-  title: "Personal Loan in Bangalore — Lowest Rates, Quick Approval | Right Assets Management",
+  title: "Personal Loan across India — Lowest Rates, Quick Approval | Right Assets Management",
   description:
-    "Apply for a personal loan in Bangalore with Right Assets Management. Compare offers from 15+ banks & NBFCs, get the lowest interest rate, and 24–48 hour approval. Check eligibility free.",
+    "Apply for a personal loan across India with Right Assets Management. Compare offers from 15+ banks & NBFCs, get the lowest interest rate, and 24–48 hour approval. Check eligibility free.",
 };
 
 const LENDERS = [
@@ -84,12 +84,12 @@ export default function PersonalLoanPage() {
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-5"
                 style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#C9A84C", border: "1px solid rgba(201,168,76,0.3)" }}
               >
-                Personal Loan · Bangalore
+                Personal Loan · India
               </div>
 
               <h1 className="font-heading font-bold text-white mb-4" style={{ fontSize: "clamp(1.65rem, 4vw, 2.85rem)", lineHeight: 1.15 }}>
                 Get a Personal Loan at the{" "}
-                <span style={{ color: "#C9A84C" }}>Lowest Rate</span> in Bangalore
+                <span style={{ color: "#C9A84C" }}>Lowest Rate</span> across India
               </h1>
               <p className="text-base sm:text-lg mb-6 sm:mb-8" style={{ color: "rgba(255,255,255,0.72)", lineHeight: 1.6 }}>
                 We compare offers from 15+ banks and NBFCs to get you the best interest rate

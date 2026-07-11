@@ -153,7 +153,7 @@ export default function StickyMobileCTA() {
         >
           <Link
             href="/contact"
-            aria-label="Book Free Consultation"
+            aria-label="Book Consultation"
             style={{
               position: "absolute",
               top: "-18px",

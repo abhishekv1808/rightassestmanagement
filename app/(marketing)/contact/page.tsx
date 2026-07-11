@@ -15,9 +15,9 @@ import LeadForm from "@/components/forms/LeadForm";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
-  title: "Contact Us — Book a Free Consultation",
+  title: "Contact Us — Book a Consultation",
   description:
-    "Get in touch with Right Assets Management in Bangalore. Book a free consultation for financial planning, real estate documentation, or legal advisory services.",
+    "Get in touch with Right Assets Management across India. Book a free consultation for financial planning, real estate documentation, or legal advisory services.",
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -294,7 +294,7 @@ export default function ContactPage() {
             {/* ── Right: form ─────────────────────────────────────────────── */}
             <div className="lg:col-span-7">
               <LeadForm
-                heading="Book a Free Consultation"
+                heading="Book a Consultation"
                 subtext="Fill in your details and we'll call you back within 24 hours — guaranteed."
               />
 
@@ -302,7 +302,7 @@ export default function ContactPage() {
               <div className="mt-5 flex flex-wrap items-center justify-center gap-6">
                 {[
                   "500+ clients served",
-                  "Free 30-min consultation",
+                  "30-min consultation",
                   "No commitment required",
                 ].map((t) => (
                   <div

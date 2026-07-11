@@ -50,7 +50,7 @@ const CATEGORY_USE_CASES: Record<string, string[]> = {
     "You want to reduce your tax outgo legally before the financial year ends",
   ],
   "real-estate": [
-    "You are buying, selling, or registering property in Bangalore",
+    "You are buying, selling, or registering property across India",
     "You need to complete government documentation for your property",
     "You want to protect yourself from common property fraud and disputes",
   ],

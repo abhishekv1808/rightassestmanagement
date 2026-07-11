@@ -66,7 +66,7 @@ export default function ServiceSchema({ service }: ServiceSchemaProps) {
     "@type": "Service",
     "@id": `${serviceUrl}/#service`,
     name: service.title,
-    alternateName: `${service.title} in Bangalore`,
+    alternateName: `${service.title} across India`,
     description: service.description || service.tagline,
     url: serviceUrl,
     serviceType: service.title,
@@ -78,14 +78,14 @@ export default function ServiceSchema({ service }: ServiceSchemaProps) {
     },
     areaServed: {
       "@type": "City",
-      name: "Bangalore",
+      name: "India",
       sameAs: "https://www.wikidata.org/wiki/Q1355",
     },
     audience: {
       "@type": "Audience",
       audienceType: service.whoIsItFor.length > 0
         ? service.whoIsItFor.join(", ")
-        : "Individuals and businesses in Bangalore",
+        : "Individuals and businesses across India",
     },
     ...(service.benefits.length > 0 && {
       hasOfferCatalog: {

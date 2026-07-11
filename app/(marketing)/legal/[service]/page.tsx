@@ -119,7 +119,7 @@ export default async function LegalServicePage({
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98]"
                   style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
                 >
-                  Book a Free Consultation
+                  Book a Consultation
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
@@ -143,7 +143,7 @@ export default async function LegalServicePage({
                   border: "1px solid rgba(255,255,255,0.12)",
                 }}
               >
-                <p className="text-white font-semibold mb-1">Free 30-min Consultation</p>
+                <p className="text-white font-semibold mb-1">30-min Consultation</p>
                 <p className="text-sm mb-5" style={{ color: "rgba(255,255,255,0.6)" }}>
                   Get clear guidance on your {svc.title.toLowerCase()} — confidential and without commitment.
                 </p>

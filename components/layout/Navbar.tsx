@@ -63,6 +63,7 @@ const VERTICALS: NavVertical[] = [
         links: [
           { label: "Health Insurance", href: "/financial/health-insurance" },
           { label: "Life Insurance", href: "/financial/life-insurance" },
+          { label: "Vehicle Insurance", href: "/financial/vehicle-insurance" },
           { label: "Home Loans", href: "/financial/home-loan" },
           { label: "Personal Loans", href: "/financial/personal-loan" },
           { label: "Vehicle Loans", href: "/financial/vehicle-loan" },
@@ -77,7 +78,6 @@ const VERTICALS: NavVertical[] = [
           { label: "Atal Pension Yojana", href: "/financial/atal-pension" },
           { label: "Tax Planning & ITR Filing", href: "/financial/tax-planning" },
           { label: "Credit Score Improvement", href: "/financial/credit-score" },
-          { label: "Startup Funding Advisory", href: "/financial/startup-funding" },
           { label: "Comprehensive Financial Planning", href: "/financial/financial-planning" },
         ],
       },
@@ -106,7 +106,7 @@ const VERTICALS: NavVertical[] = [
       {
         category: "Documents & Records",
         links: [
-          { label: "E-Khatha Application", href: "/real-estate/e-khatha" },
+          { label: "Khata Certificate Application", href: "/real-estate/khata-certificate" },
           { label: "Encumbrance Certificate (EC)", href: "/real-estate/encumbrance" },
           { label: "RTC / Pahani Records", href: "/real-estate/rtc-pahani" },
           { label: "Property Mutation", href: "/real-estate/mutation" },
@@ -120,7 +120,7 @@ const VERTICALS: NavVertical[] = [
           { label: "Rent Agreement", href: "/real-estate/rent-agreement" },
           { label: "NOC for Property", href: "/real-estate/noc" },
           { label: "Power of Attorney", href: "/real-estate/power-of-attorney" },
-          { label: "Land Conversion", href: "/real-estate/land-conversion" },
+          { label: "DC Conversion", href: "/real-estate/dc-conversion" },
           { label: "Building Plan Approval", href: "/real-estate/building-plan" },
         ],
       },
@@ -133,7 +133,7 @@ const VERTICALS: NavVertical[] = [
     color: "#6B46C1",
     lightBg: "#F0EBF9",
     Icon: Scale,
-    description: "8 services — property, civil, family & financial",
+    description: "11 services — deeds, property, civil, family & financial",
     groups: [
       {
         category: "Property & Criminal",
@@ -151,6 +151,14 @@ const VERTICALS: NavVertical[] = [
           { label: "Labour Case Help", href: "/legal/labour-cases" },
           { label: "Insurance Claim Cases", href: "/legal/insurance-claims" },
           { label: "Banking & Financial Cases", href: "/legal/banking-cases" },
+        ],
+      },
+      {
+        category: "Property Deeds & Estate",
+        links: [
+          { label: "Partition Deed", href: "/legal/partition-deed" },
+          { label: "Will Drafting & Registration", href: "/legal/will" },
+          { label: "Release Deed", href: "/legal/release-deed" },
         ],
       },
     ],
@@ -376,7 +384,7 @@ export default function Navbar() {
                 className="px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:opacity-90 active:scale-95 whitespace-nowrap"
                 style={{ backgroundColor: "#C9A84C", color: "#1B3A6B" }}
               >
-                Free Consult
+                Consult
               </Link>
 
               <UserAuthButton />
@@ -645,7 +653,7 @@ export default function Navbar() {
                   className="flex items-center justify-center w-full px-4 py-3 rounded-xl text-sm font-semibold transition-all active:scale-95"
                   style={{ backgroundColor: "#C9A84C", color: "#1B3A6B" }}
                 >
-                  Book Free Consultation
+                  Book Consultation
                 </Link>
               </div>
             </motion.div>

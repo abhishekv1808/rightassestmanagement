@@ -298,7 +298,7 @@ export default async function LPPage({
               style={{ gap: 20, flexWrap: "wrap" }}
             >
               {[
-                "Free Consultation",
+                "Consultation",
                 "No Commitment",
                 "Call in 2 Hours",
               ].map((b) => (
@@ -358,7 +358,7 @@ export default async function LPPage({
             style={{ display: "flex", gap: 0, whiteSpace: "nowrap" }}
           >
             {[
-              "✦  500+ Families Served in Bangalore",
+              "✦  500+ Families Served across India",
               "✦  ₹500 Crore+ in Loans Facilitated",
               "✦  10+ Years of Expert Advisory",
               "✦  SEBI-Registered Advisors",
@@ -367,9 +367,9 @@ export default async function LPPage({
               "✦  ₹2 Crore+ Tax Saved for Clients",
               "✦  Zero Spam — Ever",
               "✦  Free First Consultation Always",
-              "✦  Serving All Areas of Bangalore",
+              "✦  Serving All Areas of India",
               // Duplicate for seamless loop
-              "✦  500+ Families Served in Bangalore",
+              "✦  500+ Families Served across India",
               "✦  ₹500 Crore+ in Loans Facilitated",
               "✦  10+ Years of Expert Advisory",
               "✦  SEBI-Registered Advisors",
@@ -378,7 +378,7 @@ export default async function LPPage({
               "✦  ₹2 Crore+ Tax Saved for Clients",
               "✦  Zero Spam — Ever",
               "✦  Free First Consultation Always",
-              "✦  Serving All Areas of Bangalore",
+              "✦  Serving All Areas of India",
             ].map((item, i) => (
               <span
                 key={i}
@@ -584,7 +584,7 @@ export default async function LPPage({
               textAlign: "center",
             }}
           >
-            Why Bangalore residents choose Right Assets Management
+            Why India residents choose Right Assets Management
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -793,7 +793,7 @@ export default async function LPPage({
                 marginBottom: 10,
               }}
             >
-              What Our Clients in Bangalore Say
+              What Our Clients across India Say
             </h2>
             <p style={{ fontSize: 15, color: "#64748B" }}>
               Real stories from real people — not stock photos.

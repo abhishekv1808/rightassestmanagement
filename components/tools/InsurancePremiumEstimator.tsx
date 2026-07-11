@@ -259,7 +259,7 @@ export default function InsurancePremiumEstimator() {
                   className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98]"
                   style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
                 >
-                  Get Exact Quote — Free Consultation
+                  Get Exact Quote — Consultation
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a

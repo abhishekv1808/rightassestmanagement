@@ -18,9 +18,9 @@ import {
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about" },
-  title: "About Us — Right Assets Management Bangalore",
+  title: "About Us — Right Assets Management India",
   description:
-    "Learn about Right Assets Management — Bangalore's trusted multi-vertical firm offering financial planning, real estate, and legal advisory services under one roof.",
+    "Learn about Right Assets Management — India's trusted multi-vertical firm offering financial planning, real estate, and legal advisory services under one roof.",
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -52,14 +52,14 @@ const VERTICALS = [
     href: "/real-estate",
     count: "17 services",
     headline: "We handle all of it.",
-    body: "Buying, selling, legal documentation, government records, E-Khatha, encumbrance certificates, property registration, land conversion — every piece of the real estate puzzle in one place.",
+    body: "Buying, selling, legal documentation, government records, Khata Certificate, encumbrance certificates, property registration, land conversion — every piece of the real estate puzzle in one place.",
     services: [
       "Buy & Sell Properties",
       "Property Registration",
-      "E-Khatha & Mutation",
+      "Khata Certificate & Mutation",
       "Sale Deed & Agreement",
       "Encumbrance Certificate",
-      "Land Conversion & NOC",
+      "DC Conversion & NOC",
     ],
   },
   {
@@ -68,7 +68,7 @@ const VERTICALS = [
     color: "#6B46C1",
     lightBg: "#F0EBF9",
     href: "/legal",
-    count: "8 services",
+    count: "11 services",
     headline: "Expert advisory without the confusion.",
     body: "Property disputes, family cases, cyber crime, insurance claim cases, consumer forum — experienced legal advisory that gives you clarity and direction when you need it most.",
     services: [
@@ -115,8 +115,8 @@ const WHY_CHOOSE = [
     Icon: MapPin,
     color: "#1B3A6B",
     lightBg: "#EEF2F8",
-    title: "Pan Bangalore Coverage",
-    body: "We serve clients across all zones of Bangalore — from HSR Layout to Yelahanka, Whitefield to Rajajinagar. Wherever you are, we're accessible.",
+    title: "Pan India Coverage",
+    body: "We serve clients across all zones of India — from HSR Layout to Yelahanka, Whitefield to Rajajinagar. Wherever you are, we're accessible.",
   },
 ];
 
@@ -181,7 +181,7 @@ export default function AboutPage() {
                 color: "#C9A84C",
               }}
             >
-              Bangalore&apos;s Multi-Vertical Advisory Firm
+              India&apos;s Multi-Vertical Advisory Firm
             </span>
             <h1
               className="font-heading font-bold text-white mb-4"
@@ -224,7 +224,7 @@ export default function AboutPage() {
                 <p>
                   Right Assets Management was founded with a single mission — to make financial
                   planning, real estate transactions, and legal support accessible, transparent,
-                  and reliable for every Bangalorean.
+                  and reliable for every Indiaan.
                 </p>
                 <p>
                   We bring together expertise across three critical areas of life under one roof,
@@ -233,7 +233,7 @@ export default function AboutPage() {
                   one call to Right Assets Management is all it takes.
                 </p>
                 <p>
-                  Over the years we have served 500+ clients across Bangalore — from salaried
+                  Over the years we have served 500+ clients across India — from salaried
                   professionals starting their investment journey to HNI individuals managing
                   complex portfolios, from first-time homebuyers to seasoned real estate investors,
                   from individuals seeking legal guidance to businesses resolving commercial disputes.
@@ -264,7 +264,7 @@ export default function AboutPage() {
                   style={{ lineHeight: 1.65 }}
                 >
                   To make financial planning, real estate, and legal services accessible,
-                  transparent, and reliable for every Bangalorean.
+                  transparent, and reliable for every Indiaan.
                 </p>
               </div>
 
@@ -433,7 +433,7 @@ export default function AboutPage() {
               Why Choose Right Assets?
             </h2>
             <p className="text-gray-500 text-base sm:text-lg max-w-xl mx-auto">
-              Five reasons clients consistently choose us over other advisors in Bangalore.
+              Five reasons clients consistently choose us over other advisors across India.
             </p>
           </div>
 

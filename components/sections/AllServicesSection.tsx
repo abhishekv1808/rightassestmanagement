@@ -49,17 +49,17 @@ const FINANCIAL_CARDS: CardConfig[] = [
   { slug: "credit-score",        Icon: CreditCard,  color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Improve in 30–90 Days",   vertical: "financial" },
   { slug: "aif",                 Icon: Building2,   color: "#1B3A6B", lightBg: "#EEF2F8", highlight: "Min. ₹1 Cr Investment",   vertical: "financial" },
   { slug: "sukanya-samriddhi",   Icon: Star,        color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "For Girl Child",           vertical: "financial" },
-  { slug: "startup-funding",     Icon: Rocket,      color: "#C9A84C", lightBg: "#FBF5E6", highlight: "Startup Advisory",        vertical: "financial" },
+  { slug: "vehicle-insurance",   Icon: Car,         color: "#C9A84C", lightBg: "#FBF5E6", highlight: "Car · Bike · Commercial", vertical: "financial" },
   { slug: "atal-pension",        Icon: Clock,       color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Guaranteed Pension",      vertical: "financial" },
 ];
 
 const REAL_ESTATE_CARDS: CardConfig[] = [
   { slug: "buy-sell",            Icon: Home,        color: "#0D7E7E", lightBg: "#E6F4F4", badge: "Most Sought",  highlight: "End-to-End Support",        vertical: "real-estate" },
-  { slug: "e-khatha",            Icon: CheckSquare, color: "#0D7E7E", lightBg: "#E6F4F4", badge: "High Demand",  highlight: "BBMP / BDA / Gram Panchayat", vertical: "real-estate" },
+  { slug: "khata-certificate",            Icon: CheckSquare, color: "#0D7E7E", lightBg: "#E6F4F4", badge: "High Demand",  highlight: "BBMP / BDA / Gram Panchayat", vertical: "real-estate" },
   { slug: "property-registration",Icon: Award,     color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Sub-Registrar Office",     vertical: "real-estate" },
   { slug: "sale-deed",           Icon: FileText,    color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Legally Compliant",       vertical: "real-estate" },
   { slug: "rent-agreement",      Icon: Key,         color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Registered Agreement",    vertical: "real-estate" },
-  { slug: "land-conversion",     Icon: MapPin,      color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Agri → Residential",      vertical: "real-estate" },
+  { slug: "dc-conversion",     Icon: MapPin,      color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Agri → Residential",      vertical: "real-estate" },
   { slug: "building-plan",       Icon: Layers,      color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "BBMP / BDA Approved",     vertical: "real-estate" },
   { slug: "encumbrance",         Icon: Shield,      color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Clear Title Verification", vertical: "real-estate" },
   { slug: "mutation",            Icon: RefreshCw,   color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Khatha Transfer",         vertical: "real-estate" },
@@ -82,6 +82,9 @@ const LEGAL_CARDS: CardConfig[] = [
   { slug: "labour-cases",        Icon: Briefcase,   color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Employee & Employer",     vertical: "legal" },
   { slug: "insurance-claims",    Icon: FileText,    color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Wrongful Rejection Cases", vertical: "legal" },
   { slug: "banking-cases",       Icon: Building2,   color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Loan Fraud & NPA",        vertical: "legal" },
+  { slug: "partition-deed",      Icon: Users,       color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Divide Family Property",  vertical: "legal" },
+  { slug: "will",                Icon: FileText,    color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Secure Your Estate",      vertical: "legal" },
+  { slug: "release-deed",        Icon: ScrollText,  color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Relinquish a Share",      vertical: "legal" },
 ];
 
 const DEFAULT_VISIBLE = 8;
@@ -186,7 +189,7 @@ function VerticalGroup({ config }: { config: VerticalConfig }) {
             {config.tagline}
           </h3>
           <p className="text-sm text-gray-500">
-            {config.cards.length} services · Expert advisory in Bangalore
+            {config.cards.length} services · Expert advisory across India
           </p>
         </div>
         <Link
@@ -318,7 +321,7 @@ export default function AllServicesSection() {
             <span style={{ color: "#C9A84C" }}>Three Verticals.</span>
           </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
-            Financial planning, real estate documentation, and legal advisory — all under one roof in Bangalore.
+            Financial planning, real estate documentation, and legal advisory — all under one roof across India.
           </p>
         </motion.div>
 

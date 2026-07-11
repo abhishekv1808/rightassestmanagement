@@ -22,8 +22,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <AllServicesSection />
       <MutualFundTicker />
+      <AllServicesSection />
       <ServicesGrid />
       <StatsBar />
       <WhyRightAsset />

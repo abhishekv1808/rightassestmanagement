@@ -8,7 +8,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 const TRUST = [
   "Transparent Fee Structure",
   "500+ Clients Served",
-  "Pan Bangalore Coverage",
+  "Pan India Coverage",
 ];
 
 const fadeUp = (delay = 0) => ({
@@ -92,7 +92,7 @@ export default function Hero() {
                 className="w-2 h-2 rounded-full"
                 style={{ backgroundColor: "#C9A84C", boxShadow: "0 0 7px rgba(201,168,76,0.8)" }}
               />
-              Bangalore&apos;s All-in-One Advisory Firm
+              India&apos;s All-in-One Advisory Firm
             </span>
           </motion.div>
 
@@ -106,7 +106,7 @@ export default function Hero() {
             <span style={{ color: "#C9A84C" }}>Financial,&nbsp;Real&nbsp;Estate</span>
             {" "}&amp;{" "}
             <span style={{ color: "#C9A84C" }}>Legal&nbsp;Services</span>{" "}
-            in&nbsp;Bangalore
+            in&nbsp;India
           </motion.h1>
 
           {/* Subheadline */}
@@ -126,7 +126,7 @@ export default function Hero() {
               className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-sm sm:text-[15px] shadow-xl transition-all hover:opacity-90 active:scale-[0.97]"
               style={{ backgroundColor: "#C9A84C", color: "#1B3A6B" }}
             >
-              Book a Free Consultation
+              Book a Consultation
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a

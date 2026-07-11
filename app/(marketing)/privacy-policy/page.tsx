@@ -16,7 +16,7 @@ const SECTIONS = [
   {
     id: "introduction",
     title: "1. Introduction",
-    content: `Right Assets Management ("we", "our", "us"), a financial advisory and services firm based in Bangalore, Karnataka, India, is committed to protecting the privacy and personal data of every individual who visits our website or engages our services.
+    content: `Right Assets Management ("we", "our", "us"), a financial advisory and services firm based in India, is committed to protecting the privacy and personal data of every individual who visits our website or engages our services.
 
 This Privacy Policy explains what personal information we collect, how we use it, how it is stored, with whom it may be shared, and what rights you hold over your data. This Policy applies to all visitors to rightassetsmanagement.com (the "Website") and to all clients who engage us for Financial, Real Estate, or Legal advisory services.
 
@@ -163,7 +163,7 @@ We encourage you to review this Policy periodically. Your continued use of our W
     content: `For any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal data, you may contact us at:
 
 **Right Assets Management**
-Bangalore, Karnataka, India
+India
 Email: contact@rightassetsmanagement.com
 Phone: +91 97428 26804
 WhatsApp: +91 97428 26804

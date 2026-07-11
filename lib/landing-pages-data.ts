@@ -38,17 +38,17 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "home-loan",
     metaTitle:
-      "Home Loan in Bangalore | Free Expert Guidance — Right Assets Management",
+      "Home Loan across India | Free Expert Guidance — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
-    eyebrow: "Trusted Home Loan Advisors in Bangalore",
-    headline: "Get the Best Home Loan in Bangalore — Without the Confusion",
+    eyebrow: "Trusted Home Loan Advisors across India",
+    headline: "Get the Best Home Loan across India — Without the Confusion",
     subheadline:
       "We compare offers from 20+ banks and NBFCs, handle all documentation, and get you approved faster. 100% free advisory — no hidden charges.",
     serviceLabel: "Home Loan",
     ctaText: "Get Free Loan Guidance",
-    whatsappMessage: "Hi, I need help with a Home Loan in Bangalore",
+    whatsappMessage: "Hi, I need help with a Home Loan across India",
     stats: [
       { value: "20+", label: "Banks Compared" },
       { value: "₹500Cr+", label: "Loans Facilitated" },
@@ -104,7 +104,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         body: "If your score needs improvement, we tell you exactly what to do before applying so you get the best rate.",
       },
       {
-        heading: "Doorstep service, all of Bangalore",
+        heading: "Doorstep service, all of India",
         body: "Our team comes to you for document collection and verification. No bank visits until final signing.",
       },
       {
@@ -128,19 +128,19 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         quote:
           "I was comparing home loan rates for 2 months and getting nowhere. Right Assets sorted my ₹65 lakh loan in 10 days at 8.4% — lower than what my own bank had offered. Absolutely recommend.",
         name: "Suresh Reddy",
-        location: "Whitefield, Bangalore",
+        location: "Whitefield, India",
       },
       {
         quote:
           "My CIBIL score was 720 and I was worried no bank would give me a good rate. The team advised me to clear one old credit card due and reapply — got 8.6% from HDFC. Genuine advisors.",
         name: "Meera Krishnaswamy",
-        location: "Electronic City, Bangalore",
+        location: "Electronic City, India",
       },
       {
         quote:
           "First-time home buyer, completely clueless. Right Assets explained everything — EMI, tenure, prepayment — and got my loan sanctioned in 4 days. The doorstep service saved me 2 days of leave.",
         name: "Arun Nair",
-        location: "JP Nagar, Bangalore",
+        location: "JP Nagar, India",
       },
     ],
     comparisonRows: [
@@ -196,11 +196,11 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "mutual-funds-sip",
     metaTitle:
-      "SIP & Mutual Fund Investment in Bangalore | SEBI-Registered Advisor — Right Assets Management",
+      "SIP & Mutual Fund Investment across India | SEBI-Registered Advisor — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
-    eyebrow: "SEBI-Registered Investment Advisor in Bangalore",
+    eyebrow: "SEBI-Registered Investment Advisor across India",
     headline: "Start Building Wealth with SIP Investments — Guided by Experts",
     subheadline:
       "Get a personalised mutual fund portfolio built by SEBI-registered advisors. Start a SIP with just ₹500/month and grow wealth systematically.",
@@ -286,19 +286,19 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         quote:
           "Started a ₹10,000/month SIP through Right Assets 3 years ago. My portfolio is up 41% and they reviewed it twice without me even asking. Genuine advisors who actually care.",
         name: "Priya Menon",
-        location: "Koramangala, Bangalore",
+        location: "Koramangala, India",
       },
       {
         quote:
           "I was putting money in FDs for years — safe but terrible returns. Right Assets moved me to a balanced portfolio with 13% CAGR over 4 years. I wish I had done this 10 years ago.",
         name: "Rajesh Iyer",
-        location: "Indiranagar, Bangalore",
+        location: "Indiranagar, India",
       },
       {
         quote:
           "They showed me I was paying 1.2% extra per year in a regular plan through my bank. Switched to direct, added a ELSS for tax saving. The difference over 20 years is huge.",
         name: "Deepa Shankar",
-        location: "HSR Layout, Bangalore",
+        location: "HSR Layout, India",
       },
     ],
     comparisonRows: [
@@ -350,23 +350,23 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "property-registration",
     metaTitle:
-      "Property Registration in Bangalore | Expert End-to-End Help — Right Assets Management",
+      "Property Registration across India | Expert End-to-End Help — Right Assets Management",
     vertical: "real-estate",
     accentColor: "#0D7E7E",
     lightBg: "#E6F4F4",
-    eyebrow: "Property Registration Experts Serving All of Bangalore",
+    eyebrow: "Property Registration Experts Serving All of India",
     headline:
-      "Property Registration in Bangalore — Handled End-to-End by Experts",
+      "Property Registration across India — Handled End-to-End by Experts",
     subheadline:
       "Stamp duty calculation, document preparation, and Sub-Registrar Office coordination — all handled by our team so you don't face rejections or delays.",
     serviceLabel: "Property Registration",
     ctaText: "Get Registration Help",
-    whatsappMessage: "Hi, I need help with property registration in Bangalore",
+    whatsappMessage: "Hi, I need help with property registration across India",
     stats: [
       { value: "1000+", label: "Properties Registered" },
       { value: "100%", label: "Success Rate" },
       { value: "3 Days", label: "Avg. Completion" },
-      { value: "All Areas", label: "Bangalore Coverage" },
+      { value: "All Areas", label: "India Coverage" },
     ],
     processSteps: [
       {
@@ -441,19 +441,19 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         quote:
           "My property registration was stuck for 6 months due to a khata issue. Right Assets resolved it in 3 weeks — they handled the BBMP, the SRO, everything. Absolute lifesavers.",
         name: "Anand Kumar",
-        location: "Jayanagar, Bangalore",
+        location: "Jayanagar, India",
       },
       {
         quote:
           "First time buying a property. I didn't know anything about stamp duty or EC. The team walked me through every step, calculated the exact charges, and came with me to the SRO. Highly recommend.",
         name: "Sangeetha Rajan",
-        location: "Hebbal, Bangalore",
+        location: "Hebbal, India",
       },
       {
         quote:
           "The seller's property had a wrong survey number in the old deed. Right Assets caught it before we registered and got it corrected. Could have been a very expensive mistake.",
         name: "Vivek Sharma",
-        location: "Marathahalli, Bangalore",
+        location: "Marathahalli, India",
       },
     ],
     comparisonRows: [
@@ -487,7 +487,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
       "If we find any title issue or legal problem with the property, we will tell you before you register — even if it means you walk away from the deal. Protecting your money always comes first.",
     faqs: [
       {
-        q: "How much stamp duty do I pay for property registration in Bangalore?",
+        q: "How much stamp duty do I pay for property registration across India?",
         a: "Stamp duty in Karnataka is 5% of the property value for properties above ₹45 lakh, plus 1% registration charge. For joint female ownership, there is a 1% concession. We calculate the exact amount for your property.",
       },
       {
@@ -505,17 +505,17 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "tax-planning",
     metaTitle:
-      "Tax Planning & ITR Filing in Bangalore | Save More Tax — Right Assets Management",
+      "Tax Planning & ITR Filing across India | Save More Tax — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
-    eyebrow: "Expert Tax Planning & CA-Guided ITR Filing in Bangalore",
-    headline: "Stop Overpaying Tax — Expert Tax Planning in Bangalore",
+    eyebrow: "Expert Tax Planning & CA-Guided ITR Filing across India",
+    headline: "Stop Overpaying Tax — Expert Tax Planning across India",
     subheadline:
       "We maximise deductions under 80C, 80D, HRA, and NPS, and file error-free ITR returns for salaried, self-employed, and business owners.",
     serviceLabel: "Tax Planning & ITR Filing",
     ctaText: "Get Free Tax Review",
-    whatsappMessage: "Hi, I need help with tax planning and ITR filing in Bangalore",
+    whatsappMessage: "Hi, I need help with tax planning and ITR filing across India",
     stats: [
       { value: "₹2Cr+", label: "Tax Saved for Clients" },
       { value: "1000+", label: "Returns Filed" },
@@ -595,19 +595,19 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         quote:
           "I was paying ₹1.2L in tax every year. Right Assets showed me I was missing HRA and NPS deductions. My tax came down to ₹68,000 that same year. Wish I had known sooner.",
         name: "Kavitha Narayan",
-        location: "HSR Layout, Bangalore",
+        location: "HSR Layout, India",
       },
       {
         quote:
           "I had freelance income alongside my salary and had no idea about advance tax. Got a demand notice from IT dept last year. Right Assets fixed everything and filed a revised return. Stress-free now.",
         name: "Rohit Desai",
-        location: "Koramangala, Bangalore",
+        location: "Koramangala, India",
       },
       {
         quote:
           "They switched me to the old regime after comparing both — saved ₹42,000 in a single year. My CA never even mentioned the option. Will never go back to self-filing.",
         name: "Sunita Prasad",
-        location: "Bannerghatta Road, Bangalore",
+        location: "Bannerghatta Road, India",
       },
     ],
     comparisonRows: [
@@ -659,18 +659,18 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "health-insurance",
     metaTitle:
-      "Best Health Insurance Plans in Bangalore | Compare & Buy — Right Assets Management",
+      "Best Health Insurance Plans across India | Compare & Buy — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
-    eyebrow: "Health Insurance Advisors in Bangalore — Unbiased Comparison",
+    eyebrow: "Health Insurance Advisors across India — Unbiased Comparison",
     headline:
-      "Find the Right Health Insurance for Your Family in Bangalore",
+      "Find the Right Health Insurance for Your Family across India",
     subheadline:
       "We compare 30+ health insurance plans and recommend the one that gives maximum coverage at the best premium — with no hidden exclusions explained in fine print.",
     serviceLabel: "Health Insurance",
     ctaText: "Compare Plans Free",
-    whatsappMessage: "Hi, I want to compare health insurance plans in Bangalore",
+    whatsappMessage: "Hi, I want to compare health insurance plans across India",
     stats: [
       { value: "30+", label: "Insurers Compared" },
       { value: "500+", label: "Families Insured" },
@@ -711,7 +711,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
     benefits: [
       {
         heading: "Right cover, not over-sold",
-        body: "We recommend a cover amount based on your actual hospitalisation risk and medical inflation in Bangalore — not the most expensive plan.",
+        body: "We recommend a cover amount based on your actual hospitalisation risk and medical inflation across India — not the most expensive plan.",
       },
       {
         heading: "Exclusions explained in plain language",
@@ -719,7 +719,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
       },
       {
         heading: "Cashless hospital network check",
-        body: "We verify that your nearest hospitals in Bangalore are covered under the plan's cashless network before recommending it.",
+        body: "We verify that your nearest hospitals across India are covered under the plan's cashless network before recommending it.",
       },
       {
         heading: "Super top-up strategy",
@@ -750,19 +750,19 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         quote:
           "I had a health insurance plan for 4 years and thought I was fully covered. Right Assets reviewed it and found 3 critical exclusions I had no idea about. Switched to a better plan the same week.",
         name: "Ramesh Gowda",
-        location: "Bannerghatta Road, Bangalore",
+        location: "Bannerghatta Road, India",
       },
       {
         quote:
           "My mother has diabetes and I could not find a plan that would cover her without a 4-year waiting period. Right Assets found a Care Supreme plan with a 2-year PED waiting period at a fair premium.",
         name: "Anitha Murthy",
-        location: "Malleshwaram, Bangalore",
+        location: "Malleshwaram, India",
       },
       {
         quote:
           "When my husband was hospitalised, Right Assets helped us file the claim the same day. We did not have to worry about paperwork — they handled everything. That is the real value.",
         name: "Divya Menon",
-        location: "Indiranagar, Bangalore",
+        location: "Indiranagar, India",
       },
     ],
     comparisonRows: [
@@ -796,8 +796,8 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
       "If we cannot find a plan that is genuinely better than what you currently have, we will tell you to stay with your existing insurer. We will never recommend a switch unless it clearly benefits you.",
     faqs: [
       {
-        q: "How much health insurance cover does my family need in Bangalore?",
-        a: "For a family of 4 in Bangalore, we recommend a minimum of ₹10 lakh base cover with a super top-up of ₹50 lakh. Medical inflation in Bangalore runs at 15–18% per year — under-insurance is a real risk.",
+        q: "How much health insurance cover does my family need across India?",
+        a: "For a family of 4 across India, we recommend a minimum of ₹10 lakh base cover with a super top-up of ₹50 lakh. Medical inflation across India runs at 15–18% per year — under-insurance is a real risk.",
       },
       {
         q: "What is the difference between individual and family floater plans?",
@@ -814,11 +814,11 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "term-life-insurance",
     metaTitle:
-      "Term Life Insurance in Bangalore | ₹1 Crore Cover from ₹500/Month — Right Assets Management",
+      "Term Life Insurance across India | ₹1 Crore Cover from ₹500/Month — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
-    eyebrow: "Term Life Insurance Advisors in Bangalore",
+    eyebrow: "Term Life Insurance Advisors across India",
     headline:
       "₹1 Crore Life Cover from ₹500/Month — Protect Your Family Today",
     subheadline:
@@ -905,19 +905,19 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         quote:
           "Took a ₹1.5 Cr term plan at 31 for just ₹850/month. Right Assets helped me choose a plan with a critical illness rider that my bank agent had never even mentioned. Very thorough.",
         name: "Vikram Shetty",
-        location: "Marathahalli, Bangalore",
+        location: "Marathahalli, India",
       },
       {
         quote:
           "I had a ULIP that my old LIC agent had sold me as 'life cover'. Right Assets showed me I was getting ₹8L cover for ₹1,500/month. Switched to a ₹1 Cr term plan for ₹720/month. Eye-opening.",
         name: "Karthik Rao",
-        location: "BTM Layout, Bangalore",
+        location: "BTM Layout, India",
       },
       {
         quote:
           "My husband passed away last year. Because Right Assets had helped us get a term plan with the right nominee details and payout structure, the claim was settled in 12 days. In that moment, it was everything.",
         name: "Name withheld on request",
-        location: "Bangalore",
+        location: "India",
       },
     ],
     comparisonRows: [

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/tools/sip-calculator" },
   title: "SIP Returns Calculator — Free Tool | Right Assets Management",
   description:
-    "Calculate your SIP maturity value for any monthly investment, expected return, and duration. Free SIP calculator by Right Assets Management, Bangalore.",
+    "Calculate your SIP maturity value for any monthly investment, expected return, and duration. Free SIP calculator by Right Assets Management, India.",
 };
 
 export default function SIPCalculatorPage() {
@@ -90,7 +90,7 @@ export default function SIPCalculatorPage() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:opacity-90"
               style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
             >
-              Start Your SIP — Book Free Consultation
+              Start Your SIP — Book Consultation
             </Link>
             <Link
               href="/financial/mutual-funds"

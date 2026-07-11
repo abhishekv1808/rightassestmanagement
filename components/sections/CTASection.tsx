@@ -5,7 +5,7 @@ import { MessageCircle, Phone, CheckCircle } from "lucide-react";
 import LeadForm from "@/components/forms/LeadForm";
 
 const BENEFITS = [
-  "Free 30-minute initial consultation",
+  "30-minute initial consultation",
   "No commitment required",
   "Response within 24 hours",
 ];
@@ -100,7 +100,7 @@ export default function CTASection() {
             transition={{ duration: 0.58, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
             <LeadForm
-              heading="Book a Free Consultation"
+              heading="Book a Consultation"
               subtext="Fill in your details — we'll call you back within 24 hours."
             />
           </motion.div>

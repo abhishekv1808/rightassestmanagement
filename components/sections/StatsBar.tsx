@@ -7,7 +7,7 @@ const STATS = [
   { value: 48, suffix: "+", label: "Expert Services" },
   { value: 500, suffix: "+", label: "Clients Served" },
   { value: 10, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Bangalore Coverage" },
+  { value: 100, suffix: "%", label: "India Coverage" },
 ];
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {

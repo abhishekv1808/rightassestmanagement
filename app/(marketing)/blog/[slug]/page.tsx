@@ -397,7 +397,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
                           color: "#1A1A1A",
                         }}
                       >
-                        Book Free Consultation
+                        Book Consultation
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                       <a
@@ -435,7 +435,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
             <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
               {/* Lead form */}
               <LeadForm
-                heading="Free Consultation"
+                heading="Consultation"
                 subtext="Have questions about this topic? Our experts can help."
               />
 

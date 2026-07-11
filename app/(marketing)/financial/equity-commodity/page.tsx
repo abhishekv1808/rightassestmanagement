@@ -30,9 +30,9 @@ import ServiceStickyBar from "@/components/service/ServiceStickyBar";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/financial/equity-commodity" },
-  title: "Equity & Commodity Market Advisory in Bangalore | Right Assets Management",
+  title: "Equity & Commodity Market Advisory across India | Right Assets Management",
   description:
-    "Expert equity and commodity market advisory in Bangalore. Research-backed stock picks, commodity strategies on MCX/NCDEX, portfolio management, and tax-efficient exits. Book a free consultation today.",
+    "Expert equity and commodity market advisory across India. Research-backed stock picks, commodity strategies on MCX/NCDEX, portfolio management, and tax-efficient exits. Book a free consultation today.",
 };
 
 // ─── Static data ───────────────────────────────────────────────────────────
@@ -111,7 +111,7 @@ const markets = [
 
 const trustStats = [
   { value: "10+", label: "Years of Market Experience" },
-  { value: "500+", label: "Clients Across Bangalore" },
+  { value: "500+", label: "Clients Across India" },
   { value: "₹50Cr+", label: "Portfolio Value Advised" },
   { value: "NSE · BSE · MCX", label: "All Major Exchanges" },
 ];
@@ -254,7 +254,7 @@ export default function EquityCommodityPage() {
                 }}
               >
                 <TrendingUp className="w-3.5 h-3.5" />
-                Financial Advisory · Bangalore
+                Financial Advisory · India
               </div>
 
               <h1
@@ -274,7 +274,7 @@ export default function EquityCommodityPage() {
                 style={{ color: "rgba(255,255,255,0.72)" }}
               >
                 Expert, research-backed guidance for stock market and commodity
-                investments. We help Bangalore investors build wealth — not just
+                investments. We help India investors build wealth — not just
                 portfolios.
               </p>
 
@@ -311,7 +311,7 @@ export default function EquityCommodityPage() {
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98]"
                   style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
                 >
-                  Book Free Consultation
+                  Book Consultation
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
@@ -362,7 +362,7 @@ export default function EquityCommodityPage() {
                 <div className="flex items-center gap-2 mb-3">
                   <Star className="w-4 h-4" style={{ color: "#C9A84C" }} />
                   <p className="text-white font-semibold text-sm">
-                    Free 30-min Strategy Call
+                    30-min Strategy Call
                   </p>
                 </div>
                 <p
@@ -450,7 +450,7 @@ export default function EquityCommodityPage() {
             <p className="text-gray-500 text-sm leading-relaxed">
               End-to-end equity and commodity market services — from your first
               investment to active portfolio management, all under one roof in
-              Bangalore.
+              India.
             </p>
           </div>
 
@@ -926,7 +926,7 @@ export default function EquityCommodityPage() {
             {/* Right — lead form */}
             <div>
               <LeadForm
-                heading="Book a Free Consultation"
+                heading="Book a Consultation"
                 subtext="Talk to our equity & commodity advisors — no commitment, no sales pressure."
                 defaultService="Equity & Commodity Market"
               />

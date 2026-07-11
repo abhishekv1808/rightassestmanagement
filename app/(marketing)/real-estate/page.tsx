@@ -24,9 +24,9 @@ import { getServiceBySlug } from "@/lib/services-data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/real-estate" },
-  title: "Real Estate Services in Bangalore — Property, Documentation & Registration",
+  title: "Real Estate Services across India — Property, Documentation & Registration",
   description:
-    "Complete real estate services in Bangalore — buy/sell properties, sale deed, khatha, EC, land conversion, property registration, and more. Right Assets Management.",
+    "Complete real estate services across India — buy/sell properties, sale deed, khatha, EC, land conversion, property registration, and more. Right Assets Management.",
 };
 
 // ─── Cards config ─────────────────────────────────────────────────────────────
@@ -35,11 +35,11 @@ const CARDS = [
   { slug: "buy-sell",            Icon: Home,          color: "#0D7E7E", lightBg: "#E6F4F4",  badge: "Most Popular", highlight: "Buy & Sell Assistance" },
   { slug: "property-registration", Icon: FileCheck,   color: "#1B3A6B", lightBg: "#EEF2F8",  badge: null,           highlight: "SRO Coordination" },
   { slug: "sale-deed",           Icon: FileText,      color: "#C9A84C", lightBg: "#FBF5E6",  badge: null,           highlight: "Legal Document Drafting" },
-  { slug: "e-khatha",            Icon: ClipboardList, color: "#6B46C1", lightBg: "#F0EBF9",  badge: "High Demand",  highlight: "BBMP & Gram Panchayat" },
+  { slug: "khata-certificate",            Icon: ClipboardList, color: "#6B46C1", lightBg: "#F0EBF9",  badge: "High Demand",  highlight: "BBMP & Gram Panchayat" },
   { slug: "encumbrance",         Icon: Search,        color: "#0D7E7E", lightBg: "#E6F4F4",  badge: null,           highlight: "Clear Title Verification" },
   { slug: "rent-agreement",      Icon: Key,           color: "#1B3A6B", lightBg: "#EEF2F8",  badge: null,           highlight: "Registered Agreements" },
   { slug: "mutation",            Icon: GitBranch,     color: "#C9A84C", lightBg: "#FBF5E6",  badge: null,           highlight: "Khatha Transfer" },
-  { slug: "land-conversion",     Icon: Layers,        color: "#6B46C1", lightBg: "#F0EBF9",  badge: null,           highlight: "Agri → Residential" },
+  { slug: "dc-conversion",     Icon: Layers,        color: "#6B46C1", lightBg: "#F0EBF9",  badge: null,           highlight: "Agri → Residential" },
   { slug: "property-valuation",  Icon: Receipt,       color: "#0D7E7E", lightBg: "#E6F4F4",  badge: null,           highlight: "Certified Reports" },
   { slug: "building-plan",       Icon: Building,      color: "#1B3A6B", lightBg: "#EEF2F8",  badge: null,           highlight: "BBMP / BDA Approval" },
   { slug: "rtc-pahani",          Icon: FileText,      color: "#C9A84C", lightBg: "#FBF5E6",  badge: null,           highlight: "Revenue Records" },
@@ -60,39 +60,39 @@ export default function RealEstateHubPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What real estate services does Right Assets Management provide in Bangalore?",
+        "name": "What real estate services does Right Assets Management provide across India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer 17+ real estate services in Bangalore including property buying/selling, sale deed drafting, rent agreements, E-Khatha, land conversion, building plan approval, encumbrance certificates, property registration, mutation, and more."
+          "text": "We offer 17+ real estate services across India including property buying/selling, sale deed drafting, rent agreements, Khata Certificate, land conversion, building plan approval, encumbrance certificates, property registration, mutation, and more."
         }
       },
       {
         "@type": "Question",
-        "name": "Can Right Assets Management help with property registration in Bangalore?",
+        "name": "Can Right Assets Management help with property registration across India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we provide end-to-end property registration assistance in Bangalore — from document verification and stamp duty calculation to sub-registrar office coordination and final registration."
+          "text": "Yes, we provide end-to-end property registration assistance across India — from document verification and stamp duty calculation to sub-registrar office coordination and final registration."
         }
       },
       {
         "@type": "Question",
-        "name": "How long does property registration take in Bangalore?",
+        "name": "How long does property registration take across India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Property registration in Bangalore typically takes 1–3 working days once all documents are in order. The sub-registrar appointment can be booked online via the Kaveri portal."
+          "text": "Property registration across India typically takes 1–3 working days once all documents are in order. The sub-registrar appointment can be booked online via the Kaveri portal."
         }
       },
       {
         "@type": "Question",
-        "name": "What is E-Khatha and do I need it?",
+        "name": "What is Khata Certificate and do I need it?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "E-Khatha is a digital property ownership document issued by BBMP (Bruhat Bengaluru Mahanagara Palike). It is mandatory for property tax payment and essential for property transactions in Bangalore."
+          "text": "Khata Certificate is a digital property ownership document issued by BBMP (Bruhat Bengaluru Mahanagara Palike). It is mandatory for property tax payment and essential for property transactions across India."
         }
       },
       {
         "@type": "Question",
-        "name": "What documents are required for property registration in Bangalore?",
+        "name": "What documents are required for property registration across India?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Key documents include the original sale deed, encumbrance certificate, Khatha certificate, property tax receipts, identity proofs of buyer/seller, and the demand draft for stamp duty and registration fees."
@@ -159,7 +159,7 @@ export default function RealEstateHubPage() {
             </h1>
 
             <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Buying, selling, or managing property in Bangalore? We handle every aspect —
+              Buying, selling, or managing property across India? We handle every aspect —
               documentation, government records, legal verification, and registration —
               all under one roof.
             </p>
@@ -170,7 +170,7 @@ export default function RealEstateHubPage() {
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98]"
                 style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
               >
-                Book a Free Consultation
+                Book a Consultation
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
@@ -303,7 +303,7 @@ export default function RealEstateHubPage() {
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98]"
               style={{ backgroundColor: "#C9A84C", color: "#1A1A1A" }}
             >
-              Book Free Consultation
+              Book Consultation
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a

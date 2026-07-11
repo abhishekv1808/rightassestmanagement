@@ -228,7 +228,7 @@ export default async function AdminBlogPage() {
             }}
           >
             Create your first blog post. Good SEO articles drive organic leads
-            from Google — especially for Bangalore-specific queries.
+            from Google — especially for India-specific queries.
           </p>
           <Link
             href="/admin/blog/new"

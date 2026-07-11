@@ -15,9 +15,9 @@ const FAQS: { question: string; answer: string }[] = [
       "Yes. Your first consultation is completely free with no obligation. Our advisors understand your situation and give you a clear roadmap before you commit to anything. For services like home loans and insurance, our advisory is free throughout — we are compensated by the lender or insurer, not by you.",
   },
   {
-    question: "Which areas of Bangalore do you serve?",
+    question: "Which areas do you serve?",
     answer:
-      "We serve clients across all of Bangalore — including Whitefield, Koramangala, Indiranagar, Electronic City, HSR Layout, Jayanagar, JP Nagar, Marathahalli, Sarjapur Road, Hebbal, Yelahanka, and more. For property documentation and registration, our team coordinates with the relevant Sub-Registrar Office and BBMP wards across the city.",
+      "We serve clients across India — both online and in person. Our advisors work with you over phone, WhatsApp, and video for financial and legal advisory, and for property documentation and registration we coordinate with the relevant Sub-Registrar Office and local authorities wherever your property is located.",
   },
   {
     question: "How do I get started?",

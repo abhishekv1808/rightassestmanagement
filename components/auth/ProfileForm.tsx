@@ -201,7 +201,7 @@ export default function ProfileForm({ profile }: { profile: Profile }) {
                 fontSize: 11, fontWeight: 500, color: "rgba(255,255,255,0.65)",
               }}>
                 <MapPin size={11} />
-                {area}, Bangalore
+                {area}, India
               </span>
             )}
           </div>
@@ -355,7 +355,7 @@ export default function ProfileForm({ profile }: { profile: Profile }) {
                 Location
               </p>
               <p style={{ fontSize: 12, color: "#94A3B8", margin: 0 }}>
-                Your area in Bangalore
+                Your area across India
               </p>
             </div>
           </div>

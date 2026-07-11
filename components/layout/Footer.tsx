@@ -416,7 +416,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <ColHeading icon={TrendingUp} label="Financial" />
             <LinkList links={FINANCIAL_LINKS} />
-            <ViewAll href="/financial" count="20" label="services" />
+            <ViewAll href="/financial" count="21" label="services" />
           </div>
 
           {/* Real Estate */}
@@ -452,12 +452,12 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
             <p className="text-xs order-2 sm:order-1" style={{ color: "rgba(255,255,255,0.3)" }}>
-              © {year} Right Assets Management. All rights reserved. Designed by{" "}
+              © {year} Right Assets Management. All rights reserved. Designed &amp; developed by{" "}
               <span
-                className="transition-colors hover:text-white cursor-pointer"
-                style={{ color: "rgba(201,168,76,0.55)" }}
+                className="font-semibold transition-colors hover:text-white cursor-pointer"
+                style={{ color: "#C9A84C" }}
               >
-                AVD Studio
+                Itbizone Technologies
               </span>.
             </p>
 

@@ -63,7 +63,18 @@ const CARDS = [
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightassetsmanagement.com";
+
 export default function FinancialHubPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Financial Services", item: `${SITE_URL}/financial` },
+    ],
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -73,7 +84,7 @@ export default function FinancialHubPage() {
         "name": "What financial services does Right Assets Management offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Right Assets Management offers 22+ financial services including mutual funds, health and life insurance, home loans, personal loans, credit cards, equity investments, fixed deposits, tax planning, NPS, PPF, portfolio management, and more — all under one roof."
+          "text": "Right Assets Management offers 23+ financial services including mutual funds, health and life insurance, home loans, personal loans, credit cards, equity investments, fixed deposits, tax planning, NPS, PPF, portfolio management, and more — all under one roof."
         }
       },
       {
@@ -113,6 +124,10 @@ export default function FinancialHubPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

@@ -19,9 +19,9 @@ import { getServiceBySlug } from "@/lib/services-data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/legal" },
-  title: "Legal Services across India — Property, Family & Consumer Case Advisory",
+  title: "Legal Services — Property, Family & Consumer Case Advisory",
   description:
-    "Expert legal advisory across India for property disputes, family cases, cyber crime, consumer disputes, labour cases, and more. Right Assets Management.",
+    "Expert legal advisory for property disputes, family cases, cyber crime, consumer disputes, labour cases, and more. Right Assets Management.",
 };
 
 // ─── Cards config ─────────────────────────────────────────────────────────────
@@ -42,7 +42,18 @@ const CARDS = [
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightassetsmanagement.com";
+
 export default function LegalHubPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Legal Services", item: `${SITE_URL}/legal` },
+    ],
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -92,6 +103,10 @@ export default function LegalHubPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

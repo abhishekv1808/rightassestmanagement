@@ -66,7 +66,6 @@ export default function ServiceSchema({ service }: ServiceSchemaProps) {
     "@type": "Service",
     "@id": `${serviceUrl}/#service`,
     name: service.title,
-    alternateName: `${service.title} across India`,
     description: service.description || service.tagline,
     url: serviceUrl,
     serviceType: service.title,
@@ -77,15 +76,14 @@ export default function ServiceSchema({ service }: ServiceSchemaProps) {
       url: SITE_URL,
     },
     areaServed: {
-      "@type": "Country",
-      name: "India",
-      sameAs: "https://www.wikidata.org/wiki/Q668",
+      "@type": "AdministrativeArea",
+      name: "Global",
     },
     audience: {
       "@type": "Audience",
       audienceType: service.whoIsItFor.length > 0
         ? service.whoIsItFor.join(", ")
-        : "Individuals and businesses across India",
+        : "Individuals and businesses",
     },
     ...(service.benefits.length > 0 && {
       hasOfferCatalog: {

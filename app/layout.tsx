@@ -21,17 +21,17 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Right Assets Management — Financial, Real Estate & Legal Services across India",
+    default: "Right Assets Management — Financial, Real Estate & Legal Services",
     template: "%s | Right Assets Management",
   },
   description:
-    "Right Assets Management is India's trusted multi-vertical firm offering 48+ expert services across Financial Planning, Real Estate, and Legal Advisory under one roof.",
+    "Right Assets Management is a trusted multi-vertical firm offering 48+ expert services across Financial Planning, Real Estate, and Legal Advisory under one roof.",
   keywords: [
-    "financial advisor India",
-    "real estate services India",
-    "legal advisory India",
-    "mutual fund advisor India",
-    "property registration India",
+    "financial advisor",
+    "real estate services",
+    "legal advisory",
+    "mutual fund advisor",
+    "property registration",
     "Right Assets Management",
   ],
   authors: [{ name: "Right Assets Management" }],
@@ -41,20 +41,20 @@ export const metadata: Metadata = {
   ),
   openGraph: {
     type: "website",
-    locale: "en_IN",
+    locale: "en",
     url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rightassetsmanagement.com",
     siteName: "Right Assets Management",
     title:
-      "Right Assets Management — Financial, Real Estate & Legal Services across India",
+      "Right Assets Management — Financial, Real Estate & Legal Services",
     description:
       "One destination for 48+ expert services — investments, property, and legal help under one roof.",
     // og:image is provided automatically by app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
-    title: "Right Assets Management — India",
+    title: "Right Assets Management",
     description:
-      "48+ Financial, Real Estate & Legal services under one roof across India.",
+      "48+ Financial, Real Estate & Legal services under one roof.",
     // twitter:image falls back to app/opengraph-image.tsx
   },
   robots: {

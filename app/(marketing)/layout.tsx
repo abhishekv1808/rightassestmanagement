@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import MarketTickerStrip from "@/components/widgets/MarketTickerStrip";
 import WhatsAppButton from "@/components/widgets/WhatsAppButton";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
+import WebsiteSchema from "@/components/seo/WebsiteSchema";
 import CookieConsent from "@/components/ui/CookieConsent";
 import ExitIntentPopup from "@/components/ui/ExitIntentPopup";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
@@ -15,8 +16,9 @@ export default function MarketingLayout({
 }) {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Root LocalBusiness JSON-LD — present on every marketing page */}
+      {/* Root LocalBusiness + WebSite JSON-LD — present on every marketing page */}
       <LocalBusinessSchema />
+      <WebsiteSchema />
       <Navbar />
       <MarketTickerStrip />
       <main className="flex-1 flex flex-col pb-16 lg:pb-0">{children}</main>

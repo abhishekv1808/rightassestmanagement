@@ -46,7 +46,7 @@ export default function LocalBusinessSchema() {
     },
     image: `${SITE_URL}/og-image.png`,
     description:
-      "Right Assets Management is India's trusted multi-vertical firm offering 48+ expert services across Financial Planning, Real Estate, and Legal Advisory under one roof.",
+      "Right Assets Management is a trusted multi-vertical firm offering expert services across Financial Planning, Real Estate, and Legal Advisory under one roof.",
     telephone: BUSINESS_PHONE,
     email: BUSINESS_EMAIL,
     address: {
@@ -63,9 +63,8 @@ export default function LocalBusinessSchema() {
       longitude: 77.5121,
     },
     areaServed: {
-      "@type": "Country",
-      name: "India",
-      sameAs: "https://www.wikidata.org/wiki/Q668",
+      "@type": "AdministrativeArea",
+      name: "Global",
     },
     priceRange: "₹₹",
     currenciesAccepted: "INR",
@@ -120,7 +119,6 @@ export default function LocalBusinessSchema() {
     knowsAbout: [
       "Financial Planning",
       "Mutual Funds",
-      "SIP Investments",
       "Health Insurance",
       "Life Insurance",
       "Home Loans",

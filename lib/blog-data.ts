@@ -138,7 +138,7 @@ const article1: BlogPost = {
     {
       heading: "Why a Financial Advisor across India Can Help You Decide",
       paragraphs: [
-        "A good financial advisor does not just say \"do SIP\" or \"invest lump sum\" — they evaluate your complete financial picture. Your income trajectory (India salaries often double every 4–5 years in tech), your EMI obligations, your tax-saving needs under Section 80C and 80D, your existing investments, and your life stage all influence the right investment strategy.",
+        "A good financial advisor does not just say \"do SIP\" or \"invest lump sum\" — they evaluate your complete financial picture. Your income trajectory (India salaries often double every 4–5 years in tech), your EMI obligations, your tax-saving needs under prevailing income tax laws, your existing investments, and your life stage all influence the right investment strategy.",
         "At Right Assets Management, our advisors work with India professionals to build personalised investment plans. Whether you want to start a ₹5,000 SIP, deploy a ₹10 lakh bonus, or restructure your entire portfolio — we provide clear, unbiased guidance with no commission-driven product pushing. Our first consultation is free, and we explain everything in plain language.",
       ],
     },
@@ -274,12 +274,12 @@ const article2: BlogPost = {
     {
       heading: "Tax Benefits You Get on a Home Loan",
       paragraphs: [
-        "Home loans in India come with significant income tax benefits that reduce your effective cost of borrowing. If you are a salaried professional in the 30% tax bracket, these deductions can save you ₹1–1.5 lakh per year in taxes.",
-        "Under Section 24(b) of the Income Tax Act, you can claim a deduction of up to ₹2 lakh per year on the interest paid on your home loan — but only for a self-occupied property. For a let-out property, the full interest paid is deductible against rental income.",
-        "Under Section 80C, the principal repayment component of your home loan EMI qualifies for deduction up to ₹1.5 lakh per year — alongside other 80C investments like ELSS mutual funds, PPF, and life insurance premiums. Stamp duty and registration charges paid during the purchase year are also eligible under Section 80C.",
+        "Home loans in India come with income tax benefits that reduce your effective cost of borrowing, and the exact savings depend on your income and applicable tax bracket.",
+        "Interest paid on your home loan may qualify for a deduction under the Income Tax Act — but only for a self-occupied property. For a let-out property, the full interest paid is deductible against rental income.",
+        "The principal repayment component of your home loan EMI may also qualify for deduction under prevailing tax laws, alongside other eligible investments like ELSS mutual funds, PPF, and life insurance premiums. Stamp duty and registration charges paid during the purchase year may also be eligible.",
       ],
       callout:
-        "Combined, Sections 24(b) and 80C give you up to ₹3.5 lakh in tax deductions per year on a home loan — worth ₹1.05 lakh annually in tax savings for someone in the 30% bracket (plus cess). This is a major financial benefit that reduces the effective interest rate of your loan.",
+        "Combined, home loan interest and principal deductions can add up to meaningful tax savings each year depending on your income and tax bracket — since the applicable sections, limits, and rates change from time to time, we recommend confirming the current benefits with a tax advisor before you finalise your loan. This is a major financial benefit that reduces the effective interest rate of your loan.",
     },
     {
       heading: "Common Mistakes First-Time Home Buyers Make",

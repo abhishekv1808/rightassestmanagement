@@ -77,7 +77,7 @@ export default function NewsletterSignup() {
             </h3>
             <p style={{ color: "rgba(255,255,255,0.7)" }} className="text-base">
               Check your inbox for a confirmation. You&apos;ll get our best financial
-              tips and India property insights every month — no spam.
+              tips and property insights every month — no spam.
             </p>
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function NewsletterSignup() {
               className="text-base max-w-sm mx-auto"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
-              Join 500+ India investors. Expert insights on SIPs, property
+              Join 500+ investors. Expert insights on investments, property
               trends, and tax planning — delivered to your inbox.
             </p>
             <p

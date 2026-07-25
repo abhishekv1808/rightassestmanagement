@@ -38,17 +38,17 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "home-loan",
     metaTitle:
-      "Home Loan across India | Free Expert Guidance — Right Assets Management",
+      "Home Loan | Free Expert Guidance — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
-    eyebrow: "Trusted Home Loan Advisors across India",
-    headline: "Get the Best Home Loan across India — Without the Confusion",
+    eyebrow: "Trusted Home Loan Advisors",
+    headline: "Get the Best Home Loan — Without the Confusion",
     subheadline:
       "We compare offers from 20+ banks and NBFCs, handle all documentation, and get you approved faster. 100% free advisory — no hidden charges.",
     serviceLabel: "Home Loan",
     ctaText: "Get Free Loan Guidance",
-    whatsappMessage: "Hi, I need help with a Home Loan across India",
+    whatsappMessage: "Hi, I need help with a Home Loan",
     stats: [
       { value: "20+", label: "Banks Compared" },
       { value: "₹500Cr+", label: "Loans Facilitated" },
@@ -104,7 +104,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         body: "If your score needs improvement, we tell you exactly what to do before applying so you get the best rate.",
       },
       {
-        heading: "Doorstep service, all of India",
+        heading: "Doorstep service, wherever you are",
         body: "Our team comes to you for document collection and verification. No bank visits until final signing.",
       },
       {
@@ -112,7 +112,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         body: "EMI start date, insurance requirements, part-prepayment advice — we stay with you after disbursement.",
       },
     ],
-    partnerLabel: "We work with India's leading lenders",
+    partnerLabel: "We work with leading lenders",
     partnerNames: [
       "SBI",
       "HDFC Bank",
@@ -128,19 +128,19 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         quote:
           "I was comparing home loan rates for 2 months and getting nowhere. Right Assets sorted my ₹65 lakh loan in 10 days at 8.4% — lower than what my own bank had offered. Absolutely recommend.",
         name: "Suresh Reddy",
-        location: "Whitefield, India",
+        location: "Delhi, India",
       },
       {
         quote:
           "My CIBIL score was 720 and I was worried no bank would give me a good rate. The team advised me to clear one old credit card due and reapply — got 8.6% from HDFC. Genuine advisors.",
         name: "Meera Krishnaswamy",
-        location: "Electronic City, India",
+        location: "Hyderabad, India",
       },
       {
         quote:
           "First-time home buyer, completely clueless. Right Assets explained everything — EMI, tenure, prepayment — and got my loan sanctioned in 4 days. The doorstep service saved me 2 days of leave.",
         name: "Arun Nair",
-        location: "JP Nagar, India",
+        location: "Kolkata, India",
       },
     ],
     comparisonRows: [
@@ -194,22 +194,22 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
 
   // ── 2. MUTUAL FUNDS / SIP ──────────────────────────────────────────────────
   {
-    slug: "mutual-funds-sip",
+    slug: "mutual-funds",
     metaTitle:
-      "SIP & Mutual Fund Investment across India | SEBI-Registered Advisor — Right Assets Management",
+      "Mutual Fund Investment | SEBI-Registered Advisor — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
-    eyebrow: "SEBI-Registered Investment Advisor across India",
-    headline: "Start Building Wealth with SIP Investments — Guided by Experts",
+    eyebrow: "SEBI-Registered Investment Advisor",
+    headline: "Start Building Wealth with Mutual Fund Investing — Guided by Experts",
     subheadline:
-      "Get a personalised mutual fund portfolio built by SEBI-registered advisors. Start a SIP with just ₹500/month and grow wealth systematically.",
-    serviceLabel: "Mutual Funds & SIP Investment",
+      "Get a personalised mutual fund portfolio built by SEBI-registered advisors. Start investing with just ₹500/month and grow wealth systematically.",
+    serviceLabel: "Mutual Fund Investment",
     ctaText: "Get Free Portfolio Advice",
-    whatsappMessage: "Hi, I want to start SIP investments and need expert guidance",
+    whatsappMessage: "Hi, I want to start mutual fund investments and need expert guidance",
     stats: [
       { value: "₹50Cr+", label: "AUM Managed" },
-      { value: "500+", label: "Active SIP Portfolios" },
+      { value: "500+", label: "Active Portfolios Managed" },
       { value: "12–15%*", label: "Historical CAGR" },
       { value: "SEBI", label: "Registered Advisor" },
     ],
@@ -255,11 +255,11 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
       },
       {
         heading: "Tax-efficient investing",
-        body: "We optimise your portfolio to minimise STCG and LTCG tax impact and use Section 80C benefits (ELSS).",
+        body: "We optimise your portfolio to minimise capital gains tax impact and make full use of available tax-saving fund options (ELSS).",
       },
       {
-        heading: "Step-up SIP automation",
-        body: "We set up automatic SIP increases each year so your investment grows with your income — zero effort from you.",
+        heading: "Step-up investment automation",
+        body: "We set up automatic investment increases each year so your portfolio grows with your income — zero effort from you.",
       },
       {
         heading: "Emergency fund planning",
@@ -284,21 +284,21 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
     testimonials: [
       {
         quote:
-          "Started a ₹10,000/month SIP through Right Assets 3 years ago. My portfolio is up 41% and they reviewed it twice without me even asking. Genuine advisors who actually care.",
+          "Started a ₹10,000/month investment plan through Right Assets 3 years ago. My portfolio is up 41% and they reviewed it twice without me even asking. Genuine advisors who actually care.",
         name: "Priya Menon",
-        location: "Koramangala, India",
+        location: "Mumbai, India",
       },
       {
         quote:
           "I was putting money in FDs for years — safe but terrible returns. Right Assets moved me to a balanced portfolio with 13% CAGR over 4 years. I wish I had done this 10 years ago.",
         name: "Rajesh Iyer",
-        location: "Indiranagar, India",
+        location: "Delhi, India",
       },
       {
         quote:
           "They showed me I was paying 1.2% extra per year in a regular plan through my bank. Switched to direct, added a ELSS for tax saving. The difference over 20 years is huge.",
         name: "Deepa Shankar",
-        location: "HSR Layout, India",
+        location: "Chennai, India",
       },
     ],
     comparisonRows: [
@@ -318,9 +318,9 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         withUs: "Quarterly review & rebalancing by advisor",
       },
       {
-        aspect: "Tax optimisation",
+        aspect: "Tax efficiency",
         alone: "Rarely considered at investment stage",
-        withUs: "Built in — 80C, LTCG harvesting, debt vs equity mix",
+        withUs: "Built in — capital gains harvesting, debt vs equity mix",
       },
       {
         aspect: "Accountability",
@@ -332,8 +332,8 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
       "If after our free consultation you feel our advice did not add value, there is absolutely no obligation to invest through us. We earn only when you genuinely benefit.",
     faqs: [
       {
-        q: "What is the minimum amount to start a SIP?",
-        a: "You can start a SIP with as little as ₹500/month. We recommend starting with a comfortable amount and increasing it by 10% each year using a step-up SIP strategy.",
+        q: "What is the minimum amount to start investing in mutual funds?",
+        a: "You can start with as little as ₹500/month. We recommend starting with a comfortable amount and increasing it by 10% each year using a step-up investment strategy.",
       },
       {
         q: "Are mutual fund investments safe?",
@@ -350,23 +350,23 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "property-registration",
     metaTitle:
-      "Property Registration across India | Expert End-to-End Help — Right Assets Management",
+      "Property Registration | Expert End-to-End Help — Right Assets Management",
     vertical: "real-estate",
     accentColor: "#0D7E7E",
     lightBg: "#E6F4F4",
     eyebrow: "Property Registration Experts Serving All of India",
     headline:
-      "Property Registration across India — Handled End-to-End by Experts",
+      "Property Registration — Handled End-to-End by Experts",
     subheadline:
       "Stamp duty calculation, document preparation, and Sub-Registrar Office coordination — all handled by our team so you don't face rejections or delays.",
     serviceLabel: "Property Registration",
     ctaText: "Get Registration Help",
-    whatsappMessage: "Hi, I need help with property registration across India",
+    whatsappMessage: "Hi, I need help with property registration",
     stats: [
       { value: "1000+", label: "Properties Registered" },
       { value: "100%", label: "Success Rate" },
       { value: "3 Days", label: "Avg. Completion" },
-      { value: "All Areas", label: "India Coverage" },
+      { value: "All Areas", label: "Global Coverage" },
     ],
     processSteps: [
       {
@@ -441,19 +441,19 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         quote:
           "My property registration was stuck for 6 months due to a khata issue. Right Assets resolved it in 3 weeks — they handled the BBMP, the SRO, everything. Absolute lifesavers.",
         name: "Anand Kumar",
-        location: "Jayanagar, India",
+        location: "Mumbai, India",
       },
       {
         quote:
           "First time buying a property. I didn't know anything about stamp duty or EC. The team walked me through every step, calculated the exact charges, and came with me to the SRO. Highly recommend.",
         name: "Sangeetha Rajan",
-        location: "Hebbal, India",
+        location: "Ahmedabad, India",
       },
       {
         quote:
           "The seller's property had a wrong survey number in the old deed. Right Assets caught it before we registered and got it corrected. Could have been a very expensive mistake.",
         name: "Vivek Sharma",
-        location: "Marathahalli, India",
+        location: "Hyderabad, India",
       },
     ],
     comparisonRows: [
@@ -487,7 +487,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
       "If we find any title issue or legal problem with the property, we will tell you before you register — even if it means you walk away from the deal. Protecting your money always comes first.",
     faqs: [
       {
-        q: "How much stamp duty do I pay for property registration across India?",
+        q: "How much stamp duty do I pay for property registration?",
         a: "Stamp duty in Karnataka is 5% of the property value for properties above ₹45 lakh, plus 1% registration charge. For joint female ownership, there is a 1% concession. We calculate the exact amount for your property.",
       },
       {
@@ -505,17 +505,17 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "tax-planning",
     metaTitle:
-      "Tax Planning & ITR Filing across India | Save More Tax — Right Assets Management",
+      "Tax Planning & ITR Filing | Save More Tax — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
-    eyebrow: "Expert Tax Planning & CA-Guided ITR Filing across India",
-    headline: "Stop Overpaying Tax — Expert Tax Planning across India",
+    eyebrow: "Expert Tax Planning & CA-Guided ITR Filing",
+    headline: "Stop Overpaying Tax — Expert Tax Planning",
     subheadline:
-      "We maximise deductions under 80C, 80D, HRA, and NPS, and file error-free ITR returns for salaried, self-employed, and business owners.",
+      "We maximise every deduction available to you under prevailing tax laws — across eligible investments, health insurance, HRA, and NPS — and file error-free ITR returns for salaried, self-employed, and business owners.",
     serviceLabel: "Tax Planning & ITR Filing",
     ctaText: "Get Free Tax Review",
-    whatsappMessage: "Hi, I need help with tax planning and ITR filing across India",
+    whatsappMessage: "Hi, I need help with tax planning and ITR filing",
     stats: [
       { value: "₹2Cr+", label: "Tax Saved for Clients" },
       { value: "1000+", label: "Returns Filed" },
@@ -542,7 +542,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
     trustPoints: [
       {
         heading: "Every deduction identified — nothing missed",
-        body: "80C (PPF, ELSS, insurance), 80D (health insurance), HRA, home loan interest, NPS — we check every applicable section.",
+        body: "Eligible investments (PPF, ELSS, insurance), health insurance, HRA, home loan interest, NPS — we check every applicable section under prevailing tax laws.",
       },
       {
         heading: "Old vs New tax regime comparison",
@@ -555,12 +555,12 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
     ],
     benefits: [
       {
-        heading: "Maximum 80C deduction",
-        body: "We ensure your full ₹1.5L under Section 80C is utilised — PPF, ELSS, insurance, provident fund, housing loan principal.",
+        heading: "Maximum eligible-investment deduction",
+        body: "We ensure every rupee you are entitled to under prevailing tax laws is utilised — PPF, ELSS, insurance, provident fund, housing loan principal.",
       },
       {
-        heading: "80D health insurance deduction",
-        body: "₹25,000 for self + ₹50,000 for senior citizen parents. Many taxpayers miss this. We find and claim every rupee.",
+        heading: "Health insurance premium deduction",
+        body: "Deductions for self and for senior citizen parents as per prevailing tax laws. Many taxpayers miss this. We find and claim every rupee you're entitled to.",
       },
       {
         heading: "HRA exemption calculation",
@@ -571,8 +571,8 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         body: "LTCG from equity, debt funds, and property — we calculate accurately and show you how to minimise the liability legally.",
       },
       {
-        heading: "NPS tax benefit (additional ₹50,000)",
-        body: "Section 80CCD(1B) gives an extra ₹50,000 deduction over and above 80C — most salaried employees are not using this.",
+        heading: "NPS tax benefit",
+        body: "NPS offers an additional exclusive deduction over and above other eligible investments, as per prevailing tax laws — most salaried employees are not using this.",
       },
       {
         heading: "Advance tax reminders",
@@ -595,19 +595,19 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         quote:
           "I was paying ₹1.2L in tax every year. Right Assets showed me I was missing HRA and NPS deductions. My tax came down to ₹68,000 that same year. Wish I had known sooner.",
         name: "Kavitha Narayan",
-        location: "HSR Layout, India",
+        location: "Bangalore, India",
       },
       {
         quote:
           "I had freelance income alongside my salary and had no idea about advance tax. Got a demand notice from IT dept last year. Right Assets fixed everything and filed a revised return. Stress-free now.",
         name: "Rohit Desai",
-        location: "Koramangala, India",
+        location: "Chennai, India",
       },
       {
         quote:
           "They switched me to the old regime after comparing both — saved ₹42,000 in a single year. My CA never even mentioned the option. Will never go back to self-filing.",
         name: "Sunita Prasad",
-        location: "Bannerghatta Road, India",
+        location: "Jaipur, India",
       },
     ],
     comparisonRows: [
@@ -659,18 +659,18 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "health-insurance",
     metaTitle:
-      "Best Health Insurance Plans across India | Compare & Buy — Right Assets Management",
+      "Best Health Insurance Plans | Compare & Buy — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
-    eyebrow: "Health Insurance Advisors across India — Unbiased Comparison",
+    eyebrow: "Health Insurance Advisors — Unbiased Comparison",
     headline:
-      "Find the Right Health Insurance for Your Family across India",
+      "Find the Right Health Insurance for Your Family",
     subheadline:
       "We compare 30+ health insurance plans and recommend the one that gives maximum coverage at the best premium — with no hidden exclusions explained in fine print.",
     serviceLabel: "Health Insurance",
     ctaText: "Compare Plans Free",
-    whatsappMessage: "Hi, I want to compare health insurance plans across India",
+    whatsappMessage: "Hi, I want to compare health insurance plans",
     stats: [
       { value: "30+", label: "Insurers Compared" },
       { value: "500+", label: "Families Insured" },
@@ -711,7 +711,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
     benefits: [
       {
         heading: "Right cover, not over-sold",
-        body: "We recommend a cover amount based on your actual hospitalisation risk and medical inflation across India — not the most expensive plan.",
+        body: "We recommend a cover amount based on your actual hospitalisation risk and medical inflation — not the most expensive plan.",
       },
       {
         heading: "Exclusions explained in plain language",
@@ -719,7 +719,7 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
       },
       {
         heading: "Cashless hospital network check",
-        body: "We verify that your nearest hospitals across India are covered under the plan's cashless network before recommending it.",
+        body: "We verify that your nearest hospitals are covered under the plan's cashless network before recommending it.",
       },
       {
         heading: "Super top-up strategy",
@@ -750,19 +750,19 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         quote:
           "I had a health insurance plan for 4 years and thought I was fully covered. Right Assets reviewed it and found 3 critical exclusions I had no idea about. Switched to a better plan the same week.",
         name: "Ramesh Gowda",
-        location: "Bannerghatta Road, India",
+        location: "Bangalore, India",
       },
       {
         quote:
           "My mother has diabetes and I could not find a plan that would cover her without a 4-year waiting period. Right Assets found a Care Supreme plan with a 2-year PED waiting period at a fair premium.",
         name: "Anitha Murthy",
-        location: "Malleshwaram, India",
+        location: "Lucknow, India",
       },
       {
         quote:
           "When my husband was hospitalised, Right Assets helped us file the claim the same day. We did not have to worry about paperwork — they handled everything. That is the real value.",
         name: "Divya Menon",
-        location: "Indiranagar, India",
+        location: "Pune, India",
       },
     ],
     comparisonRows: [
@@ -796,8 +796,8 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
       "If we cannot find a plan that is genuinely better than what you currently have, we will tell you to stay with your existing insurer. We will never recommend a switch unless it clearly benefits you.",
     faqs: [
       {
-        q: "How much health insurance cover does my family need across India?",
-        a: "For a family of 4 across India, we recommend a minimum of ₹10 lakh base cover with a super top-up of ₹50 lakh. Medical inflation across India runs at 15–18% per year — under-insurance is a real risk.",
+        q: "How much health insurance cover does my family need?",
+        a: "For a family of 4, we recommend a minimum of ₹10 lakh base cover with a super top-up of ₹50 lakh. Medical inflation runs at 15–18% per year — under-insurance is a real risk.",
       },
       {
         q: "What is the difference between individual and family floater plans?",
@@ -814,11 +814,11 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
   {
     slug: "term-life-insurance",
     metaTitle:
-      "Term Life Insurance across India | ₹1 Crore Cover from ₹500/Month — Right Assets Management",
+      "Term Life Insurance | ₹1 Crore Cover from ₹500/Month — Right Assets Management",
     vertical: "financial",
     accentColor: "#1B3A6B",
     lightBg: "#EEF2F8",
-    eyebrow: "Term Life Insurance Advisors across India",
+    eyebrow: "Term Life Insurance Advisors",
     headline:
       "₹1 Crore Life Cover from ₹500/Month — Protect Your Family Today",
     subheadline:
@@ -905,13 +905,13 @@ export const ALL_LANDING_PAGES: LandingPage[] = [
         quote:
           "Took a ₹1.5 Cr term plan at 31 for just ₹850/month. Right Assets helped me choose a plan with a critical illness rider that my bank agent had never even mentioned. Very thorough.",
         name: "Vikram Shetty",
-        location: "Marathahalli, India",
+        location: "Jaipur, India",
       },
       {
         quote:
           "I had a ULIP that my old LIC agent had sold me as 'life cover'. Right Assets showed me I was getting ₹8L cover for ₹1,500/month. Switched to a ₹1 Cr term plan for ₹720/month. Eye-opening.",
         name: "Karthik Rao",
-        location: "BTM Layout, India",
+        location: "Chandigarh, India",
       },
       {
         quote:

@@ -30,9 +30,9 @@ import ServiceStickyBar from "@/components/service/ServiceStickyBar";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/financial/equity-commodity" },
-  title: "Equity & Commodity Market Advisory across India | Right Assets Management",
+  title: "Equity & Commodity Market Advisory | Right Assets Management",
   description:
-    "Expert equity and commodity market advisory across India. Research-backed stock picks, commodity strategies on MCX/NCDEX, portfolio management, and tax-efficient exits. Book a free consultation today.",
+    "Expert equity and commodity market advisory. Research-backed stock picks, commodity strategies on MCX/NCDEX, portfolio management, and tax-efficient exits. Book a free consultation today.",
 };
 
 // ─── Static data ───────────────────────────────────────────────────────────

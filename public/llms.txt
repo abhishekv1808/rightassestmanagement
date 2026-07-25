@@ -1,8 +1,8 @@
 # Right Assets Management
 
-> India-based multi-vertical advisory firm offering 48+ expert services across Financial Planning, Real Estate (Realty), and Legal Advisory under one roof. Tagline: "Where Assets Meet Assurance."
+> Multi-vertical advisory firm offering 47+ expert services across Financial Planning, Real Estate (Realty), and Legal Advisory under one roof. Tagline: "Where Assets Meet Assurance."
 
-Right Assets Management helps individuals and businesses across India with investments, insurance, loans, property transactions and documentation, government records, and legal advisory. Contact: +91 97428 26804 · contact@rightassetsmanagement.com · Sy. No 13/1, Site No. 21, 3rd Floor, Narasappa Road, Metro Pillar 471, T. Dasarahalli, Bengaluru, Karnataka 560057.
+Right Assets Management helps individuals and businesses with investments, insurance, loans, property transactions and documentation, government records, and legal advisory. Contact: +91 97428 26804 · contact@rightassetsmanagement.com · Sy. No 13/1, Site No. 21, 3rd Floor, Narasappa Road, Metro Pillar 471, T. Dasarahalli, Bengaluru, Karnataka 560057.
 
 ## Core Pages
 - [Home](https://rightassetsmanagement.com/): Overview of all services
@@ -10,7 +10,7 @@ Right Assets Management helps individuals and businesses across India with inves
 - [Contact](https://rightassetsmanagement.com/contact): Book a free consultation
 
 ## Service Hubs
-- [Financial Services](https://rightassetsmanagement.com/financial): Mutual funds & SIP, insurance, loans, tax planning, portfolio management, NPS, PPF, bonds, AIF, gold investment (21 services)
+- [Financial Services](https://rightassetsmanagement.com/financial): Mutual funds, insurance, loans, credit cards, tax planning, portfolio management, NPS, PPF, bonds, AIF, gold investment (22 services)
 - [Realty Services](https://rightassetsmanagement.com/real-estate): Buy/sell property, sale deed, rent agreement, E-Khatha, encumbrance certificate, RTC/Pahani, property registration & valuation (17 services)
 - [Legal Services](https://rightassetsmanagement.com/legal): Property disputes, family cases, criminal advisory, labour, insurance claims, banking, cyber crime, consumer disputes (8 services)
 
@@ -22,8 +22,7 @@ Right Assets Management helps individuals and businesses across India with inves
 - [Rental Yield Calculator](https://rightassetsmanagement.com/tools/rent-yield)
 
 ## Guides & Insights
-- [Blog](https://rightassetsmanagement.com/blog): Practical, jargon-free guides on finance, property, and legal matters across India
-- [India Localities](https://rightassetsmanagement.com/bangalore): Locality-specific financial, realty, and legal services across India
+- [Blog](https://rightassetsmanagement.com/blog): Practical, jargon-free guides on finance, property, and legal matters
 
 ## Notes
 - Right Assets Management is an advisory and facilitation service, not a law firm, broker, or lending institution.

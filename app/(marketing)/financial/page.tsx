@@ -23,14 +23,15 @@ import {
   CreditCard,
   Target,
   MessageCircle,
+  Plane,
 } from "lucide-react";
 import { getServiceBySlug } from "@/lib/services-data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/financial" },
-  title: "Financial Services across India — Investments, Insurance & Loans",
+  title: "Financial Services — Investments, Insurance & Loans",
   description:
-    "Comprehensive financial services across India — mutual funds, SIP, insurance, home loans, tax planning, and more. Expert advisors at Right Assets Management.",
+    "Comprehensive financial services — mutual funds, insurance, home loans, tax planning, and more. Expert advisors at Right Assets Management.",
 };
 
 // ─── Cards config ─────────────────────────────────────────────────────────────
@@ -45,9 +46,9 @@ const CARDS = [
   { slug: "portfolio-management", Icon: BarChart3, color: "#C9A84C", lightBg: "#FBF5E6",  badge: null,           highlight: "HNI Clients" },
   { slug: "vehicle-loan",       Icon: Car,         color: "#6B46C1", lightBg: "#F0EBF9",  badge: null,           highlight: "Car & Two-Wheeler" },
   { slug: "fixed-deposits",     Icon: PiggyBank,   color: "#1B3A6B", lightBg: "#EEF2F8",  badge: null,           highlight: "Safe Returns" },
-  { slug: "nps",                Icon: Landmark,    color: "#0D7E7E", lightBg: "#E6F4F4",  badge: null,           highlight: "Tax Benefit u/s 80CCD" },
+  { slug: "nps",                Icon: Landmark,    color: "#0D7E7E", lightBg: "#E6F4F4",  badge: null,           highlight: "Retirement Saving" },
   { slug: "tax-planning",       Icon: Calculator,  color: "#C9A84C", lightBg: "#FBF5E6",  badge: null,           highlight: "ITR Filing Included" },
-  { slug: "bonds-ncd",          Icon: FileText,    color: "#6B46C1", lightBg: "#F0EBF9",  badge: null,           highlight: "Fixed Income" },
+  { slug: "bonds",              Icon: FileText,    color: "#6B46C1", lightBg: "#F0EBF9",  badge: null,           highlight: "Fixed Income" },
   { slug: "ppf",                Icon: Coins,       color: "#1B3A6B", lightBg: "#EEF2F8",  badge: null,           highlight: "15-Year Lock-in" },
   { slug: "gold-investment",    Icon: Gem,         color: "#C9A84C", lightBg: "#FBF5E6",  badge: null,           highlight: "SGB & Gold ETF" },
   { slug: "financial-planning", Icon: Target,      color: "#0D7E7E", lightBg: "#E6F4F4",  badge: "Recommended",  highlight: "Comprehensive Plans" },
@@ -56,6 +57,8 @@ const CARDS = [
   { slug: "sukanya-samriddhi",  Icon: Star,        color: "#0D7E7E", lightBg: "#E6F4F4",  badge: null,           highlight: "For Girl Child" },
   { slug: "vehicle-insurance",  Icon: Car,         color: "#C9A84C", lightBg: "#FBF5E6",  badge: null,           highlight: "Car · Bike · Commercial" },
   { slug: "atal-pension",       Icon: Clock,       color: "#6B46C1", lightBg: "#F0EBF9",  badge: null,           highlight: "Guaranteed Pension" },
+  { slug: "credit-card",        Icon: CreditCard,  color: "#1B3A6B", lightBg: "#EEF2F8",  badge: "New",          highlight: "Rewards & Cashback" },
+  { slug: "travel-marine-insurance", Icon: Plane,  color: "#0D7E7E", lightBg: "#E6F4F4",  badge: "New",          highlight: "Trips & Cargo Cover" },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -67,10 +70,10 @@ export default function FinancialHubPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What financial services does Right Assets Management offer across India?",
+        "name": "What financial services does Right Assets Management offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Right Assets Management offers 21+ financial services including mutual fund SIP, health and life insurance, home loans, personal loans, equity investments, fixed deposits, tax planning, NPS, PPF, portfolio management, and more — all under one roof across India."
+          "text": "Right Assets Management offers 22+ financial services including mutual funds, health and life insurance, home loans, personal loans, credit cards, equity investments, fixed deposits, tax planning, NPS, PPF, portfolio management, and more — all under one roof."
         }
       },
       {
@@ -94,7 +97,7 @@ export default function FinancialHubPage() {
         "name": "What is the minimum investment amount for mutual funds?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can start a SIP (Systematic Investment Plan) with as little as ₹500 per month. There is no minimum for lump sum investments in most mutual fund schemes."
+          "text": "You can start investing in a mutual fund with as little as ₹500 per month through a systematic monthly investment plan. There is no minimum for lump sum investments in most mutual fund schemes."
         }
       },
       {
@@ -153,7 +156,7 @@ export default function FinancialHubPage() {
               style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#C9A84C", border: "1px solid rgba(201,168,76,0.3)" }}
             >
               <TrendingUp className="w-3.5 h-3.5" />
-              20 Financial Services
+              23 Financial Services
             </div>
 
             <h1
@@ -166,7 +169,7 @@ export default function FinancialHubPage() {
             </h1>
 
             <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl" style={{ color: "rgba(255,255,255,0.7)" }}>
-              From your first SIP to your retirement corpus — our experienced advisors
+              From your first investment to your retirement corpus — our experienced advisors
               guide every financial decision with clarity, transparency, and no sales pressure.
             </p>
 

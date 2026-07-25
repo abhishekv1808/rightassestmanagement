@@ -10,7 +10,7 @@ const VERTICALS = [
     lightBg: "#EEF2F8",
     href: "/financial",
     description:
-      "Mutual funds, SIPs, insurance, home loans, tax planning, NPS, PPF and portfolio management — complete financial lifecycle coverage for individuals and businesses.",
+      "Mutual funds, insurance, home loans, tax planning, NPS, PPF and portfolio management — complete financial lifecycle coverage for individuals and businesses.",
   },
   {
     Icon: Building2,
@@ -20,7 +20,7 @@ const VERTICALS = [
     lightBg: "#E6F4F4",
     href: "/real-estate",
     description:
-      "Buy, sell, register property, get Khata Certificate, encumbrance certificates, mutation, land conversion, and sale deed documentation — all across India.",
+      "Buy, sell, register property, get Khata Certificate, encumbrance certificates, mutation, land conversion, and sale deed documentation — all handled end to end.",
   },
   {
     Icon: Scale,

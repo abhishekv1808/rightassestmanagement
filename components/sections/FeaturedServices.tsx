@@ -10,8 +10,8 @@ const FEATURED = [
     verticalColor: "#1B3A6B",
     verticalBg: "#EEF2F8",
     Icon: TrendingUp,
-    title: "Mutual Funds & SIP",
-    tagline: "Grow wealth systematically with expert-guided SIPs starting from ₹500/month.",
+    title: "Mutual Funds",
+    tagline: "Grow wealth systematically with expert-guided investing starting from ₹500/month.",
     href: "/financial/mutual-funds",
   },
   {
@@ -29,7 +29,7 @@ const FEATURED = [
     verticalBg: "#E6F4F4",
     Icon: Building2,
     title: "Khata Certificate Application",
-    tagline: "Get your Khata Certificate certificate across India — fast, correct, and without queues.",
+    tagline: "Get your Khata Certificate — fast, correct, and without queues.",
     href: "/real-estate/khata-certificate",
   },
   {

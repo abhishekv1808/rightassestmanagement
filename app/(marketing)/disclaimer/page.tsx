@@ -26,7 +26,7 @@ Users and clients are strongly advised to independently verify all information a
     id: "investment-disclaimer",
     title: "2. Investment & Financial Services Disclaimer",
     content: `**Market Risk:**
-Investments in equity, mutual funds, bonds, Non-Convertible Debentures (NCDs), Alternate Investment Funds (AIFs), gold instruments (SGBs, ETFs), and all other securities are subject to market risk. The Net Asset Value (NAV) of mutual fund schemes and the market price of securities fluctuate based on market conditions. There is no assurance or guarantee that the objectives of any investment product will be achieved.
+Investments in equity, mutual funds, government and corporate bonds, Alternate Investment Funds (AIFs), gold instruments (SGBs, ETFs), and all other securities are subject to market risk. The Net Asset Value (NAV) of mutual fund schemes and the market price of securities fluctuate based on market conditions. There is no assurance or guarantee that the objectives of any investment product will be achieved.
 
 **Past Performance:**
 Past performance of any financial instrument, scheme, fund, or portfolio is strictly not indicative of future performance. Any reference to historical returns is for illustrative purposes only and should not be construed as an assurance of similar future returns.
@@ -41,7 +41,7 @@ Insurance is a subject matter of solicitation. Right Assets Management facilitat
 Loan facilitation is provided for informational purposes. Interest rates, loan amounts, tenures, and processing fees are determined by the lending bank or NBFC. Right Assets Management does not guarantee loan approvals or the interest rate offered. Failure to repay loans on time may affect your credit score and result in legal action by the lender.
 
 **Tax Planning:**
-Tax savings and benefits mentioned in the context of any financial product (e.g., Section 80C, Section 80D, Section 10(10D)) are based on current tax laws as of the date of communication. Tax laws are subject to change. The actual tax benefit available to an individual depends on their income, applicable tax regime, and other factors. Consult a Chartered Accountant for personalised tax advice.
+Tax savings and benefits mentioned in the context of any financial product are based on prevailing tax laws as of the date of communication and are described in general terms only, without reference to specific sections or rates, since tax laws are subject to change at any time. The actual tax benefit available to an individual depends on their income, applicable tax regime, and other factors. Consult a Chartered Accountant for personalised tax advice.
 
 **Conflicts of Interest:**
 Right Assets Management is committed to transparency. Where we receive commissions or referral fees from product manufacturers or service providers, such compensation is disclosed to clients before any engagement.`,

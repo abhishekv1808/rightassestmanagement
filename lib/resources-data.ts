@@ -49,7 +49,7 @@ export const ALL_RESOURCES: Resource[] = [
       "Eligibility calculator: how banks decide your loan amount",
       "Complete document checklist (salaried vs self-employed)",
       "How to compare lenders beyond just the interest rate",
-      "Tax benefits: Section 24, 80C, and 80EE explained",
+      "Tax benefits on home loans, explained in plain language",
     ],
     forWhom: "First-time home buyers planning to apply for a loan",
     color: "#1B3A6B",
@@ -57,14 +57,14 @@ export const ALL_RESOURCES: Resource[] = [
     downloadPath: "/downloads/home-loan-guide.pdf",
     metaTitle: "Home Loan Buyer's Guide — Free Download | Right Assets Management",
     metaDescription:
-      "Free 16-page home loan guide for first-time buyers across India. Covers eligibility, document checklist, lender comparison, and tax benefits.",
+      "Free 16-page home loan guide for first-time buyers. Covers eligibility, document checklist, lender comparison, and tax benefits.",
   },
   {
     slug: "property-registration-checklist",
     title: "Property Registration Checklist",
     subtitle: "Step-by-step guide for India property buyers",
     description:
-      "Property registration across India involves stamp duty, SRO appointments, and a stack of documents that can overwhelm any first-time buyer. This 10-page checklist walks you through every step — from document preparation to post-registration follow-up — with 2025-updated stamp duty rates for Karnataka so there are no surprises on registration day.",
+      "Property registration involves stamp duty, SRO appointments, and a stack of documents that can overwhelm any first-time buyer. This 10-page checklist walks you through every step — from document preparation to post-registration follow-up — with 2025-updated stamp duty rates for Karnataka so there are no surprises on registration day.",
     category: "real-estate",
     pages: 10,
     highlights: [
@@ -73,7 +73,7 @@ export const ALL_RESOURCES: Resource[] = [
       "How to book your SRO appointment on Kaveri Online",
       "5 common registration mistakes that cause delays",
     ],
-    forWhom: "Anyone buying or selling property across India",
+    forWhom: "Anyone buying or selling property",
     color: "#0D7E7E",
     lightBg: "#E6F4F4",
     downloadPath: "/downloads/property-registration-checklist.pdf",
@@ -86,7 +86,7 @@ export const ALL_RESOURCES: Resource[] = [
     title: "Khata Certificate Application Guide",
     subtitle: "Get your India property Khatha without the run-around",
     description:
-      "Khatha is mandatory for property tax payment, construction approvals, and most property transactions across India — yet getting it can feel like a maze. This 8-page guide explains the difference between BBMP and Gram Panchayat Khatha, walks through the online application process step by step, and tells you exactly how to handle rejection notices.",
+      "Khatha is mandatory for property tax payment, construction approvals, and most property transactions — yet getting it can feel like a maze. This 8-page guide explains the difference between BBMP and Gram Panchayat Khatha, walks through the online application process step by step, and tells you exactly how to handle rejection notices.",
     category: "real-estate",
     pages: 8,
     highlights: [
@@ -102,19 +102,19 @@ export const ALL_RESOURCES: Resource[] = [
     downloadPath: "/downloads/khata-certificate-guide.pdf",
     metaTitle: "Khata Certificate Application Guide India — Free Download | Right Assets Management",
     metaDescription:
-      "Free 8-page guide to applying for Khata Certificate across India. Covers BBMP vs Gram Panchayat Khatha, online process, documents, and handling rejections.",
+      "Free 8-page guide to applying for Khata Certificate. Covers BBMP vs Gram Panchayat Khatha, online process, documents, and handling rejections.",
   },
   {
     slug: "tax-saving-guide",
     title: "Tax Saving Guide 2025–26",
     subtitle: "Legally reduce your tax burden before March 31st",
     description:
-      "With the choice between the new and old tax regimes now permanent, picking the wrong regime can cost you tens of thousands every year. This 18-page guide compares both regimes with real salary examples, ranks every 80C investment by returns and lock-in period, and gives you a pre-March filing checklist so you never scramble at the last minute.",
+      "With the choice between the new and old tax regimes now permanent, picking the wrong regime can cost you tens of thousands every year. This 18-page guide compares both regimes with real salary examples, ranks every eligible tax-saving investment by returns and lock-in period, and gives you a pre-March filing checklist so you never scramble at the last minute.",
     category: "financial",
     pages: 18,
     highlights: [
       "New regime vs Old regime: which saves you more money",
-      "All 80C investments ranked by returns and lock-in",
+      "Every eligible tax-saving investment ranked by returns and lock-in",
       "HRA, home loan, NPS — maximising every deduction",
       "ITR filing checklist so you never miss a deadline",
     ],
@@ -125,7 +125,7 @@ export const ALL_RESOURCES: Resource[] = [
     downloadPath: "/downloads/tax-saving-guide.pdf",
     metaTitle: "Tax Saving Guide 2025–26 — Free Download | Right Assets Management",
     metaDescription:
-      "Free 18-page tax saving guide for 2025–26. Compare new vs old tax regime, maximise 80C deductions, and file your ITR without missing a deadline.",
+      "Free 18-page tax saving guide for 2025–26. Compare new vs old tax regime, maximise your eligible deductions, and file your ITR without missing a deadline.",
   },
   {
     slug: "property-due-diligence",
@@ -178,7 +178,7 @@ export const ALL_RESOURCES: Resource[] = [
     title: "Tenant & Landlord Rights Guide",
     subtitle: "Know your legal rights before signing any rent agreement",
     description:
-      "Disputes between tenants and landlords across India most often arise from one thing: a poorly drafted or misunderstood rent agreement. This 12-page guide explains the legal difference between a registered and a notarised agreement, outlines Karnataka Rent Act rules on security deposits and rent increases, and tells you the exact legal process to follow if things go wrong.",
+      "Disputes between tenants and landlords most often arise from one thing: a poorly drafted or misunderstood rent agreement. This 12-page guide explains the legal difference between a registered and a notarised agreement, outlines Karnataka Rent Act rules on security deposits and rent increases, and tells you the exact legal process to follow if things go wrong.",
     category: "legal",
     pages: 12,
     highlights: [
@@ -188,13 +188,13 @@ export const ALL_RESOURCES: Resource[] = [
       "Rent increase limits and proper notice procedures",
     ],
     forWhom:
-      "Tenants and landlords across India navigating rental agreements",
+      "Tenants and landlords navigating rental agreements",
     color: "#6B46C1",
     lightBg: "#F0EBF9",
     downloadPath: "/downloads/tenant-landlord-guide.pdf",
     metaTitle: "Tenant & Landlord Rights Guide India — Free Download | Right Assets Management",
     metaDescription:
-      "Free 12-page guide to tenant and landlord rights across India under the Karnataka Rent Act. Covers rent agreements, security deposits, and legal remedies.",
+      "Free 12-page guide to tenant and landlord rights under the Karnataka Rent Act. Covers rent agreements, security deposits, and legal remedies.",
   },
 ];
 

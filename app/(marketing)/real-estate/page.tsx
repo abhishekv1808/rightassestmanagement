@@ -24,9 +24,9 @@ import { getServiceBySlug } from "@/lib/services-data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/real-estate" },
-  title: "Real Estate Services across India — Property, Documentation & Registration",
+  title: "Real Estate Services — Property, Documentation & Registration",
   description:
-    "Complete real estate services across India — buy/sell properties, sale deed, khatha, EC, land conversion, property registration, and more. Right Assets Management.",
+    "Complete real estate services — buy/sell properties, sale deed, khatha, EC, land conversion, property registration, and more. Right Assets Management.",
 };
 
 // ─── Cards config ─────────────────────────────────────────────────────────────
@@ -39,7 +39,7 @@ const CARDS = [
   { slug: "encumbrance",         Icon: Search,        color: "#0D7E7E", lightBg: "#E6F4F4",  badge: null,           highlight: "Clear Title Verification" },
   { slug: "rent-agreement",      Icon: Key,           color: "#1B3A6B", lightBg: "#EEF2F8",  badge: null,           highlight: "Registered Agreements" },
   { slug: "mutation",            Icon: GitBranch,     color: "#C9A84C", lightBg: "#FBF5E6",  badge: null,           highlight: "Khatha Transfer" },
-  { slug: "dc-conversion",     Icon: Layers,        color: "#6B46C1", lightBg: "#F0EBF9",  badge: null,           highlight: "Agri → Residential" },
+  { slug: "land-conversion",   Icon: Layers,        color: "#6B46C1", lightBg: "#F0EBF9",  badge: null,           highlight: "Residential & Industrial" },
   { slug: "property-valuation",  Icon: Receipt,       color: "#0D7E7E", lightBg: "#E6F4F4",  badge: null,           highlight: "Certified Reports" },
   { slug: "building-plan",       Icon: Building,      color: "#1B3A6B", lightBg: "#EEF2F8",  badge: null,           highlight: "BBMP / BDA Approval" },
   { slug: "rtc-pahani",          Icon: FileText,      color: "#C9A84C", lightBg: "#FBF5E6",  badge: null,           highlight: "Revenue Records" },
@@ -60,26 +60,26 @@ export default function RealEstateHubPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What real estate services does Right Assets Management provide across India?",
+        "name": "What real estate services does Right Assets Management provide?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer 17+ real estate services across India including property buying/selling, sale deed drafting, rent agreements, Khata Certificate, land conversion, building plan approval, encumbrance certificates, property registration, mutation, and more."
+          "text": "We offer 17+ real estate services including property buying/selling, sale deed drafting, rent agreements, Khata Certificate, land conversion, building plan approval, encumbrance certificates, property registration, mutation, and more."
         }
       },
       {
         "@type": "Question",
-        "name": "Can Right Assets Management help with property registration across India?",
+        "name": "Can Right Assets Management help with property registration?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we provide end-to-end property registration assistance across India — from document verification and stamp duty calculation to sub-registrar office coordination and final registration."
+          "text": "Yes, we provide end-to-end property registration assistance — from document verification and stamp duty calculation to sub-registrar office coordination and final registration."
         }
       },
       {
         "@type": "Question",
-        "name": "How long does property registration take across India?",
+        "name": "How long does property registration take?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Property registration across India typically takes 1–3 working days once all documents are in order. The sub-registrar appointment can be booked online via the Kaveri portal."
+          "text": "Property registration typically takes 1–3 working days once all documents are in order. The sub-registrar appointment can be booked online through the applicable state portal."
         }
       },
       {
@@ -87,12 +87,12 @@ export default function RealEstateHubPage() {
         "name": "What is Khata Certificate and do I need it?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Khata Certificate is a digital property ownership document issued by BBMP (Bruhat Bengaluru Mahanagara Palike). It is mandatory for property tax payment and essential for property transactions across India."
+          "text": "Khata Certificate is a digital property ownership document issued by the local municipal corporation. It is mandatory for property tax payment and essential for property transactions."
         }
       },
       {
         "@type": "Question",
-        "name": "What documents are required for property registration across India?",
+        "name": "What documents are required for property registration?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Key documents include the original sale deed, encumbrance certificate, Khatha certificate, property tax receipts, identity proofs of buyer/seller, and the demand draft for stamp duty and registration fees."
@@ -159,7 +159,7 @@ export default function RealEstateHubPage() {
             </h1>
 
             <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Buying, selling, or managing property across India? We handle every aspect —
+              Buying, selling, or managing property? We handle every aspect —
               documentation, government records, legal verification, and registration —
               all under one roof.
             </p>

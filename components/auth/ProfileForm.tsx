@@ -9,14 +9,12 @@ import {
 import { saveProfile, signOut } from "@/app/actions/profile";
 import { createClient } from "@/lib/supabase/client";
 
-const BANGALORE_AREAS = [
-  "Whitefield", "Koramangala", "Indiranagar", "Electronic City",
-  "HSR Layout", "BTM Layout", "Jayanagar", "JP Nagar",
-  "Marathahalli", "Sarjapur Road", "Hebbal", "Yelahanka",
-  "Malleshwaram", "Bannerghatta Road", "Rajajinagar",
-  "Bellandur", "Kadugodi", "MG Road", "Domlur",
-  "Basavanagudi", "RT Nagar", "KR Puram", "Horamavu",
-  "Hennur Road", "Outer Ring Road", "Hosur Road", "Other",
+const LOCATIONS = [
+  "Bangalore", "Mumbai", "Delhi NCR", "Hyderabad",
+  "Chennai", "Pune", "Kolkata", "Ahmedabad",
+  "Kochi", "Jaipur", "Chandigarh", "Lucknow",
+  "Middle East (UAE / GCC)", "Singapore", "United Kingdom",
+  "United States", "Australia", "Other",
 ];
 
 const SERVICE_CATEGORIES = [
@@ -25,7 +23,7 @@ const SERVICE_CATEGORIES = [
   { id: "legal", label: "Legal Services", desc: "Property disputes, family cases" },
   { id: "tax", label: "Tax Planning & ITR", desc: "Tax saving, ITR filing" },
   { id: "home-loan", label: "Home Loan", desc: "Loan advisory & comparison" },
-  { id: "mutual-funds", label: "Mutual Funds / SIP", desc: "Wealth management" },
+  { id: "mutual-funds", label: "Mutual Funds", desc: "Wealth management" },
 ];
 
 type Profile = {
@@ -201,7 +199,7 @@ export default function ProfileForm({ profile }: { profile: Profile }) {
                 fontSize: 11, fontWeight: 500, color: "rgba(255,255,255,0.65)",
               }}>
                 <MapPin size={11} />
-                {area}, India
+                {area}
               </span>
             )}
           </div>
@@ -355,7 +353,7 @@ export default function ProfileForm({ profile }: { profile: Profile }) {
                 Location
               </p>
               <p style={{ fontSize: 12, color: "#94A3B8", margin: 0 }}>
-                Your area across India
+                Your city / region
               </p>
             </div>
           </div>
@@ -368,7 +366,7 @@ export default function ProfileForm({ profile }: { profile: Profile }) {
                 style={{ ...inputCls, cursor: "pointer", appearance: "auto" }}
               >
                 <option value="">Select your area…</option>
-                {BANGALORE_AREAS.map((a) => (
+                {LOCATIONS.map((a) => (
                   <option key={a} value={a}>{a}</option>
                 ))}
               </select>

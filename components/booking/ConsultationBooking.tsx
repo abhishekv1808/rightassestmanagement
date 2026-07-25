@@ -44,7 +44,7 @@ const TIME_SLOTS = [
 
 const SERVICES = [
   "Financial Planning",
-  "Mutual Funds / SIP",
+  "Mutual Funds",
   "Home Loan",
   "Personal Loan",
   "Insurance",
@@ -539,7 +539,7 @@ export default function ConsultationBooking() {
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
                   rows={2}
-                  placeholder={mode === "in-person" ? "Where should our advisor meet you? Flat / street / area, India" : "Your address (helps us serve you better)"}
+                  placeholder={mode === "in-person" ? "Where should our advisor meet you? Flat / street / area" : "Your address (helps us serve you better)"}
                   style={{ width: "100%", padding: "11px 14px 11px 42px", borderRadius: 10, border: `1.5px solid ${fieldErrors.address ? "#EF4444" : "#E2E8F0"}`, fontSize: 14, outline: "none", fontFamily: "inherit", backgroundColor: "#FAFAFA", boxSizing: "border-box", resize: "vertical", lineHeight: 1.5 }}
                 />
               </div>

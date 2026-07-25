@@ -18,9 +18,9 @@ import {
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about" },
-  title: "About Us — Right Assets Management India",
+  title: "About Us — Right Assets Management",
   description:
-    "Learn about Right Assets Management — India's trusted multi-vertical firm offering financial planning, real estate, and legal advisory services under one roof.",
+    "Learn about Right Assets Management — A trusted multi-vertical firm offering financial planning, real estate, and legal advisory services under one roof.",
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -32,11 +32,11 @@ const VERTICALS = [
     color: "#1B3A6B",
     lightBg: "#EEF2F8",
     href: "/financial",
-    count: "20 services",
+    count: "23 services",
     headline: "Your complete financial guide.",
-    body: "From SIPs to portfolio management, health insurance to home loans, tax planning to retirement — we cover every stage of your financial life with qualified, experienced advisors.",
+    body: "From mutual funds to portfolio management, health insurance to home loans, tax planning to retirement — we cover every stage of your financial life with qualified, experienced advisors.",
     services: [
-      "Mutual Funds & SIP",
+      "Mutual Funds",
       "Insurance Planning",
       "Home & Personal Loans",
       "Portfolio Management",
@@ -59,7 +59,7 @@ const VERTICALS = [
       "Khata Certificate & Mutation",
       "Sale Deed & Agreement",
       "Encumbrance Certificate",
-      "DC Conversion & NOC",
+      "Land Conversion & NOC",
     ],
   },
   {
@@ -88,7 +88,7 @@ const WHY_CHOOSE = [
     color: "#1B3A6B",
     lightBg: "#EEF2F8",
     title: "48+ Services Under One Roof",
-    body: "From your first SIP to your last legal dispute, we cover every major financial and property need — eliminating the hassle of managing multiple advisors.",
+    body: "From your first investment to your last legal dispute, we cover every major financial and property need — eliminating the hassle of managing multiple advisors.",
   },
   {
     Icon: FileCheck,
@@ -115,8 +115,8 @@ const WHY_CHOOSE = [
     Icon: MapPin,
     color: "#1B3A6B",
     lightBg: "#EEF2F8",
-    title: "Pan India Coverage",
-    body: "We serve clients across all zones of India — from HSR Layout to Yelahanka, Whitefield to Rajajinagar. Wherever you are, we're accessible.",
+    title: "Global Coverage",
+    body: "We serve clients wherever they are — in person locally and remotely for clients anywhere in the world. Wherever you are, we're accessible.",
   },
 ];
 
@@ -229,11 +229,11 @@ export default function AboutPage() {
                 <p>
                   We bring together expertise across three critical areas of life under one roof,
                   so you never have to coordinate between multiple advisors. Whether you&apos;re
-                  planning your first SIP, registering a property, or navigating a legal dispute —
+                  planning your first investment, registering a property, or navigating a legal dispute —
                   one call to Right Assets Management is all it takes.
                 </p>
                 <p>
-                  Over the years we have served 500+ clients across India — from salaried
+                  Over the years we have served 500+ clients — from salaried
                   professionals starting their investment journey to HNI individuals managing
                   complex portfolios, from first-time homebuyers to seasoned real estate investors,
                   from individuals seeking legal guidance to businesses resolving commercial disputes.
@@ -433,7 +433,7 @@ export default function AboutPage() {
               Why Choose Right Assets?
             </h2>
             <p className="text-gray-500 text-base sm:text-lg max-w-xl mx-auto">
-              Five reasons clients consistently choose us over other advisors across India.
+              Five reasons clients consistently choose us over other advisors.
             </p>
           </div>
 

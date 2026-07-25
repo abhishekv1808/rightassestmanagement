@@ -126,7 +126,7 @@ export default function SocialFollowBanner() {
 
         {/* Bottom nudge */}
         <p className="text-center text-xs mt-8" style={{ color: "rgba(255,255,255,0.25)" }}>
-          Join thousands of Indians getting free financial, property & legal tips every week.
+          Join thousands of readers getting free financial, property & legal tips every week.
         </p>
 
       </div>

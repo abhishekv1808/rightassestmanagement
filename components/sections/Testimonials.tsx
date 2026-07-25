@@ -8,7 +8,7 @@ const TESTIMONIALS = [
   {
     name: "Ramesh Shetty",
     role: "Business Owner",
-    location: "Jayanagar, India",
+    location: "Mumbai, India",
     service: "Portfolio Management & Mutual Funds",
     quote:
       "Right Assets simplified my investment portfolio completely. What was scattered across eight different places is now professionally managed under one trusted advisor. Returns have improved and I finally have clarity on my financial future.",
@@ -19,10 +19,10 @@ const TESTIMONIALS = [
   {
     name: "Kavitha Reddy",
     role: "Senior IT Professional",
-    location: "Whitefield, India",
+    location: "Delhi, India",
     service: "Property Registration & Khata Certificate",
     quote:
-      "They handled my entire property registration without me running to a single government office. All documentation, stamp duty, Sub-Registrar coordination — done in under 3 weeks. Truly end-to-end service like no one else across India.",
+      "They handled my entire property registration without me running to a single government office. All documentation, stamp duty, Sub-Registrar coordination — done in under 3 weeks. Truly end-to-end service like no one else.",
     rating: 5,
     initial: "KR",
     color: "#0D7E7E",
@@ -30,7 +30,7 @@ const TESTIMONIALS = [
   {
     name: "Suresh Anand",
     role: "Retired Professional",
-    location: "Malleswaram, India",
+    location: "Chennai, India",
     service: "Property Dispute Advisory",
     quote:
       "The legal team helped me resolve a decade-old boundary dispute with clear, professional advice and a calm approach. No unnecessary delays, no confusing jargon. The outcome was far better than I ever expected.",
@@ -41,7 +41,7 @@ const TESTIMONIALS = [
   {
     name: "Priya Nair",
     role: "Homemaker & Entrepreneur",
-    location: "Indiranagar, India",
+    location: "Hyderabad, India",
     service: "Tax Planning & ITR Filing",
     quote:
       "I used to panic every March. Right Assets took over my tax planning mid-year and saved me significantly. The filing was done before I even remembered the deadline. I wish I had found them sooner.",
@@ -97,7 +97,7 @@ export default function Testimonials() {
             style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", color: "#1B3A6B" }}
           >
             Trusted by 500+ Clients{" "}
-            <span style={{ color: "#C9A84C" }}>Across India</span>
+            <span style={{ color: "#C9A84C" }}>Globally</span>
           </h2>
           <p style={{ color: "#64748B", fontSize: "1rem" }}>
             Real outcomes for real people — from investments to property to legal matters.

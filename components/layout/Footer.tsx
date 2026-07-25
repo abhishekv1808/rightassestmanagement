@@ -28,7 +28,7 @@ import {
 // ─── Link data ────────────────────────────────────────────────────
 
 const FINANCIAL_LINKS = [
-  { label: "Mutual Funds & SIP",       href: "/financial/mutual-funds" },
+  { label: "Mutual Funds",              href: "/financial/mutual-funds" },
   { label: "Health Insurance",          href: "/financial/health-insurance" },
   { label: "Life Insurance",            href: "/financial/life-insurance" },
   { label: "Home Loans",               href: "/financial/home-loan" },
@@ -48,7 +48,7 @@ const REAL_ESTATE_LINKS = [
   { label: "Sale Deed & Agreement",    href: "/real-estate/sale-deed" },
   { label: "Rent Agreement",           href: "/real-estate/rent-agreement" },
   { label: "Property Valuation",       href: "/real-estate/property-valuation" },
-  { label: "DC Conversion",          href: "/real-estate/dc-conversion" },
+  { label: "Land Conversion",          href: "/real-estate/land-conversion" },
 ];
 
 const LEGAL_LINKS = [
@@ -346,12 +346,12 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm leading-relaxed mb-1.5" style={{ color: "rgba(255,255,255,0.5)" }}>
-              India&apos;s trusted multi-vertical firm offering expert services across
+              A trusted multi-vertical firm offering expert services across
               Financial Planning, Real Estate, and Legal Advisory — all under one roof.
             </p>
 
             <p className="text-[11px] mb-7 font-medium tracking-wide" style={{ color: "rgba(201,168,76,0.65)" }}>
-              Pan India
+              Serving Clients Globally
             </p>
 
             {/* Contact details */}
@@ -416,7 +416,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <ColHeading icon={TrendingUp} label="Financial" />
             <LinkList links={FINANCIAL_LINKS} />
-            <ViewAll href="/financial" count="21" label="services" />
+            <ViewAll href="/financial" count="23" label="services" />
           </div>
 
           {/* Real Estate */}

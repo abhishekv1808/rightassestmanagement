@@ -251,7 +251,7 @@ export default function InsurancePremiumEstimator() {
 
                 <div className="p-3.5 rounded-xl text-xs leading-relaxed" style={{ backgroundColor: "#FBF5E6", color: "#92714A" }}>
                   This is an indicative estimate. Actual premium will be confirmed after underwriting.
-                  Tax benefits available u/s 80C (life) and 80D (health) of Income Tax Act.
+                  Tax benefits may be available on premiums as per prevailing income tax laws.
                 </div>
 
                 <Link

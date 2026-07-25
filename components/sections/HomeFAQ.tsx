@@ -17,7 +17,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "Which areas do you serve?",
     answer:
-      "We serve clients across India — both online and in person. Our advisors work with you over phone, WhatsApp, and video for financial and legal advisory, and for property documentation and registration we coordinate with the relevant Sub-Registrar Office and local authorities wherever your property is located.",
+      "We serve clients globally — both online and in person. Our advisors work with you over phone, WhatsApp, and video for financial and legal advisory, and for property documentation and registration we coordinate with the relevant Sub-Registrar Office and local authorities wherever your property is located.",
   },
   {
     question: "How do I get started?",

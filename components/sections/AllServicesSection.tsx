@@ -8,7 +8,7 @@ import {
   // Financial icons
   PieChart, Heart, Home, Shield, Banknote, Car, BarChart3,
   PiggyBank, FileText, Building2, Landmark, Coins, Star,
-  Clock, Gem, Calculator, CreditCard, Target, TrendingUp,
+  Clock, Gem, Calculator, CreditCard, Target, TrendingUp, Plane,
   // Real Estate icons
   Key, MapPin, Layers, RefreshCw, Users, BarChart2, Receipt,
   CheckSquare, PenLine, Wallet, Award, ScrollText,
@@ -40,9 +40,9 @@ const FINANCIAL_CARDS: CardConfig[] = [
   { slug: "portfolio-management",Icon: BarChart3,   color: "#C9A84C", lightBg: "#FBF5E6", highlight: "HNI Clients",              vertical: "financial" },
   { slug: "vehicle-loan",        Icon: Car,         color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Car & Two-Wheeler",        vertical: "financial" },
   { slug: "fixed-deposits",      Icon: PiggyBank,   color: "#1B3A6B", lightBg: "#EEF2F8", highlight: "Safe Returns",             vertical: "financial" },
-  { slug: "nps",                 Icon: Landmark,    color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Tax Benefit u/s 80CCD",    vertical: "financial" },
+  { slug: "nps",                 Icon: Landmark,    color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Retirement Saving",    vertical: "financial" },
   { slug: "tax-planning",        Icon: Calculator,  color: "#C9A84C", lightBg: "#FBF5E6", highlight: "ITR Filing Included",      vertical: "financial" },
-  { slug: "bonds-ncd",           Icon: FileText,    color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Fixed Income",             vertical: "financial" },
+  { slug: "bonds",               Icon: FileText,    color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Fixed Income",             vertical: "financial" },
   { slug: "ppf",                 Icon: Coins,       color: "#1B3A6B", lightBg: "#EEF2F8", highlight: "15-Year Lock-in",          vertical: "financial" },
   { slug: "gold-investment",     Icon: Gem,         color: "#C9A84C", lightBg: "#FBF5E6", highlight: "SGB & Gold ETF",           vertical: "financial" },
   { slug: "financial-planning",  Icon: Target,      color: "#0D7E7E", lightBg: "#E6F4F4", badge: "Recommended", highlight: "Comprehensive Plans",       vertical: "financial" },
@@ -51,6 +51,8 @@ const FINANCIAL_CARDS: CardConfig[] = [
   { slug: "sukanya-samriddhi",   Icon: Star,        color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "For Girl Child",           vertical: "financial" },
   { slug: "vehicle-insurance",   Icon: Car,         color: "#C9A84C", lightBg: "#FBF5E6", highlight: "Car · Bike · Commercial", vertical: "financial" },
   { slug: "atal-pension",        Icon: Clock,       color: "#6B46C1", lightBg: "#F0EBF9", highlight: "Guaranteed Pension",      vertical: "financial" },
+  { slug: "credit-card",         Icon: CreditCard,  color: "#1B3A6B", lightBg: "#EEF2F8", badge: "New", highlight: "Rewards & Cashback",      vertical: "financial" },
+  { slug: "travel-marine-insurance", Icon: Plane,   color: "#0D7E7E", lightBg: "#E6F4F4", badge: "New", highlight: "Trips & Cargo Cover",     vertical: "financial" },
 ];
 
 const REAL_ESTATE_CARDS: CardConfig[] = [
@@ -59,7 +61,7 @@ const REAL_ESTATE_CARDS: CardConfig[] = [
   { slug: "property-registration",Icon: Award,     color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Sub-Registrar Office",     vertical: "real-estate" },
   { slug: "sale-deed",           Icon: FileText,    color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Legally Compliant",       vertical: "real-estate" },
   { slug: "rent-agreement",      Icon: Key,         color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Registered Agreement",    vertical: "real-estate" },
-  { slug: "dc-conversion",     Icon: MapPin,      color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Agri → Residential",      vertical: "real-estate" },
+  { slug: "land-conversion",   Icon: MapPin,      color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Residential & Industrial", vertical: "real-estate" },
   { slug: "building-plan",       Icon: Layers,      color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "BBMP / BDA Approved",     vertical: "real-estate" },
   { slug: "encumbrance",         Icon: Shield,      color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Clear Title Verification", vertical: "real-estate" },
   { slug: "mutation",            Icon: RefreshCw,   color: "#0D7E7E", lightBg: "#E6F4F4", highlight: "Khatha Transfer",         vertical: "real-estate" },
@@ -189,7 +191,7 @@ function VerticalGroup({ config }: { config: VerticalConfig }) {
             {config.tagline}
           </h3>
           <p className="text-sm text-gray-500">
-            {config.cards.length} services · Expert advisory across India
+            {config.cards.length} services · Expert advisory globally
           </p>
         </div>
         <Link
@@ -321,7 +323,7 @@ export default function AllServicesSection() {
             <span style={{ color: "#C9A84C" }}>Three Verticals.</span>
           </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
-            Financial planning, real estate documentation, and legal advisory — all under one roof across India.
+            Financial planning, real estate documentation, and legal advisory — all under one roof, wherever you are.
           </p>
         </motion.div>
 

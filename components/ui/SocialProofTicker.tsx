@@ -12,14 +12,14 @@ interface Notification {
 const NOTIFICATIONS: Notification[] = [
   {
     name: "Rahul S.",
-    action: "enquired about Mutual Fund SIP",
-    location: "Koramangala",
+    action: "enquired about Mutual Funds",
+    location: "Mumbai",
     time: "2 mins ago",
   },
   {
     name: "Priya M.",
     action: "booked a Home Loan consultation",
-    location: "Whitefield",
+    location: "Delhi",
     time: "5 mins ago",
   },
   {
@@ -31,7 +31,7 @@ const NOTIFICATIONS: Notification[] = [
   {
     name: "Deepa R.",
     action: "enquired about Health Insurance",
-    location: "Indiranagar",
+    location: "Hyderabad",
     time: "11 mins ago",
   },
   {
@@ -43,7 +43,7 @@ const NOTIFICATIONS: Notification[] = [
   {
     name: "Sneha B.",
     action: "booked a Tax Planning session",
-    location: "Jayanagar",
+    location: "Pune",
     time: "18 mins ago",
   },
   {
@@ -302,7 +302,7 @@ export default function SocialProofTicker() {
                   color: "#94A3B8",
                 }}
               >
-                {current.location}, India
+                {current.location}
               </span>
             </div>
           </div>

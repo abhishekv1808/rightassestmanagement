@@ -48,7 +48,7 @@ export const SOCIAL_PLATFORMS = [
     icon: InstagramIcon,
     name: "Instagram",
     handle: "@rightassetsmanagement",
-    desc: "Visual property guides, SIP tips & infographics",
+    desc: "Visual property guides, investment tips & infographics",
     href: "https://www.instagram.com/rightassetsmanagement",
     accent: "#E1306C",
   },

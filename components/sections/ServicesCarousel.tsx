@@ -138,7 +138,7 @@ export default function ServicesCarousel() {
               <span style={{ color: "#C9A84C" }}>One Trusted Partner.</span>
             </h2>
             <p className="mt-3 text-sm max-w-xl" style={{ color: "#64748B" }}>
-              Financial planning, real estate transactions, and legal advisory — all under one roof across India.
+              Financial planning, real estate transactions, and legal advisory — all under one roof, wherever you are.
             </p>
           </div>
           <div className="flex flex-wrap gap-2 shrink-0">

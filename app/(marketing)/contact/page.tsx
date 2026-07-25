@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
   title: "Contact Us — Book a Consultation",
   description:
-    "Get in touch with Right Assets Management across India. Book a free consultation for financial planning, real estate documentation, or legal advisory services.",
+    "Get in touch with Right Assets Management. Book a free consultation for financial planning, real estate documentation, or legal advisory services.",
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────

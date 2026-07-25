@@ -95,7 +95,7 @@ export default function LatestInsights() {
               Latest From Our Experts
             </h2>
             <p className="text-sm text-gray-500 mt-1.5 max-w-lg">
-              Practical, jargon-free guides on financial planning, property, and legal matters — written for India.
+              Practical, jargon-free guides on financial planning, property, and legal matters — written for you.
             </p>
           </div>
           <Link

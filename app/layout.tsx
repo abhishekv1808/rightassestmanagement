@@ -1,7 +1,9 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
+import { Suspense } from "react";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import AuthCodeHandler from "@/components/auth/AuthCodeHandler";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -84,6 +86,9 @@ export default function RootLayout({
     <html lang="en" className={`${dmSans.variable} ${jetbrainsMono.variable}`}>
       <body suppressHydrationWarning>
         {gaId && <GoogleAnalytics gaId={gaId} />}
+        <Suspense fallback={null}>
+          <AuthCodeHandler />
+        </Suspense>
         {children}
       </body>
     </html>
